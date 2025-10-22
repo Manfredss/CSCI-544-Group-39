@@ -1,0 +1,159 @@
+标题: Certified Self-Consistency: Statistical Guarantees and Test-Time Training for Reliable Reasoning in LLMs
+arXiv ID: 2510.17472v1
+发布时间: 2025-10-20 12:14:12+00:00
+作者: Paula Cordero-Encinar, Andrew B. Duncan
+摘要: Recent advances such as self-consistency and test-time reinforcement learning
+(TTRL) improve the reliability of large language models (LLMs) without
+additional supervision, yet their underlying mechanisms and statistical
+guarantees remain poorly understood. We present a unified framework for
+certifiable inference in LLMs, showing that majority voting provides a
+statistical certificate of self-consistency: under mild assumptions, the
+aggregated answer coincides with the mode of the model's terminal distribution
+with high probability. We derive finite-sample and anytime-valid concentration
+bounds that quantify this confidence, and introduce the Martingale Majority
+Certificate (MMC), a sequential stopping rule that adaptively determines when
+sufficient samples have been drawn. We further prove that label-free
+post-training methods such as TTRL implicitly sharpen the answer distribution
+by exponentially tilting it toward its mode, thereby reducing the number of
+samples required for certification. Building on this insight, we propose new
+post-training objectives that explicitly optimise this trade-off between
+sharpness and bias. Together, these results explain and connect two central
+test-time scaling strategies, self-consistency and TTRL, within a single
+statistical framework for label-free, certifiable reliability in reasoning
+LLMs.
+URL: http://arxiv.org/abs/2510.17472v1
+图片输出目录: all_conference_papers/iclr/2510.17472v1/extracted_images
+LaTeX文件数量: 19
+图片文件总数: 32
+匹配图片数量: 32
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/iclr/2510.17472v1/mmc.tex
+  - all_conference_papers/iclr/2510.17472v1/main.tex
+  - all_conference_papers/iclr/2510.17472v1/math_commands.tex
+  - all_conference_papers/iclr/2510.17472v1/snr_problem_difficulty.tex
+  - all_conference_papers/iclr/2510.17472v1/numerical_experiments.tex
+  - all_conference_papers/iclr/2510.17472v1/test_time_training_loss.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/analysis_mmc.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/bernstein_bound.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/further_experimental_details.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/analysis_TTT_entropy.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/hoeffding_bound.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/small_regime_bounds.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/sanov_bound.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/compute_estimated_probabilites.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/chernoff_markov_bound.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/CLT_asymptotic_bound.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/analysis_TTRL.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/details_new_TTT_loss.tex
+  - all_conference_papers/iclr/2510.17472v1/appendix/bahadur_rao_correction.tex
+
+==================================================
+图片引用列表:
+  - condorcet_framework
+  - empirical_vs_theoreticalbounds
+  - QWEN-MATH-7B_violin_maj100_SNR_01
+  - QWEN-MATH-7B_violin_maj100_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-1.5B_violin_maj100_SNR_01
+  - QWEN-MATH-1.5B_violin_maj100_probability_adaptive_01_NO_ground_truth
+  - truncated_beta_prior_stopping_5
+  - updating_point_prior_ratio_stopping_5
+  - delta_dirac_prior_stopping_5
+  - QWEN-MATH-1.5B_violin_maj100_probability_adaptive_04_NO_ground_truth
+  - QWEN-MATH-1.5B_violin_maj50_SNR_04
+  - QWEN-MATH-1.5B_violin_maj50_probability_adaptive_04_NO_ground_truth
+  - QWEN-MATH-1.5B_violin_maj50_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-1.5B_violin_maj10_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-1.5B_violin_maj100_SNR_04
+  - QWEN-MATH-7B_violin_maj50_SNR_01
+  - QWEN-MATH-1.5B_violin_maj100_SNR_01
+  - QWEN-MATH-7B_violin_maj100_SNR_01
+  - QWEN-MATH-1.5B_violin_maj10_SNR_01
+  - QWEN-MATH-7B_violin_maj50_SNR_04
+  - QWEN-MATH-7B_violin_maj10_SNR_04
+  - QWEN-MATH-1.5B_violin_maj10_SNR_04
+  - QWEN-MATH-1.5B_violin_maj50_SNR_01
+  - QWEN-MATH-7B_violin_maj10_probability_adaptive_04_NO_ground_truth
+  - plot_pass1_validation
+  - QWEN-MATH-1.5B_violin_maj10_probability_adaptive_04_NO_ground_truth
+  - QWEN-MATH-7B_violin_maj50_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-7B_violin_maj10_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-7B_violin_maj100_probability_adaptive_04_NO_ground_truth
+  - plot_training_SNR
+  - QWEN-MATH-7B_violin_maj100_probability_adaptive_01_NO_ground_truth
+  - QWEN-MATH-7B_violin_maj50_probability_adaptive_04_NO_ground_truth
+  - QWEN-MATH-7B_violin_maj10_SNR_01
+  - QWEN-MATH-7B_violin_maj100_SNR_04
+  - plot_training_negative_entropy
+  - QWEN-MATH-1.5B_violin_maj100_probability_adaptive_01_NO_ground_truth
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/delta_dirac_prior_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/condorcet_framework.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/updating_point_prior_ratio_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/empirical_vs_theoreticalbounds.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_training_negative_entropy.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_pass1_validation.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/truncated_beta_prior_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_training_SNR.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/delta_dirac_prior_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/condorcet_framework.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/updating_point_prior_ratio_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/empirical_vs_theoreticalbounds.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj50_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj100_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_training_negative_entropy.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_pass1_validation.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj100_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj50_SNR_04.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_SNR_01.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-7B_violin_maj10_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_probability_adaptive_04_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/truncated_beta_prior_stopping_5.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/QWEN-MATH-1.5B_violin_maj10_probability_adaptive_01_NO_ground_truth.pdf
+  - all_conference_papers/iclr/2510.17472v1/figs/plot_training_SNR.pdf

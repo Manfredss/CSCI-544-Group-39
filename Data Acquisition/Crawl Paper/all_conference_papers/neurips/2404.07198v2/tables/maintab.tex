@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Zero-shot inference results of \method and ablated \methodlp on 23 datasets compared to the best reported baselines. \method was trained on one transductive FB15k237 dataset, \methodlp was only pre-trained on KG completion and uses scores thresholding. The \emph{no thrs.} version does not use any thresholding of intermediate scores (\Cref{subsec:ultra_proj}). The best baselines are trainable on each transductive and inductive $(e)$ dataset, and the non-parametric heuristic baseline on inductive $(e,r)$ datasets. }
+%\scriptsize
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lrrrrrrrrrrrrrrrrr}\toprule
+\multirow{3}{*}{Model} &\multicolumn{4}{c}{\textbf{Inductive} $(e,r)$ (11 datasets)} &\multicolumn{4}{c}{\textbf{Inductive} $(e)$ (9 datasets)} &\multicolumn{4}{c}{\textbf{Transductive} (3 datasets)} &\multicolumn{4}{c}{\textbf{Total Average} (23 datasets)} \\\cmidrule(l){2-5} \cmidrule(l){6-9} \cmidrule(l){10-13} \cmidrule(l){14-17}
+&\multicolumn{2}{c}{EPFO avg} &\multicolumn{2}{c}{neg avg} &\multicolumn{2}{c}{EPFO avg} &\multicolumn{2}{c}{neg avg} &\multicolumn{2}{c}{EPFO avg} &\multicolumn{2}{c}{neg avg} &\multicolumn{2}{c}{EPFO avg} &\multicolumn{2}{c}{neg avg} \\\cmidrule(l){2-3} \cmidrule(l){4-5} \cmidrule(l){6-7} \cmidrule(l){8-9} \cmidrule(l){10-11} \cmidrule(l){12-13} \cmidrule(l){14-15} \cmidrule(l){16-17}
+&\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} &\bf{MRR} &\bf{H@10} \\\midrule
+Best baseline &0.014 &0.029 &0.004 &0.007 &\bf{0.328} &\textbf{0.469} &\bf{0.176} &\bf{0.297} &\bf{0.468} &\bf{0.603} &\bf{0.259} &\bf{0.409} &0.196 &0.276 &0.105 &0.173 \\ \midrule
+\textsc{UltraQuery} 0-shot &\bf{0.280} &0.380 &\bf{0.193} &\bf{0.288} &0.312 &\bf{0.467} &0.139 &0.262 &0.411 &0.517 &0.240 &0.352 &\bf{0.309} &\bf{0.432} &\bf{0.178} &\bf{0.286} \\
+\textsc{UltraQuery LP} 0-shot &0.268 &\bf{0.409} &0.104 &0.181 &0.277 &0.441 &0.098 &0.191 &0.322 &0.476 &0.150 &0.263 &0.279 &0.430 &0.107 &0.195 \\
+\textsc{UltraQuery LP} no thrs. &0.227 &0.331 &0.080 &0.138 &0.246 &0.390 &0.085 &0.167 &0.281 &0.417 &0.127 &0.223 &0.242 &0.367 &0.088 &0.161 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\label{tab:maintab1}
+\vskip -0.1 in
+\end{table*}

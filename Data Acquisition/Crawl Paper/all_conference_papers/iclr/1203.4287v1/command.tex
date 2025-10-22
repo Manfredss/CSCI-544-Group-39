@@ -1,0 +1,140 @@
+
+\renewcommand{\l}{$\langle$}
+\renewcommand{\r}{$\rangle$}
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.10}
+\renewcommand{\floatpagefraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.90}
+%
+%
+\newcommand{\rom}[1]{\setcounter{enumiii}{#1} \roman{enumiii}}
+\newcommand{\name}{*}
+\newcommand{\support}[1]{$\langle${\tt #1}$\rangle$}
+\newcommand{\eq}{:=}
+\newcommand{\pt}{.}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\rA}{\rightarrow}
+\newcommand{\an}[1]{\langle #1\rangle}
+\newcommand{\qin}{\hspace*{0.25in}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\li}{\Rightarrow}
+\newcommand{\IMPL}{\Rightarrow}
+\newcommand{\subs}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\proj}{\mbox{$\prod$}}
+\newcommand{\monleq}{\sqsubseteq}
+\newcommand{\OL}{\overline}
+\newcommand{\comment}[1]{{}}
+\newcommand{\nil}{[\;]}
+\newcommand{\IFF}{\Leftrightarrow}
+\newcommand{\proves}{\vdash}
+\newcommand{\when}{\ \mbox{${:\!\!-\;}$}}
+\newcommand{\goesto}{\mbox{$\leftarrow$}}
+\newcommand{\ce}{~{\mbox :-}~}
+\newcommand{\myc}[1]{}
+\newcommand{\SLDIF}{\leftarrow}
+ % IF of SLD
+\newcommand{\EDGE}{\rightarrow}
+\newcommand{\abs}[1]{\ensuremath{|#1|}}
+
+\newtheorem{Algo}{Algorithm}
+\newtheorem{Lem}{Lemma}
+\newtheorem{Cor}[Lem]{Corollary}
+\newtheorem{Hypo}[Lem]{Hypothesis}
+\newtheorem{Thm}[Lem]{Theorem}
+\newtheorem{Pro}[Lem]{Proposition}
+\newtheorem{Req}[Lem]{Requirement}
+\newtheorem{Prop}[Lem]{Property}
+\newtheorem{Def}{Definition}
+\newtheorem{Txfm}[Def]{Transformation}
+\newtheorem{Ex}{Example}
+
+
+
+\newcommand{\de}[1]{\ensuremath{\Longrightarrow_{#1}}}
+\newcommand{\derive}[2]{\ensuremath{\stackrel{#1}{\de{#2}}}}
+
+\newcommand{\trans}[1]{\ensuremath{\stackrel{#1}{\longrightarrow}}}
+\newcommand{\harrow}{\ensuremath{\hookrightarrow}}
+\newcommand{\stkalph}{\ensuremath{\Gamma}}
+\newcommand{\stkcon}{\ensuremath{\Gamma^*}}
+\newcommand{\derivetar}{\ensuremath{\rightsquigarrow}}
+
+%% Stuffs for the theory part
+\newcommand{\cirarr}{\ensuremath{\circ\!\!\!\longrightarrow}}
+\newcommand{\Sderives}{\ensuremath{\stackrel{S}{\cirarr}}}
+\newcommand{\Wderives}{\ensuremath{\stackrel{W}{\cirarr}}}
+\newcommand{\Sderivesz}{\ensuremath{\Sderives_{0}}}
+\newcommand{\Wderivesz}{\ensuremath{\Wderives_{0}}}
+\newcommand{\Serase}{\mbox{\sf Serase}}
+\newcommand{\Werase}{\mbox{\sf Werase}}
+\newcommand{\gammahat}{\ensuremath{\hat{\gamma}}}
+
+
+\newcommand{\moves}[1]{\ensuremath{\stackrel{#1}{\rightarrow}}}
+\newcommand{\Propo}{\ensuremath{Prop}}
+\newcommand{\pdaP}{\ensuremath{\cal{P}}}
+\newcommand{\buchiB}{\ensuremath{\cal{B}}}
+\newcommand{\buchipdaBP}{\ensuremath{\cal{BP}}}
+\newcommand{\erase}{\mbox{\sf Erase}}
+\newcommand{\emptystring}{\ensuremath{\epsilon}}
+
+
+\newcommand{\fautomaton}{F-graph}
+\newcommand{\rcautomaton}{R-graph}
+
+\newcommand{\tuple}[3]{\langle #1,#2,#3 \rangle}
+\newcommand{\lsem}{\mbox{$[\![$}}
+\newcommand{\rsem}{\mbox{$]\!]$}}
+\newcommand{\sem}[1]{\mbox{$\lsem #1 \rsem$}}
+
+%\newcommand{\url}[1]{\mbox{\tt #1}}
+\newcommand{\id}[1]{\mbox{\it #1\/}}
+\newcommand{\fvar}[1]{\mbox{\sf #1}}
+\newcommand{\proc}[1]{\mbox{\tt #1}}
+\newcommand{\kw}[1]{\mbox{\tt #1}}
+
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+
+\newenvironment{alg}{\begin{tabbing}xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\kill}{\end{tabbing}}
+
+\newcommand{\infer}[3]{%
+        % #1: antecedent
+        % #2: consequence
+        % #3: condition
+        \begin{tabular}{cc}
+        \begin{tabular}{c}
+        {\mbox{${#1}$}}\\ \hline
+        {\mbox{${#2}$}}
+        \end{tabular}
+        &
+        {\mbox{${#3}$}}
+        \end{tabular}
+}       
+\newcommand{\Paragraph}[1]{\smallskip \noindent {\bf #1} \hspace*{0.5em}}
+\newcommand{\TopParagraph}[1]{\noindent {\bf #1} \hspace*{0.5em}}
+\renewcommand{\subparagraph}[1]{\smallskip \noindent \textbf{\textit{#1}} \hspace*{0.5em}}
+\newcommand{\mgu}{\mbox{\rm mgu\xspace}}
+\newcommand{\rv}{\mbox{\rm rv\xspace}}
+
+\def\squareforqed{\hbox{\rlap{$\sqcap$}$\sqcup$}}
+\def\qed{\ifmmode\squareforqed\else{\unskip\nobreak\hfil
+\penalty50\hskip1em\null\nobreak\hfil\squareforqed
+\parfillskip=0pt\finalhyphendemerits=0\endgraf}\fi}
+
+
+\setlength{\marginparwidth}{0.5in}
+\newcommand\annotate[1]%
+{\textcolor{blue}{$\maltese$} \renewcommand{\baselinestretch}{0.7}%
+\-\marginpar[\raggedleft\scriptsize \textcolor{red}{#1}]%
+{\raggedright\scriptsize \textcolor{red}{#1}}}
+
+      
+\newcommand{\cpdf}[2]{\ensuremath{\langle#1,\mbox{\textcolor{blue}{$#2$}}\rangle}}
+
+\newcommand{\mycite}[1]{\mbox{\citeauthor{#1} (\citeyear{#1})}}

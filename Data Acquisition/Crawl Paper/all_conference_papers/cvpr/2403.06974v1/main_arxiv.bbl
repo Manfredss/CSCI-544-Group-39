@@ -1,0 +1,306 @@
+\begin{thebibliography}{48}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Armeni et~al.(2016)Armeni, Sener, Zamir, Jiang, Brilakis, Fischer, and
+  Savarese]{armeni20163d}
+Iro Armeni, Ozan Sener, Amir~R Zamir, Helen Jiang, Ioannis Brilakis, Martin
+  Fischer, and Silvio Savarese.
+\newblock 3d semantic parsing of large-scale indoor spaces.
+\newblock In \emph{ICCV}, pages 1534--1543, 2016.
+
+\bibitem[Carreira et~al.(2018)Carreira, Patraucean, Mazare, Zisserman, and
+  Osindero]{carreira2018massively}
+Joao Carreira, Viorica Patraucean, Laurent Mazare, Andrew Zisserman, and Simon
+  Osindero.
+\newblock Massively parallel video networks.
+\newblock In \emph{ECCV}, pages 649--666, 2018.
+
+\bibitem[Chang et~al.(2015)Chang, Funkhouser, Guibas, Hanrahan, Huang, Li,
+  Savarese, Savva, Song, Su, et~al.]{chang2015shapenet}
+Angel~X Chang, Thomas Funkhouser, Leonidas Guibas, Pat Hanrahan, Qixing Huang,
+  Zimo Li, Silvio Savarese, Manolis Savva, Shuran Song, Hao Su, et~al.
+\newblock Shapenet: An information-rich 3d model repository.
+\newblock \emph{arXiv preprint arXiv:1512.03012}, 2015.
+
+\bibitem[Chaplot et~al.(2020)Chaplot, Gandhi, Gupta, and
+  Salakhutdinov]{chaplot2020object}
+Devendra~Singh Chaplot, Dhiraj~Prakashchand Gandhi, Abhinav Gupta, and Russ~R
+  Salakhutdinov.
+\newblock Object goal navigation using goal-oriented semantic exploration.
+\newblock \emph{NeurIPS}, 33:\penalty0 4247--4258, 2020.
+
+\bibitem[Chen et~al.(2022)Chen, Duan, Wang, He, Lu, Dai, and
+  Qiao]{chen2022vision}
+Zhe Chen, Yuchen Duan, Wenhai Wang, Junjun He, Tong Lu, Jifeng Dai, and Yu
+  Qiao.
+\newblock Vision transformer adapter for dense predictions.
+\newblock \emph{arXiv preprint arXiv:2205.08534}, 2022.
+
+\bibitem[Choy et~al.(2019)Choy, Gwak, and Savarese]{choy20194d}
+Christopher Choy, JunYoung Gwak, and Silvio Savarese.
+\newblock 4d spatio-temporal convnets: Minkowski convolutional neural networks.
+\newblock In \emph{CVPR}, pages 3075--3084, 2019.
+
+\bibitem[Dai et~al.(2017)Dai, Chang, Savva, Halber, Funkhouser, and
+  Nie{\ss}ner]{dai2017scannet}
+Angela Dai, Angel~X. Chang, Manolis Savva, Maciej Halber, Thomas Funkhouser,
+  and Matthias Nie{\ss}ner.
+\newblock Scannet: Richly-annotated 3d reconstructions of indoor scenes.
+\newblock In \emph{CVPR}, pages 5828–--5839, 2017.
+
+\bibitem[Dai et~al.(2019)Dai, Yang, Yang, Carbonell, Le, and
+  Salakhutdinov]{dai2019transformer}
+Zihang Dai, Zhilin Yang, Yiming Yang, Jaime Carbonell, Quoc~V Le, and Ruslan
+  Salakhutdinov.
+\newblock Transformer-xl: Attentive language models beyond a fixed-length
+  context.
+\newblock \emph{arXiv preprint arXiv:1901.02860}, 2019.
+
+\bibitem[Engelcke et~al.(2017)Engelcke, Rao, Wang, Tong, and
+  Posner]{engelcke2017vote3deep}
+Martin Engelcke, Dushyant Rao, Dominic~Zeng Wang, Chi~Hay Tong, and Ingmar
+  Posner.
+\newblock Vote3deep: Fast object detection in 3d point clouds using efficient
+  convolutional neural networks.
+\newblock In \emph{ICRA}, pages 1355--1361, 2017.
+
+\bibitem[Graham(2014)]{graham2014spatially}
+Benjamin Graham.
+\newblock Spatially-sparse convolutional neural networks.
+\newblock \emph{arXiv preprint arXiv:1409.6070}, 2014.
+
+\bibitem[Graham et~al.(2018)Graham, Engelcke, and Van Der~Maaten]{graham20183d}
+Benjamin Graham, Martin Engelcke, and Laurens Van Der~Maaten.
+\newblock 3d semantic segmentation with submanifold sparse convolutional
+  networks.
+\newblock In \emph{CVPR}, pages 9224--9232, 2018.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{CVPR}, pages 770--778, 2016.
+
+\bibitem[Hou et~al.(2019)Hou, Dai, and Nie{\ss}ner]{hou20193d}
+Ji Hou, Angela Dai, and Matthias Nie{\ss}ner.
+\newblock 3d-sis: 3d semantic instance segmentation of rgb-d scans.
+\newblock In \emph{CVPR}, pages 4421--4430, 2019.
+
+\bibitem[Hou et~al.(2021)Hou, Xie, Graham, Dai, and Nie{\ss}ner]{hou2021pri3d}
+Ji Hou, Saining Xie, Benjamin Graham, Angela Dai, and Matthias Nie{\ss}ner.
+\newblock Pri3d: Can 3d priors help 2d representation learning?
+\newblock In \emph{ICCV}, pages 5693--5702, 2021.
+
+\bibitem[Hua et~al.(2016)Hua, Pham, Nguyen, Tran, Yu, and
+  Yeung]{hua2016scenenn}
+Binh-Son Hua, Quang-Hieu Pham, Duc~Thanh Nguyen, Minh-Khoi Tran, Lap-Fai Yu,
+  and Sai-Kit Yeung.
+\newblock Scenenn: A scene meshes dataset with annotations.
+\newblock In \emph{3DV}, pages 92--101, 2016.
+
+\bibitem[Huang et~al.(2021)Huang, Ma, Mu, Fu, and Hu]{huang2021supervoxel}
+Shi-Sheng Huang, Ze-Yu Ma, Tai-Jiang Mu, Hongbo Fu, and Shi-Min Hu.
+\newblock Supervoxel convolution for online 3d semantic segmentation.
+\newblock \emph{TOG}, 40\penalty0 (3):\penalty0 1--15, 2021.
+
+\bibitem[Jiang et~al.(2020)Jiang, Zhao, Shi, Liu, Fu, and
+  Jia]{jiang2020pointgroup}
+Li Jiang, Hengshuang Zhao, Shaoshuai Shi, Shu Liu, Chi-Wing Fu, and Jiaya Jia.
+\newblock Pointgroup: Dual-set point grouping for 3d instance segmentation.
+\newblock In \emph{CVPR}, pages 4867--4876, 2020.
+
+\bibitem[Kolodiazhnyi et~al.(2023)Kolodiazhnyi, Rukhovich, Vorontsova, and
+  Konushin]{kolodiazhnyi2023top}
+Maksim Kolodiazhnyi, Danila Rukhovich, Anna Vorontsova, and Anton Konushin.
+\newblock Top-down beats bottom-up in 3d instance segmentation.
+\newblock \emph{arXiv preprint arXiv:2302.02871}, 2023.
+
+\bibitem[Kondratyuk et~al.(2021)Kondratyuk, Yuan, Li, Zhang, Tan, Brown, and
+  Gong]{kondratyuk2021movinets}
+Dan Kondratyuk, Liangzhe Yuan, Yandong Li, Li Zhang, Mingxing Tan, Matthew
+  Brown, and Boqing Gong.
+\newblock Movinets: Mobile video networks for efficient video recognition.
+\newblock In \emph{CVPR}, pages 16020--16030, 2021.
+
+\bibitem[Lin et~al.(2019)Lin, Gan, and Han]{lin2019tsm}
+Ji Lin, Chuang Gan, and Song Han.
+\newblock Tsm: Temporal shift module for efficient video understanding.
+\newblock In \emph{ICCV}, pages 7083--7093, 2019.
+
+\bibitem[Lin et~al.(2017)Lin, Doll{\'a}r, Girshick, He, Hariharan, and
+  Belongie]{lin2017fpn}
+Tsung-Yi Lin, Piotr Doll{\'a}r, Ross Girshick, Kaiming He, Bharath Hariharan,
+  and Serge Belongie.
+\newblock Feature pyramid networks for object detection.
+\newblock In \emph{CVPR}, pages 2117--2125, 2017.
+
+\bibitem[Liu et~al.(2022)Liu, Zheng, Lin, Ni, and Fang]{liu2022ins}
+Leyao Liu, Tian Zheng, Yun-Jou Lin, Kai Ni, and Lu Fang.
+\newblock Ins-conv: Incremental sparse convolution for online 3d segmentation.
+\newblock In \emph{CVPR}, pages 18975--18984, 2022.
+
+\bibitem[Liu et~al.(2019)Liu, Tang, Lin, and Han]{liu2019point}
+Zhijian Liu, Haotian Tang, Yujun Lin, and Song Han.
+\newblock Point-voxel cnn for efficient 3d deep learning.
+\newblock In \emph{NeurIPS}, pages 963--973, 2019.
+
+\bibitem[McCormac et~al.(2017)McCormac, Handa, Davison, and
+  Leutenegger]{mccormac2017semanticfusion}
+John McCormac, Ankur Handa, Andrew Davison, and Stefan Leutenegger.
+\newblock Semanticfusion: Dense 3d semantic mapping with convolutional neural
+  networks.
+\newblock In \emph{ICRA}, pages 4628--4635. IEEE, 2017.
+
+\bibitem[Mousavian et~al.(2019)Mousavian, Eppner, and Fox]{Mousavian_2019_ICCV}
+Arsalan Mousavian, Clemens Eppner, and Dieter Fox.
+\newblock 6-dof graspnet: Variational grasp generation for object manipulation.
+\newblock In \emph{ICCV}, pages 2901--2910, 2019.
+
+\bibitem[Narita et~al.(2019)Narita, Seno, Ishikawa, and
+  Kaji]{narita2019panopticfusion}
+Gaku Narita, Takashi Seno, Tomoya Ishikawa, and Yohsuke Kaji.
+\newblock Panopticfusion: Online volumetric semantic mapping at the level of
+  stuff and things.
+\newblock In \emph{IROS}, pages 4205--4212. IEEE, 2019.
+
+\bibitem[Nathan~Silberman and Fergus(2012)]{Silberman2012nyu}
+Pushmeet~Kohli Nathan~Silberman, Derek~Hoiem and Rob Fergus.
+\newblock Indoor segmentation and support inference from rgbd images.
+\newblock In \emph{ECCV}, 2012.
+
+\bibitem[Oord et~al.(2016)Oord, Dieleman, Zen, Simonyan, Vinyals, Graves,
+  Kalchbrenner, Senior, and Kavukcuoglu]{oord2016wavenet}
+Aaron van~den Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol Vinyals,
+  Alex Graves, Nal Kalchbrenner, Andrew Senior, and Koray Kavukcuoglu.
+\newblock Wavenet: A generative model for raw audio.
+\newblock \emph{arXiv preprint arXiv:1609.03499}, 2016.
+
+\bibitem[Pan et~al.(2022)Pan, Lin, Zhu, Shao, and Li]{pan2022st}
+Junting Pan, Ziyi Lin, Xiatian Zhu, Jing Shao, and Hongsheng Li.
+\newblock St-adapter: Parameter-efficient image-to-video transfer learning.
+\newblock \emph{NeurIPS}, 35:\penalty0 26462--26477, 2022.
+
+\bibitem[Park et~al.(2017)Park, Zhou, and Koltun]{park2017colored}
+Jaesik Park, Qian-Yi Zhou, and Vladlen Koltun.
+\newblock Colored point cloud registration revisited.
+\newblock In \emph{ICCV}, pages 143--152, 2017.
+
+\bibitem[Qi et~al.(2016)Qi, Su, Nie{\ss}ner, Dai, Yan, and
+  Guibas]{qi2016volumetric}
+Charles~R Qi, Hao Su, Matthias Nie{\ss}ner, Angela Dai, Mengyuan Yan, and
+  Leonidas~J Guibas.
+\newblock Volumetric and multi-view cnns for object classification on 3d data.
+\newblock In \emph{CVPR}, pages 5648--5656, 2016.
+
+\bibitem[Qi et~al.(2017{\natexlab{a}})Qi, Su, Mo, and Guibas]{qi2017pointnet}
+Charles~R Qi, Hao Su, Kaichun Mo, and Leonidas~J Guibas.
+\newblock Pointnet: Deep learning on point sets for 3d classification and
+  segmentation.
+\newblock In \emph{CVPR}, pages 652--660, 2017{\natexlab{a}}.
+
+\bibitem[Qi et~al.(2017{\natexlab{b}})Qi, Yi, Su, and Guibas]{qi2017pointnet++}
+Charles~Ruizhongtai Qi, Li Yi, Hao Su, and Leonidas~J Guibas.
+\newblock Pointnet++: Deep hierarchical feature learning on point sets in a
+  metric space.
+\newblock In \emph{NeurIPS}, pages 5099--5108, 2017{\natexlab{b}}.
+
+\bibitem[Qi et~al.(2019)Qi, Litany, He, and Guibas]{Qi_2019_ICCV}
+Charles~R. Qi, Or Litany, Kaiming He, and Leonidas~J. Guibas.
+\newblock Deep hough voting for 3d object detection in point clouds.
+\newblock In \emph{ICCV}, pages 9277--9286, 2019.
+
+\bibitem[Ramakrishnan et~al.(2022)Ramakrishnan, Chaplot, Al-Halah, Malik, and
+  Grauman]{ramakrishnan2022poni}
+Santhosh~Kumar Ramakrishnan, Devendra~Singh Chaplot, Ziad Al-Halah, Jitendra
+  Malik, and Kristen Grauman.
+\newblock Poni: Potential functions for objectgoal navigation with
+  interaction-free learning.
+\newblock In \emph{CVPR}, pages 18890--18900, 2022.
+
+\bibitem[Ren et~al.(2016)Ren, He, Girshick, and Sun]{ren2016faster}
+Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun.
+\newblock Faster r-cnn: towards real-time object detection with region proposal
+  networks.
+\newblock \emph{TPAMI}, 39\penalty0 (6):\penalty0 1137--1149, 2016.
+
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and
+  Brox]{ronneberger2015u}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In \emph{MICCAI}, pages 234--241. Springer, 2015.
+
+\bibitem[Rukhovich et~al.(2022)Rukhovich, Vorontsova, and
+  Konushin]{rukhovich2022fcaf3d}
+Danila Rukhovich, Anna Vorontsova, and Anton Konushin.
+\newblock Fcaf3d: fully convolutional anchor-free 3d object detection.
+\newblock In \emph{ECCV}, pages 477--493. Springer, 2022.
+
+\bibitem[Rukhovich et~al.(2023)Rukhovich, Vorontsova, and
+  Konushin]{rukhovich2023tr3d}
+Danila Rukhovich, Anna Vorontsova, and Anton Konushin.
+\newblock Tr3d: Towards real-time indoor 3d object detection.
+\newblock \emph{arXiv preprint arXiv:2302.02858}, 2023.
+
+\bibitem[Schult et~al.(2022)Schult, Engelmann, Hermans, Litany, Tang, and
+  Leibe]{schult2022mask3d}
+Jonas Schult, Francis Engelmann, Alexander Hermans, Or Litany, Siyu Tang, and
+  Bastian Leibe.
+\newblock Mask3d for 3d semantic instance segmentation.
+\newblock \emph{arXiv preprint arXiv:2210.03105}, 2022.
+
+\bibitem[Song et~al.(2015)Song, Lichtenberg, and Xiao]{song2015sun}
+Shuran Song, Samuel~P Lichtenberg, and Jianxiong Xiao.
+\newblock Sun rgb-d: A rgb-d scene understanding benchmark suite.
+\newblock In \emph{CVPR}, pages 567--576, 2015.
+
+\bibitem[Vu et~al.(2022)Vu, Kim, Luu, Nguyen, and Yoo]{vu2022softgroup}
+Thang Vu, Kookhoi Kim, Tung~M Luu, Thanh Nguyen, and Chang~D Yoo.
+\newblock Softgroup for 3d instance segmentation on point clouds.
+\newblock In \emph{CVPR}, pages 2708--2717, 2022.
+
+\bibitem[Wang et~al.(2022)Wang, Ding, Dong, Shi, Li, Li, Li, and
+  Wang]{wang2022cagroup3d}
+Haiyang Wang, Lihe Ding, Shaocong Dong, Shaoshuai Shi, Aoxue Li, Jianan Li,
+  Zhenguo Li, and Liwei Wang.
+\newblock Cagroup3d: Class-aware grouping for 3d object detection on point
+  clouds.
+\newblock \emph{arXiv preprint arXiv:2210.04264}, 2022.
+
+\bibitem[Wu et~al.(2022)Wu, Xu, Wang, Xia, Zhao, Lu, and Yan]{wu2023anyview}
+Zhenyu Wu, Xiuwei Xu, Ziwei Wang, Chong Xia, Linqing Zhao, Jiwen Lu, and Haibin
+  Yan.
+\newblock Anyview: generalizable indoor 3d object detection with variable
+  frames.
+\newblock \emph{arXiv preprint arXiv:2310.05346}, 2022.
+
+\bibitem[Yi et~al.(2019)Yi, Zhao, Wang, Sung, and Guibas]{yi2019gspn}
+Li Yi, Wang Zhao, He Wang, Minhyuk Sung, and Leonidas~J Guibas.
+\newblock Gspn: Generative shape proposal network for 3d instance segmentation
+  in point cloud.
+\newblock In \emph{CVPR}, pages 3947--3956, 2019.
+
+\bibitem[Zhang et~al.(2020)Zhang, Zhu, Zheng, and Xu]{zhang2020fusion}
+Jiazhao Zhang, Chenyang Zhu, Lintao Zheng, and Kai Xu.
+\newblock Fusion-aware point convolution for online semantic 3d scene
+  segmentation.
+\newblock In \emph{CVPR}, pages 4534--4543, 2020.
+
+\bibitem[Zhang et~al.(2023)Zhang, Dai, Meng, Fan, Chen, Xu, and
+  Wang]{zhang20233d}
+Jiazhao Zhang, Liu Dai, Fanpeng Meng, Qingnan Fan, Xuelin Chen, Kai Xu, and He
+  Wang.
+\newblock 3d-aware object goal navigation via simultaneous exploration and
+  identification.
+\newblock In \emph{CVPR}, pages 6672--6682, 2023.
+
+\bibitem[Zhao et~al.(2021)Zhao, Agrawal, Batra, and
+  Schwing]{zhao2021surprising}
+Xiaoming Zhao, Harsh Agrawal, Dhruv Batra, and Alexander~G Schwing.
+\newblock The surprising effectiveness of visual odometry techniques for
+  embodied pointgoal navigation.
+\newblock In \emph{ICCV}, pages 16127--16136, 2021.
+
+\end{thebibliography}

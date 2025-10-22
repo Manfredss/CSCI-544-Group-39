@@ -1,0 +1,25 @@
+\section{Discussion and Future Work}
+\label{sec:conclusion}
+
+\textbf{Limitations.}
+The only parameterized component of \method is the projection operator and, therefore, limitations and improvement opportunities stem from the projection operator~\citep{ultra} and its interplay with the multi-hop query answering framework. 
+For instance, new mechanisms of tackling the multi-source propagation, better pre-training strategies, and scaling might positively impact the zero-shot \clqa performance.
+The support for very large KGs could be further improved by adopting more scalable entity-level GNN predictors like A*Net~\citep{astarnet} or AdaProp~\citep{adaprop} which have been shown to scale to graphs of millions of nodes. We are optimistic that \method could scale to such graphs  when integrated with those models.
+
+\textbf{Conclusion and Future Work.}
+We presented \method, the first foundation model for inductive zero-shot complex logical query answering on any KG that combines a parameterized, inductive projection operator with non-parametric logical operators.
+Alleviating the multi-source message propagation issue is the key to adapt pre-trained projection operators into the multi-hop query answering framework.
+\method performs comparably to or better than strong baselines trained specifically on each graph and at the same time retains key qualitative features like faithfullness and answer cardinality estimation.
+Having a single query answering model working on any KG, the scope for future work is vast as highlighted by \citet{ren2023ngdb} and includes, for example, better theoretical understanding of logical expressiveness bounds, supporting more query patterns beyond simple trees~\citep{efok, fit}, queries without anchor nodes~\citep{egnn_qe}, hyper-relational queries~\citep{starqe}, queries with numerical literals~\citep{demir_litcqd}, or temporal queries~\citep{lin2023tflex}.
+
+\textbf{Impact Statement.}
+We do not envision direct ethical or societal consequences of this work. 
+Still, models capable of zero-shot inference on any graph might be applied to domains other than those designed by the authors. 
+Positive impacts include saving compute resources and reducing carbon footprint of training specific models tailored for each graph.
+
+\vspace{-1em}
+\section*{Acknowledgements}
+
+This project is supported by Intel-Mila partnership program, the Natural Sciences and Engineering Research Council (NSERC) Discovery Grant, the Canada CIFAR AI Chair Program, collaboration grants between Microsoft Research and Mila, Samsung Electronics Co., Ltd., Amazon Faculty Research Award, Tencent AI Lab Rhino-Bird Gift Fund and a NRC Collaborative R\&D Project (AI4D-CORE-06). This project was also partially funded by IVADO Fundamental Research Project grant PRF-2019-3583139727. The computation resource of this project is supported by Mila\footnote{\url{https://mila.quebec/}}, Calcul Qu\'ebec\footnote{\url{https://www.calculquebec.ca/}} and the Digital Research Alliance of Canada\footnote{\url{https://alliancecan.ca/}}.
+
+This work was funded in part by the National Science Foundation (NSF) awards, CCF-1918483, CAREER IIS-1943364 and CNS-2212160, Amazon Research Award, AnalytiXIN, and the Wabash Heartland Innovation Network (WHIN). Computing infrastructure was supported in part by CNS-1925001 (CloudBank). Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the sponsors.

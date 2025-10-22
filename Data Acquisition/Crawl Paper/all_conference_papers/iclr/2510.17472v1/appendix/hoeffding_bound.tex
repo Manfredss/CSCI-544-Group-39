@@ -1,0 +1,106 @@
+\begin{proof}
+For each rival $j\neq c^\star$, consider the random variable
+\begin{equation}\label{eq:random_variable_sum_auxiliary}
+    Z_j^{(n)} = N_{c^\star}^{(n)} -  N_j^{(n)}= \sum_{i=1}^n\Bigl(\mathbf 1\{X_i=c^\star\}-\mathbf 1\{X_i=j\}\Bigr).
+\end{equation}
+The summands $Y_i^j = \mathbf 1\{X_i=c^\star\}-\mathbf 1\{X_i=j\}$ are independent identically distributed random variables, bounded in $[-1,1]$, with expected value $\mu_j = p_{c^\star}-p_j>0$.
+Applying Hoeffding's inequality we obtain
+\small
+    $$
+    \mathbb{P}\bigl[Z_j^{(n)} \leq 0\bigr] \leq \mathbb{P}\left[\frac{Z_j^{(n)}}{n}- \mu_j\leq -\mu_j\right] = \mathbb{P}\left[-Z_j^{(n)}+ \mathbb{E}[Z_j^{(n)}]\geq \mathbb{E}[Z_j^{(n)}]\right] \leq \exp\left(-\frac{n}{2}(p_{c^\star}-p_j)^2\right).
+    $$
+\normalsize
+The event $\{\hat{c}_n\neq c^\star\}$ implies $Z_j^{(n)}\le 0$ for some $j\neq c^\star$. Thus,
+$$
+    \mathbb{P}\bigl[\hat{c}_n\neq c\bigr]
+    \le \sum_{j\neq c}\mathbb{P}\bigl[Z_j^{(n)}\le 0\bigr]
+    \le \sum_{j\neq c}\exp\left(-\frac{n}{2}(p_{c^\star}-p_j)^2\right),
+$$
+which establishes the exponential bound. This can be further simplified as 
+$$
+    \mathbb{P}\bigl[\hat{c}_n\neq c\bigr]
+    \le (k-1)\exp\left(-\frac{n}{2}\min_{j\neq c}(p_{c^\star}-p_j)^2\right).
+$$
+Since the upper bound decays to~$0$ as $n\to \infty$, and $k$ is finite, we obtain
+$$
+    \mathbb{P}[\hat{c}_n=c^\star]\to 1\quad \text{as\; $n\to\infty$}.
+$$
+\end{proof}
+
+\subsubsection{Weighted majority vote for experts with different accuracies}\label{app:weighted_majority_vote}
+We now consider a setting where we have access to multiple models with varying expertise: some are cheaper but less accurate, while others are more expensive but more precise. To capture this heterogeneity, we assign each expert a weight, denoted by $\omega_\ell$, that reflects its reliability. Specifically, we assume there are $L$ experts, and expert $\ell$ contributes $n_\ell$ samples.
+
+Instead of using a simple majority vote, we aggregate predictions via a weighted majority vote
+$$
+\hat{c}_n^\omega = \arg\max_j \sum_{\ell =1}^L \omega_\ell { N_j^{(n_\ell)}},
+$$
+where $N_j^{(n_\ell)}= \sum_{i=1}^{n^\ell} \mathbf 1\!\bigl\{X^{(\ell)}_i=j\bigr\}$ is the number of samples from expert $\ell$ predicting label $j$. The total sample size is $n=\sum_\ell n_\ell$.
+
+In this setting, the data across experts are non-exchangeable, since each expert has a different own distribution over labels.
+
+\paragraph{Error bound for weighted majority voting.}
+We derive an error bound using Hoeffding’s inequality.
+For every rival $j\neq c^\star$, define the weighted margin
+$$
+Z_{j,\omega}^{(n)}
+= N_{c,\omega}^{(n)} - N_{j,\omega}^{(n)} 
+    = \sum_{\ell=1}^L\sum_{i=1}^{n_\ell}
+      \omega_\ell \left(\mathbf 1\{X_i^{(\ell)}=c^\star\}-\mathbf 1\{X_i^{(\ell)}=j\}\right).
+$$
+Each summand $Y_{i,\ell}^{j}=\omega_\ell \left(\mathbf 1\{X_i^{(\ell)}=c^\star\}-\mathbf 1\{X_i^{(\ell)}=j\}\right)$ is independent and bounded between $-\omega_\ell$ and $\omega_\ell$.
+The sum $Z_{j,\omega}^{(n)}$ has mean
+$$
+\mathbb{E}\left[Z_{j,\omega}^{(n)}\right] = \sum_{\ell=1}^Ln_\ell \,\omega_\ell\left(p_{c^\star}^{\ell}-p_j^\ell \right).
+$$
+Applying Hoeffding’s inequality, we obtain
+\begin{align*}
+    \mathbb{P}\left[\hat{c}_n^\omega\neq c^\star\right]
+    &\le \sum_{j\neq c}\mathbb{P}\left[Z_{j,\omega}^{(n)}\le 0\right]\le \sum_{j\neq c^\star}\exp\left(-\frac{1}{2}\frac{\left(\sum_{\ell=1}^L{n_\ell\,\omega_\ell\left(p_{c^\star}^\ell-p_j^\ell\right)}\right)^2}{\sum_{\ell = 1}^Ln_\ell \,\omega_\ell^2}\right)\\
+    &\le(k-1) \exp\left(-\frac{1}{2}\frac{\left(\sum_{\ell=1}^L{n_\ell\,\omega_\ell\min_{j\neq c^\star}\left(p_{c^\star}^\ell-p_j^\ell\right)}\right)^2}{\sum_{\ell = 1}^Ln_\ell \,\omega_\ell^2}\right)\\
+    &\le (k-1)\exp\left(-\frac{1}{2}\sum_{\ell=1}^Ln_\ell\frac{n_\ell\,\omega_\ell^2}{\sum_{\ell =1}^{L} n_\ell\,\omega_\ell^2}\min_{j\neq c^\star}\left(p_{c^\star}^\ell-p_j^\ell\right)^2\right).    
+\end{align*}
+If each expert contributes the same number of sample $(n_\ell = n)$, the previous bound can be simplified as
+\begin{align*}
+    \mathbb{P}\left[\hat{c}_n^\omega\neq c^\star\right]
+    &\le \sum_{j\neq c^\star}\mathbb{P}\left[Z_{j,\omega}^{(n)}\le 0\right]\le \sum_{j\neq c^\star}\exp\left(-\frac{n}{2}\frac{\left(\sum_{\ell=1}^L\omega_\ell\left(p_{c^\star}^\ell-p_j^\ell\right)\right)^2}{\sum_{\ell=1}^L \omega_\ell^2}\right)\\
+    &\le (k-1)\exp\left(-\frac{n}{2}\sum_{\ell=1}^L\left(\frac{\omega_\ell^2}{\sum_{\ell=1}^L\omega_\ell^2}\right)\min_{j\neq c^\star}\left(p_{c^\star}^\ell-p_j^\ell\right)^2\right).    
+\end{align*}
+
+\paragraph{Optimal weights based on expert accuracy.}
+Recall that our decision rule maps the set of expert responses $X$ to a final answer. We say a decision rule is \emph{optimal} if it minimises the probability of error. Formally, letting $D$ denote the rule, we want to minimise
+$$
+\mathbb{P}\left[D(X)\neq c^\star\right], \quad X = (X_{i_\ell}^{(\ell)}),\,\, \ell = 1,\dots, L,\,\,\,\, i_\ell = 1,\dots,n_\ell,
+$$
+where $c^\star$ is the true answer.
+To derive the optimal decision rule, we make the following assumptions.
+\begin{assumption}\label{assumption:independence_between_draws}
+    Independence: conditioned on the ground-truth label $c^\star$, the random variables $X_i^{(\ell)}$, corresponding to the $i$-th response from expert $\ell$, are mutually independent across both experts and repetitions.
+\end{assumption}
+\begin{assumption}\label{assumption:unbiased_truth}
+    Unbiased truth: the ground-truth label is uniformly distributed, i.e. $\mathbb{P}[c^\star=j] = 1/k$ for $j=1, \dots, k$.
+\end{assumption}
+
+Suppose that we know the confusion matrix $\left(C_{ij}^{(\ell)}\right)_{ij}$ for each expert $\ell$, where $$C_{ij}^{(\ell)} = \mathbb{P}\left[X^{(\ell)} = i\big \vert c^\star=j\right]$$ denotes the probability that model $\ell$ will record value $i$ given $j$ is the true response. 
+Then, the decision rule that minimises the Bayes risk coincides with the Maximum a Posteriori (MAP) rule,
+$$
+D^{\text{OPT}}(X)=\arg\max_j\; \log \mathbb{P}[c^\star=j\vert X].
+$$
+By Bayes' theorem we have
+\begin{align*}
+  \arg\max_j \,\,\mathbb{P}[c^\star=j\vert X] &= \arg\max_j \,\,\mathbb{P}[c^\star=j] \mathbb{P}[X\vert c^\star=j]\\
+  &= \arg\max_j \,\, \prod_{\ell=1}^L \prod_{i=1}^{n_\ell}\mathbb{P}\left[X_i^{(\ell)}\big \vert c^\star=j\right] = \prod_{\ell=1}^L \prod_{i=1}^{n_\ell} C_{j\ X_i^{(\ell)}}^{(\ell)},  
+\end{align*}
+which results into
+$$
+D^{\text{OPT}}(X)=\arg\max_j\; \sum_{\ell=1}^L \sum_{i=1}^{n_\ell}\log C_{j\ X_i^{(\ell)}}^{(\ell)}.
+$$
+Now, imagine that we only know each expert’s overall competence level $q_\ell \in (0,1)$, defined as the probability of correctly predicting the true label,
+$$q_\ell = \mathbb{P}\left[X^{(\ell)}= j\big\vert c^\star=j\right],$$
+but not the full confusion matrix.
+A natural approximation is to assume that errors are distributed uniformly across the $k-1$ incorrect labels, i.e.
+$$\mathbb{P}[X^{(\ell)}= i\big\vert c^\star= j\neq i] = \frac{1-q_\ell}{k-1}.$$
+Without this approximation, one would need to estimate the full confusion matrices. This can be done, for example, via the Expectation–Maximisation algorithm \citep{dawid_skene_79}.
+
+
+
+

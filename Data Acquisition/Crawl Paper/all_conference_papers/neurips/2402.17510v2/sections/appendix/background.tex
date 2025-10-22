@@ -1,0 +1,70 @@
+% !TEX root = ../../main.tex
+
+\section{Analysis of Contrastive Learning for Multiple Captions per Image}
+\label{app:analysis-of-contrastive}
+
+\begin{thm}{1}[Suboptimality of contrastive learning with multiple captions per image]
+	\label{thm:suboptimality-app}	
+	Given an image $\img{}{}$, a set of matching captions $\mathcal{C} = \{ \capt{}{A}, \capt{}{B} \}$, and a contrastive learning loss function $\infonce{}$ that optimizes for task $T$, 
+	image representations learned during contrastive learning will be minimal sufficient and will never be task-optimal image representations.
+	More formally, assume that:
+	\begin{itemize}
+		\item[$(H_1)$] $\forall i, j \in \{A, B\}\ \text{such that}\ i \neq j,\ I(\zminsuff{i} ; \capt{}{i}) = I(\img{}{} ; \capt{}{i} \mid \capt{}{j}) + I(\img{}{} ; \capt{}{i} ; \capt{}{j})$.
+		\item[$(H_2)$] $\exists i, j \in \{A, B\}\ \text{with}\ i \neq j\ \text{such that}\ I(\img{}{} ; \capt{}{i} \mid \capt{}{j}) > 0$.
+	\end{itemize}
+	Then the following holds:
+	\begin{itemize}
+		\item[$(T_2)$] $\exists \ i \in \{A, B\}\ \text{such that}\ I(\zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B}) > I(\zminsuff{i} ; \capt{}{i})$.
+	\end{itemize} 
+\end{thm}
+
+\begin{proof} 
+Following Eq.~\ref{eq:task_relevant} we define a task-optimal representation of an image $\img{}{}$ w.r.t.\ all matching captions in $\mathcal{C}$ as:
+	\begin{align*}
+		I(\zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B} )
+		 =
+		 \underbrace{ I( \img{}{} ; \capt{}{A} \mid \capt{}{B}) }_{\textit{$C_A$}}
+		+
+		\underbrace{I( \img{}{} ; \capt{}{B} \mid \capt{}{A})}_{\textit{$C_B$}}
+		+
+		\underbrace{I( \img{}{} ; \capt{}{A} ;  \capt{}{B})}_{\textit{$S$}}.
+	\end{align*}
+
+Furthermore, following Definition~\ref{def:zimgminsuff}, we define minimal sufficient representations of image $\img{}{}$ w.r.t.\ each matching caption in $\mathcal{C}$ as a combination of caption-specific and shared information:
+	\begin{align*}
+		I(\zminsuff{A} ; \capt{}{A})
+		 & =
+		 \underbrace{I(\img{}{} ; \capt{}{A} \mid \capt{}{B})}_{\textit{$C_A$}}
+		+
+		\underbrace{I(\img{}{} ; \capt{}{A} ; \capt{}{B})}_{\textit{$S$}} 
+		\\
+		I(\zminsuff{B} ; \capt{}{B})
+		& =
+		 \underbrace{I(\img{}{} ; \capt{}{B} \mid \capt{}{A})}_{\textit{$C_B$}}
+		+
+		\underbrace{ I(\img{}{} ; \capt{}{A} ; \capt{}{B}) }_{\textit{$S$}}.
+	\end{align*}
+Following assumption $H_2$, for at least one caption $\capt{}{} \in \mathcal{C}$ associated with the image $\img{}{}$, caption-specific information is positive. Therefore, we consider two cases:
+\begin{itemize}
+\item If caption-specific information of $\capt{}{A}$ is positive, that is, if $I( \img{}{} ; \capt{}{A} \mid \capt{}{B}) > 0$:
+	\begin{align*}
+	\underbrace{I( \img{}{} ; \capt{}{A} \mid \capt{}{B}) + I( \img{}{} ; \capt{}{B} \mid \capt{}{A}) + I( \img{}{} ; \capt{}{A} ;  \capt{}{B})}_{\textit{$(\zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B} )$}}
+	>
+	\underbrace{ I(\img{}{} ; \capt{}{B} \mid \capt{}{A}) + I(\img{}{} ; \capt{}{A} ; \capt{}{B}) }_{\textit{$I(\zminsuff{B} ; \capt{}{B})$} } \Rightarrow \\
+	\Rightarrow
+	I( \zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B} ) > I(\zminsuff{B} ; \capt{}{B}).
+	\end{align*}
+
+\item Similarly, if caption-specific information of $\capt{}{B}$ is positive, that is, if $I( \img{}{} ; \capt{}{B} \mid \capt{}{A}) > 0$:
+
+	\begin{align*}
+	\underbrace{I( \img{}{} ; \capt{}{A} \mid \capt{}{B}) + I( \img{}{} ; \capt{}{B} \mid \capt{}{A}) + I( \img{}{} ; \capt{}{A} ;  \capt{}{B})}_{\textit{$(\zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B} )$}}
+	>
+	\underbrace{ I(\img{}{} ; \capt{}{A} \mid \capt{}{B}) + I(\img{}{} ; \capt{}{A} ; \capt{}{B}) }_{\textit{$I(\zminsuff{A} ; \capt{}{A})$} } \Rightarrow \\
+	\Rightarrow
+	I( \zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B} ) > I(\zminsuff{A} ; \capt{}{A}).
+	\end{align*}
+\end{itemize}
+
+Therefore, we show that in a setup where a single image is associated with multiple captions, and given at least one caption contains caption-specific information, image representations learned contrastively w.r.t.\ associated captions would contain less information than task-optimal image representation: $\exists \ i \in \{A, B\}\ \text{such that}\ I(\zoptimal{}{\mathcal{C}} ; \capt{}{A}\capt{}{B}) > I(\zminsuff{i} ; \capt{}{i})$.
+\end{proof}

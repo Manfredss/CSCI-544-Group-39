@@ -1,0 +1,1009 @@
+\begin{thebibliography}{100}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{LiuCCPZYH20}
+W.~Liu, X.~Chang, L.~Chen, D.~Phung, X.~Zhang, Y.~Yang, A.~G. Hauptmann,
+  Pair-based uncertainty and diversity promoting early active learning for
+  person re-identification, {ACM} Trans. Intell. Syst. Technol. 11~(2) (2020)
+  21:1--21:15.
+
+\bibitem{LiLCYPZ19}
+Z.~Li, W.~Liu, X.~Chang, L.~Yao, M.~Prakash, H.~Zhang, Domain-aware
+  unsupervised cross-dataset person re-identification, in: J.~Li, S.~Wang,
+  S.~Qin, X.~Li, S.~Wang (Eds.), Advanced Data Mining and Applications - 15th
+  International Conference, {ADMA} 2019, Dalian, China, November 21-23, 2019,
+  Proceedings, Vol. 11888 of Lecture Notes in Computer Science, Springer, 2019,
+  pp. 406--420.
+
+\bibitem{ChengGCSHZ18}
+D.~Cheng, Y.~Gong, X.~Chang, W.~Shi, A.~G. Hauptmann, N.~Zheng, Deep feature
+  learning via structured graph laplacian embedding for person
+  re-identification, Pattern Recognit. 82 (2018) 94--104.
+
+\bibitem{LiuCCY18}
+W.~Liu, X.~Chang, L.~Chen, Y.~Yang, Semi-supervised bayesian attribute learning
+  for person re-identification, in: Proceedings of the Thirty-Second {AAAI}
+  Conference on Artificial Intelligence, (AAAI-18), the 30th innovative
+  Applications of Artificial Intelligence (IAAI-18), and the 8th {AAAI}
+  Symposium on Educational Advances in Artificial Intelligence (EAAI-18), New
+  Orleans, Louisiana, USA, February 2-7, 2018, {AAAI} Press, 2018, pp.
+  7162--7169.
+
+\bibitem{ChengCLHGZ17}
+D.~Cheng, X.~Chang, L.~Liu, A.~G. Hauptmann, Y.~Gong, N.~Zheng, Discriminative
+  dictionary learning with ranking metric embedded for person
+  re-identification, in: Proceedings of the Twenty-Sixth International Joint
+  Conference on Artificial Intelligence, {IJCAI} 2017, Melbourne, Australia,
+  August 19-25, 2017, 2017, pp. 964--970.
+
+\bibitem{LiuC0Y17}
+W.~Liu, X.~Chang, L.~Chen, Y.~Yang, Early active learning with pairwise
+  constraint for person re-identification, in: Machine Learning and Knowledge
+  Discovery in Databases - European Conference, {ECML} {PKDD} 2017, Skopje,
+  Macedonia, September 18-22, 2017, Proceedings, Part {I}, Vol. 10534 of
+  Lecture Notes in Computer Science, Springer, 2017, pp. 103--118.
+
+\bibitem{li_deepreid_2014}
+W.~Li, R.~Zhao, T.~Xiao, X.~Wang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2014/html/Li_DeepReID_Deep_Filter_2014_CVPR_paper.html}{{DeepReID}:
+  {Deep} {Filter} {Pairing} {Neural} {Network} for {Person}
+  {Re}-{Identification}}, 2014, pp. 152--159.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2014/html/Li_DeepReID_Deep_Filter_2014_CVPR_paper.html}
+
+\bibitem{zheng_scalable_2015}
+L.~Zheng, L.~Shen, L.~Tian, S.~Wang, J.~Wang, Q.~Tian,
+  \href{https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zheng_Scalable_Person_Re-Identification_ICCV_2015_paper.html}{Scalable
+  {Person} {Re}-{Identification}: {A} {Benchmark}}, 2015, pp. 1116--1124.
+\newline\urlprefix\url{https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zheng_Scalable_Person_Re-Identification_ICCV_2015_paper.html}
+
+\bibitem{liu_unity_2020}
+C.~Liu, X.~Chang, Y.-D. Shen,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_Unity_Style_Transfer_for_Person_Re-Identification_CVPR_2020_paper.html}{Unity
+  {Style} {Transfer} for {Person} {Re}-{Identification}}, 2020, pp. 6887--6896.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_Unity_Style_Transfer_for_Person_Re-Identification_CVPR_2020_paper.html}
+
+\bibitem{zheng_unlabeled_2017}
+Z.~Zheng, L.~Zheng, Y.~Yang,
+  \href{https://openaccess.thecvf.com/content_iccv_2017/html/Zheng_Unlabeled_Samples_Generated_ICCV_2017_paper.html}{Unlabeled
+  {Samples} {Generated} by {GAN} {Improve} the {Person} {Re}-{Identification}
+  {Baseline} in {Vitro}}, 2017, pp. 3754--3762.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_iccv_2017/html/Zheng_Unlabeled_Samples_Generated_ICCV_2017_paper.html}
+
+\bibitem{wang_unsupervised_2014}
+H.~Wang, S.~Gong, T.~Xiang,
+  \href{http://www.bmva.org/bmvc/2014/papers/paper019/index.html}{Unsupervised
+  {Learning} of {Generative} {Topic} {Saliency} for {Person}
+  {Re}-identification}, in: Proceedings of the {British} {Machine} {Vision}
+  {Conference} 2014, British Machine Vision Association, Nottingham, 2014, pp.
+  48.1--48.11.
+\newblock \href {https://doi.org/10.5244/C.28.48} {\path{doi:10.5244/C.28.48}}.
+\newline\urlprefix\url{http://www.bmva.org/bmvc/2014/papers/paper019/index.html}
+
+\bibitem{zheng_person_2016}
+L.~Zheng, Y.~Yang, A.~G. Hauptmann,
+  \href{http://arxiv.org/abs/1610.02984}{Person {Re}-identification: {Past},
+  {Present} and {Future}}, arXiv:1610.02984 [cs]ArXiv: 1610.02984 (Oct. 2016).
+\newline\urlprefix\url{http://arxiv.org/abs/1610.02984}
+
+\bibitem{chahar_study_2017}
+H.~Chahar, N.~Nain, A {Study} on {Deep} {Convolutional} {Neural} {Network}
+  {Based} {Approaches} for {Person} {Re}-identification, in: B.~U. Shankar,
+  K.~Ghosh, D.~P. Mandal, S.~S. Ray, D.~Zhang, S.~K. Pal (Eds.), Pattern
+  {Recognition} and {Machine} {Intelligence}, Lecture {Notes} in {Computer}
+  {Science}, Springer International Publishing, Cham, 2017, pp. 543--548.
+\newblock \href {https://doi.org/10.1007/978-3-319-69900-4_69}
+  {\path{doi:10.1007/978-3-319-69900-4_69}}.
+
+\bibitem{wang_survey_2018}
+K.~Wang, H.~Wang, M.~Liu, X.~Xing, T.~Han, Survey on person re-identification
+  based on deep learning, CAAI Trans. Intell. Technol. (2018).
+\newblock \href {https://doi.org/10.1049/TRIT.2018.1001}
+  {\path{doi:10.1049/TRIT.2018.1001}}.
+
+\bibitem{lavi_survey_2018}
+B.~Lavi, M.~F. Serj, I.~Ullah, \href{http://arxiv.org/abs/1807.05284}{Survey on
+  {Deep} {Learning} {Techniques} for {Person} {Re}-{Identification} {Task}},
+  arXiv:1807.05284 [cs]ArXiv: 1807.05284 (Jul. 2018).
+\newline\urlprefix\url{http://arxiv.org/abs/1807.05284}
+
+\bibitem{wu_deep_2019}
+D.~Wu, S.-J. Zheng, X.-P. Zhang, C.-A. Yuan, F.~Cheng, Y.~Zhao, Y.-J. Lin,
+  Z.-Q. Zhao, Y.-L. Jiang, D.-S. Huang,
+  \href{https://www.sciencedirect.com/science/article/pii/S0925231219301225}{Deep
+  learning-based methods for person re-identification: {A} comprehensive
+  review}, Neurocomputing 337 (2019) 354--371.
+\newblock \href {https://doi.org/10.1016/j.neucom.2019.01.079}
+  {\path{doi:10.1016/j.neucom.2019.01.079}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0925231219301225}
+
+\bibitem{almasawa_survey_2019}
+M.~O. Almasawa, L.~A. Elrefaei, K.~Moria, A {Survey} on {Deep}
+  {Learning}-{Based} {Person} {Re}-{Identification} {Systems}, IEEE Access 7
+  (2019) 175228--175247, conference Name: IEEE Access.
+\newblock \href {https://doi.org/10.1109/ACCESS.2019.2957336}
+  {\path{doi:10.1109/ACCESS.2019.2957336}}.
+
+\bibitem{ye_deep_2021}
+M.~Ye, J.~Shen, G.~Lin, T.~Xiang, L.~Shao, S.~C.~H. Hoi, Deep {Learning} for
+  {Person} {Re}-identification: {A} {Survey} and {Outlook}, IEEE Transactions
+  on Pattern Analysis and Machine Intelligence (2021) 1--1Conference Name: IEEE
+  Transactions on Pattern Analysis and Machine Intelligence.
+\newblock \href {https://doi.org/10.1109/TPAMI.2021.3054775}
+  {\path{doi:10.1109/TPAMI.2021.3054775}}.
+
+\bibitem{wang_beyond_2020}
+Z.~Wang, Z.~Wang, Y.~Zheng, Y.~Wu, W.~Zeng, S.~Satoh,
+  \href{http://arxiv.org/abs/1905.10048}{Beyond {Intra}-modality: {A} {Survey}
+  of {Heterogeneous} {Person} {Re}-identification}, arXiv:1905.10048 [cs]ArXiv:
+  1905.10048 (Apr. 2020).
+\newline\urlprefix\url{http://arxiv.org/abs/1905.10048}
+
+\bibitem{leng_survey_2020}
+Q.~Leng, M.~Ye, Q.~Tian, A {Survey} of {Open}-{World} {Person}
+  {Re}-{Identification}, IEEE Transactions on Circuits and Systems for Video
+  Technology 30~(4) (2020) 1092--1108, conference Name: IEEE Transactions on
+  Circuits and Systems for Video Technology.
+\newblock \href {https://doi.org/10.1109/TCSVT.2019.2898940}
+  {\path{doi:10.1109/TCSVT.2019.2898940}}.
+
+\bibitem{wang_high-order_2020}
+G.~Wang, S.~Yang, H.~Liu, Z.~Wang, Y.~Yang, S.~Wang, G.~Yu, E.~Zhou, J.~Sun,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_High-Order_Information_Matters_Learning_Relation_and_Topology_for_Occluded_Person_CVPR_2020_paper.html}{High-{Order}
+  {Information} {Matters}: {Learning} {Relation} and {Topology} for {Occluded}
+  {Person} {Re}-{Identification}}, 2020, pp. 6449--6458.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_High-Order_Information_Matters_Learning_Relation_and_Topology_for_Occluded_Person_CVPR_2020_paper.html}
+
+\bibitem{gao_pose-guided_2020}
+S.~Gao, J.~Wang, H.~Lu, Z.~Liu,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Gao_Pose-Guided_Visible_Part_Matching_for_Occluded_Person_ReID_CVPR_2020_paper.html}{Pose-{Guided}
+  {Visible} {Part} {Matching} for {Occluded} {Person} {ReID}}, 2020, pp.
+  11744--11752.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Gao_Pose-Guided_Visible_Part_Matching_for_Occluded_Person_ReID_CVPR_2020_paper.html}
+
+\bibitem{miao_pose-guided_2019}
+J.~Miao, Y.~Wu, P.~Liu, Y.~Ding, Y.~Yang,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Miao_Pose-Guided_Feature_Alignment_for_Occluded_Person_Re-Identification_ICCV_2019_paper.html}{Pose-{Guided}
+  {Feature} {Alignment} for {Occluded} {Person} {Re}-{Identification}}, 2019,
+  pp. 542--551.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Miao_Pose-Guided_Feature_Alignment_for_Occluded_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{huang_adversarially_2018}
+H.~Huang, D.~Li, Z.~Zhang, X.~Chen, K.~Huang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Huang_Adversarially_Occluded_Samples_CVPR_2018_paper.html}{Adversarially
+  {Occluded} {Samples} for {Person} {Re}-{Identification}}, 2018, pp.
+  5098--5107.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Huang_Adversarially_Occluded_Samples_CVPR_2018_paper.html}
+
+\bibitem{vedaldi_guided_2020}
+L.~He, W.~Liu,
+  \href{https://link.springer.com/10.1007/978-3-030-58604-1_22}{Guided
+  {Saliency} {Feature} {Learning} for {Person} {Re}-identification in {Crowded}
+  {Scenes}}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm (Eds.), Computer
+  {Vision} – {ECCV} 2020, Vol. 12373, Springer International Publishing,
+  Cham, 2020, pp. 357--373, series Title: Lecture Notes in Computer Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58604-1_22}
+  {\path{doi:10.1007/978-3-030-58604-1_22}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58604-1_22}
+
+\bibitem{qian_long-term_2020}
+X.~Qian, W.~Wang, L.~Zhang, F.~Zhu, Y.~Fu, T.~Xiang, Y.-G. Jiang, X.~Xue,
+  \href{https://openaccess.thecvf.com/content/ACCV2020/html/Qian_Long-Term_Cloth-Changing_Person_Re-identification_ACCV_2020_paper.html}{Long-{Term}
+  {Cloth}-{Changing} {Person} {Re}-identification}, 2020.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content/ACCV2020/html/Qian_Long-Term_Cloth-Changing_Person_Re-identification_ACCV_2020_paper.html}
+
+\bibitem{choi_hi-cmd_2020}
+S.~Choi, S.~Lee, Y.~Kim, T.~Kim, C.~Kim,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Choi_Hi-CMD_Hierarchical_Cross-Modality_Disentanglement_for_Visible-Infrared_Person_Re-Identification_CVPR_2020_paper.html}{Hi-{CMD}:
+  {Hierarchical} {Cross}-{Modality} {Disentanglement} for {Visible}-{Infrared}
+  {Person} {Re}-{Identification}}, 2020, pp. 10257--10266.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Choi_Hi-CMD_Hierarchical_Cross-Modality_Disentanglement_for_Visible-Infrared_Person_Re-Identification_CVPR_2020_paper.html}
+
+\bibitem{lu_cross-modality_2020}
+Y.~Lu, Y.~Wu, B.~Liu, T.~Zhang, B.~Li, Q.~Chu, N.~Yu,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Lu_Cross-Modality_Person_Re-Identification_With_Shared-Specific_Feature_Transfer_CVPR_2020_paper.html}{Cross-{Modality}
+  {Person} {Re}-{Identification} {With} {Shared}-{Specific} {Feature}
+  {Transfer}}, 2020, pp. 13379--13389.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Lu_Cross-Modality_Person_Re-Identification_With_Shared-Specific_Feature_Transfer_CVPR_2020_paper.html}
+
+\bibitem{wu_rgb-infrared_2017}
+A.~Wu, W.-S. Zheng, H.-X. Yu, S.~Gong, J.~Lai,
+  \href{https://openaccess.thecvf.com/content_iccv_2017/html/Wu_RGB-Infrared_Cross-Modality_Person_ICCV_2017_paper.html}{{RGB}-{Infrared}
+  {Cross}-{Modality} {Person} {Re}-{Identification}}, 2017, pp. 5380--5389.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_iccv_2017/html/Wu_RGB-Infrared_Cross-Modality_Person_ICCV_2017_paper.html}
+
+\bibitem{farenzena_person_2010}
+M.~Farenzena, L.~Bazzani, A.~Perina, V.~Murino, M.~Cristani, Person
+  re-identification by symmetry-driven accumulation of local features, in: 2010
+  {IEEE} {Computer} {Society} {Conference} on {Computer} {Vision} and {Pattern}
+  {Recognition}, 2010, pp. 2360--2367, iSSN: 1063-6919.
+\newblock \href {https://doi.org/10.1109/CVPR.2010.5539926}
+  {\path{doi:10.1109/CVPR.2010.5539926}}.
+
+\bibitem{li_locally_2013}
+W.~Li, X.~Wang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2013/html/Li_Locally_Aligned_Feature_2013_CVPR_paper.html}{Locally
+  {Aligned} {Feature} {Transforms} across {Views}}, 2013, pp. 3594--3601.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2013/html/Li_Locally_Aligned_Feature_2013_CVPR_paper.html}
+
+\bibitem{zhao_unsupervised_2013}
+R.~Zhao, W.~Ouyang, X.~Wang,
+  \href{https://www.cv-foundation.org/openaccess/content_cvpr_2013/html/Zhao_Unsupervised_Salience_Learning_2013_CVPR_paper.html}{Unsupervised
+  {Salience} {Learning} for {Person} {Re}-identification}, 2013, pp.
+  3586--3593.
+\newline\urlprefix\url{https://www.cv-foundation.org/openaccess/content_cvpr_2013/html/Zhao_Unsupervised_Salience_Learning_2013_CVPR_paper.html}
+
+\bibitem{liao_person_2015}
+S.~Liao, Y.~Hu, X.~Zhu, S.~Z. Li,
+  \href{https://openaccess.thecvf.com/content_cvpr_2015/html/Liao_Person_Re-Identification_by_2015_CVPR_paper.html}{Person
+  {Re}-{Identification} by {Local} {Maximal} {Occurrence} {Representation} and
+  {Metric} {Learning}}, 2015, pp. 2197--2206.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2015/html/Liao_Person_Re-Identification_by_2015_CVPR_paper.html}
+
+\bibitem{li_harmonious_2018}
+W.~Li, X.~Zhu, S.~Gong,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Li_Harmonious_Attention_Network_CVPR_2018_paper.html}{Harmonious
+  {Attention} {Network} for {Person} {Re}-{Identification}}, 2018, pp.
+  2285--2294.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Li_Harmonious_Attention_Network_CVPR_2018_paper.html}
+
+\bibitem{si_dual_2018}
+J.~Si, H.~Zhang, C.-G. Li, J.~Kuen, X.~Kong, A.~C. Kot, G.~Wang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Si_Dual_Attention_Matching_CVPR_2018_paper.html}{Dual
+  {Attention} {Matching} {Network} for {Context}-{Aware} {Feature} {Sequence}
+  {Based} {Person} {Re}-{Identification}}, 2018, pp. 5363--5372.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Si_Dual_Attention_Matching_CVPR_2018_paper.html}
+
+\bibitem{zhao_deeply-learned_2017}
+L.~Zhao, X.~Li, Y.~Zhuang, J.~Wang,
+  \href{https://openaccess.thecvf.com/content_iccv_2017/html/Zhao_Deeply-Learned_Part-Aligned_Representations_ICCV_2017_paper.html}{Deeply-{Learned}
+  {Part}-{Aligned} {Representations} for {Person} {Re}-{Identification}}, 2017,
+  pp. 3219--3228.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_iccv_2017/html/Zhao_Deeply-Learned_Part-Aligned_Representations_ICCV_2017_paper.html}
+
+\bibitem{zhou_point_2017}
+S.~Zhou, J.~Wang, J.~Wang, Y.~Gong, N.~Zheng,
+  \href{https://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Point_to_Set_CVPR_2017_paper.html}{Point
+  to {Set} {Similarity} {Based} {Deep} {Feature} {Learning} for {Person}
+  {Re}-{Identification}}, 2017, pp. 3741--3750.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2017/html/Zhou_Point_to_Set_CVPR_2017_paper.html}
+
+\bibitem{li_person_2017}
+W.~Li, X.~Zhu, S.~Gong,
+  \href{https://www.ijcai.org/proceedings/2017/305}{Person
+  {Re}-{Identification} by {Deep} {Joint} {Learning} of {Multi}-{Loss}
+  {Classification}}, in: Proceedings of the {Twenty}-{Sixth} {International}
+  {Joint} {Conference} on {Artificial} {Intelligence}, International Joint
+  Conferences on Artificial Intelligence Organization, Melbourne, Australia,
+  2017, pp. 2194--2200.
+\newblock \href {https://doi.org/10.24963/ijcai.2017/305}
+  {\path{doi:10.24963/ijcai.2017/305}}.
+\newline\urlprefix\url{https://www.ijcai.org/proceedings/2017/305}
+
+\bibitem{li_learning_2017}
+D.~Li, X.~Chen, Z.~Zhang, K.~Huang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2017/html/Li_Learning_Deep_Context-Aware_CVPR_2017_paper.html}{Learning
+  {Deep} {Context}-{Aware} {Features} {Over} {Body} and {Latent} {Parts} for
+  {Person} {Re}-{Identification}}, 2017, pp. 384--393.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2017/html/Li_Learning_Deep_Context-Aware_CVPR_2017_paper.html}
+
+\bibitem{zhao_spindle_2017}
+H.~Zhao, M.~Tian, S.~Sun, J.~Shao, J.~Yan, S.~Yi, X.~Wang, X.~Tang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2017/html/Zhao_Spindle_Net_Person_CVPR_2017_paper.html}{Spindle
+  {Net}: {Person} {Re}-{Identification} {With} {Human} {Body} {Region} {Guided}
+  {Feature} {Decomposition} and {Fusion}}, 2017, pp. 1077--1085.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2017/html/Zhao_Spindle_Net_Person_CVPR_2017_paper.html}
+
+\bibitem{xiao_learning_2016}
+T.~Xiao, H.~Li, W.~Ouyang, X.~Wang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2016/html/Xiao_Learning_Deep_Feature_CVPR_2016_paper.html}{Learning
+  {Deep} {Feature} {Representations} {With} {Domain} {Guided} {Dropout} for
+  {Person} {Re}-{Identification}}, 2016, pp. 1249--1258.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2016/html/Xiao_Learning_Deep_Feature_CVPR_2016_paper.html}
+
+\bibitem{liu_multi-scale_2016}
+J.~Liu, Z.-J. Zha, Q.~Tian, D.~Liu, T.~Yao, Q.~Ling, T.~Mei,
+  \href{https://doi.org/10.1145/2964284.2967209}{Multi-{Scale} {Triplet} {CNN}
+  for {Person} {Re}-{Identification}}, in: Proceedings of the 24th {ACM}
+  international conference on {Multimedia}, {MM} '16, Association for Computing
+  Machinery, New York, NY, USA, 2016, pp. 192--196.
+\newblock \href {https://doi.org/10.1145/2964284.2967209}
+  {\path{doi:10.1145/2964284.2967209}}.
+\newline\urlprefix\url{https://doi.org/10.1145/2964284.2967209}
+
+\bibitem{mclaughlin_recurrent_2016}
+N.~McLaughlin, J.~M. del Rincon, P.~Miller,
+  \href{https://openaccess.thecvf.com/content_cvpr_2016/html/McLaughlin_Recurrent_Convolutional_Network_CVPR_2016_paper.html}{Recurrent
+  {Convolutional} {Network} for {Video}-{Based} {Person}
+  {Re}-{Identification}}, 2016, pp. 1325--1334.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2016/html/McLaughlin_Recurrent_Convolutional_Network_CVPR_2016_paper.html}
+
+\bibitem{song_generalizable_2019}
+J.~Song, Y.~Yang, Y.-Z. Song, T.~Xiang, T.~M. Hospedales,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Song_Generalizable_Person_Re-Identification_by_Domain-Invariant_Mapping_Network_CVPR_2019_paper.html}{Generalizable
+  {Person} {Re}-{Identification} by {Domain}-{Invariant} {Mapping} {Network}},
+  2019, pp. 719--728.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Song_Generalizable_Person_Re-Identification_by_Domain-Invariant_Mapping_Network_CVPR_2019_paper.html}
+
+\bibitem{gray_viewpoint_2008}
+D.~Gray, H.~Tao, Viewpoint {Invariant} {Pedestrian} {Recognition} with an
+  {Ensemble} of {Localized} {Features}, in: D.~Forsyth, P.~Torr, A.~Zisserman
+  (Eds.), Computer {Vision} – {ECCV} 2008, Lecture {Notes} in {Computer}
+  {Science}, Springer, Berlin, Heidelberg, 2008, pp. 262--275.
+\newblock \href {https://doi.org/10.1007/978-3-540-88682-2_21}
+  {\path{doi:10.1007/978-3-540-88682-2_21}}.
+
+\bibitem{zheng_group-aware_2021}
+K.~Zheng, W.~Liu, L.~He, T.~Mei, J.~Luo, Z.-J. Zha,
+  \href{http://arxiv.org/abs/2103.12366}{Group-aware {Label} {Transfer} for
+  {Domain} {Adaptive} {Person} {Re}-identification}, arXiv:2103.12366
+  [cs]ArXiv: 2103.12366 (Mar. 2021).
+\newline\urlprefix\url{http://arxiv.org/abs/2103.12366}
+
+\bibitem{sun_beyond_2018}
+Y.~Sun, L.~Zheng, Y.~Yang, Q.~Tian, S.~Wang,
+  \href{https://openaccess.thecvf.com/content_ECCV_2018/html/Yifan_Sun_Beyond_Part_Models_ECCV_2018_paper.html}{Beyond
+  {Part} {Models}: {Person} {Retrieval} with {Refined} {Part} {Pooling} (and
+  {A} {Strong} {Convolutional} {Baseline})}, 2018, pp. 480--496.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ECCV_2018/html/Yifan_Sun_Beyond_Part_Models_ECCV_2018_paper.html}
+
+\bibitem{wang_learning_2018}
+G.~Wang, Y.~Yuan, X.~Chen, J.~Li, X.~Zhou,
+  \href{http://arxiv.org/abs/1804.01438}{Learning {Discriminative} {Features}
+  with {Multiple} {Granularities} for {Person} {Re}-{Identification}},
+  Proceedings of the 26th ACM international conference on Multimedia (2018)
+  274--282ArXiv: 1804.01438.
+\newblock \href {https://doi.org/10.1145/3240508.3240552}
+  {\path{doi:10.1145/3240508.3240552}}.
+\newline\urlprefix\url{http://arxiv.org/abs/1804.01438}
+
+\bibitem{wei_person_2018}
+L.~Wei, S.~Zhang, W.~Gao, Q.~Tian,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Wei_Person_Transfer_GAN_CVPR_2018_paper.html}{Person
+  {Transfer} {GAN} to {Bridge} {Domain} {Gap} for {Person}
+  {Re}-{Identification}}, 2018, pp. 79--88.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Wei_Person_Transfer_GAN_CVPR_2018_paper.html}
+
+\bibitem{zhong_invariance_2019}
+Z.~Zhong, L.~Zheng, Z.~Luo, S.~Li, Y.~Yang,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Zhong_Invariance_Matters_Exemplar_Memory_for_Domain_Adaptive_Person_Re-Identification_CVPR_2019_paper.html}{Invariance
+  {Matters}: {Exemplar} {Memory} for {Domain} {Adaptive} {Person}
+  {Re}-{Identification}}, 2019, pp. 598--607.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Zhong_Invariance_Matters_Exemplar_Memory_for_Domain_Adaptive_Person_Re-Identification_CVPR_2019_paper.html}
+
+\bibitem{ge_mutual_2020}
+Y.~Ge, D.~Chen, H.~Li,
+  \href{https://iclr.cc/virtual_2020/poster_rJlnOhVYPS.html}{Mutual
+  {Mean}-{Teaching}: {Pseudo} {Label} {Refinery} for {Unsupervised} {Domain}
+  {Adaptation} on {Person} {Re}-identification}, 2020.
+\newline\urlprefix\url{https://iclr.cc/virtual_2020/poster_rJlnOhVYPS.html}
+
+\bibitem{lin_bottom-up_2019}
+Y.~Lin, X.~Dong, L.~Zheng, Y.~Yan, Y.~Yang,
+  \href{https://ojs.aaai.org/index.php/AAAI/article/view/4898}{A {Bottom}-{Up}
+  {Clustering} {Approach} to {Unsupervised} {Person} {Re}-{Identification}},
+  Proceedings of the AAAI Conference on Artificial Intelligence 33~(01) (2019)
+  8738--8745, number: 01.
+\newblock \href {https://doi.org/10.1609/aaai.v33i01.33018738}
+  {\path{doi:10.1609/aaai.v33i01.33018738}}.
+\newline\urlprefix\url{https://ojs.aaai.org/index.php/AAAI/article/view/4898}
+
+\bibitem{lin_unsupervised_2020}
+Y.~Lin, L.~Xie, Y.~Wu, C.~Yan, Q.~Tian,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Lin_Unsupervised_Person_Re-Identification_via_Softened_Similarity_Learning_CVPR_2020_paper.html}{Unsupervised
+  {Person} {Re}-{Identification} via {Softened} {Similarity} {Learning}}, 2020,
+  pp. 3390--3399.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Lin_Unsupervised_Person_Re-Identification_via_Softened_Similarity_Learning_CVPR_2020_paper.html}
+
+\bibitem{zeng_hierarchical_2020}
+K.~Zeng, M.~Ning, Y.~Wang, Y.~Guo,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Zeng_Hierarchical_Clustering_With_Hard-Batch_Triplet_Loss_for_Person_Re-Identification_CVPR_2020_paper.html}{Hierarchical
+  {Clustering} {With} {Hard}-{Batch} {Triplet} {Loss} for {Person}
+  {Re}-{Identification}}, 2020, pp. 13657--13665.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Zeng_Hierarchical_Clustering_With_Hard-Batch_Triplet_Loss_for_Person_Re-Identification_CVPR_2020_paper.html}
+
+\bibitem{fan_unsupervised_2018}
+H.~Fan, L.~Zheng, C.~Yan, Y.~Yang,
+  \href{https://doi.org/10.1145/3243316}{Unsupervised {Person}
+  {Re}-identification: {Clustering} and {Fine}-tuning}, ACM Transactions on
+  Multimedia Computing, Communications, and Applications 14~(4) (2018)
+  83:1--83:18.
+\newblock \href {https://doi.org/10.1145/3243316} {\path{doi:10.1145/3243316}}.
+\newline\urlprefix\url{https://doi.org/10.1145/3243316}
+
+\bibitem{fu_self-similarity_2019}
+Y.~Fu, Y.~Wei, G.~Wang, Y.~Zhou, H.~Shi, T.~S. Huang,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html}{Self-{Similarity}
+  {Grouping}: {A} {Simple} {Unsupervised} {Cross} {Domain} {Adaptation}
+  {Approach} for {Person} {Re}-{Identification}}, 2019, pp. 6112--6121.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html}
+
+\bibitem{lin_multi-task_2018}
+S.~Lin, Multi-task {Mid}-level {Feature} {Alignment} {Network} for
+  {Unsupervised} {Cross}-{Dataset} {Person} {Re}-{Identiﬁcation} (2018) 13.
+
+\bibitem{wang_transferable_2018}
+J.~Wang, X.~Zhu, S.~Gong, W.~Li,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Transferable_Joint_Attribute-Identity_CVPR_2018_paper.html}{Transferable
+  {Joint} {Attribute}-{Identity} {Deep} {Learning} for {Unsupervised} {Person}
+  {Re}-{Identification}}, 2018, pp. 2275--2284.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Transferable_Joint_Attribute-Identity_CVPR_2018_paper.html}
+
+\bibitem{yu_unsupervised_2019}
+H.-X. Yu, W.-S. Zheng, A.~Wu, X.~Guo, S.~Gong, J.-H. Lai,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Yu_Unsupervised_Person_Re-Identification_by_Soft_Multilabel_Learning_CVPR_2019_paper.html}{Unsupervised
+  {Person} {Re}-{Identification} by {Soft} {Multilabel} {Learning}}, 2019, pp.
+  2148--2157.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Yu_Unsupervised_Person_Re-Identification_by_Soft_Multilabel_Learning_CVPR_2019_paper.html}
+
+\bibitem{deng_image-image_2018}
+W.~Deng, L.~Zheng, Q.~Ye, G.~Kang, Y.~Yang, J.~Jiao,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Deng_Image-Image_Domain_Adaptation_CVPR_2018_paper.html}{Image-{Image}
+  {Domain} {Adaptation} {With} {Preserved} {Self}-{Similarity} and
+  {Domain}-{Dissimilarity} for {Person} {Re}-{Identification}}, 2018, pp.
+  994--1003.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Deng_Image-Image_Domain_Adaptation_CVPR_2018_paper.html}
+
+\bibitem{zhong_generalizing_2018}
+Z.~Zhong, L.~Zheng, S.~Li, Y.~Yang,
+  \href{https://openaccess.thecvf.com/content_ECCV_2018/html/Zhun_Zhong_Generalizing_A_Person_ECCV_2018_paper.html}{Generalizing
+  {A} {Person} {Retrieval} {Model} {Hetero}- and {Homogeneously}}, 2018, pp.
+  172--188.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ECCV_2018/html/Zhun_Zhong_Generalizing_A_Person_ECCV_2018_paper.html}
+
+\bibitem{chen_instance-guided_2019}
+Y.~Chen, X.~Zhu, S.~Gong,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Chen_Instance-Guided_Context_Rendering_for_Cross-Domain_Person_Re-Identification_ICCV_2019_paper.html}{Instance-{Guided}
+  {Context} {Rendering} for {Cross}-{Domain} {Person} {Re}-{Identification}},
+  2019, pp. 232--242.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Chen_Instance-Guided_Context_Rendering_for_Cross-Domain_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{wu_unsupervised_2019}
+A.~Wu, W.-S. Zheng, J.-H. Lai,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Unsupervised_Person_Re-Identification_by_Camera-Aware_Similarity_Consistency_Learning_ICCV_2019_paper.html}{Unsupervised
+  {Person} {Re}-{Identification} by {Camera}-{Aware} {Similarity} {Consistency}
+  {Learning}}, 2019, pp. 6922--6931.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Unsupervised_Person_Re-Identification_by_Camera-Aware_Similarity_Consistency_Learning_ICCV_2019_paper.html}
+
+\bibitem{li_cross-dataset_2019}
+Y.-J. Li, C.-S. Lin, Y.-B. Lin, Y.-C.~F. Wang,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Li_Cross-Dataset_Person_Re-Identification_via_Unsupervised_Pose_Disentanglement_and_Adaptation_ICCV_2019_paper.html}{Cross-{Dataset}
+  {Person} {Re}-{Identification} via {Unsupervised} {Pose} {Disentanglement}
+  and {Adaptation}}, 2019, pp. 7919--7929.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Li_Cross-Dataset_Person_Re-Identification_via_Unsupervised_Pose_Disentanglement_and_Adaptation_ICCV_2019_paper.html}
+
+\bibitem{qi_novel_2019}
+L.~Qi, L.~Wang, J.~Huo, L.~Zhou, Y.~Shi, Y.~Gao,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Qi_A_Novel_Unsupervised_Camera-Aware_Domain_Adaptation_Framework_for_Person_Re-Identification_ICCV_2019_paper.html}{A
+  {Novel} {Unsupervised} {Camera}-{Aware} {Domain} {Adaptation} {Framework} for
+  {Person} {Re}-{Identification}}, 2019, pp. 8080--8089.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Qi_A_Novel_Unsupervised_Camera-Aware_Domain_Adaptation_Framework_for_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{zhang_self-training_2019}
+X.~Zhang, J.~Cao, C.~Shen, M.~You,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Zhang_Self-Training_With_Progressive_Augmentation_for_Unsupervised_Cross-Domain_Person_Re-Identification_ICCV_2019_paper.html}{Self-{Training}
+  {With} {Progressive} {Augmentation} for {Unsupervised} {Cross}-{Domain}
+  {Person} {Re}-{Identification}}, 2019, pp. 8222--8231.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Zhang_Self-Training_With_Progressive_Augmentation_for_Unsupervised_Cross-Domain_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{kodirov_dictionary_2015}
+E.~Kodirov, T.~Xiang, S.~Gong,
+  \href{http://www.bmva.org/bmvc/2015/papers/paper044/index.html}{Dictionary
+  {Learning} with {Iterative} {Laplacian} {Regularisation} for {Unsupervised}
+  {Person} {Re}-identification}, in: Procedings of the {British} {Machine}
+  {Vision} {Conference} 2015, British Machine Vision Association, Swansea,
+  2015, pp. 44.1--44.12.
+\newblock \href {https://doi.org/10.5244/C.29.44} {\path{doi:10.5244/C.29.44}}.
+\newline\urlprefix\url{http://www.bmva.org/bmvc/2015/papers/paper044/index.html}
+
+\bibitem{wang_towards_2016}
+H.~Wang, X.~Zhu, T.~Xiang, S.~Gong, Towards unsupervised open-set person
+  re-identification, 2016, pp. 769--773.
+\newblock \href {https://doi.org/10.1109/ICIP.2016.7532461}
+  {\path{doi:10.1109/ICIP.2016.7532461}}.
+
+\bibitem{yu_cross-view_2017}
+H.-X. Yu, A.~Wu, W.-S. Zheng,
+  \href{https://openaccess.thecvf.com/content_iccv_2017/html/Yu_Cross-View_Asymmetric_Metric_ICCV_2017_paper.html}{Cross-{View}
+  {Asymmetric} {Metric} {Learning} for {Unsupervised} {Person}
+  {Re}-{Identification}}, 2017, pp. 994--1002.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_iccv_2017/html/Yu_Cross-View_Asymmetric_Metric_ICCV_2017_paper.html}
+
+\bibitem{ye_dynamic_2017}
+M.~Ye, A.~Ma, L.~Zheng, J.~Li, P.~C. Yuen, Dynamic {Label} {Graph} {Matching}
+  for {Unsupervised} {Video} {Re}-{Identification} (Sep. 2017).
+\newblock \href {https://doi.org/10.1109/ICCV.2017.550}
+  {\path{doi:10.1109/ICCV.2017.550}}.
+
+\bibitem{liu_stepwise_2017}
+Z.~Liu, D.~Wang, H.~Lu,
+  \href{https://openaccess.thecvf.com/content_iccv_2017/html/Liu_Stepwise_Metric_Promotion_ICCV_2017_paper.html}{Stepwise
+  {Metric} {Promotion} for {Unsupervised} {Video} {Person}
+  {Re}-{Identification}}, 2017, pp. 2429--2438.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_iccv_2017/html/Liu_Stepwise_Metric_Promotion_ICCV_2017_paper.html}
+
+\bibitem{wu_exploit_2018}
+Y.~Wu, Y.~Lin, X.~Dong, Y.~Yan, W.~Ouyang, Y.~Yang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Exploit_the_Unknown_CVPR_2018_paper.html}{Exploit
+  the {Unknown} {Gradually}: {One}-{Shot} {Video}-{Based} {Person}
+  {Re}-{Identification} by {Stepwise} {Learning}}, 2018, pp. 5177--5186.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Wu_Exploit_the_Unknown_CVPR_2018_paper.html}
+
+\bibitem{wu_clustering_2019}
+J.~Wu, S.~Liao, Z.~lei, X.~Wang, Y.~Yang, S.~Z. Li, Clustering and {Dynamic}
+  {Sampling} {Based} {Unsupervised} {Domain} {Adaptation} for {Person}
+  {Re}-{Identification}, in: 2019 {IEEE} {International} {Conference} on
+  {Multimedia} and {Expo} ({ICME}), 2019, pp. 886--891, iSSN: 1945-788X.
+\newblock \href {https://doi.org/10.1109/ICME.2019.00157}
+  {\path{doi:10.1109/ICME.2019.00157}}.
+
+\bibitem{zheng_mars_2016}
+L.~Zheng, Z.~Bie, Y.~Sun, J.~Wang, C.~Su, S.~Wang, Q.~Tian, {MARS}: {A} {Video}
+  {Benchmark} for {Large}-{Scale} {Person} {Re}-{Identification}, in: B.~Leibe,
+  J.~Matas, N.~Sebe, M.~Welling (Eds.), Computer {Vision} – {ECCV} 2016,
+  Lecture {Notes} in {Computer} {Science}, Springer International Publishing,
+  Cham, 2016, pp. 868--884.
+\newblock \href {https://doi.org/10.1007/978-3-319-46466-4_52}
+  {\path{doi:10.1007/978-3-319-46466-4_52}}.
+
+\bibitem{wu_tracklet_2020}
+G.~Wu, X.~Zhu, S.~Gong,
+  \href{https://ojs.aaai.org/index.php/AAAI/article/view/6921}{Tracklet
+  {Self}-{Supervised} {Learning} for {Unsupervised} {Person}
+  {Re}-{Identification}}, Proceedings of the AAAI Conference on Artificial
+  Intelligence 34~(07) (2020) 12362--12369, number: 07.
+\newblock \href {https://doi.org/10.1609/aaai.v34i07.6921}
+  {\path{doi:10.1609/aaai.v34i07.6921}}.
+\newline\urlprefix\url{https://ojs.aaai.org/index.php/AAAI/article/view/6921}
+
+\bibitem{vedaldi_unsupervised_2020}
+F.~Zhao, S.~Liao, G.-S. Xie, J.~Zhao, K.~Zhang, L.~Shao,
+  \href{https://link.springer.com/10.1007/978-3-030-58621-8_31}{Unsupervised
+  {Domain} {Adaptation} with {Noise} {Resistible} {Mutual}-{Training} for
+  {Person} {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M.
+  Frahm (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12356, Springer
+  International Publishing, Cham, 2020, pp. 526--544, series Title: Lecture
+  Notes in Computer Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58621-8_31}
+  {\path{doi:10.1007/978-3-030-58621-8_31}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58621-8_31}
+
+\bibitem{yang_asymmetric_2020}
+F.~Yang, K.~Li, Z.~Zhong, Z.~Luo, X.~Sun, H.~Cheng, X.~Guo, F.~Huang, R.~Ji,
+  S.~Li,
+  \href{https://ojs.aaai.org/index.php/AAAI/article/view/6950}{Asymmetric
+  {Co}-{Teaching} for {Unsupervised} {Cross}-{Domain} {Person}
+  {Re}-{Identification}}, Proceedings of the AAAI Conference on Artificial
+  Intelligence 34~(07) (2020) 12597--12604, number: 07.
+\newblock \href {https://doi.org/10.1609/aaai.v34i07.6950}
+  {\path{doi:10.1609/aaai.v34i07.6950}}.
+\newline\urlprefix\url{https://ojs.aaai.org/index.php/AAAI/article/view/6950}
+
+\bibitem{vedaldi_multiple_2020}
+Y.~Zhai, Q.~Ye, S.~Lu, M.~Jia, R.~Ji, Y.~Tian,
+  \href{https://link.springer.com/10.1007/978-3-030-58571-6_35}{Multiple
+  {Expert} {Brainstorming} for {Domain} {Adaptive} {Person}
+  {Re}-{Identification}}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm
+  (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12352, Springer International
+  Publishing, Cham, 2020, pp. 594--611, series Title: Lecture Notes in Computer
+  Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58571-6_35}
+  {\path{doi:10.1007/978-3-030-58571-6_35}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58571-6_35}
+
+\bibitem{vedaldi_global_2020}
+X.~Jin, C.~Lan, W.~Zeng, Z.~Chen,
+  \href{https://link.springer.com/10.1007/978-3-030-58571-6_43}{Global
+  {Distance}-{Distributions} {Separation} for {Unsupervised} {Person}
+  {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm
+  (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12352, Springer International
+  Publishing, Cham, 2020, pp. 735--751, series Title: Lecture Notes in Computer
+  Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58571-6_43}
+  {\path{doi:10.1007/978-3-030-58571-6_43}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58571-6_43}
+
+\bibitem{yang_joint_2021}
+F.~Yang, Z.~Zhong, Z.~Luo, Y.~Cai, Y.~Lin, S.~Li, N.~Sebe,
+  \href{http://arxiv.org/abs/2103.04618}{Joint {Noise}-{Tolerant} {Learning}
+  and {Meta} {Camera} {Shift} {Adaptation} for {Unsupervised} {Person}
+  {Re}-{Identification}}, arXiv:2103.04618 [cs]ArXiv: 2103.04618 (Mar. 2021).
+\newline\urlprefix\url{http://arxiv.org/abs/2103.04618}
+
+\bibitem{xiao_joint_2017}
+T.~Xiao, S.~Li, B.~Wang, L.~Lin, X.~Wang,
+  \href{http://ieeexplore.ieee.org/document/8099843/}{Joint {Detection} and
+  {Identification} {Feature} {Learning} for {Person} {Search}}, in: 2017 {IEEE}
+  {Conference} on {Computer} {Vision} and {Pattern} {Recognition} ({CVPR}),
+  IEEE, Honolulu, HI, 2017, pp. 3376--3385.
+\newblock \href {https://doi.org/10.1109/CVPR.2017.360}
+  {\path{doi:10.1109/CVPR.2017.360}}.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/document/8099843/}
+
+\bibitem{wang_unsupervised_2020}
+D.~Wang, S.~Zhang,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_Unsupervised_Person_Re-Identification_via_Multi-Label_Classification_CVPR_2020_paper.html}{Unsupervised
+  {Person} {Re}-{Identification} via {Multi}-{Label} {Classification}}, 2020,
+  pp. 10981--10990.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_Unsupervised_Person_Re-Identification_via_Multi-Label_Classification_CVPR_2020_paper.html}
+
+\bibitem{xiang_second-order_2020}
+W.~Xiang, H.~Yong, J.~Huang, X.-S. Hua, L.~Zhang,
+  \href{https://openaccess.thecvf.com/content/ACCV2020/html/Xiang_Second-order_Camera-aware_Color_Transformation_for_Cross-domain_Person_Re-identification_ACCV_2020_paper.html}{Second-order
+  {Camera}-aware {Color} {Transformation} for {Cross}-domain {Person}
+  {Re}-identification}, 2020.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content/ACCV2020/html/Xiang_Second-order_Camera-aware_Color_Transformation_for_Cross-domain_Person_Re-identification_ACCV_2020_paper.html}
+
+\bibitem{zhai_ad-cluster_2020}
+Y.~Zhai, S.~Lu, Q.~Ye, X.~Shan, J.~Chen, R.~Ji, Y.~Tian,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Zhai_AD-Cluster_Augmented_Discriminative_Clustering_for_Domain_Adaptive_Person_Re-Identification_CVPR_2020_paper.html}{{AD}-{Cluster}:
+  {Augmented} {Discriminative} {Clustering} for {Domain} {Adaptive} {Person}
+  {Re}-{Identification}}, 2020, pp. 9021--9030.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Zhai_AD-Cluster_Augmented_Discriminative_Clustering_for_Domain_Adaptive_Person_Re-Identification_CVPR_2020_paper.html}
+
+\bibitem{xiang_part-aware_2020}
+W.~Xiang, J.~Huang, X.-S. Hua, L.~Zhang,
+  \href{https://openaccess.thecvf.com/content/ACCV2020/html/Xiang_Part-aware_Attention_Network_for_Person_Re-Identification_ACCV_2020_paper.html}{Part-aware
+  {Attention} {Network} for {Person} {Re}-{Identification}}, 2020.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content/ACCV2020/html/Xiang_Part-aware_Attention_Network_for_Person_Re-Identification_ACCV_2020_paper.html}
+
+\bibitem{guo_beyond_2019}
+J.~Guo, Y.~Yuan, L.~Huang, C.~Zhang, J.-G. Yao, K.~Han,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Guo_Beyond_Human_Parts_Dual_Part-Aligned_Representations_for_Person_Re-Identification_ICCV_2019_paper.html}{Beyond
+  {Human} {Parts}: {Dual} {Part}-{Aligned} {Representations} for {Person}
+  {Re}-{Identification}}, 2019, pp. 3642--3651.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Guo_Beyond_Human_Parts_Dual_Part-Aligned_Representations_for_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{yang_patch-based_2019}
+Q.~Yang, H.-X. Yu, A.~Wu, W.-S. Zheng,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Yang_Patch-Based_Discriminative_Feature_Learning_for_Unsupervised_Person_Re-Identification_CVPR_2019_paper.html}{Patch-{Based}
+  {Discriminative} {Feature} {Learning} for {Unsupervised} {Person}
+  {Re}-{Identification}}, 2019, pp. 3633--3642.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Yang_Patch-Based_Discriminative_Feature_Learning_for_Unsupervised_Person_Re-Identification_CVPR_2019_paper.html}
+
+\bibitem{vedaldi_attention-driven_2020}
+Z.~Ji, X.~Zou, X.~Lin, X.~Liu, T.~Huang, S.~Wu,
+  \href{https://link.springer.com/10.1007/978-3-030-58604-1_2}{An
+  {Attention}-{Driven} {Two}-{Stage} {Clustering} {Method} for {Unsupervised}
+  {Person} {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M.
+  Frahm (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12373, Springer
+  International Publishing, Cham, 2020, pp. 20--36, series Title: Lecture Notes
+  in Computer Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58604-1_2}
+  {\path{doi:10.1007/978-3-030-58604-1_2}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58604-1_2}
+
+\bibitem{vedaldi_deep_2020}
+G.~Chen, Y.~Lu, J.~Lu, J.~Zhou,
+  \href{https://link.springer.com/10.1007/978-3-030-58598-3_38}{Deep {Credible}
+  {Metric} {Learning} for {Unsupervised} {Domain} {Adaptation} {Person}
+  {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm
+  (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12353, Springer International
+  Publishing, Cham, 2020, pp. 643--659, series Title: Lecture Notes in Computer
+  Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58598-3_38}
+  {\path{doi:10.1007/978-3-030-58598-3_38}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58598-3_38}
+
+\bibitem{hermans_defense_2017}
+A.~Hermans, L.~Beyer, B.~Leibe, \href{http://arxiv.org/abs/1703.07737}{In
+  {Defense} of the {Triplet} {Loss} for {Person} {Re}-{Identification}},
+  arXiv:1703.07737 [cs]ArXiv: 1703.07737 (Nov. 2017).
+\newline\urlprefix\url{http://arxiv.org/abs/1703.07737}
+
+\bibitem{vedaldi_joint_2020-1}
+J.~Li, S.~Zhang,
+  \href{https://link.springer.com/10.1007/978-3-030-58586-0_29}{Joint {Visual}
+  and {Temporal} {Consistency} for {Unsupervised} {Domain} {Adaptive} {Person}
+  {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm
+  (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12369, Springer International
+  Publishing, Cham, 2020, pp. 483--499, series Title: Lecture Notes in Computer
+  Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58586-0_29}
+  {\path{doi:10.1007/978-3-030-58586-0_29}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58586-0_29}
+
+\bibitem{leal-taixe_motchallenge_2015}
+L.~Leal-Taixé, A.~Milan, I.~Reid, S.~Roth, K.~Schindler,
+  \href{http://arxiv.org/abs/1504.01942}{{MOTChallenge} 2015: {Towards} a
+  {Benchmark} for {Multi}-{Target} {Tracking}}, arXiv:1504.01942 [cs]ArXiv:
+  1504.01942 (Apr. 2015).
+\newline\urlprefix\url{http://arxiv.org/abs/1504.01942}
+
+\bibitem{ristani_performance_2016}
+E.~Ristani, F.~Solera, R.~Zou, R.~Cucchiara, C.~Tomasi, Performance {Measures}
+  and a {Data} {Set} for {Multi}-target, {Multi}-camera {Tracking}, in:
+  G.~Hua, H.~Jégou (Eds.), Computer {Vision} – {ECCV} 2016 {Workshops},
+  Lecture {Notes} in {Computer} {Science}, Springer International Publishing,
+  Cham, 2016, pp. 17--35.
+\newblock \href {https://doi.org/10.1007/978-3-319-48881-3_2}
+  {\path{doi:10.1007/978-3-319-48881-3_2}}.
+
+\bibitem{gao_graph_2019}
+J.~Gao, T.~Zhang, C.~Xu,
+  \href{https://ieeexplore.ieee.org/document/8953448/}{Graph {Convolutional}
+  {Tracking}}, in: 2019 {IEEE}/{CVF} {Conference} on {Computer} {Vision} and
+  {Pattern} {Recognition} ({CVPR}), IEEE, Long Beach, CA, USA, 2019, pp.
+  4644--4654.
+\newblock \href {https://doi.org/10.1109/CVPR.2019.00478}
+  {\path{doi:10.1109/CVPR.2019.00478}}.
+\newline\urlprefix\url{https://ieeexplore.ieee.org/document/8953448/}
+
+\bibitem{gao_i_2019}
+J.~Gao, I {Know} the {Relationships}: {Zero}-{Shot} {Action} {Recognition} via
+  {Two}-{Stream} {Graph} {Convolutional} {Networks} and {Knowledge} {Graphs}.
+  (2019) 8303--8311\href {https://doi.org/10.1609/aaai.v33i01.33018303}
+  {\path{doi:10.1609/aaai.v33i01.33018303}}.
+
+\bibitem{zhang_deeper_2019}
+Z.~Zhang, H.~Peng, \href{http://arxiv.org/abs/1901.01660}{Deeper and {Wider}
+  {Siamese} {Networks} for {Real}-{Time} {Visual} {Tracking}}, arXiv:1901.01660
+  [cs]ArXiv: 1901.01660 (Mar. 2019).
+\newline\urlprefix\url{http://arxiv.org/abs/1901.01660}
+
+\bibitem{ferrari_unsupervised_2018}
+M.~Li, X.~Zhu, S.~Gong,
+  \href{http://link.springer.com/10.1007/978-3-030-01225-0_45}{Unsupervised
+  {Person} {Re}-identification by {Deep} {Learning} {Tracklet} {Association}},
+  in: V.~Ferrari, M.~Hebert, C.~Sminchisescu, Y.~Weiss (Eds.), Computer
+  {Vision} – {ECCV} 2018, Vol. 11208, Springer International Publishing,
+  Cham, 2018, pp. 772--788, series Title: Lecture Notes in Computer Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-01225-0_45}
+  {\path{doi:10.1007/978-3-030-01225-0_45}}.
+\newline\urlprefix\url{http://link.springer.com/10.1007/978-3-030-01225-0_45}
+
+\bibitem{li_unsupervised_2020}
+M.~Li, X.~Zhu, S.~Gong, Unsupervised {Tracklet} {Person} {Re}-{Identification},
+  IEEE Transactions on Pattern Analysis and Machine Intelligence 42~(7) (2020)
+  1770--1782, conference Name: IEEE Transactions on Pattern Analysis and
+  Machine Intelligence.
+\newblock \href {https://doi.org/10.1109/TPAMI.2019.2903058}
+  {\path{doi:10.1109/TPAMI.2019.2903058}}.
+
+\bibitem{vedaldi_generalizing_2020}
+C.~Luo, C.~Song, Z.~Zhang,
+  \href{https://link.springer.com/10.1007/978-3-030-58555-6_14}{Generalizing
+  {Person} {Re}-{Identification} by {Camera}-{Aware} {Invariance} {Learning}
+  and {Cross}-{Domain} {Mixup}}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M.
+  Frahm (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12360, Springer
+  International Publishing, Cham, 2020, pp. 224--241, series Title: Lecture
+  Notes in Computer Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58555-6_14}
+  {\path{doi:10.1007/978-3-030-58555-6_14}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58555-6_14}
+
+\bibitem{wu_unsupervised_2019-1}
+J.~Wu, Y.~Yang, H.~Liu, S.~Liao, Z.~Lei, S.~Z. Li,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Unsupervised_Graph_Association_for_Person_Re-Identification_ICCV_2019_paper.html}{Unsupervised
+  {Graph} {Association} for {Person} {Re}-{Identification}}, 2019, pp.
+  8321--8330.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Wu_Unsupervised_Graph_Association_for_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{lv_unsupervised_2018}
+J.~Lv, W.~Chen, Q.~Li, C.~Yang,
+  \href{https://openaccess.thecvf.com/content_cvpr_2018/html/Lv_Unsupervised_Cross-Dataset_Person_CVPR_2018_paper.html}{Unsupervised
+  {Cross}-{Dataset} {Person} {Re}-{Identification} by {Transfer} {Learning} of
+  {Spatial}-{Temporal} {Patterns}}, 2018, pp. 7948--7956.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_cvpr_2018/html/Lv_Unsupervised_Cross-Dataset_Person_CVPR_2018_paper.html}
+
+\bibitem{vedaldi_unsupervised_2020-1}
+D.~Mekhazni, A.~Bhuiyan, G.~Ekladious, E.~Granger,
+  \href{https://link.springer.com/10.1007/978-3-030-58583-9_10}{Unsupervised
+  {Domain} {Adaptation} in the {Dissimilarity} {Space} for {Person}
+  {Re}-identification}, in: A.~Vedaldi, H.~Bischof, T.~Brox, J.-M. Frahm
+  (Eds.), Computer {Vision} – {ECCV} 2020, Vol. 12372, Springer International
+  Publishing, Cham, 2020, pp. 159--174, series Title: Lecture Notes in Computer
+  Science.
+\newblock \href {https://doi.org/10.1007/978-3-030-58583-9_10}
+  {\path{doi:10.1007/978-3-030-58583-9_10}}.
+\newline\urlprefix\url{https://link.springer.com/10.1007/978-3-030-58583-9_10}
+
+\bibitem{wang_smoothing_2020}
+G.~Wang, J.-H. Lai, W.~Liang, G.~Wang,
+  \href{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_Smoothing_Adversarial_Domain_Attack_and_P-Memory_Reconsolidation_for_Cross-Domain_Person_CVPR_2020_paper.html}{Smoothing
+  {Adversarial} {Domain} {Attack} and {P}-{Memory} {Reconsolidation} for
+  {Cross}-{Domain} {Person} {Re}-{Identification}}, 2020, pp. 10568--10577.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_Smoothing_Adversarial_Domain_Attack_and_P-Memory_Reconsolidation_for_Cross-Domain_Person_CVPR_2020_paper.html}
+
+\bibitem{huang_domain_2020}
+Y.~Huang, P.~Peng, Y.~Jin, Y.~Li, J.~Xing,
+  \href{https://ojs.aaai.org/index.php/AAAI/article/view/6762}{Domain
+  {Adaptive} {Attention} {Learning} for {Unsupervised} {Person}
+  {Re}-{Identification}}, Proceedings of the AAAI Conference on Artificial
+  Intelligence 34~(07) (2020) 11069--11076, number: 07.
+\newblock \href {https://doi.org/10.1609/aaai.v34i07.6762}
+  {\path{doi:10.1609/aaai.v34i07.6762}}.
+\newline\urlprefix\url{https://ojs.aaai.org/index.php/AAAI/article/view/6762}
+
+\bibitem{liu_adaptive_2019}
+J.~Liu, Z.-J. Zha, D.~Chen, R.~Hong, M.~Wang,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Liu_Adaptive_Transfer_Network_for_Cross-Domain_Person_Re-Identification_CVPR_2019_paper.html}{Adaptive
+  {Transfer} {Network} for {Cross}-{Domain} {Person} {Re}-{Identification}},
+  2019, pp. 7202--7211.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Liu_Adaptive_Transfer_Network_for_Cross-Domain_Person_Re-Identification_CVPR_2019_paper.html}
+
+\bibitem{zhu_unpaired_2017}
+J.-Y. Zhu, T.~Park, P.~Isola, A.~A. Efros, Unpaired {Image}-to-{Image}
+  {Translation} {Using} {Cycle}-{Consistent} {Adversarial} {Networks}, in: 2017
+  {IEEE} {International} {Conference} on {Computer} {Vision} ({ICCV}), 2017,
+  pp. 2242--2251, iSSN: 2380-7504.
+\newblock \href {https://doi.org/10.1109/ICCV.2017.244}
+  {\path{doi:10.1109/ICCV.2017.244}}.
+
+\bibitem{bak_domain_2018}
+S.~Bak, P.~Carr, J.-F. Lalonde,
+  \href{https://openaccess.thecvf.com/content_ECCV_2018/html/Slawomir_Bak_Domain_Adaptation_through_ECCV_2018_paper.html}{Domain
+  {Adaptation} through {Synthesis} for {Unsupervised} {Person}
+  {Re}-identification}, 2018, pp. 189--205.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ECCV_2018/html/Slawomir_Bak_Domain_Adaptation_through_ECCV_2018_paper.html}
+
+\bibitem{isola_image--image_2017}
+P.~Isola, J.-Y. Zhu, T.~Zhou, A.~A. Efros,
+  \href{http://ieeexplore.ieee.org/document/8100115/}{Image-to-{Image}
+  {Translation} with {Conditional} {Adversarial} {Networks}}, in: 2017 {IEEE}
+  {Conference} on {Computer} {Vision} and {Pattern} {Recognition} ({CVPR}),
+  IEEE, Honolulu, HI, 2017, pp. 5967--5976.
+\newblock \href {https://doi.org/10.1109/CVPR.2017.632}
+  {\path{doi:10.1109/CVPR.2017.632}}.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/document/8100115/}
+
+\bibitem{ding_towards_2019}
+G.~Ding, S.~Khan, Z.~Tang, J.~Zhang, F.~Porikli,
+  \href{http://arxiv.org/abs/1906.01308}{Towards better {Validity}:
+  {Dispersion} based {Clustering} for {Unsupervised} {Person}
+  {Re}-identification}, arXiv:1906.01308 [cs]ArXiv: 1906.01308 (Jun. 2019).
+\newline\urlprefix\url{http://arxiv.org/abs/1906.01308}
+
+\bibitem{ye_robust_2018}
+M.~Ye, X.~Lan, P.~C. Yuen,
+  \href{https://openaccess.thecvf.com/content_ECCV_2018/html/Mang_YE_Robust_Anchor_Embedding_ECCV_2018_paper.html}{Robust
+  {Anchor} {Embedding} for {Unsupervised} {Video} {Person}
+  {Re}-{Identification} in the {Wild}}, 2018, pp. 170--186.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ECCV_2018/html/Mang_YE_Robust_Anchor_Embedding_ECCV_2018_paper.html}
+
+\bibitem{chen_deep_2018}
+Y.~Chen, X.~Zhu, S.~Gong, \href{http://arxiv.org/abs/1808.07301}{Deep
+  {Association} {Learning} for {Unsupervised} {Video} {Person}
+  {Re}-identification}, arXiv:1808.07301 [cs]ArXiv: 1808.07301 (Aug. 2018).
+\newline\urlprefix\url{http://arxiv.org/abs/1808.07301}
+
+\bibitem{girshick_deformable_2014}
+R.~Girshick, F.~Iandola, T.~Darrell, J.~Malik,
+  \href{http://arxiv.org/abs/1409.5403}{Deformable {Part} {Models} are
+  {Convolutional} {Neural} {Networks}}, arXiv:1409.5403 [cs]ArXiv: 1409.5403
+  (Oct. 2014).
+\newline\urlprefix\url{http://arxiv.org/abs/1409.5403}
+
+\bibitem{hirzer_person_2011}
+M.~Hirzer, C.~Beleznai, P.~M. Roth, H.~Bischof, Person {Re}-identification by
+  {Descriptive} and {Discriminative} {Classification}, in: A.~Heyden, F.~Kahl
+  (Eds.), Image {Analysis}, Lecture {Notes} in {Computer} {Science}, Springer,
+  Berlin, Heidelberg, 2011, pp. 91--102.
+\newblock \href {https://doi.org/10.1007/978-3-642-21227-7_9}
+  {\path{doi:10.1007/978-3-642-21227-7_9}}.
+
+\bibitem{wang_person_2014}
+T.~Wang, S.~Gong, X.~Zhu, S.~Wang, Person {Re}-identification by {Video}
+  {Ranking}, in: D.~Fleet, T.~Pajdla, B.~Schiele, T.~Tuytelaars (Eds.),
+  Computer {Vision} – {ECCV} 2014, Lecture {Notes} in {Computer} {Science},
+  Springer International Publishing, Cham, 2014, pp. 688--703.
+\newblock \href {https://doi.org/10.1007/978-3-319-10593-2_45}
+  {\path{doi:10.1007/978-3-319-10593-2_45}}.
+
+\bibitem{dehghan_gmmcp_2015}
+A.~Dehghan, S.~M. Assari, M.~Shah,
+  \href{http://ieeexplore.ieee.org/document/7299036/}{{GMMCP} tracker:
+  {Globally} optimal {Generalized} {Maximum} {Multi} {Clique} problem for
+  multiple object tracking}, in: 2015 {IEEE} {Conference} on {Computer}
+  {Vision} and {Pattern} {Recognition} ({CVPR}), IEEE, Boston, MA, USA, 2015,
+  pp. 4091--4099.
+\newblock \href {https://doi.org/10.1109/CVPR.2015.7299036}
+  {\path{doi:10.1109/CVPR.2015.7299036}}.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/document/7299036/}
+
+\bibitem{song_unsupervised_2018}
+L.~Song, C.~Wang, L.~Zhang, B.~Du, Q.~Zhang, C.~Huang, X.~Wang,
+  \href{http://arxiv.org/abs/1807.11334}{Unsupervised {Domain} {Adaptive}
+  {Re}-{Identification}: {Theory} and {Practice}}, arXiv:1807.11334 [cs]ArXiv:
+  1807.11334 (Jul. 2018).
+\newline\urlprefix\url{http://arxiv.org/abs/1807.11334}
+
+\bibitem{zhong_camstyle_2019}
+Z.~Zhong, L.~Zheng, Z.~Zheng, S.~Li, Y.~Yang, {CamStyle}: {A} {Novel} {Data}
+  {Augmentation} {Method} for {Person} {Re}-{Identification}, IEEE Transactions
+  on Image Processing 28~(3) (2019) 1176--1190, conference Name: IEEE
+  Transactions on Image Processing.
+\newblock \href {https://doi.org/10.1109/TIP.2018.2874313}
+  {\path{doi:10.1109/TIP.2018.2874313}}.
+
+\bibitem{zheng_joint_2019}
+Z.~Zheng, X.~Yang, Z.~Yu, L.~Zheng, Y.~Yang, J.~Kautz,
+  \href{https://openaccess.thecvf.com/content_CVPR_2019/html/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.html}{Joint
+  {Discriminative} and {Generative} {Learning} for {Person}
+  {Re}-{Identification}}, 2019, pp. 2138--2147.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_CVPR_2019/html/Zheng_Joint_Discriminative_and_Generative_Learning_for_Person_Re-Identification_CVPR_2019_paper.html}
+
+\bibitem{ge_self-paced_2020}
+Y.~Ge, F.~Zhu, D.~Chen, R.~Zhao, H.~Li,
+  \href{https://proceedings.neurips.cc/paper/2020/hash/821fa74b50ba3f7cba1e6c53e8fa6845-Abstract.html}{Self-paced
+  {Contrastive} {Learning} with {Hybrid} {Memory} for {Domain} {Adaptive}
+  {Object} {Re}-{ID}}, Advances in Neural Information Processing Systems 33
+  (2020) 11309--11321.
+\newline\urlprefix\url{https://proceedings.neurips.cc/paper/2020/hash/821fa74b50ba3f7cba1e6c53e8fa6845-Abstract.html}
+
+\bibitem{xuan_intra-inter_2021}
+S.~Xuan, S.~Zhang, \href{http://arxiv.org/abs/2103.11658}{Intra-{Inter}
+  {Camera} {Similarity} for {Unsupervised} {Person} {Re}-{Identification}},
+  arXiv:2103.11658 [cs]ArXiv: 2103.11658 (Mar. 2021).
+\newline\urlprefix\url{http://arxiv.org/abs/2103.11658}
+
+\bibitem{xu_person_2014}
+Y.~Xu, B.~Ma, R.~Huang, L.~Lin,
+  \href{https://doi.org/10.1145/2647868.2654965}{Person {Search} in a {Scene}
+  by {Jointly} {Modeling} {People} {Commonness} and {Person} {Uniqueness}}, in:
+  Proceedings of the 22nd {ACM} international conference on {Multimedia}, {MM}
+  '14, Association for Computing Machinery, New York, NY, USA, 2014, pp.
+  937--940.
+\newblock \href {https://doi.org/10.1145/2647868.2654965}
+  {\path{doi:10.1145/2647868.2654965}}.
+\newline\urlprefix\url{https://doi.org/10.1145/2647868.2654965}
+
+\bibitem{ijcai2021-613}
+X.~Lin, P.~Ren, Y.~Xiao, X.~Chang, A.~Hauptmann,
+  \href{https://doi.org/10.24963/ijcai.2021/613}{Person search challenges and
+  solutions: A survey}, in: Z.-H. Zhou (Ed.), Proceedings of the Thirtieth
+  International Joint Conference on Artificial Intelligence, {IJCAI-21},
+  International Joint Conferences on Artificial Intelligence Organization,
+  2021, pp. 4500--4507, survey Track.
+\newblock \href {https://doi.org/10.24963/ijcai.2021/613}
+  {\path{doi:10.24963/ijcai.2021/613}}.
+\newline\urlprefix\url{https://doi.org/10.24963/ijcai.2021/613}
+
+\bibitem{khan_transformers_2021}
+S.~Khan, M.~Naseer, M.~Hayat, S.~W. Zamir, F.~S. Khan, M.~Shah,
+  \href{http://arxiv.org/abs/2101.01169}{Transformers in {Vision}: {A}
+  {Survey}}, arXiv:2101.01169 [cs]ArXiv: 2101.01169 (Sep. 2021).
+\newline\urlprefix\url{http://arxiv.org/abs/2101.01169}
+
+\bibitem{10.1007/978-3-030-58452-8_13}
+N.~Carion, F.~Massa, G.~Synnaeve, N.~Usunier, A.~Kirillov, S.~Zagoruyko,
+  End-to-end object detection with transformers, in: A.~Vedaldi, H.~Bischof,
+  T.~Brox, J.-M. Frahm (Eds.), Computer Vision -- ECCV 2020, Springer
+  International Publishing, Cham, 2020, pp. 213--229.
+
+\bibitem{nguyen_clusformer_2021}
+X.-B. Nguyen, D.~T. Bui, C.~N. Duong, T.~D. Bui, K.~Luu,
+  \href{https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Clusformer_A_Transformer_Based_Clustering_Approach_to_Unsupervised_Large-Scale_Face_CVPR_2021_paper.html}{Clusformer:
+  {A} {Transformer} {Based} {Clustering} {Approach} to {Unsupervised}
+  {Large}-{Scale} {Face} and {Visual} {Landmark} {Recognition}}, 2021, pp.
+  10847--10856.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content/CVPR2021/html/Nguyen_Clusformer_A_Transformer_Based_Clustering_Approach_to_Unsupervised_Large-Scale_Face_CVPR_2021_paper.html}
+
+\bibitem{liu_swin_2021}
+Z.~Liu, Y.~Lin, Y.~Cao, H.~Hu, Y.~Wei, Z.~Zhang, S.~Lin, B.~Guo,
+  \href{http://arxiv.org/abs/2103.14030}{Swin {Transformer}: {Hierarchical}
+  {Vision} {Transformer} using {Shifted} {Windows}}, arXiv:2103.14030
+  [cs]ArXiv: 2103.14030 (Aug. 2021).
+\newline\urlprefix\url{http://arxiv.org/abs/2103.14030}
+
+\bibitem{zhou_omni-scale_2019}
+K.~Zhou, Y.~Yang, A.~Cavallaro, T.~Xiang,
+  \href{https://openaccess.thecvf.com/content_ICCV_2019/html/Zhou_Omni-Scale_Feature_Learning_for_Person_Re-Identification_ICCV_2019_paper.html}{Omni-{Scale}
+  {Feature} {Learning} for {Person} {Re}-{Identification}}, 2019, pp.
+  3702--3712.
+\newline\urlprefix\url{https://openaccess.thecvf.com/content_ICCV_2019/html/Zhou_Omni-Scale_Feature_Learning_for_Person_Re-Identification_ICCV_2019_paper.html}
+
+\bibitem{li_person_2017b}
+S.~Li, T.~Xiao, H.~Li, B.~Zhou, D.~Yue, X.~Wang,
+  \href{http://ieeexplore.ieee.org/document/8100034/}{Person {Search} with
+  {Natural} {Language} {Description}}, in: 2017 {IEEE} {Conference} on
+  {Computer} {Vision} and {Pattern} {Recognition} ({CVPR}), IEEE, Honolulu, HI,
+  2017, pp. 5187--5196.
+\newblock \href {https://doi.org/10.1109/CVPR.2017.551}
+  {\path{doi:10.1109/CVPR.2017.551}}.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/document/8100034/}
+
+\end{thebibliography}

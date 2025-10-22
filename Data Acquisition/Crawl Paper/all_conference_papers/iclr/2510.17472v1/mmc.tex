@@ -1,0 +1,277 @@
+In this section we introduce the \emph{Martingale Majority Certificate} (MMC), a principled stopping rule that adaptively decides when to stop sampling rollouts while controlling the error of returning the empirical majority. Rather than fixing $n$ in advance, MMC updates after each
+new sample and stops once the empirical evidence is sufficient.
+
+We consider the following setting: 
+at step $n$, we have samples $X_1, \dots, X_n \sim X$  from the terminal distribution over $\{1, \dots, k\}$, generated from $n$ independent rollouts, where $k$ is possibly unknown.  These are independent and identically distributed, conditioned on the prompt $pr$.
+The true-but-unknown class probabilities are $p_j = \mathbb{P}[X=j\,|\,pr]$, and the empirical frequencies are
+$\hat{p}_{n,j}$. 
+
+Our goal is to construct a stopping rule that guarantees, with high confidence, that the majority vote $\widehat{c}_n = \arg\max_j\, \hat{p}_{n,j} $ coincides with the true mode $c^\star = \arg\max_j\, {p}_{j}$. Formally, we seek a strategy such that, at the stopping iteration $n_\tau$, 
+$
+\mathbb{P}\left[\widehat{c}_{n_\tau}\neq c^\star\right]\leq \varepsilon.
+$
+ The central challenge in the LLM setting is the potentially large number of possible outcomes. A naive stopping rule would require pairwise comparisons of the empirical probabilities across all classes $i \neq j$, $i,j \in\{1, \dots, k\}$, which becomes computationally prohibitive as $k$ grows.   
+
+To address this, we exploit the observation that the mass of the terminal law is typically concentrated on a few classes $m\ll k$.  Thus, instead of considering all classes individually, we aggregate votes into three categories: $(i)$ the current leader $\widehat{c}_n$, $(ii)$ the top-$(m-1)$ runner-ups, $j_{n,1}^\star, \dots, j_{n,m-1}^\star$, where $j_{n,i}^\star = \arg\max_{j\neq \widehat{c}_n, j_{n,1}^\star,\dots, j_{n,i-1}^\star} \,\hat{p}_{n,j}$, and $(iii)$ all the \emph{others}.
+Note that
+\small
+\begin{align*}
+\widehat{c}_n = c^\star 
+&\iff \big(\forall \ i\ \in\{1,\dots, m-1\};\ \ p_{\widehat{c}_n}> p_{j_{n,i}^\star}\big)\ \text{AND}\ \big(\forall \ j \in \text{\{\emph{others}\}};\ \  p_{\widehat{c}_n}> p_j\big)\\
+&\,\,\Longleftarrow \,\,\,\big(\forall \ i\ \in\{1,\dots, m-1\};\ \ p_{\widehat{c}_n}> p_{j_{n,i}^\star}\big)\ \text{AND}\ \big(  p_{\widehat{c}_n}> {\scriptstyle\sum}_{j\in\, \textit{others}}\, \, p_j\big).
+\end{align*}
+\normalsize
+Accordingly, we perform two tests: leader vs top-$(m-1)$ runner-ups and leader vs \emph{others}.
+We stop only when both conditions are satisfied with high probability, ensuring that $\widehat{c}_n$ coincides with the true mode with high confidence. 
+In what follows, we focus on the case $m=2$, a detailed construction of the stopping rule for general $m$ is provided in Appendix \ref{app:subsec_general_stopping_rule}.
+
+\subsection{Anytime-valid $e$-processes}
+\label{subsec:mmc_recursive}
+
+At round $n\!\ge\!1$, \emph{before} observing $X_n$, set the predictable top-2 labels as
+\[
+A_{n-1}:=\widehat c_{\,n-1},\qquad B_{n-1}:=j^\star_{\,n-1},
+\]
+which are measurable w.r.t.\ $\mathcal F_{n-1}=\sigma(X_1,\dots,X_{n-1})$ (ties broken deterministically).
+We maintain the following \emph{recursive, predictable} counts
+\[
+\begin{aligned}
+&\textbf{Leader hits:}&& s_n \;=\; s_{n-1} + \mathbf 1\{X_n = A_{n-1}\}, \quad s_0=0,\\
+&\textbf{Runner-up hits (for the A vs B test):}&& f_n \;=\; f_{n-1} + \mathbf 1\{X_n = B_{n-1}\}, \quad f_0=0,\\
+&\textbf{Others hits (for the A vs others test):}&& o_n \;=\; o_{n-1} + \mathbf 1\{X_n \notin \{A_{n-1},B_{n-1}\}\}, \quad o_0=0.
+\end{aligned}
+\]
+Thus the sample sizes are
+\[
+M_n := s_n + f_n,\qquad
+T_n := s_n + o_n.
+\]
+Let $(\pi^{\mathrm{run}}_{n})_{n\ge1}$ and $(\pi^{\mathrm{oth}}_{n})_{n\ge1}$ be  {predictable} priors (each $\pi_n$ is $\mathcal F_{n-1}$-measurable) 
+supported on $(1/2,1]$.
+Define the two mixture $e$-processes recursively (with optional skipping) by
+\begin{align*}
+e^{\mathrm{run}}_n
+&=\begin{cases}
+e^{\mathrm{run}}_{n-1}\cdot 2\!\displaystyle\int \theta\,\pi^{\mathrm{run}}_n(d\theta), & X_n = A_{n-1},\\[1mm]
+e^{\mathrm{run}}_{n-1}\cdot 2\!\displaystyle\int (1-\theta)\,\pi^{\mathrm{run}}_n(d\theta), & X_n = B_{n-1},\\[1mm]
+e^{\mathrm{run}}_{n-1}, & \text{otherwise,}
+\end{cases}\\[2mm]
+e^{\mathrm{oth}}_n
+&=\begin{cases}
+e^{\mathrm{oth}}_{n-1}\cdot 2\!\displaystyle\int \lambda\,\pi^{\mathrm{oth}}_n(d\lambda), & X_n = A_{n-1},\\[1mm]
+e^{\mathrm{oth}}_{n-1}\cdot 2\!\displaystyle\int (1-\lambda)\,\pi^{\mathrm{oth}}_n(d\lambda), & X_n \notin \{A_{n-1},B_{n-1}\},\\[1mm]
+e^{\mathrm{oth}}_{n-1}, & \text{if } X_n = B_{n-1},
+\end{cases}
+\end{align*}
+with $e^{\mathrm{run}}_0=e^{\mathrm{oth}}_0=1$.
+
+Equivalently, by aggregating the per-round factors,
+\begin{align}
+e^{\mathrm{run}}_n
+&= 2^{M_n}\!\int \prod_{i=1}^n\theta_{i}^{\mathbf{1}\{X_i=A_{i-1}\}}(1-\theta_i)^{\mathbf{1}\{X_i=B_{i-1}\}}\,\Pi^{\mathrm{run}}_n(d\bm\theta),\label{eq:e_process_A_vs_B}\\
+e^{\mathrm{oth}}_n
+&= 2^{T_n}\!\int \prod_{i=1}^n\lambda_i^{\mathbf{1}\{X_i=A_{i-1}\}}(1-\lambda)_i^{\mathbf{1}\{X_i\notin \{A_{i-1},B_{i-1}\}\}}\,\Pi^{\mathrm{oth}}_n(d\bm\lambda),\label{eq:e_process_A_vs_OTHERS}
+\end{align}
+where $\Pi^{\mathrm{run}}_n$ (resp.\ $\Pi^{\mathrm{oth}}_n$) denotes a prior on the vector $\bm\theta$ (resp. $\bm\lambda$) and must be predictable, i.e. $\mathcal F_{n-1}$-measurable.
+If $\Pi_n$ is a product distribution, we are re-mixing, i.e. not sharing information across steps.   If it is not a product distribution, we have the opportunity to be a bit more efficient.
+
+The following theorem shows that the $e$-processes defined above provide anytime-valid tests.
+
+
+\begin{theorem}[Anytime validity]\label{thm:mmc_eprocess_recursive}
+Let $p_j=\mathbb P[X=j\mid pr]$. For the \emph{A vs B} test (leader vs runner-up), define
+$\theta_n = \tfrac{p_{A_{n-1}}}{p_{A_{n-1}}+p_{B_{n-1}}}$ and the one-sided composite null
+\[
+H^{\mathrm{run}}_0:\quad \theta_n \le \tfrac12 \ \big(\text{equivalently $p_{A_{n-1}}\le p_{B_{n-1}}$}\big) \,\,\text{at every round $n$.}
+\]
+For the \emph{A vs others} test, define
+$\lambda_n = \tfrac{p_{A_{n-1}}}{p_{A_{n-1}}+\sum_{j\notin\{A_{n-1},B_{n-1}\}}p_j} = \tfrac{p_{A_{n-1}}}{1-p_{B_{n-1}}}$
+and the composite null
+\[
+H^{\mathrm{oth}}_0:\quad \lambda_n \le \tfrac12 \ \big(\text{equivalently $p_{A_{n-1}}\le \scriptstyle{\sum_{j\notin\{A_{n-1},B_{n-1}\}}}$$\, p_j$}\big) \,\,\text{at every round $n$.}
+\]
+Then $\{e^{\mathrm{run}}_n\}_{n\ge0}$ and $\{e^{\mathrm{oth}}_n\}_{n\ge0}$ defined in (\ref{eq:e_process_A_vs_B}), (\ref{eq:e_process_A_vs_OTHERS}) are non-negative test
+\emph{supermartingales} w.r.t.\ $\{\mathcal F_n\}$, even with predictable, data-dependent priors and optional skipping.
+Under the boundary (simple) nulls ($\theta_n\equiv\tfrac12$ or $\lambda_n\equiv\tfrac12$ on their informative rounds),
+they are test \emph{martingales}. Consequently, by Ville’s inequality, for any stopping time,
+\[
+\sup_{\mathbb P\in H^{\mathrm{run}}_0}\ \mathbb P\Big(\sup_{n\ge0}e^{\mathrm{run}}_n\ge 1/\varepsilon\Big)\le\varepsilon,
+\qquad
+\sup_{\mathbb P\in H^{\mathrm{oth}}_0}\ \mathbb P\Big(\sup_{n\ge0}e^{\mathrm{oth}}_n\ge 1/\varepsilon\Big)\le\varepsilon.
+\]
+\end{theorem}
+The proof is provided in Appendix \ref{subsec_app:mmc_recursive}.
+
+\begin{corollary}[Union null for stopping]\label{cor:union_recursive}
+Let $H_0:=H^{\mathrm{run}}_0\ \cup\ H^{\mathrm{oth}}_0$. Define the MMC stopping time
+$N:=\inf\{n:\ e^{\mathrm{run}}_n\ge 1/\varepsilon\ \text{and}\ e^{\mathrm{oth}}_n\ge 1/\varepsilon\}$.
+Then $\sup_{\,\mathbb P\in H_0}\mathbb P(N<\infty)\le \varepsilon$.
+\end{corollary}
+
+\begin{remark}[Why $o_n$ excludes $B_{n-1}$]
+The A vs others null is $p_A \le \sum_{j\notin\{A,B\}}p_j$, which is equivalent to
+$\lambda \le 1/2$ when we map successes to $X=A$ and failures to $X\notin\{A,B\}$.
+Including $B$ among failures would test $p_A\le 1/2$ (absolute majority), which is unnecessarily strong.
+\end{remark}
+
+Pseudocode for implementing the MMC stopping rule is provided in Algorithm \ref{alg:stopping_rule}. If the maximum sample budget is reached, we return an upper bound $\hat{\varepsilon}$ on $\mathbb{P}[\hat{c}_n\neq c^\star]$. Details on how to compute $\hat{\varepsilon}$ are provided in Appendix \ref{app:subsec_estimator_proability}.
+
+\begin{algorithm}[ht]
+\small{
+\caption{Martingale Majority Certificate stopping rule}
+\label{alg:stopping_rule}
+\begin{algorithmic}[1]
+\Require confidence level $\varepsilon$, budget $N_{\text{budget}}$, prior hyperparameters; deterministic tie-break rule
+\State \textbf{Init:} $n\gets 0$; for all $j\in\{1,\dots,k\}$ set label counts $N_j\gets 0$; $s_0=f_0=o_0\gets 0$; $e^{\mathrm{run}}_0=e^{\mathrm{oth}}_0\gets 1$
+\While{True}
+  \State \textbf{Predictable top-2:} set $A_n\gets\arg\max_j N_j$, $B_n\gets$ second largest (ties broken deterministically)
+  \State \textbf{Cache counts (pre-update):} $\tilde s\gets s_n$, $\tilde f\gets f_n$, $\tilde o\gets o_n$
+  \State \textbf{Draw a new vote:} sample $X\sim\mathbb P[\,\cdot\,| pr]$; \Comment{the only source of randomness per round}
+  \State \textbf{Per-round ratio (A vs B):}
+  \[
+  \rho_{\mathrm{run}} \;=\;
+  \scriptstyle\begin{cases}
+ 2\!\displaystyle\int \theta\,\pi^{\mathrm{run}}_n(d\theta), & X = A_{n},\\[1mm]
+ 2\!\displaystyle\int (1-\theta)\,\pi^{\mathrm{run}}_n(d\theta), & X = B_{n},\\[1mm]
+1, & \text{otherwise,}
+\end{cases}
+  \]
+  \State \textbf{Per-round ratio (A vs others):}
+  \[
+  \hspace{26pt}\rho_{\mathrm{oth}} \;=\;
+\scriptstyle\begin{cases}
+2\!\displaystyle\int \lambda\,\pi^{\mathrm{oth}}_n(d\lambda), & X = A_{n},\\[1mm]
+ 2\!\displaystyle\int (1-\lambda)\,\pi^{\mathrm{oth}}_n(d\lambda), & X \notin \{A_{n},B_{n}\},\\[1mm]
+1, & \text{if } X = B_{n},
+\end{cases}
+  \]
+  \State \textbf{Update $e$-values:} $e^{\mathrm{run}}_{n+1}\gets e^{\mathrm{run}}_{n}\cdot \rho_{\mathrm{run}}$, \ \ $e^{\mathrm{oth}}_{n+1}\gets e^{\mathrm{oth}}_{n}\cdot \rho_{\mathrm{oth}}$
+  \State \textbf{Update recursive counts:}
+  \[
+  (s_{n+1},f_{n+1},o_{n+1})=
+  \begin{cases}
+    (\tilde s+1,\tilde f,\tilde o), & X=A_n,\\
+    (\tilde s,\tilde f+1,\tilde o), & X=B_n,\\
+    (\tilde s,\tilde f,\tilde o+1), & \text{otherwise.}
+  \end{cases}
+  \]
+  \State \textbf{Update label counts:} $N_X\gets N_X+1$; \ $n\gets n+1$
+  \State \textbf{Check stop:} \textbf{if} $e^{\mathrm{run}}_{n}\ge 1/\varepsilon$ \textbf{and} $e^{\mathrm{oth}}_{n}\ge 1/\varepsilon$ \textbf{then}
+     \State \hspace{1.5em} set $\hat c\gets \arg\max_j N_j$; \Return $(\hat c,\ \text{stopped})$
+  \State \textbf{Budget:} \textbf{if} $n\ge N_{\text{budget}}$ \textbf{then} \Return $(\arg\max_j N_j,\ \text{abstained})$
+\EndWhile
+\end{algorithmic}}
+\normalsize
+\end{algorithm}
+
+\subsection{Two practical priors: truncated \texorpdfstring{$\mathrm{Beta}(a,b)$}{Beta(a,b)} and an updating point prior}
+\label{subsec:mmc_priors}
+We introduce two priors to compute the $e$-processes. Their performance is evaluated on synthetic data in Appendix \ref{app:subsec_mmc_synthetic_data}.
+
+
+
+\paragraph{A. Truncated \texorpdfstring{$\mathrm{Beta}(a,b)$}{Beta(a,b)} prior on $(\tfrac12,1]$.}
+For convenience, define the \emph{upper–half Beta mass}
+\[
+\mathsf{B}_{>1/2}(a,b)\;:=\;\int_{1/2}^1 t^{a-1}(1-t)^{b-1}\,dt\,.
+\]
+Here we use a \emph{single} latent parameter (shared across informative rounds), that is,
+\begin{align*}
+\Pi_n^{\mathrm{run}}(d\bm\theta)&\propto \theta^{a-1}(1-\theta)^{b-1}\mathbf 1\{\theta>1/2\}\prod_{i=1}^n\delta_\theta(d\theta_i),\\
+\Pi_n^{\mathrm{oth}}(d\bm\lambda)&\propto \lambda^{a-1}(1-\lambda)^{b-1}\mathbf 1\{\lambda>1/2\}\prod_{i=1}^n\delta_\lambda(d\lambda_i).
+\end{align*}
+The mixture $e$-values admit closed forms in terms of $\mathsf{B}_{>1/2}$:
+\[
+\,e^{\mathrm{run}}_n
+= 2^{M_n}\frac{\mathsf{B}_{>1/2}(a+s_n,\,b+f_n)}{\mathsf{B}_{>1/2}(a,b)}\,,\qquad
+{\,e^{\mathrm{oth}}_n
+= 2^{T_n}\frac{\mathsf{B}_{>1/2}(a+s_n,\,b+o_n)}{\mathsf{B}_{>1/2}(a,b)}\,}.
+\]
+These can be updated online by using \emph{ratios}:
+\begin{align*}
+\frac{e^{\mathrm{run}}_n}{e^{\mathrm{run}}_{n-1}}
+&=
+\begin{cases}
+2\,\dfrac{\mathsf{B}_{>1/2}(a+s_{n-1}+1,\,b+f_{n-1})}{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+f_{n-1})},
+& X_n=A_{n-1},\\[2mm]
+2\,\dfrac{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+f_{n-1}+1)}{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+f_{n-1})},
+& X_n=B_{n-1},\\[2mm]
+1,&\text{otherwise,}
+\end{cases}\\
+\frac{e^{\mathrm{oth}}_n}{e^{\mathrm{oth}}_{n-1}}
+&=
+\begin{cases}
+2\,\dfrac{\mathsf{B}_{>1/2}(a+s_{n-1}+1,\,b+o_{n-1})}{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+o_{n-1})},
+& X_n=A_{n-1},\\[2mm]
+2\,\dfrac{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+o_{n-1}+1)}{\mathsf{B}_{>1/2}(a+s_{n-1},\,b+o_{n-1})},
+& X_n\notin\{A_{n-1},B_{n-1}\},\\[2mm]
+1,& X_n=B_{n-1}.
+\end{cases}
+\end{align*}
+\emph{Recommended hyperparameters.} $a=b=\tfrac12$ (Jeffreys) or $a=b=1$ (Laplace) are robust defaults.
+Truncation to $(1/2,1]$ ensures support under the one-sided alternative and yields the required
+supermartingale property for the composite null via the boundary case $\theta=\tfrac12$ (resp. $\lambda=\tfrac12$).
+
+
+
+
+\paragraph{B. Updating plug-in point prior.}
+In this case, we share information across the two tests by maintaining a {single} plug–in estimate of the multinomial parameters for the predictable top–2 and the aggregated others.
+\\\\
+Fix smoothing hyperparameters $(\alpha_A,\alpha_B,\alpha_O)>0$ and set
+\[
+\hat p_{A,n} \;:=\; \tfrac{s_{n-1}+\alpha_A}{L_{n-1}+\alpha_A+\alpha_B+\alpha_O},\quad
+\hat p_{B,n} \;:=\; \tfrac{f_{n-1}+\alpha_B}{L_{n-1}+\alpha_A+\alpha_B+\alpha_O},\quad
+\hat p_{O,n} \;:=\; \tfrac{o_{n-1}+\alpha_O}{L_{n-1}+\alpha_A+\alpha_B+\alpha_O},
+\]
+where $L_{n-1}:=s_{n-1}+f_{n-1}+o_{n-1}$.
+Define the  one–dimensional informative-round parameters
+\[
+\theta^\star_n \;:=\; \operatorname{clip}\!\left(\frac{\hat p_{A,n}}{\hat p_{A,n}+\hat p_{B,n}},\; \tfrac12+\varepsilon,\; 1-\varepsilon\right),
+\qquad
+\lambda^\star_n \;:=\; \operatorname{clip}\!\left(\frac{\hat p_{A,n}}{1-\hat p_{B,n}},\; \tfrac12+\varepsilon,\; 1-\varepsilon\right),
+\]
+where $\varepsilon\in(0,10^{-3}]$ ensures numerical stability.
+We consider two different $e$-processes:
+\begin{itemize}
+    \item[(B.1)] Consider the shared-parameter priors
+    \begin{align*}
+\hspace{-30pt}\Pi_n^{\mathrm{run}}(d\bm\theta)&=\prod_{i=1}^n\delta_{\theta_n^\star}(d\theta_i),\qquad
+\Pi_n^{\mathrm{oth}}(d\bm\lambda)=\prod_{i=1}^n\delta_{\lambda_n^\star}(d\lambda_i).
+\end{align*}
+    The corresponding mixture $e$-values are given by
+\[
+\hspace{-30pt}\,e^{\mathrm{run}}_n
+= 2^{M_n}(\theta_n^\star)^{s_n}(1-\theta_n^\star)^{f_n},\qquad
+{\,e^{\mathrm{oth}}_n
+= 2^{T_n}(\theta_n^\star)^{s_n}(1-\theta_n^\star)^{o_n}\,}.
+\]    
+    \item[(B.2)] The second one is defined by its per-round update factors
+    \[
+\hspace{-30pt}\frac{e^{\mathrm{run}}_n}{e^{\mathrm{run}}_{n-1}}
+=
+\begin{cases}
+2\,\theta^\star_n, & X_n=A_{n-1},\\
+2\,(1-\theta^\star_n), & X_n=B_{n-1},\\
+1, & \text{otherwise,}
+\end{cases}
+\qquad
+\frac{e^{\mathrm{oth}}_n}{e^{\mathrm{oth}}_{n-1}}
+=
+\begin{cases}
+2\,\lambda^\star_n, & X_n=A_{n-1},\\
+2\,(1-\lambda^\star_n), & X_n\notin\{A_{n-1},B_{n-1}\},\\
+1, & X_n=B_{n-1}.
+\end{cases}
+\]
+\end{itemize}
+By construction, $\theta^\star_n,\lambda^\star_n$ are $\mathcal F_{n-1}$–measurable and lie in $(\tfrac12,1]$ after clipping,
+so Theorem~\ref{thm:mmc_eprocess_recursive} applies: $\{e^{\mathrm{run}}_n\}$ and $\{e^{\mathrm{oth}}_n\}$ are
+non-negative test supermartingales under their respective composite nulls, and test martingales under the boundary nulls.
+Ville’s inequality then yields time–uniform guarantees.  
+
+\smallskip
+\textbf{Heuristic sample complexity.}
+If the informative–round parameter $\vartheta\in(\tfrac12,1)$ is well tracked by the plug–in estimate,
+each $e$–process in (B.1) crosses $1/\varepsilon$ after roughly $\log(1/\varepsilon)/D_{\mathrm{KL}}(\mathrm{Ber}(\vartheta)\|\mathrm{Ber}(\tfrac12))$
+informative draws. See Appendix \ref{app:subsec_stopping_time} for details. 

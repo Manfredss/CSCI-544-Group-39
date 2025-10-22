@@ -1,0 +1,38 @@
+The random variable $Y_i^j = \mathbf 1\{X_i=c^\star\}-\mathbf 1\{X_i=j\} \in\{-1,0,1\}$ is integer-valued with span $d=1$ and has logarithmic moment generating function
+$$
+\Lambda_Y(\lambda) = \log M(\lambda) = \log \mathbb{E}\left[e^{\lambda Y_i^j}\right] = \log\left(p_{c^\star} e^{\lambda} + p_j e^{-\lambda} + 1- (p_{c^\star}+p_j)\right).
+$$
+Consider $S_j^{(n)}=-\sum_i^n Y_i^j = -Z_j^{(n)}$. We have that 
+$$
+\Lambda_{-Y}(\lambda) = \Lambda_Y(-\lambda). 
+$$
+Let $\lambda^\star =\tfrac{1}{2}\log(p_j/p_{c^\star}) < 0$ denote the minimiser of the moment generating function $M(\lambda)$ and define $\eta = -\lambda^\star>0$. 
+Then, 
+$$
+\Lambda_{-Y}'(\eta) = -\Lambda'_Y(-\eta) = -\Lambda'_Y(\lambda^\star) =0.
+$$
+We are interested in the event $S_j^{(n)}\geq q$, where $q=\Lambda_{-Y}'(\eta)=0$. 
+By \citet[Theorem 3.7.4. (b)]{dembo2010ldp}, as $n\to \infty$, we obtain the exact asymptotics 
+$$
+\mathbb{P}\left[S_j^{(n)}\geq nq\right] = \frac{1+o(1)}{(1-\exp(\lambda^\star))\sqrt{2\pi n\Lambda''_{-Y}(-\lambda^\star)}}\exp\left(-n\ \Lambda^\star_{-Y}(q)\right),
+$$
+where $\Lambda^\star_{-Y}(q)$ is the Legendre transform given by
+\begin{align*}
+ \Lambda^\star_{-Y}(q) &= \eta q - \Lambda_{-Y}(\eta) = -\Lambda_{-Y}(-\lambda^\star) = -\Lambda_{Y}(\lambda^\star)\\
+ &=-\log\left(1-\left(\sqrt{p_{c^\star}}-\sqrt{p_j}\right)^2\right)
+\end{align*}
+and 
+$$
+\Lambda''_{-Y}(-\lambda^\star) = \Lambda_Y(\lambda^\star) = \frac{M''(\lambda^\star)}{M(\lambda^\star)} = \frac{2\sqrt{p_{c^\star} p_j}}{1-(\sqrt{p_{c^\star}}- \sqrt{p_j})^2}:=\tilde \sigma_j^2.
+$$
+Finally, we have that as $n\to\infty$,
+\begin{align*}
+    \mathbb{P}\bigl[\hat{c}_n&\neq c^\star\bigr]
+    \le \sum_{j\neq c^\star}\mathbb{P}\bigl[Z_j^{(n)}\le 0\bigr]
+    =\sum_{j\neq c^\star}\mathbb{P}\bigl[S_j^{(n)}\ge 0\bigr]\\
+    &=(1+o(1))\sum_{j\neq c^\star}\frac{1}{\sqrt{2\pi n}(1-\exp(1/2\log(p_j/p_{c^\star})))\tilde\sigma_j}\exp\left(n\log(1-(\sqrt{p_{c^\star}}-\sqrt{p_j})^2)\right)\\
+    &\sim \frac{1}{\sqrt{2\pi n}(1-\exp(1/2\log(p_{j^\star}/p_{c^\star})))\tilde\sigma_{j^\star}}\exp\left(n\log(1-(\sqrt{p_{c^\star}}-\sqrt{p_{j^\star}})^2)\right)\\
+    &\sim \frac{1}{\sqrt{2\pi n}(1-\exp(1/2\log(p_{j^\star}/p_{c^\star})))\tilde\sigma_{j^\star}}\exp\left(-n I^\star(\mathbf{p})\right),
+\end{align*}
+where
+${j^\star} = \arg\max_{j \neq c^\star}\,\, p_j$ is the runner-up.

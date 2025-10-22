@@ -1,0 +1,77 @@
+标题: Multimodal Prescriptive Deep Learning
+arXiv ID: 2501.14152v1
+发布时间: 2025-01-24 00:37:28+00:00
+作者: Dimitris Bertsimas, Lisa Everest, Vasiliki Stoumpou
+摘要: We introduce a multimodal deep learning framework, Prescriptive Neural
+Networks (PNNs), that combines ideas from optimization and machine learning,
+and is, to the best of our knowledge, the first prescriptive method to handle
+multimodal data. The PNN is a feedforward neural network trained on embeddings
+to output an outcome-optimizing prescription. In two real-world multimodal
+datasets, we demonstrate that PNNs prescribe treatments that are able to
+significantly improve estimated outcomes in transcatheter aortic valve
+replacement (TAVR) procedures by reducing estimated postoperative complication
+rates by 32% and in liver trauma injuries by reducing estimated mortality rates
+by over 40%. In four real-world, unimodal tabular datasets, we demonstrate that
+PNNs outperform or perform comparably to other well-known, state-of-the-art
+prescriptive models; importantly, on tabular datasets, we also recover
+interpretability through knowledge distillation, fitting interpretable Optimal
+Classification Tree models onto the PNN prescriptions as classification
+targets, which is critical for many real-world applications. Finally, we
+demonstrate that our multimodal PNN models achieve stability across randomized
+data splits comparable to other prescriptive methods and produce realistic
+prescriptions across the different datasets.
+URL: http://arxiv.org/abs/2501.14152v1
+图片输出目录: all_conference_papers/icml/2501.14152v1/extracted_images
+LaTeX文件数量: 2
+图片文件总数: 14
+匹配图片数量: 11
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/icml/2501.14152v1/main.tex
+  - all_conference_papers/icml/2501.14152v1/math_commands.tex
+
+==================================================
+图片引用列表:
+  - Groceries_OCT_seed2_iter2
+  - Spleen_OCT_seed3_iter1
+  - Spleen_OPT_seed3_iter5
+  - nn
+  - REBOA_OCT_seed1_iter3
+  - Liver_OCT_seed5_iter5
+  - Diabetes_OPT_seed2_iter1
+  - Diabetes_OCT_seed2_iter1
+  - TAVR_OCT_seed1_iter1
+  - REBOA_OPT_seed2_iter1
+  - Groceries_OPT_seed2_iter2
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/icml/2501.14152v1/images/nn.png
+  - all_conference_papers/icml/2501.14152v1/images/Groceries_OCT_seed2_iter2.png
+  - all_conference_papers/icml/2501.14152v1/images/Diabetes_OPT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/Spleen_OCT_seed3_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/TAVR_OCT_seed1_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/Spleen_OPT_seed3_iter5.png
+  - all_conference_papers/icml/2501.14152v1/images/Groceries_OPT_seed2_iter2.png
+  - all_conference_papers/icml/2501.14152v1/images/Diabetes_OCT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/Liver_OCT_seed5_iter5.png
+  - all_conference_papers/icml/2501.14152v1/images/REBOA_OPT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/REBOA_OCT_seed1_iter3.png
+
+==================================================
+所有图片文件:
+  - all_conference_papers/icml/2501.14152v1/images/Liver_OPT_seed5_iter7.png
+  - all_conference_papers/icml/2501.14152v1/images/nn.png
+  - all_conference_papers/icml/2501.14152v1/images/Groceries_OCT_seed2_iter2.png
+  - all_conference_papers/icml/2501.14152v1/images/Diabetes_OPT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/TAVR_OPT_seed1_iter2.png
+  - all_conference_papers/icml/2501.14152v1/images/Spleen_OCT_seed3_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/TAVR_OCT_seed1_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/Spleen_OPT_seed3_iter5.png
+  - all_conference_papers/icml/2501.14152v1/images/Groceries_OPT_seed2_iter2.png
+  - all_conference_papers/icml/2501.14152v1/images/Diabetes_OCT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/Liver_OPT_seed5_iter8.png
+  - all_conference_papers/icml/2501.14152v1/images/Liver_OCT_seed5_iter5.png
+  - all_conference_papers/icml/2501.14152v1/images/REBOA_OPT_seed2_iter1.png
+  - all_conference_papers/icml/2501.14152v1/images/REBOA_OCT_seed1_iter3.png

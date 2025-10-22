@@ -1,0 +1,49 @@
+\section{Related Work}
+\label{sec:related_work}
+
+\textbf{Complex Logical Query Answering.}
+To the best of our knowledge, there is no existing approach for generalizable and inductive query answering where the method is required to deal with new entitis and relations at inference time.
+% at inference time \emph{both} entities and relations are unseen.
+
+Due to the necessity of learning entity and relation embeddings, the vast majority of existing methods like GQE~\citep{gqe}, BetaE~\citep{betae}, ConE~\citep{cone}, MPQE~\citep{mpqe} (and many more from the survey by \citet{ren2023ngdb}) are transductive-only and tailored for a specific set of entities and relations.
+Among them, CQD~\citep{cqd} and QTO~\citep{qto} are inference-only query answering engines that execute logical operators with non-parametric fuzzy logic operators (\eg, product logic) but still require pre-trained entity and relation embedding matrices to execute relation projections (link prediction steps). 
+We refer the interested reader to the comprehensive survey by \citet{ren2023ngdb} that covers query answering theory, a taxonomy of approaches, datasets, and open challenges.
+
+\begin{wraptable}{R}{0.5\textwidth}
+\begin{minipage}{0.5\textwidth}
+    \input{tables/relwork}
+\end{minipage}
+\end{wraptable}
+
+
+A few models~\citep{gnn_qe,galkin2022, sheaves} generalize only to % unseen entities at the cost of learning relation embedding matrices. 
+new entities by modeling entities as a function of relation embeddings.
+\citet{sheaves} apply the idea of cellular sheaves and harmonic extension to translation-based embedding models to answer conjunctive queries (without unions and negations).
+NodePiece-QE~\citep{galkin2022} trains an inductive entity encoder (based on the fixed vocabulary of relations) that is able to reconstruct entity embeddings of the % unseen
+new graph and then apply non-parametric engines like CQD to answer queries against % unseen
+new entities.
+The most effective inductive (entity) approach is GNN-QE~\cite{gnn_qe, galkin2022} that parameterizes each entity as a function of the relational structure between the query constants and the entity itself.
+However, all these works rely on a fixed relation vocabulary and cannot generalize to KGs with new relations at test time.
+In contrast, our model uses inductive relation projection and inductive logical operations that enable zero-shot generalization to any new KG with any entity and relation vocabulary without any specific training.
+% The most effective inductive (entity) approach is GNN-QE~\citep{gnn_qe} that does not need entity embedding thanks to the inductive nature of the underlying NBFNet~\citep{nbfnet} encoder for relation projections and non-parametric fuzzy logic operators. 
+% In this work, we leverage the \emph{learnable projection -- non-parametric logical operators} blueprint of GNN-QE and imbue the framework with a relation projection operator inductive to \emph{both} entities and relations that enables zero-shot generalization to any unseen KG with any entity and relation vocabulary without any specific training.
+
+\textbf{Inductive Knowledge Graph Completion.}
+In \clqa, KG completion methods execute the projection operator and are mainly responsible for predicting missing links in incomplete graphs during query execution. 
+Inductive KG completion is usually categorized~\citep{chen2023generalizing} into two branches: (i) inductive entity (inductive $(e)$) approaches have a fixed set of relations and only generalize to % unseen
+new entities, for example, to different subgraphs of one larger KG with one set of relations; and (ii) inductive entity and relation (inductive $(e,r)$) approaches that do not rely on any fixed set of entities and relations and generalize to any new KG with arbitrary new sets of entities and relations.
+
+Up until recently, the majority of existing approaches belonged to the inductive $(e)$ family (\eg, GraIL~\citep{grail}, NBFNet~\citep{nbfnet}, RED-GNN~\citep{redgnn}, NodePiece~\citep{nodepiece}, A*Net~\citep{astarnet}, AdaProp~\citep{adaprop}) %, \emph{inter alia}) 
+that generalizes only to % unseen
+new entities as their featurization strategies are based on learnable relation embeddings. 
+
+Recently, the more generalizable inductive $(e,r)$ family started getting more attention, \eg, with RMPI~\citep{rmpi}, InGram~\citep{ingram}, \ultra~\citep{ultra}, and the theory of \emph{double equivariance} introduced by \citet{isdea} followed by ISDEA and MTDEA~\citep{mtdea} models. 
+% Consider moving the following to the main Method section.
+In this work, we employ \ultra to obtain transferable graph representations and execute the projection operator with link prediction over any arbitrary KG without input features.
+%Notably, \ultra does not require pre-computed input entity or edge features and relies solely on the graph structure.
+%As different KGs might often have heterogeneous feature spaces, \eg, textual descriptions or numerical features of different dimensions, deriving a single fixed-width model for any arbitrary feature space is highly non-trivial and we deem this direction orthogonal to the present work. 
+%As different KGs might have heterogeneous feature spaces, \eg, textual or numerical, 
+Extending our model with additional input features is possible (although deriving a single fixed-width model for graphs with arbitrary input space % dimensions
+is highly non-trivial) and we leave it for future work.
+%as a promising avenue for exploration in future work.
+

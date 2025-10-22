@@ -1,0 +1,25 @@
+% 3D perception
+% mainly offline models, not applicable; a few online models, designed for special model and task, some need to be applied with 3D reconstruction method, not extendable
+% ours: inspired by adapter, empower existing 3D model with online perception ability by introducing a small proportion of additional parameters.-->general, extendable
+% for the first time, without model and task-specific design, insert adapters into exsiting 3D models and finetune, with simple prediction fusion strategy, achieve leading performance on three tasks
+
+3D scene perception aims to parse a 3D scene into semantic or object-level entities, mainly including semantic segmentation, object detection and instance segmentation, which is the fundamental ability for robotics or AR/VR applications. 
+Since PointNet~\cite{qi2017pointnet} proposes the first model that directly process point clouds, great improvement on 3D scene perception~\cite{choy20194d,rukhovich2022fcaf3d,wang2022cagroup3d,schult2022mask3d,vu2022softgroup} has been achieved in recent years by accurate and efficient architecture design.
+
+However, conventional 3D scene perception methods are offline, i.e., they take an already reconstructed 3D scene geometry from pre-collected RGB-D videos without temporal information as input. While in most robotic application such as navigation~\cite{chaplot2020object,zhang20233d} and manipulation~\cite{Mousavian_2019_ICCV} where the agent is usually initialized in an unknown environment, the input data is streaming RGB-D videos and scene perception should be performed synchronously with data collection to guide the agent how to explore. Therefore, online 3D scene perception model with temporal modeling ability is required, which takes in streaming RGB-D video and continuously outputs the perception of the currently observed 3D scene.
+There are also a few online 3D scene perception methods~\cite{mccormac2017semanticfusion,narita2019panopticfusion,zhang2020fusion,huang2021supervoxel,liu2022ins} designed for special architecture and task. 
+As these methods only focus on temporal aggregation for single modality, they cannot fully exploit temporal relations between image and point cloud features and thus their performances are not satisfactory. 
+
+In this paper, we propose a new general framework for online 3D scene perception. Different from previous works which design online perception approachs based on specific architecture and task and train models on RGB-D videos from scratch, we convert exsiting offline 3D perception models to online ones by simply inserting plug-and-play modules and finetuning.
+Taking inspiration from adapters~\cite{pan2022st,chen2022vision} which adapt image backbones to downstream tasks by additional parameter tuning, we propose memory-based adapters to empower the backbone of 3D perception model with temporal modeling ability by reusing the extracted features from previous frames. 
+Specifically, we propose a queued memory mechanism to cache the supporting point cloud and image features for the RGB-D frame at current time. Based on the structure of memory, we devise aggregation modules which directly operate on the memory and pass temporal information to current frame. As the global context of image features is limited, we further propose 3D-to-2D adapter to enhance image features with 3D memory projection and 2D sparse aggregation.
+In this way, we can make use of the existing mainstream 3D scene perception model zoo to acquire a series of online models, with simple inserting and finetuning.
+We conduct extensive experiments on three online perception tasks on ScanNet~\cite{dai2017scannet} and SceneNN~\cite{hua2016scenenn} datasets.
+Our approach achieves leading performance on all tasks and datasets without any additional loss function and special prediction fusion strategy.
+To summarize, our contributions include:
+\begin{itemize}
+    \item We propose a new framework for online 3D scene perception, which extends existing offline models to online ones by adapter without model and task-specific design.
+    \item We propose general memory-based adapters for image and point cloud backbones, which cache and aggregate extracted features to model the temporal relations between frames.
+    \item Equipped with our adapters, offline models are able to achieve leading performance on three tasks compared with state-of-the-art online models.
+    % \item We develop codebase to uniformly train and evaluate 3D scene perception models on three online tasks and two datasets. The memory-based adapters can be easily inserted into exsiting models with the simplest code and significantly boost their performance on online tasks.
+\end{itemize}

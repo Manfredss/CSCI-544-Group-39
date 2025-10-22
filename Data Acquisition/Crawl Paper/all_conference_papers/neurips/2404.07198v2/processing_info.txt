@@ -1,0 +1,78 @@
+标题: A Foundation Model for Zero-shot Logical Query Reasoning
+arXiv ID: 2404.07198v2
+发布时间: 2024-04-10 17:56:07+00:00
+作者: Mikhail Galkin, Jincheng Zhou, Bruno Ribeiro, Jian Tang, Zhaocheng Zhu
+摘要: Complex logical query answering (CLQA) in knowledge graphs (KGs) goes beyond
+simple KG completion and aims at answering compositional queries comprised of
+multiple projections and logical operations. Existing CLQA methods that learn
+parameters bound to certain entity or relation vocabularies can only be applied
+to the graph they are trained on which requires substantial training time
+before being deployed on a new graph. Here we present UltraQuery, the first
+foundation model for inductive reasoning that can zero-shot answer logical
+queries on any KG. The core idea of UltraQuery is to derive both projections
+and logical operations as vocabulary-independent functions which generalize to
+new entities and relations in any KG. With the projection operation initialized
+from a pre-trained inductive KG reasoning model, UltraQuery can solve CLQA on
+any KG after finetuning on a single dataset. Experimenting on 23 datasets,
+UltraQuery in the zero-shot inference mode shows competitive or better query
+answering performance than best available baselines and sets a new state of the
+art on 15 of them.
+URL: http://arxiv.org/abs/2404.07198v2
+图片输出目录: all_conference_papers/neurips/2404.07198v2/extracted_images
+LaTeX文件数量: 13
+图片文件总数: 14
+匹配图片数量: 7
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/neurips/2404.07198v2/main.tex
+  - all_conference_papers/neurips/2404.07198v2/math_commands.tex
+  - all_conference_papers/neurips/2404.07198v2/command.tex
+  - all_conference_papers/neurips/2404.07198v2/tables/maintab.tex
+  - all_conference_papers/neurips/2404.07198v2/tables/relwork.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/06_conclusion.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/03_prelim.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/01_introduction.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/05_experiments.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/appendices.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/02_related_work.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/checklist.tex
+  - all_conference_papers/neurips/2404.07198v2/sections/04_method.tex
+
+==================================================
+图片引用列表:
+  - icml_numpapers
+  - mainfig1_MRR_pyg
+  - UltraQuery_Fig1
+  - newres_pyg
+  - qual_analysis_pyg
+  - ultraquery_num_graphs
+  - app_inde_pyg
+  - Fig2v2
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/neurips/2404.07198v2/figs/Fig2v2.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/mainfig1_MRR_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/newres_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/UltraQuery_Fig1.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/ultraquery_num_graphs.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/qual_analysis_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/app_inde_pyg.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/neurips/2404.07198v2/figs/qual_analysis.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/Fig2.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/Fig2v2.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/mainfig1_MRR_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/newres5.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/mainfig1_MRR2.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/newres_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/mainfig1_MRR.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/UltraQuery_Fig1.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/app_inde_full1.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/Ablation_multisource.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/ultraquery_num_graphs.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/qual_analysis_pyg.pdf
+  - all_conference_papers/neurips/2404.07198v2/figs/app_inde_pyg.pdf

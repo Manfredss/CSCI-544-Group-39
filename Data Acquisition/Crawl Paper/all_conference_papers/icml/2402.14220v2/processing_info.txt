@@ -1,0 +1,107 @@
+标题: Estimating Unknown Population Sizes Using the Hypergeometric Distribution
+arXiv ID: 2402.14220v2
+发布时间: 2024-02-22 01:53:56+00:00
+作者: Liam Hodgson, Danilo Bzdok
+摘要: The multivariate hypergeometric distribution describes sampling without
+replacement from a discrete population of elements divided into multiple
+categories. Addressing a gap in the literature, we tackle the challenge of
+estimating discrete distributions when both the total population size and the
+sizes of its constituent categories are unknown. Here, we propose a novel
+solution using the hypergeometric likelihood to solve this estimation
+challenge, even in the presence of severe under-sampling. We develop our
+approach to account for a data generating process where the ground-truth is a
+mixture of distributions conditional on a continuous latent variable, such as
+with collaborative filtering, using the variational autoencoder framework.
+Empirical data simulation demonstrates that our method outperforms other
+likelihood functions used to model count data, both in terms of accuracy of
+population size estimate and in its ability to learn an informative latent
+space. We demonstrate our method's versatility through applications in NLP, by
+inferring and estimating the complexity of latent vocabularies in text
+excerpts, and in biology, by accurately recovering the true number of gene
+transcripts from sparse single-cell genomics data.
+URL: http://arxiv.org/abs/2402.14220v2
+图片输出目录: all_conference_papers/icml/2402.14220v2/extracted_images
+LaTeX文件数量: 4
+图片文件总数: 25
+匹配图片数量: 20
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/icml/2402.14220v2/sim_results_table_full.tex
+  - all_conference_papers/icml/2402.14220v2/main.tex
+  - all_conference_papers/icml/2402.14220v2/math_commands.tex
+  - all_conference_papers/icml/2402.14220v2/sim_results_table.tex
+
+==================================================
+图片引用列表:
+  - spike_totals
+  - sgd_k2_50ci
+  - sgd_k3_50ci_20frac
+  - complexity_unique_tokens
+  - spike12_counts
+  - scaling_k3_50ci
+  - sgd_k3_50ci_60frac
+  - measured_sp12_counts
+  - nll_landscape
+  - vae_total_counts
+  - complexity_total_tokens
+  - scaling_k2_90ci
+  - vae_trajectory
+  - scaling_k3_90ci
+  - sgd_k2_90ci
+  - sgd_k3_50ci_80frac
+  - sgd_k3_90ci
+  - vae_feature_counts
+  - sgd_k3_50ci
+  - scaling_k2_50ci
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/icml/2402.14220v2/sgd_k2_90ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_90ci.png
+  - all_conference_papers/icml/2402.14220v2/complexity_total_tokens.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k2_50ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_60frac.png
+  - all_conference_papers/icml/2402.14220v2/vae_trajectory.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k2_50ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k3_50ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k3_90ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k2_90ci.png
+  - all_conference_papers/icml/2402.14220v2/vae_total_counts.png
+  - all_conference_papers/icml/2402.14220v2/nll_landscape.png
+  - all_conference_papers/icml/2402.14220v2/spike_totals.png
+  - all_conference_papers/icml/2402.14220v2/measured_sp12_counts.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_80frac.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_20frac.png
+  - all_conference_papers/icml/2402.14220v2/vae_feature_counts.png
+  - all_conference_papers/icml/2402.14220v2/complexity_unique_tokens.png
+  - all_conference_papers/icml/2402.14220v2/spike12_counts.png
+
+==================================================
+所有图片文件:
+  - all_conference_papers/icml/2402.14220v2/icml_numpapers.pdf
+  - all_conference_papers/icml/2402.14220v2/sgd_k2.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k2_90ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_90ci.png
+  - all_conference_papers/icml/2402.14220v2/complexity_total_tokens.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k2_50ci.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_60frac.png
+  - all_conference_papers/icml/2402.14220v2/vae_trajectory.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k2_50ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k3_50ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k3_90ci.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k2_90ci.png
+  - all_conference_papers/icml/2402.14220v2/vae_total_counts.png
+  - all_conference_papers/icml/2402.14220v2/nll_landscape.png
+  - all_conference_papers/icml/2402.14220v2/spike_totals.png
+  - all_conference_papers/icml/2402.14220v2/measured_sp12_counts.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_80frac.png
+  - all_conference_papers/icml/2402.14220v2/sgd_k3_50ci_20frac.png
+  - all_conference_papers/icml/2402.14220v2/vae_feature_counts.png
+  - all_conference_papers/icml/2402.14220v2/complexity_unique_tokens.png
+  - all_conference_papers/icml/2402.14220v2/spike12_counts.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k2.png
+  - all_conference_papers/icml/2402.14220v2/scaling_k3.png

@@ -1,0 +1,82 @@
+\section{Introduction}
+\label{sec:intro}
+
+Probabilistic Logic Programming (PLP) is a 
+class of Statistical Relational Learning
+(SRL) frameworks~\cite{srlbook} which combine
+statistical and logical knowledge representation and inference.
+PLP languages, such as SLP~\cite{Muggleton}, ICL~\cite{PooleICL},
+PRISM~\cite{sato-kameya-prism}, ProbLog~\cite{deRaedt} and
+LPAD~\cite{lpad}  extend traditional logic
+programming languages by implicitly or explicitly attaching 
+random variables with certain clauses in a logic
+program.  A large class of common statistical models, such as Bayesian
+networks, Hidden Markov models and Probabilistic Context-Free Grammars
+have been effectively encoded in PLP; the programming aspect of PLP
+has also been exploited to succinctly specify complex models, such as
+discovering links in biological networks~\cite{deRaedt}.  Parameter learning in these
+languages is typically done by variants of the EM
+algorithm~\cite{DempsterEM}.  
+
+Operationally, combined statistical/logical inference in PLP is
+based on proof structures similar to those created by
+pure logical inference.  As a result, these languages have 
+limited support models with continuous random
+variables.  Recently, we extended PRISM~\cite{sato-kameya-prism}
+with Gaussian and Gamma-distributed random variables, and
+linear equality constraints (\url{http://arxiv.org/abs/1112.2681})\footnote{Relevant
+  technical aspects of this extension are summarized in this paper to make it self-contained.}. This extension permits encoding of
+complex statistical models including Kalman filters and a large class
+of Hybrid Bayesian Networks.  
+
+In this paper, we present an algorithm for parameter learning in PRISM
+extended with Gaussian random variables.  The key aspect of this
+algorithm is the construction of \emph{symbolic derivations} that
+succinctly represent large (sometimes infinite) sets of traditional
+logical derivations.  Our learning algorithm represents and computes
+Expected Sufficient Statistics (ESS) symbolically as well, for
+Gaussian as well as discrete random variables. 
+Although our technical development is limited to PRISM, the core algorithm can be
+adapted to parameter learning in (extended versions of) other PLP
+languages as well.
+
+\paragraph{Related Work}
+SRL frameworks can be broadly classified as
+statistical-model-based or logic-based, depending on how their
+semantics is defined.  In the first category are languages such as
+Bayesian Logic Programs (BLPs)~\cite{hblp}, Probabilistic Relational
+Models (PRMs)~\cite{hprm}, and Markov Logic Networks (MLNs)~\cite{mln},
+where logical relations are used to specify a model compactly.
+Although originally defined over discrete random variables, these
+languages have been extended (e.g.  Continuous
+BLP~\cite{hblp}, Hybrid PRM~\cite{hprm}, and Hybrid
+MLN~\cite{hmln}) to support continuous random variables as
+well.  Techniques for parameter learning in statistical-model-based
+languages are adapted from the corresponding techniques in the
+underlying statistical models.  For example, discriminative learning
+techniques are used for parameter learning in MLNs
+~\cite{mlnlearningA,mlnlearningB}.
+
+Logic-based SRL languages include the PLP languages mentioned earlier.
+Hybrid ProbLog ~\cite{hproblog} extends ProbLog by adding
+continuous probabilistic facts, but restricts their use such that
+statistical models such as Kalman filters and certain classes of Hybrid Bayesian Networks
+(with continuous child with continuous parents) 
+cannot be encoded.  More recently, \mycite{apprProblog} introduced a
+sampling-based approach for (approximate) probabilistic inference in a
+ProbLog-like language. 
+
+Graphical EM~\cite{sato} is the parameter learning algorithm used in
+PRISM.  Interestingly, graphical EM reduces to the
+Baum-Welch~\cite{rabiner} algorithm for HMMs encoded in PRISM.
+\mycite{probloglearningA} introduced a least squares optimization
+approach to learn distribution parameters in ProbLog.
+CoPrEM~\cite{probloglearningB} is another algorithm for ProLog that
+computes binary decision diagrams (BDDs) for representing proofs and
+uses a dynamic programming approach to estimate
+parameters. BO-EM~\cite{satoBDD} is a BDD-based parameter learning
+algorithm for PRISM.  These techniques enumerate derivations (even
+when represented as BDDs), and do not readily generalize when
+continuous random variables are introduced. 
+
+

@@ -1,0 +1,150 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Bishop}{2006}]{bishop}
+Bishop, C.
+\newblock 2006.
+\newblock {\em Pattern recognition and Machine Learning.}
+\newblock Springer.
+
+\bibitem[\protect\citeauthoryear{{De Raedt}, Kimmig, and
+  Toivonen}{2007}]{deRaedt}
+{De Raedt}, L.; Kimmig, A.; and Toivonen, H.
+\newblock 2007.
+\newblock {ProbLog}: A probabilistic prolog and its application in link
+  discovery.
+\newblock In {\em IJCAI},  2462--2467.
+
+\bibitem[\protect\citeauthoryear{Dempster, Laird, and Rubin}{1977}]{DempsterEM}
+Dempster, A.~P.; Laird, N.~M.; and Rubin, D.~B.
+\newblock 1977.
+\newblock Maximum likelihood from incomplete data via the em algorithm.
+\newblock {\em JOURNAL OF THE ROYAL STATISTICAL SOCIETY, SERIES B} 39(1):1--38.
+
+\bibitem[\protect\citeauthoryear{Getoor and Taskar}{2007}]{srlbook}
+Getoor, L., and Taskar, B.
+\newblock 2007.
+\newblock {\em Introduction to Statistical Relational Learning}.
+\newblock The MIT Press.
+
+\bibitem[\protect\citeauthoryear{Gutmann \bgroup et al\mbox.\egroup
+  }{2008}]{probloglearningA}
+Gutmann, B.; Kimmig, A.; Kersting, K.; and {De Raedt}, L.
+\newblock 2008.
+\newblock Parameter learning in probabilistic databases: A least squares
+  approach.
+\newblock In {\em ECML/PKDD (1)},  473--488.
+
+\bibitem[\protect\citeauthoryear{Gutmann \bgroup et al\mbox.\egroup
+  }{2011}]{apprProblog}
+Gutmann, B.; Thon, I.; Kimmig, A.; Bruynooghe, M.; and {De Raedt}, L.
+\newblock 2011.
+\newblock The magic of logical inference in probabilistic programming.
+\newblock {\em TPLP} 11(4-5):663--680.
+
+\bibitem[\protect\citeauthoryear{Gutmann, Jaeger, and {De
+  Raedt}}{2010}]{hproblog}
+Gutmann, B.; Jaeger, M.; and {De Raedt}, L.
+\newblock 2010.
+\newblock Extending {ProbLog} with continuous distributions.
+\newblock In {\em Proceedings of ILP}.
+
+\bibitem[\protect\citeauthoryear{Gutmann, Thon, and {De
+  Raedt}}{2011}]{probloglearningB}
+Gutmann, B.; Thon, I.; and {De Raedt}, L.
+\newblock 2011.
+\newblock Learning the parameters of probabilistic logic programs from
+  interpretations.
+\newblock In {\em ECML/PKDD (1)},  581--596.
+
+\bibitem[\protect\citeauthoryear{Ishihata \bgroup et al\mbox.\egroup
+  }{2010}]{satoBDD}
+Ishihata, M.; Kameya, Y.; Sato, T.; and ichi Minato, S.
+\newblock 2010.
+\newblock An em algorithm on bdds with order encoding for logic-based
+  probabilistic models.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track}
+  13:161--176.
+
+\bibitem[\protect\citeauthoryear{Kersting and {De Raedt}}{2001}]{hblp}
+Kersting, K., and {De Raedt}, L.
+\newblock 2001.
+\newblock Adaptive {Bayesian} logic programs.
+\newblock In {\em Proceedings of ILP}.
+
+\bibitem[\protect\citeauthoryear{Lowd and Domingos}{2007}]{mlnlearningB}
+Lowd, D., and Domingos, P.
+\newblock 2007.
+\newblock Efficient weight learning for markov logic networks.
+\newblock In {\em PKDD},  200--211.
+
+\bibitem[\protect\citeauthoryear{McLachlan and Peel}{2001}]{fmm}
+McLachlan, G., and Peel, D.
+\newblock 2001.
+\newblock {\em Finite mixture models}.
+\newblock Wiley.
+
+\bibitem[\protect\citeauthoryear{Muggleton}{1996}]{Muggleton}
+Muggleton, S.
+\newblock 1996.
+\newblock Stochastic logic programs.
+\newblock In {\em Advances in inductive logic programming}.
+
+\bibitem[\protect\citeauthoryear{Narman \bgroup et al\mbox.\egroup
+  }{2010}]{hprm}
+Narman, P.; Buschle, M.; Konig, J.; and Johnson, P.
+\newblock 2010.
+\newblock Hybrid probabilistic relational models for system quality analysis.
+\newblock In {\em Proceedings of EDOC}.
+
+\bibitem[\protect\citeauthoryear{Poole}{2008}]{PooleICL}
+Poole, D.
+\newblock 2008.
+\newblock The independent choice logic and beyond.
+\newblock In {\em Probabilistic ILP},  222--243.
+
+\bibitem[\protect\citeauthoryear{Rabiner}{1989}]{rabiner}
+Rabiner, L.~R.
+\newblock 1989.
+\newblock A tutorial on hidden {Markov} models and selected applications in
+  speech recoginition.
+\newblock In {\em Proceedings of the IEEE}, volume~77,  257--286.
+
+\bibitem[\protect\citeauthoryear{Richardson and Domingos}{2006}]{mln}
+Richardson, M., and Domingos, P.
+\newblock 2006.
+\newblock Markov logic networks.
+\newblock {\em Machine Learning}.
+
+\bibitem[\protect\citeauthoryear{Sato and Kameya}{1997}]{sato-kameya-prism}
+Sato, T., and Kameya, Y.
+\newblock 1997.
+\newblock {PRISM:} a symbolic-statistical modeling language.
+\newblock In {\em IJCAI}.
+
+\bibitem[\protect\citeauthoryear{Sato and Kameya}{1999}]{sato}
+Sato, T., and Kameya, Y.
+\newblock 1999.
+\newblock Parameter learning of logic programs for symbolic-statistical
+  modeling.
+\newblock {\em Journal of Artificial Intelligence Research}  391--454.
+
+\bibitem[\protect\citeauthoryear{Singla and Domingos}{2005}]{mlnlearningA}
+Singla, P., and Domingos, P.
+\newblock 2005.
+\newblock Discriminative training of markov logic networks.
+\newblock In {\em AAAI},  868--873.
+
+\bibitem[\protect\citeauthoryear{Vennekens, Verbaeten, and
+  Bruynooghe}{2004}]{lpad}
+Vennekens, J.; Verbaeten, S.; and Bruynooghe, M.
+\newblock 2004.
+\newblock Logic programs with annotated disjunctions.
+\newblock In {\em ICLP},  431--445.
+
+\bibitem[\protect\citeauthoryear{Wang and Domingos}{2008}]{hmln}
+Wang, J., and Domingos, P.
+\newblock 2008.
+\newblock Hybrid markov logic networks.
+\newblock In {\em Proceedings of AAAI}.
+
+\end{thebibliography}

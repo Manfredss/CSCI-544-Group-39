@@ -1,0 +1,129 @@
+\section{Background: An Overview of PRISM}
+\label{sec:prism}
+
+%PAGE BUDGET: 1.0 page including Extended PRISM.
+
+PRISM programs have Prolog-like syntax (see Example~\ref{ex:fmm}).
+In a PRISM program the \texttt{msw} relation (``multi-valued switch'')
+has a special meaning: \texttt{msw(X,I,V)} says that \texttt{V} is a
+random variable.  More precisely, \texttt{V} is the outcome of the
+\texttt{I}-th instance from a family \texttt{X} of random
+processes\footnote{Following PRISM, we often omit the instance number
+  in an \texttt{msw} when a program uses only one instance from a
+  family of random processes.}.  The set of variables $\{\mathtt{V}_i
+\mid \mathtt{msw(}p, i, \mathtt{V}_i\mathtt{)}\}$ are i.i.d., and
+their distribution is given by the random process $p$.  The
+\texttt{msw} relation provides the mechanism for using random
+variables, thereby allowing us to weave together statistical and
+logical aspects of a model into a single program.  The distribution
+parameters of the random variables are specified separately.
+
+
+PRISM programs have declarative semantics, called 
+\emph{distribution semantics}~\cite{sato-kameya-prism,sato}.
+Operationally,  query evaluation in PRISM closely follows that for
+traditional logic programming, with one
+modification.  When the goal selected at a step is of the form
+\texttt{msw(X,I,Y)}, then \texttt{Y} is bound to a possible outcome of a
+random process \texttt{X}.  The derivation step is
+associated with the probability of this outcome.  If all random
+processes encountered in a derivation are independent, then the
+probability of the derivation is the product of probabilities of each
+step in the derivation.  If a set of derivations are pairwise mutually
+exclusive, the probability of the set is the sum of probabilities of
+each derivation in the set\footnote{The evaluation procedure is
+  defined only when the independence and exclusiveness assumptions
+  hold.}.  
+Finally, the probability of an answer to
+a query is computed as the probability of the set of derivations
+corresponding to that answer.  
+
+As an illustration, consider the query \texttt{fmix(X)} evaluated over program in
+Example~\ref{ex:fmm}.   One step of resolution derives goal of
+the form \texttt{msw(m, M), msw(w(M),X)}. Now depending on the value of \texttt{m},
+there are two possible next steps:
+\texttt{msw(w(a),X)} and \texttt{msw(w(b),X)}.
+\emph{Thus in PRISM, derivations are constructed by enumerating the
+  possible outcomes of each random variable.}
+
+
+\begin{Ex}[Finite Mixture Model]
+In the following PRISM program, which encodes a finite mixture model~\cite{fmm},
+{\rm \texttt{msw(m, M)}} chooses one distribution from a finite set of
+continuous 
+distributions, {\rm \texttt{msw(w(M), X)}} samples {\rm \texttt{X}} from the chosen distribution.
+
+\begin{small}
+  \begin{minipage}{3.0in}
+\begin{verbatim}
+fmix(X) :- msw(m, M),
+           msw(w(M), X).
+
+% Ranges of RVs
+values(m, [a,b]).
+values(w(M), real).
+% PDFs and PMFs
+:- set_sw(m, [0.3, 0.7]),
+   set_sw(w(a), norm(2.0, 1.0)),
+   set_sw(w(b), norm(3.0, 1.0)).
+\end{verbatim}
+\end{minipage}
+\end{small}
+\qed
+  \label{ex:fmm}
+\end{Ex}
+
+
+\section{Extended PRISM}
+\label{sec:language}
+
+Support for continuous variables is added by modifying PRISM's
+language in two ways.   We use the \texttt{msw}
+relation to sample from discrete as well as continuous distributions.
+In PRISM, a special relation
+called \texttt{values} is used to specify the ranges of values of
+random variables; the probability mass functions are specified using
+\texttt{set\_sw} directives.  We extend the
+\texttt{set\_sw} directives to specify probability density functions
+as well.  For instance, \texttt{set\_sw(r, norm(Mu,Var))} specifies
+that outcomes of  random processes \texttt{r} have Gaussian
+distribution with mean 
+\texttt{Mu} and variance \texttt{Var}.
+\comment{ \footnote{The technical
+  development in this paper considers only univariate Gaussian
+  variables; see Discussions section on a discussion on how
+  multivariate Gaussian as well as other continuous distributions are
+  handled.}}  Parameterized families of random
+processes may be specified, as long as the parameters are
+discrete-valued.  For 
+instance, \texttt{set\_sw(w(M), norm(Mu,Var))} specifies a family of
+random processes, with one for each value of \texttt{M}. As
+in PRISM, \texttt{set\_sw} directives may be specified
+programmatically; for instance, the distribution parameters of \texttt{w(M)},
+ may be computed as functions of
+\texttt{M}.
+
+Additionally, we extend PRISM programs with linear equality
+constraints over reals.  Without loss of generality, we
+assume that constraints are written as linear equalities of the form
+$Y = a_1 * X_1 + \ldots + a_n * X_n + b$ where $a_i$ and $b$ are all
+floating-point constants.
+\comment{ , or inequalities of the form $Y < a$ or $Y>a$
+for some floating point constant $a$. 
+Note that inequalities comparing
+two variables can be expressed as an inequality comparing a linear
+function of the two variables and a constant.}
+The use of constraints enables us to encode Hybrid Bayesian Networks and Kalman Filters as
+extended PRISM programs.  In the following, we use \emph{Constr} to
+denote a set (conjunction) of linear equality 
+constraints.  We also denote by $\overline{X}$ a vector of variables
+and/or values, explicitly specifying the size only when it is not
+clear from the context.  This permits us to write linear equality
+constraints compactly (e.g., $Y = \overline{a}\cdot\overline{X} +b$).
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

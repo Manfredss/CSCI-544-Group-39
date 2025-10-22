@@ -1,0 +1,43 @@
+标题: Parameter Learning in PRISM Programs with Continuous Random Variables
+arXiv ID: 1203.4287v1
+发布时间: 2012-03-19 23:37:07+00:00
+作者: Muhammad Asiful Islam, C. R. Ramakrishnan, I. V. Ramakrishnan
+摘要: Probabilistic Logic Programming (PLP), exemplified by Sato and Kameya's
+PRISM, Poole's ICL, De Raedt et al's ProbLog and Vennekens et al's LPAD,
+combines statistical and logical knowledge representation and inference.
+Inference in these languages is based on enumerative construction of proofs
+over logic programs. Consequently, these languages permit very limited use of
+random variables with continuous distributions. In this paper, we extend PRISM
+with Gaussian random variables and linear equality constraints, and consider
+the problem of parameter learning in the extended language. Many statistical
+models such as finite mixture models and Kalman filter can be encoded in
+extended PRISM. Our EM-based learning algorithm uses a symbolic inference
+procedure that represents sets of derivations without enumeration. This permits
+us to learn the distribution parameters of extended PRISM programs with
+discrete as well as Gaussian variables. The learning algorithm naturally
+generalizes the ones used for PRISM and Hybrid Bayesian Networks.
+URL: http://arxiv.org/abs/1203.4287v1
+图片输出目录: all_conference_papers/iclr/1203.4287v1/extracted_images
+LaTeX文件数量: 8
+图片文件总数: 0
+匹配图片数量: 0
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/iclr/1203.4287v1/intro.tex
+  - all_conference_papers/iclr/1203.4287v1/conclusion.tex
+  - all_conference_papers/iclr/1203.4287v1/inference.tex
+  - all_conference_papers/iclr/1203.4287v1/main.tex
+  - all_conference_papers/iclr/1203.4287v1/abstract.tex
+  - all_conference_papers/iclr/1203.4287v1/learning.tex
+  - all_conference_papers/iclr/1203.4287v1/prism.tex
+  - all_conference_papers/iclr/1203.4287v1/command.tex
+
+==================================================
+图片引用列表:
+
+==================================================
+匹配的图片文件:
+
+==================================================
+所有图片文件:

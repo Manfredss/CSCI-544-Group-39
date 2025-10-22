@@ -1,0 +1,135 @@
+Our ultimate goal is to minimise the number of samples required from the LLM  for the majority vote to return the correct answer with high confidence $1-\varepsilon$. 
+From the analysis in Section~\ref{sec:stopping_rule}, the
+expected stopping time of the MMC scales approximately as
+\begin{equation}\label{eq:expected_number_samples}
+N \;\approx\;
+\frac{2(p_{\hat c}+p_{j^\star})}{(p_{\hat c}-p_{j^\star})^{2}}
+\,\log ({1}/{\varepsilon}),
+\end{equation}
+so that small mode margins \( \delta = p_{\hat c}-p_{j^\star} \) lead to rapidly increasing sample
+requirements (see Appendix \ref{app:subsec_stopping_time} for details).  The key question is whether test-time adaptation can reshape the terminal distribution
+to enlarge this margin, thereby improving sample efficiency.
+
+
+\paragraph{Effect of test-time training.} 
+Test-time reinforcement learning (TTRL; \citealp{zuo2025ttrl}) adapts model parameters at inference
+time by maximising a KL-regularised objective based on self-generated rewards.  Given a prompt
+\(pr\), let $(Y_t)_{t\geq 0}$ be the autoregressive token process from a reference distribution $\pi_{\text{ref}}(\cdot \, |\, pr)$ on trajectories.  Let $X = g(Y_{\tau:})$, where $\tau$ is the time at which the answer is generated, which is a (finite a.s.) stopping time with respect to the canonical filtration.
+\\\\
+Given $n$ trajectories $Y_1, \ldots, Y_n \sim \pi_{\text{ref}}$, yielding answers $X_1, \ldots, X_n$, let $\widehat{c}_n$ be the associated majority vote.  The reward introduced in \cite{zuo2025ttrl} is $r_n(Y_i) = \mathbf{1}\lbrace X_i = \widehat{c}_n\rbrace$.   The associated KL-regularised optimisation over trajectory laws parametrised by $\pi_{\phi} \ll \pi_{\text{ref}}$ is given by
+\[
+\max_{\phi}
+\;
+\mathbb{E}_{Y\sim\pi_\phi(\cdot|pr)}[r_n(Y)\,]
+-\beta\,\KL(\pi_\phi\|\pi_{\mathrm{ref}}).
+\]
+The optimal policy is an \emph{exponentially tilted} distribution
+\[
+\pi^{\star}(Y|pr)
+=\frac{e^{r_n(Y)/\beta}\,\pi_{\mathrm{ref}}(Y|pr)}
+       {Z_\beta(pr)},\qquad
+Z_\beta(pr)
+=1+\pi_{\mathrm{ref}}(\widehat c_n|pr)\bigl(e^{1/\beta}-1\bigr),
+\]
+where the denominator is the normalising constant
+\(Z_\beta=\mathbb{E}_{\pi_{\mathrm{ref}}}[e^{r_n(Y)/\beta}]\).
+Writing \(\kappa=1/\beta\), the tilting sharpens the terminal law around the majority mode and
+monotonically increases the signal-to-noise ratio (SNR) of the margin variable
+\(\Delta_{j^\star_n}=\mathbf 1\{X=\widehat c_n\}-\mathbf 1\{X=j^\star_n\}\):
+\[
+\tfrac{d}{d\kappa}\mathrm{SNR}\bigl(\Delta_{j^\star_n}\bigr)(\kappa)\ge 0,
+\]
+with equality only if \(p_{\hat c_n}=1\), i.e. the distribution is a Dirac delta at the majority vote.
+Strict monotonicity holds between values of~\(\kappa\) for which the runner-up~\(j^\star_n\) remains
+fixed; at swap points the SNR function is continuous but non-differentiable.  Thus, increasing
+\(\kappa\) (i.e.\ stronger tilting) consistently improves the margin and reduces the number of samples
+required for certification.  See Appendix \ref{app:subsec_analysis_TTRL} for further details.
+
+
+\paragraph{Two new test-time RL objectives.}
+We introduce two label-free group-level rewards designed to optimise the trade-off between sharpness
+and bias.  Let $\mathbf{X} = (X_1, \dots, X_n)$ be a set of answers arising from rollouts $\mathbf{Y} =(Y_1, \ldots, Y_n)$ for a given prompt, with $\widehat{c}_n$ denoting the majority vote and $j_n^\star$  the runner-up. Define $N_j= \scriptstyle\sum_i\mathbf{1}\{X_i=j\}$. 
+
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{SNR-based reward.}
+Directly leveraging the SNR as a driving factor in the efficiency of the MMC scheme we introduce the first reward
+\begin{equation}\label{eq:snr_based_reward}
+r^{(1)}_n(\mathbf{Y})
+=\widehat{\mathrm{SNR}}(\Delta_{j^\star_n})(\mathbf{X})
+=\tfrac{(N_{\widehat c_n}-N_{j^\star_n})^{2}}
+       {n\left(N_{\widehat c_n}+N_{j^\star_n}\right)
+        -(N_{\widehat c_n}-N_{j^\star_n})^{2}}
+\;\xrightarrow[n\to\infty]{}\;
+\mathrm{SNR}(\Delta_{j^\star_n}).
+\end{equation}
+This objective aims to directly maximise \(\text{SNR}(\Delta_{j_n^*})\), which is equivalent to minimising the expected
+number of samples required to obtain statistical certificates for the majority vote. 
+
+\item \textbf{Entropy-based reward.}
+As we want to encourage a more peaked terminal distribution, another natural option is negative entropy, i.e.
+\begin{equation}\label{eq:entropy_based_reward}
+r^{(2)}_n(\mathbf{Y})
+=\widehat H_n(\mathbf{X})
+=\sum_{j:N_j>0}\frac{N_j}{n}\log\frac{N_j}{n}
+\;\xrightarrow[n\to\infty]{}\;
+\sum_j p_j\log p_j=-H(p).
+\end{equation}
+Maximising \( \widehat H_n \)  \emph{minimises} the Shannon entropy of the answer
+distribution, encouraging a sharper, lower-entropy distribution.
+\end{enumerate}
+
+Solving the corresponding KL-regularised variational problems (Appendices~\ref{app:details_new_TTT_loss}, \ref{app:subsec_analysis_TTTEntropy})
+yields the respective optimisers.  
+As with the TTRL tilt, \(\mathrm{SNR}(\Delta_{j^\star_n})\) is non-decreasing, implying that
+sharper distributions require fewer samples for reliable certification.    
+It is important to emphasise that our proposed entropy-based reward differs from that of \citep{agarwal2025unreasonableeffectivenessentropyminimization}. 
+\\\\
+The entropy reward $r_n^{(2)}$ should be understood as penalising entropy of the terminal distribution
+of the trajectory distribution, not to the full trajectory law itself.
+Formally, let $\pi_{\mathrm{ref}}(Y_{0:\tau})$ denote the reference
+distribution over reasoning trajectories with terminal variable
+$X=g(Y_{\tau:})$, and write
+$p_{\mathrm{ref}}(x)=\pi_{\mathrm{ref}}(X=x)$ for its induced marginal.
+Applying the KL chain rule,
+\[
+\KL(\pi_\phi\|\pi_{\mathrm{ref}})
+=\KL(q\|p_{\mathrm{ref}})
++\E_{x\sim q}\!\big[\KL(\pi_\phi(\cdot|X=x)\|
+   \pi_{\mathrm{ref}}(\cdot|X=x))\big],
+\]
+where $q(x)=\pi_\phi(X=x)$ is the terminal marginal of the adapted policy.
+Because the entropy reward depends only on $X$, the second term is minimised
+when $\pi_\phi(\cdot|X=x)=\pi_{\mathrm{ref}}(\cdot|X=x)$ for all $x$.  Hence, the KL-regularised variational problem over the base measure reduces to one over  the marginal $q$ alone:
+\[
+\max_{q\in\Delta(\mathcal X)} \;
+   \big\{-H(q)-\beta \,\KL(q\|p_{\mathrm{ref}})\big\}.
+\]
+The unique maximiser of this objective is
+$q^\star(x)\propto p_{\mathrm{ref}}(x)^{\kappa}$ with
+$\kappa=\beta/(\beta-1)>1$.
+Hence the test-time adaptation \emph{tempers the terminal marginal}
+$p_{\mathrm{ref}}(x)$, while preserving the reference conditional trajectory
+law $\pi_{\mathrm{ref}}(\cdot|X=x)$.  In particular,
+\[
+\pi_\phi^\star(Y_{0:\tau})
+= \pi_{\mathrm{ref}}(Y_{0:\tau}\mid X)\,q^\star(X)
+\;\neq\;
+\frac{\pi_{\mathrm{ref}}(Y_{0:\tau})^{\kappa}}
+     {\int \pi_{\mathrm{ref}}(Y_{0:\tau})^{\kappa}\,dY_{0:\tau}},
+\]
+except in the degenerate case where
+$\pi_{\mathrm{ref}}(\cdot|X=x)$ is uniform for all $x$.
+The tempering therefore sharpens only the distribution of final answers,
+not the full sequence distribution.  This gives us the best of both worlds:  promoting certainty when providing a final answer, but permitting exploration of diverse pathways during the chain-of-thought reasoning process.  In particular, this should not be confused with \emph{low temperature scaling}, where the conditional next-token distributions of the full trajectory is tempered according to a temperature schedule \cite{wang2020contextual}.  
+\\\\
+Because the reward functions couple multiple variables, the corresponding gradient estimates can exhibit high variance. To reduce this variance, we adopt a leave-one-out control variate approach \citep{tang2025optimizing}, resulting in the following effective advantage functions for $Y_i$
+\small
+\begin{equation}\label{eq:effective_advantage_main_text}
+A_i^{(1)} = \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X) - \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X_{-i}), \qquad A_i^{(2)} = \hat{H}_n(\mathbf X) - \hat{H}_{n-1}(\mathbf X_{-i}).
+\end{equation}
+\normalsize
+This preserves unbiasedness and substantially reduce gradient variance in REINFORCE-style
+optimisation.  
+\\\\
+We post-train our models using the {GRPO} algorithm \citep{shao2024deepseekmathpushinglimitsmathematical} for each of these rewards.  Details can be found in Appendix~\ref{app:details_test_time_training_loss}.   By contrast with the TTRL reward $r_n(Y)=1\{X=\hat{c}_n\}$, a benefit of both SNR- and entropy- based rewards is that these yield smoother signals of consensus.  In practice, this results in significantly faster and more stable convergence of the RL-loss function, consistent with similar observations made in \cite{huang2025pitfalls,ma2025general,tao2025hybrid}.
+

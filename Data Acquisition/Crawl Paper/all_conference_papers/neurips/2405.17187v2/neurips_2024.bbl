@@ -1,0 +1,443 @@
+\begin{thebibliography}{10}
+
+\bibitem{kerbl20233d}
+Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
+\newblock 3d gaussian splatting for real-time radiance field rendering.
+\newblock {\em ACM Trans. Graph.}, 42(4), 2023.
+
+\bibitem{schonberger2016structure}
+Johannes~L Schonberger and Jan-Michael Frahm.
+\newblock Structure-from-motion revisited.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 4104--4113, 2016.
+
+\bibitem{yang2024denoising}
+Jiawei Yang, Katie~Z Luo, Jiefeng Li, Kilian~Q Weinberger, Yonglong Tian, and Yue Wang.
+\newblock Denoising vision transformers.
+\newblock {\em arXiv preprint arXiv:2401.02957}, 2024.
+
+\bibitem{oquab2023dinov2}
+Maxime Oquab, Timothée Darcet, Theo Moutakanni, Huy~V. Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, Russell Howes, Po-Yao Huang, Hu~Xu, Vasu Sharma, Shang-Wen Li, Wojciech Galuba, Mike Rabbat, Mido Assran, Nicolas Ballas, Gabriel Synnaeve, Ishan Misra, Herve Jegou, Julien Mairal, Patrick Labatut, Armand Joulin, and Piotr Bojanowski.
+\newblock Dinov2: Learning robust visual features without supervision.
+\newblock {\em Trans. Mach. Learn Res.}, 2024.
+
+\bibitem{diaz2022ithaca365}
+Carlos~A Diaz-Ruiz, Youya Xia, Yurong You, Jose Nino, Junan Chen, Josephine Monica, Xiangyu Chen, Katie Luo, Yan Wang, Marc Emond, et~al.
+\newblock Ithaca365: Dataset and driving perception under repeated and challenging weather conditions.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 21383--21392, 2022.
+
+\bibitem{karnchanachari2024towards}
+Napat Karnchanachari, Dimitris Geromichalos, Kok~Seang Tan, Nanxiang Li, Christopher Eriksen, Shakiba Yaghoubi, Noushin Mehdipour, Gianmarco Bernasconi, Whye~Kit Fong, Yiluan Guo, et~al.
+\newblock Towards learning-based planning: The nuplan benchmark for real-world autonomous driving.
+\newblock In {\em IEEE Int. Conf. Robot. Autom.}, 2024.
+
+\bibitem{you2024better}
+Yurong You, Cheng~Perng Phoo, Carlos~Andres Diaz-Ruiz, Katie~Z Luo, Wei-Lun Chao, Mark Campbell, Bharath Hariharan, and Kilian~Q Weinberger.
+\newblock Better monocular 3d detectors with lidar from the past.
+\newblock In {\em IEEE Int. Conf. Robot. Autom.}, 2024.
+
+\bibitem{you2023enhancing}
+Yurong You.
+\newblock {\em Enhancing 3D Perception with Unlabeled Repeated Historical Data for Autonomous Vehicles}.
+\newblock PhD thesis, Cornell University, 2023.
+
+\bibitem{xiong2023neural}
+Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yue Wang, Yilun Wang, and Hang Zhao.
+\newblock Neural map prior for autonomous driving.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 17535--17544, 2023.
+
+\bibitem{yuan2024presight}
+Tianyuan Yuan, Yucheng Mao, Jiawei Yang, Yicheng Liu, Yue Wang, and Hang Zhao.
+\newblock Presight: Enhancing autonomous vehicle perception with city-scale nerf priors.
+\newblock {\em arXiv preprint arXiv:2403.09079}, 2024.
+
+\bibitem{you2021hindsight}
+Yurong You, Katie~Z Luo, Xiangyu Chen, Junan Chen, Wei-Lun Chao, Wen Sun, Bharath Hariharan, Mark Campbell, and Kilian~Q Weinberger.
+\newblock Hindsight is 20/20: Leveraging past traversals to aid 3d perception.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2021.
+
+\bibitem{you2022learning}
+Yurong You, Katie Luo, Cheng~Perng Phoo, Wei-Lun Chao, Wen Sun, Bharath Hariharan, Mark Campbell, and Kilian~Q Weinberger.
+\newblock Learning to detect mobile objects from lidar scans without labels.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 1130--1140, 2022.
+
+\bibitem{you2022unsupervised}
+Yurong You, Cheng~Perng Phoo, Katie Luo, Travis Zhang, Wei-Lun Chao, Bharath Hariharan, Mark Campbell, and Kilian~Q Weinberger.
+\newblock Unsupervised adaptation from repeated traversals for autonomous driving.
+\newblock In {\em Adv. Neural Inform. Process. Syst.}, volume~35, pages 27716--27729, 2022.
+
+\bibitem{maddern20171}
+Will Maddern, Geoffrey Pascoe, Chris Linegar, and Paul Newman.
+\newblock 1 year, 1000 km: The oxford robotcar dataset.
+\newblock {\em The International Journal of Robotics Research}, 36(1):3--15, 2017.
+
+\bibitem{toft2020long}
+Carl Toft, Will Maddern, Akihiko Torii, Lars Hammarstrand, Erik Stenborg, Daniel Safari, Masatoshi Okutomi, Marc Pollefeys, Josef Sivic, Tomas Pajdla, et~al.
+\newblock Long-term visual localization revisited.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 44(4):2074--2088, 2020.
+
+\bibitem{lowry2015visual}
+Stephanie Lowry, Niko S{\"u}nderhauf, Paul Newman, John~J Leonard, David Cox, Peter Corke, and Michael~J Milford.
+\newblock Visual place recognition: A survey.
+\newblock {\em ieee transactions on robotics}, 32(1):1--19, 2015.
+
+\bibitem{li2023collaborative}
+Yiming Li, Zonglin Lyu, Mingxuan Lu, Chao Chen, Michael Milford, and Chen Feng.
+\newblock Collaborative visual place recognition.
+\newblock {\em arXiv preprint arXiv:2310.05541}, 2023.
+
+\bibitem{barnes2018driven}
+Dan Barnes, Will Maddern, Geoffrey Pascoe, and Ingmar Posner.
+\newblock Driven to distraction: Self-supervised distractor learning for robust monocular visual odometry in urban environments.
+\newblock In {\em IEEE Int. Conf. Robot. Autom.}, pages 1894--1900. IEEE, 2018.
+
+\bibitem{barron2021mip}
+Jonathan~T Barron, Ben Mildenhall, Matthew Tancik, Peter Hedman, Ricardo Martin-Brualla, and Pratul~P Srinivasan.
+\newblock Mip-nerf: A multiscale representation for anti-aliasing neural radiance fields.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 5855--5864, 2021.
+
+\bibitem{niemeyer2022regnerf}
+Michael Niemeyer, Jonathan~T Barron, Ben Mildenhall, Mehdi~SM Sajjadi, Andreas Geiger, and Noha Radwan.
+\newblock Regnerf: Regularizing neural radiance fields for view synthesis from sparse inputs.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 5480--5490, 2022.
+
+\bibitem{barron2023zip}
+Jonathan~T Barron, Ben Mildenhall, Dor Verbin, Pratul~P Srinivasan, and Peter Hedman.
+\newblock Zip-nerf: Anti-aliased grid-based neural radiance fields.
+\newblock In {\em Int. Conf. Comput. Vis.}, 2023.
+
+\bibitem{xu2022point}
+Qiangeng Xu, Zexiang Xu, Julien Philip, Sai Bi, Zhixin Shu, Kalyan Sunkavalli, and Ulrich Neumann.
+\newblock Point-nerf: Point-based neural radiance fields.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 5438--5448, 2022.
+
+\bibitem{fridovich2022plenoxels}
+Sara Fridovich-Keil, Alex Yu, Matthew Tancik, Qinhong Chen, Benjamin Recht, and Angjoo Kanazawa.
+\newblock Plenoxels: Radiance fields without neural networks.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 5501--5510, 2022.
+
+\bibitem{muller2022instant}
+Thomas M{\"u}ller, Alex Evans, Christoph Schied, and Alexander Keller.
+\newblock Instant neural graphics primitives with a multiresolution hash encoding.
+\newblock {\em ACM Trans. Graph.}, 41(4):1--15, 2022.
+
+\bibitem{zwicker2002ewa}
+Matthias Zwicker, Hanspeter Pfister, Jeroen Van~Baar, and Markus Gross.
+\newblock Ewa splatting.
+\newblock {\em IEEE Trans. Vis. Comput. Graph.}, 8(3):223--238, 2002.
+
+\bibitem{chen2023gaussianeditor}
+Yiwen Chen, Zilong Chen, Chi Zhang, Feng Wang, Xiaofeng Yang, Yikai Wang, Zhongang Cai, Lei Yang, Huaping Liu, and Guosheng Lin.
+\newblock Gaussianeditor: Swift and controllable 3d editing with gaussian splatting.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{luiten2023dynamic}
+Jonathon Luiten, Georgios Kopanas, Bastian Leibe, and Deva Ramanan.
+\newblock Dynamic 3d gaussians: Tracking by persistent dynamic view synthesis.
+\newblock In {\em Int. Conf. 3D Vis.}, 2023.
+
+\bibitem{yang2023gs4d}
+Zeyu Yang, Hongye Yang, Zijie Pan, and Li~Zhang.
+\newblock Real-time photorealistic dynamic scene representation and rendering with 4d gaussian splatting.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2024.
+
+\bibitem{fan2024instantsplat}
+Zhiwen Fan, Wenyan Cong, Kairun Wen, Kevin Wang, Jian Zhang, Xinghao Ding, Danfei Xu, Boris Ivanovic, Marco Pavone, Georgios Pavlakos, et~al.
+\newblock Instantsplat: Unbounded sparse-view pose-free gaussian splatting in 40 seconds.
+\newblock {\em arXiv preprint arXiv:2403.20309}, 2024.
+
+\bibitem{guedon2023sugar}
+Antoine Gu{\'e}don and Vincent Lepetit.
+\newblock Sugar: Surface-aligned gaussian splatting for efficient 3d mesh reconstruction and high-quality mesh rendering.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{zhou2023feature}
+Shijie Zhou, Haoran Chang, Sicheng Jiang, Zhiwen Fan, Zehao Zhu, Dejia Xu, Pradyumna Chari, Suya You, Zhangyang Wang, and Achuta Kadambi.
+\newblock Feature 3dgs: Supercharging 3d gaussian splatting to enable distilled feature fields.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{qin2023langsplat}
+Minghan Qin, Wanhua Li, Jiawei Zhou, Haoqian Wang, and Hanspeter Pfister.
+\newblock Langsplat: 3d language gaussian splatting.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{Matsuki:Murai:etal:CVPR2024}
+Hidenobu Matsuki, Riku Murai, Paul H.~J. Kelly, and Andrew~J. Davison.
+\newblock {G}aussian {S}platting {SLAM}.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{chen2023periodic}
+Yurui Chen, Chun Gu, Junzhe Jiang, Xiatian Zhu, and Li~Zhang.
+\newblock Periodic vibration gaussian: Dynamic urban scene reconstruction and real-time rendering.
+\newblock {\em arXiv preprint arXiv:2311.18561}, 2023.
+
+\bibitem{zhao2024tclc}
+Cheng Zhao, Su~Sun, Ruoyu Wang, Yuliang Guo, Jun-Jun Wan, Zhou Huang, Xinyu Huang, Yingjie~Victor Chen, and Liu Ren.
+\newblock Tclc-gs: Tightly coupled lidar-camera gaussian splatting for surrounding autonomous driving scenes.
+\newblock {\em arXiv preprint arXiv:2404.02410}, 2024.
+
+\bibitem{rematas2022urban}
+Konstantinos Rematas, Andrew Liu, Pratul~P Srinivasan, Jonathan~T Barron, Andrea Tagliasacchi, Thomas Funkhouser, and Vittorio Ferrari.
+\newblock Urban radiance fields.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 12932--12942, 2022.
+
+\bibitem{wang2023neural}
+Zian Wang, Tianchang Shen, Jun Gao, Shengyu Huang, Jacob Munkberg, Jon Hasselgren, Zan Gojcic, Wenzheng Chen, and Sanja Fidler.
+\newblock Neural fields meet explicit geometric representations for inverse rendering of urban scenes.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 8370--8380, 2023.
+
+\bibitem{guo2023streetsurf}
+Jianfei Guo, Nianchen Deng, Xinyang Li, Yeqi Bai, Botian Shi, Chiyu Wang, Chenjing Ding, Dongliang Wang, and Yikang Li.
+\newblock Streetsurf: Extending multi-view implicit surface reconstruction to street views.
+\newblock {\em arXiv preprint arXiv:2306.04988}, 2023.
+
+\bibitem{ost2021neural}
+Julian Ost, Fahim Mannan, Nils Thuerey, Julian Knodt, and Felix Heide.
+\newblock Neural scene graphs for dynamic scenes.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 2856--2865, 2021.
+
+\bibitem{xie2022s}
+Ziyang Xie, Junge Zhang, Wenye Li, Feihu Zhang, and Li~Zhang.
+\newblock S-nerf: Neural radiance fields for street views.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2022.
+
+\bibitem{yang2023unisim}
+Ze~Yang, Yun Chen, Jingkang Wang, Sivabalan Manivasagam, Wei-Chiu Ma, Anqi~Joyce Yang, and Raquel Urtasun.
+\newblock Unisim: A neural closed-loop sensor simulator.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 1389--1399, 2023.
+
+\bibitem{tonderski2023neurad}
+Adam Tonderski, Carl Lindstr{\"o}m, Georg Hess, William Ljungbergh, Lennart Svensson, and Christoffer Petersson.
+\newblock Neurad: Neural rendering for autonomous driving.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{zhou2023drivinggaussian}
+Xiaoyu Zhou, Zhiwei Lin, Xiaojun Shan, Yongtao Wang, Deqing Sun, and Ming-Hsuan Yang.
+\newblock Drivinggaussian: Composite gaussian splatting for surrounding dynamic autonomous driving scenes.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2023.
+
+\bibitem{yan2024street}
+Yunzhi Yan, Haotong Lin, Chenxu Zhou, Weijie Wang, Haiyang Sun, Kun Zhan, Xianpeng Lang, Xiaowei Zhou, and Sida Peng.
+\newblock Street gaussians for modeling dynamic urban scenes.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{zhou2024hugs}
+Hongyu Zhou, Jiahao Shao, Lu~Xu, Dongfeng Bai, Weichao Qiu, Bingbing Liu, Yue Wang, Andreas Geiger, and Yiyi Liao.
+\newblock Hugs: Holistic urban 3d scene understanding via gaussian splatting.
+\newblock {\em arXiv preprint arXiv:2403.12722}, 2024.
+
+\bibitem{yang2023emernerf}
+Jiawei Yang, Boris Ivanovic, Or~Litany, Xinshuo Weng, Seung~Wook Kim, Boyi Li, Tong Che, Danfei Xu, Sanja Fidler, Marco Pavone, and Yue Wang.
+\newblock Emernerf: Emergent spatial-temporal scene decomposition via self-supervision.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2024.
+
+\bibitem{tancik2022block}
+Matthew Tancik, Vincent Casser, Xinchen Yan, Sabeek Pradhan, Ben Mildenhall, Pratul~P Srinivasan, Jonathan~T Barron, and Henrik Kretzschmar.
+\newblock Block-nerf: Scalable large scene neural view synthesis.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 8248--8258, 2022.
+
+\bibitem{xiangli2022bungeenerf}
+Yuanbo Xiangli, Linning Xu, Xingang Pan, Nanxuan Zhao, Anyi Rao, Christian Theobalt, Bo~Dai, and Dahua Lin.
+\newblock Bungeenerf: Progressive neural radiance field for extreme multi-scale scene rendering.
+\newblock In {\em Eur. Conf. Comput. Vis.}, pages 106--122. Springer, 2022.
+
+\bibitem{turki2022mega}
+Haithem Turki, Deva Ramanan, and Mahadev Satyanarayanan.
+\newblock Mega-nerf: Scalable construction of large-scale nerfs for virtual fly-throughs.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 12922--12931, 2022.
+
+\bibitem{turki2023suds}
+Haithem Turki, Jason~Y Zhang, Francesco Ferroni, and Deva Ramanan.
+\newblock Suds: Scalable urban dynamic scenes.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 12375--12385, 2023.
+
+\bibitem{li2024nerfxl}
+Ruilong Li, Sanja Fidler, Angjoo Kanazawa, and Francis Williams.
+\newblock Nerf-xl: Scaling nerfs with multiple gpus.
+\newblock {\em arXiv preprint arXiv:2404.16221}, 2024.
+
+\bibitem{lin2024vastgaussian}
+Jiaqi Lin, Zhihao Li, Xiao Tang, Jianzhuang Liu, Shiyong Liu, Jiayue Liu, Yangdi Lu, Xiaofei Wu, Songcen Xu, Youliang Yan, et~al.
+\newblock Vastgaussian: Vast 3d gaussians for large scene reconstruction.
+\newblock {\em arXiv preprint arXiv:2402.17427}, 2024.
+
+\bibitem{cheng2020panoptic}
+Bowen Cheng, Maxwell~D Collins, Yukun Zhu, Ting Liu, Thomas~S Huang, Hartwig Adam, and Liang-Chieh Chen.
+\newblock Panoptic-deeplab: A simple, strong, and fast baseline for bottom-up panoptic segmentation.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 12475--12485, 2020.
+
+\bibitem{caron2021emerging}
+Mathilde Caron, Hugo Touvron, Ishan Misra, Herv{\'e} J{\'e}gou, Julien Mairal, Piotr Bojanowski, and Armand Joulin.
+\newblock Emerging properties in self-supervised vision transformers.
+\newblock In {\em Int. Conf. Comput. Vis.}, pages 9650--9660, 2021.
+
+\bibitem{teed2020raft}
+Zachary Teed and Jia Deng.
+\newblock Raft: Recurrent all-pairs field transforms for optical flow.
+\newblock In {\em Eur. Conf. Comput. Vis.}, pages 402--419. Springer, 2020.
+
+\bibitem{piccardi2004background}
+Massimo Piccardi.
+\newblock Background subtraction techniques: a review.
+\newblock In {\em IEEE international conference on systems, man and cybernetics}, volume~4, pages 3099--3104. IEEE, 2004.
+
+\bibitem{brutzer2011evaluation}
+Sebastian Brutzer, Benjamin H{\"o}ferlin, and Gunther Heidemann.
+\newblock Evaluation of background subtraction techniques for video surveillance.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 1937--1944. IEEE, 2011.
+
+\bibitem{zhou2012moving}
+Xiaowei Zhou, Can Yang, and Weichuan Yu.
+\newblock Moving object detection by detecting contiguous outliers in the low-rank representation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 35(3):597--610, 2012.
+
+\bibitem{liu2015background}
+Xin Liu, Guoying Zhao, Jiawen Yao, and Chun Qi.
+\newblock Background subtraction based on low-rank and structured sparse decomposition.
+\newblock {\em IEEE Trans. Image Process.}, 24(8):2502--2514, 2015.
+
+\bibitem{hayman2003statistical}
+Hayman and Eklundh.
+\newblock Statistical background subtraction for a mobile observer.
+\newblock In {\em Int. Conf. Comput. Vis.}, pages 67--74. IEEE, 2003.
+
+\bibitem{sheikh2009background}
+Yaser Sheikh, Omar Javed, and Takeo Kanade.
+\newblock Background subtraction for freely moving cameras.
+\newblock In {\em Int. Conf. Comput. Vis.}, pages 1219--1225. IEEE, 2009.
+
+\bibitem{yuan2021star}
+Wentao Yuan, Zhaoyang Lv, Tanner Schmidt, and Steven Lovegrove.
+\newblock Star: Self-supervised tracking and reconstruction of rigid objects in motion with neural rendering.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 13144--13152, 2021.
+
+\bibitem{wu2022d}
+Tianhao Wu, Fangcheng Zhong, Andrea Tagliasacchi, Forrester Cole, and Cengiz Oztireli.
+\newblock D\^{} 2nerf: Self-supervised decoupling of dynamic and static objects from a monocular video.
+\newblock {\em Adv. Neural Inform. Process. Syst.}, 35:32653--32666, 2022.
+
+\bibitem{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock {\em Adv. Neural Inform. Process. Syst.}, 33:1877--1901, 2020.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock {\em Adv. Neural Inform. Process. Syst.}, 30, 2017.
+
+\bibitem{dosovitskiy2020image}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et~al.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2020.
+
+\bibitem{darcet2023vision}
+Timoth{\'e}e Darcet, Maxime Oquab, Julien Mairal, and Piotr Bojanowski.
+\newblock Vision transformers need registers.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2023.
+
+\bibitem{suzuki1985topological}
+Satoshi Suzuki et~al.
+\newblock Topological structural analysis of digitized binary images by border following.
+\newblock {\em Computer vision, graphics, and image processing}, 30(1):32--46, 1985.
+
+\bibitem{martin2021nerf}
+Ricardo Martin-Brualla, Noha Radwan, Mehdi~SM Sajjadi, Jonathan~T Barron, Alexey Dosovitskiy, and Daniel Duckworth.
+\newblock Nerf in the wild: Neural radiance fields for unconstrained photo collections.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 7210--7219, 2021.
+
+\bibitem{chen2022hallucinated}
+Xingyu Chen, Qi~Zhang, Xiaoyu Li, Yue Chen, Ying Feng, Xuan Wang, and Jue Wang.
+\newblock Hallucinated neural radiance fields in the wild.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 12943--12952, 2022.
+
+\bibitem{yang2023cross}
+Yifan Yang, Shuhai Zhang, Zixiong Huang, Yubing Zhang, and Mingkui Tan.
+\newblock Cross-ray neural radiance fields for novel-view synthesis from unconstrained image collections.
+\newblock In {\em Int. Conf. Comput. Vis.}, pages 15901--15911, 2023.
+
+\bibitem{sabour2023robustnerf}
+Sara Sabour, Suhani Vora, Daniel Duckworth, Ivan Krasin, David~J Fleet, and Andrea Tagliasacchi.
+\newblock Robustnerf: Ignoring distractors with robust losses.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 20626--20636, 2023.
+
+\bibitem{sun2020scalability}
+Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou, Yuning Chai, Benjamin Caine, et~al.
+\newblock Scalability in perception for autonomous driving: Waymo open dataset.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 2446--2454, 2020.
+
+\bibitem{caesar2020nuscenes}
+Holger Caesar, Varun Bankiti, Alex~H Lang, Sourabh Vora, Venice~Erin Liong, Qiang Xu, Anush Krishnan, Yu~Pan, Giancarlo Baldan, and Oscar Beijbom.
+\newblock nuscenes: A multimodal dataset for autonomous driving.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 11621--11631, 2020.
+
+\bibitem{zhao2017pyramid}
+Hengshuang Zhao, Jianping Shi, Xiaojuan Qi, Xiaogang Wang, and Jiaya Jia.
+\newblock Pyramid scene parsing network.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 2881--2890, 2017.
+
+\bibitem{zhang2022segvit}
+Bowen Zhang, Zhi Tian, Quan Tang, Xiangxiang Chu, Xiaolin Wei, Chunhua Shen, et~al.
+\newblock Segvit: Semantic segmentation with plain vision transformers.
+\newblock In {\em Adv. Neural Inform. Process. Syst.}, volume~35, pages 4971--4982, 2022.
+
+\bibitem{cheng2022masked}
+Bowen Cheng, Ishan Misra, Alexander~G Schwing, Alexander Kirillov, and Rohit Girdhar.
+\newblock Masked-attention mask transformer for universal image segmentation.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, pages 1290--1299, 2022.
+
+\bibitem{xie2021segformer}
+Enze Xie, Wenhai Wang, Zhiding Yu, Anima Anandkumar, Jose~M Alvarez, and Ping Luo.
+\newblock Segformer: Simple and efficient design for semantic segmentation with transformers.
+\newblock In {\em Adv. Neural Inform. Process. Syst.}, volume~34, pages 12077--12090, 2021.
+
+\bibitem{wang2023internimage}
+Wenhai Wang, Jifeng Dai, Zhe Chen, Zhenhang Huang, Zhiqi Li, Xizhou Zhu, Xiaowei Hu, Tong Lu, Lewei Lu, Hongsheng Li, et~al.
+\newblock Internimage: Exploring large-scale vision foundation models with deformable convolutions.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, page IEEE Conf. Comput. Vis. Pattern Recog., 2023.
+
+\bibitem{zhou2017scene}
+Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Barriuso, and Antonio Torralba.
+\newblock Scene parsing through ade20k dataset.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and pattern recognition}, pages 633--641, 2017.
+
+\bibitem{cordts2016cityscapes}
+Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler, Rodrigo Benenson, Uwe Franke, Stefan Roth, and Bernt Schiele.
+\newblock The cityscapes dataset for semantic urban scene understanding.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and pattern recognition}, pages 3213--3223, 2016.
+
+\bibitem{hamilton2022unsupervised}
+Mark Hamilton, Zhoutong Zhang, Bharath Hariharan, Noah Snavely, and William~T Freeman.
+\newblock Unsupervised semantic segmentation by distilling feature correspondences.
+\newblock In {\em Int. Conf. Learn. Represent.}, 2022.
+
+\bibitem{kim2023causal}
+Junho Kim, Byung-Kwan Lee, and Yong~Man Ro.
+\newblock Causal unsupervised semantic segmentation.
+\newblock {\em arXiv preprint arXiv:2310.07379}, 2023.
+
+\bibitem{depthanything}
+Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.
+\newblock Depth anything: Unleashing the power of large-scale unlabeled data.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2024.
+
+\bibitem{Huang2DGS2024}
+Binbin Huang, Zehao Yu, Anpei Chen, Andreas Geiger, and Shenghua Gao.
+\newblock 2d gaussian splatting for geometrically accurate radiance fields.
+\newblock {\em SIGGRAPH}, 2024.
+
+\bibitem{monodepth17}
+Cl{\'{e}}ment Godard, Oisin {Mac Aodha}, and Gabriel~J. Brostow.
+\newblock Unsupervised monocular depth estimation with left-right consistency.
+\newblock In {\em CVPR}, 2017.
+
+\bibitem{zhao2017pspnet}
+Hengshuang Zhao, Jianping Shi, Xiaojuan Qi, Xiaogang Wang, and Jiaya Jia.
+\newblock Pyramid scene parsing network.
+\newblock In {\em IEEE Conf. Comput. Vis. Pattern Recog.}, 2017.
+
+\bibitem{hierarchicalgaussians24}
+Bernhard Kerbl, Andreas Meuleman, Georgios Kopanas, Michael Wimmer, Alexandre Lanvin, and George Drettakis.
+\newblock A hierarchical 3d gaussian representation for real-time rendering of very large datasets.
+\newblock {\em ACM Transactions on Graphics}, 43(4), July 2024.
+
+\end{thebibliography}

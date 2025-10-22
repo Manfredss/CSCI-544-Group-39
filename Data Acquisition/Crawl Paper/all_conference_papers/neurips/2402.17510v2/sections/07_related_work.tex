@@ -1,0 +1,86 @@
+% !TEX root = ../main.tex
+
+\section{Related work}
+\label{sec:related-work}
+
+We discuss related work on multi-view representation learning, \acl{VL} learning, and shortcut learning. 
+
+\header{Multi-view Representation Learning}  To learn the underlying semantics of the training data, a subgroup of representation learning methods involves training neural encoders that maximize the agreement between representations of the similar \textit{views}~\citep{oord2018representation, hjelm2019learning, chen2020simple, radford2021learning, bardes2022vicreg}. 
+In general, for uni-modal representation learning, data augmentations are used to generate different views of the same data point.
+One of the core assumptions in multi-view representation learning is that each view shares the same \emph{task-relevant information}~\citep{sridharan2008information, zhao2017multi, federici2020learning, tian2020contrastive, shwartz2023compress}.
+However, the optimal view for contrastive \ac{SSL} (i.e., which information is shared among views/which data augmentation is used) is task-dependent~\citep{tian2020what, xiao2021what}.
+Therefore, maximizing the \acf{MI} between representations of views (i.e., shared information) does not necessarily result in representations that generalize better to down-stream evaluation tasks, since the representations may contain too much additional noise that is irrelevant for the downstream task~\citep{tian2020what, tschannen2020on}.
+An open problem in multi-view \ac{SSL} is to learn representations that contain all task-relevant information from views where each view contains distinct, task-relevant information~\citep{shwartz2023compress}, this is especially a problem in the multi-modal learning domain~\citep{zong2023self}.
+
+\cite{chen2021intriguing} investigate multi-view representation learning for images using contrastive losses. 
+They demonstrate that when multiple competing features exist that redundantly predict the match between two views, contrastive models tend to focus on learning the easy-to-represent features while suppressing other task-relevant information.
+This results in contrastive losses mainly capturing the easy features, even if all task-relevant information is shared between the two views, suppressing the remaining relevant information.
+
+Several optimization objectives have been introduced to either maximize the lower bound on the \ac{MI} between views and their latent representations~\citep{oord2018representation, bachman2019learning, hjelm2019learning, tian2020contrastive} or minimize the \ac{MI} between representations of views while keeping the task-relevant information~\citep{federici2020learning, lee2021compressive}.
+To learn more task-relevant information that either might not be shared between views or that is compressed by a contrastive loss, several works proposed additional reconstruction objectives to maximize the \ac{MI} between the latent representation and input data~\citep{tsai2021self, wang2022rethinking, li2023addressing, bleeker2023reducing}.
+\cite{liang2023factorized} introduce a multimodal contrastive objective that factorizes the representations into shared and unique information, while also removing task-irrelevant information by minimizing the upper bound on \ac{MI} between similar views.
+
+\header{Vision-language Representation Learning}
+The goal of \ac{VL} representation learning is to combine information from the visual and textual modalities into a joint representation or learn coordinated representations~\citep{baltrusaitis2019_multimodal, guo2019_deep}.
+The representation learning approaches can be separated into several groups.
+
+\emph{Contrastive methods} represent one prominent category of \ac{VL} representation methods. 
+The approaches in this group are typically dual encoders.
+Early methods in this category are trained from scratch; for instance, \citep{frome2013devise} proposed a \ac{VL} representation learning model that features a skip-gram language model and a visual object categorization component trained with hinge rank loss. 
+Another subgroup of methods uses a \emph{dual-encoder} with a hinge-based triplet loss~\citep{kiros2014unifying, li2019visual, lee2018stacked}.
+\cite{kiros2014unifying} use the loss for training a CNN-RNN dual encoder. 
+\citet{li2019visual} leverage bottom-up attention and graph convolutional networks~\citep{kipf2017_semi} to learn the relationship between image regions. 
+\cite{lee2018stacked} add stacked cross-attention to use both image regions and words as context.
+
+More recently, contrastive approaches involve transformer-based dual-encoders trained with more data than the training data from the evaluation set(s).
+ALBEF~\citep{li2021align} propose to contrastively align unimodal representations before fusion, while X-VLM~\citep{zeng2022multi} employs an additional cross-modal encoder to learn fine-grained \ac{VL} representations.
+Florence~\citep{yuan2021florence} leverages various adaptation models for learning fine-grained object-level representations.
+CLIP~\citep{radford2021learning}, a scaled-up dual-encoder, is pre-trained on the task of predicting which caption goes with which image.
+ALIGN~\citep{jia2021scaling} uses a simple dual-encoder trained on over a billion image alt-text pairs.
+FILIP~\citep{yao2022flip} is a transformer-based bi-encoder that features late multimodal interaction meant to capture fine-grained representations.
+SLIP~\citep{mu2022slip} combines language supervision and image self-supervision to learn visual representations without labels.
+DeCLIP~\citep{li2022supervision} proposes to improve the efficiency of CLIP pretraining using intra-modality self-supervision, cross-modal multi-view supervision, and nearest neighbor supervision.
+
+Another line of work includes learning \ac{VL} representations using models that are inspired by BERT~\citep{devlin2019_bert}.
+ViLBERT~\citep{lu2019vilbert} and LXMERT~\citep{tan2019lxmert} expand upon BERT by introducing a two-stream architecture, where two transformers are applied to images and text independently, which is fused by a third transformer in a later stage. 
+B2T2~\citep{alberti2019fusion}, VisualBERT~\citep{li2019visualbert}, Unicoder-VL~\citep{li2019unicoder}, VL-BERT~\citep{su2019vl}, and UNITER~\citep{chen2020uniter} propose a single-stream architecture, where a single transformer is applied to both images and text.
+Oscar~\citep{li2020oscar} uses caption object tags as anchor points that are fed to the transformer alongside region features.
+BEIT-3~\citep{wang2022image} adapt multiway transformers trained using cross-entropy loss~\citep{bao2022vlmo}.
+
+Another category of methods for learning \ac{VL} representations are generative methods, that imply learning \ac{VL} representation by generating new instances of one modality conditioned on the other modality. For instance, BLIP~\citep{li2022blip} bootstraps captions by generating synthetic captions and filtering out the noisy ones; BLIP-2~\citep{li2023blip} bootstraps \ac{VL} representation learning and, subsequently, vision-to-language generative learning.
+On the other hand, \citet{tschannen2023image} propose to pretrain a encoder-decoder architecture via the image captioning task.
+
+\header{Shortcut Learning} \cite{geirhos2020shortcut} define shortcuts in deep neural networks as ``decision rules that perform well on standard benchmarks but fail to transfer to more challenging testing conditions, such as real-world scenarios.''
+In the context of deep learning, a shortcut solution can also be seen as a discrepancy between the features that a model has learned during training and the intended features that a model should learn to perform well during evaluation. 
+For example, shortcuts might be features that minimize the training objective but are much easier to detect than the intended features that are relevant to the evaluation task.
+Shortcut learning can be caused by biases in the dataset or inductive biases in either the network architecture or training objective.
+
+\cite{hermann2020what} design a dataset with multiple predictive features, where each feature can be used as a label for an image classification task.
+The authors show that in the presence of multiple features that each redundantly predicts the target label, the deep neural model chooses to represent only one of the predictive features that are the easiest to detect, i.e., the model favors features that are easy to detect over features that are harder to discriminate.
+Next to that, they show that features that are not needed for a classification task, are in general suppressed by the model instead of captured in the learned latent representations.
+
+\cite{robinson2021can} show that contrastive losses can have multiple local minima, where different local minima can be achieved by suppressing features from the input data (i.e., the model learns a shortcut by not learning all task-relevant features). 
+To mitigate the shortcut learning problem, \cite{robinson2021can} propose \acl{IFM}, a method that perpetuates the features of positive and negative samples during training to encourage the model to capture different features than the model currently relies on. 
+
+\cite{scimeca2022which} design an experimental set-up with multiple shortcut cues in the training data, where each shortcut is equally valid w.r.t. predicting the correct target label. The goal of the experimental setup is to investigate which cues are preferred to others when learning a classification task.  
+
+\Acf{LTD} is a method to reduce predictive feature suppression (i.e.,  shortcuts) for resource-constrained contrastive \ac{ICR} by reconstructing the input caption in a non-auto-regressive manner.
+\cite{bleeker2023reducing} argue that most of the task-relevant information for the \ac{ICR} task is captured by the text modality.
+Hence, the focus is on the reconstruction of the text modality instead of the image modality.
+\cite{bleeker2023reducing} add a decoder to the learning algorithm, to reconstruct the input caption.
+Instead of reconstructing the input tokens, the input caption is reconstructed in a non-autoregressive manner in the latent space of a \acl{SBERT}~\citep{reimersers2019sentence, song2020mpnet} model.
+\ac{LTD} can be implemented as an optimization constraint and as a dual-loss.
+\cite{li2023addressing} show that contrastive losses are prone to feature suppression. 
+They introduce predictive contrastive learning (PCL), which combines contrastive learning with a decoder to reconstruct the input data from the latent representations to prevent shortcut learning.
+
+\cite{adnan2022monitoring}  measure the \ac{MI} between the latent representation and the input as a domain agnostic metric to find where (and when) in training a network relies on shortcuts in the input data. 
+Their main finding is that, in the presence of shortcuts, the \ac{MI} between the input data and the latent representation of the data is lower than without shortcuts in the input data. 
+Hence, the latent representation captures less information of the input data in the presence of shortcuts and mainly relies on shortcuts to predict the target.
+
+\header{Our Focus}
+In this work, we focus on the problem of shortcut learning for \ac{VL} in the context of multi-view \ac{VL} representation learning with multiple captions per image. 
+In contrast with previous (uni-modal) work on multi-view learning, we consider different captions matching to the same image as different \textit{views}.
+We examine the problem by introducing a framework of synthetic shortcuts designed for \ac{VL} representation learning, which allows us to investigate the problem in a controlled way.
+For our experiments, we select two prevalent \ac{VL} models that are solely optimized with the InfoNCE loss: 
+CLIP, a large-scale pre-trained model, and VSE++, a model trained from scratch.
+We select models that are solely optimized with a contrastive loss, to prevent measuring the effect of other optimization objectives on the shortcut learning problem. 

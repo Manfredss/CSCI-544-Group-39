@@ -1,0 +1,36 @@
+\begin{table}
+    \centering
+    % \resizebox{\linewidth}{!}{ %< auto-adjusts font size to fill line
+    \begin{tabular}{@{}cccc@{}}
+    \toprule
+    % \textbf{Method} & 
+    Batch Size & SimCLR (\%) & DT(\%) & Improvement ($\Delta$) \\
+    \midrule
+    % \multirow{7}{*}{SimCLR}
+    16 & 38.89 & 40.49 & \textbf{+ 1.6} \\
+    32 & 46.79 & 51.78 & \textbf{+ 5.0} \\
+    64 & 53.06 & 57.49 & \textbf{+ 4.4}\\
+    128 & 55.75 & 60.30 & \textbf{+ 4.6} \\
+    256 & 56.41 & 59.38 & \textbf{+ 3.0} \\
+    512 & 57.13 & 59.12 & \textbf{+ 2.0} \\
+    1024 & 56.93 & 57.36 & \textbf{+ 0.4} \\
+    % \midrule
+    % \multirow{6}{*}{DT}
+    % & 16 & - \\
+    % & 32 & - \\
+    % & 64 & 57.49 \\
+    % & 128 & 60.30 \\
+    % & 256 & 59.38 \\
+    % & 512 & 59.12 \\
+    % & 1024 & 57.36 \\
+    \bottomrule
+    \end{tabular}
+    % } % \resizeboxs
+    \caption{
+    % 
+    The comparision of our method Dual Temperature (DT) and baseline SimCLR. In Cifar 100, using ResNet-18, epoch 250. SimCLR temperature 0.1. our Dual Temperature $\tau_{intra} = 0.1, \tau_{inter} = 1$.
+    %\textbf{State of the art} -- Glory to the bold numbers.
+    % 
+    } % \caption
+    \label{tab:sota1}
+\end{table}

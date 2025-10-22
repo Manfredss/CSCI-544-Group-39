@@ -1,0 +1,48 @@
+% !TEX root = ../main.tex
+
+\section{Experimental Results}
+\label{sec:shorcut_results}
+
+\subsection{Does Latent Target Decoding Reduce Shortcut Learning?}
+
+In Table~\ref{tab:ltd} we summarize the effect of \ac{LTD} on reducing shortcut learning. 
+
+For CLIP, for both the \ac{Flickr30k} and \ac{MS-COCO} dataset, we do not observe an increase in recall scores when fine-tuning with $\ltd{}$ compared to models that are only fine-tuned with $\infonce{}$. 
+LTD has originally been proposed for resource-constrained \ac{VL} models. 
+We argue that the additional features that LTD can extract are either already present in the pre-trained CLIP model, or not relevant for the evaluation task. 
+However, when fine-tuning with $\ltd{}$ and in the presence of shortcuts in the training data, degradation in recall scores is significantly lower than when fine-tuned only with the $\infonce{}$. 
+This shows that LTD can reduce the suppression of features in favor of the shortcut features when fine-tuning large-scale \ac{VL} models. 
+
+\input{tables/ltd/recall_results_ltd}
+
+Across the board, VSE++ models trained with the $\ltd{}$ loss consistently outperform the $\infonce{}$ loss, both for \ac{i2t} and \ac{t2i} retrieval and both when trained either with or without shortcuts, as indicated by higher recall@$k$ scores; this is consistent with the findings presented in \citep{bleeker2023reducing}).
+For both the \ac{Flickr30k} and \ac{MS-COCO} dataset, when trained with the $\infonce{}$ and with shortcuts present in the training data, the model performance collapses to around 0 in the absence of shortcuts (as we have seen in Section~\ref{eval:results}). 
+However, when we train with shortcuts in the training data and with $\ltd{}$, we observe, for both \ac{Flickr30k} and \ac{MS-COCO}, a significant gain in performance. 
+The performance improvement is bigger for \ac{Flickr30k} than for \ac{MS-COCO}.
+In general, the recall scores are still significantly lower than training without shortcuts, however, the models do not solely rely on the shortcuts anymore to minimize the contrastive loss and are able during evaluation (in the absence of shortcuts) to still correctly match image-caption pairs with each other.
+The results in Table~\ref{tab:ltd} show that LTD is able, in the presence of shortcuts in the training data, to guide (small-scale) \ac{VL} models that are trained from scratch to not only learn the shortcut features that minimize the contrastive training objective but also represent other remaining task-relevant features in the data that are not extracted by $\infonce{}$.
+
+
+\subsection{Does Implicit Feature Modification Reduce Shortcut Learning?}
+
+\input{tables/ifm/recall_results_ifm}
+
+In Table~\ref{tab:ifm} we summarize the effect of \ac{IFM} on reducing shortcut solutions. 
+
+For CLIP, we observe that $\ifm{}$, when training without shortcuts in the training data, only improves performance for the \ac{MS-COCO} dataset for the \ac{t2i} task. 
+However, for both~\ac{Flickr30k} and~\ac{MS-COCO} we observe that, when training with unique shortcuts in the training data, fine-tuning with $\ifm{}$ results in a significantly lower performance drop in recall score than when fine-tuning with the $\infonce{}$.
+Similar to LTD, the recall@$k$ scores are still lower than when trained without shortcuts in the training data.
+We conclude that IFM is sufficient to reduce the suppression of features in favor of the shortcut features when fine-tuning a large-scale \ac{VL} model, as indicated by higher recall@$k$ scores when evaluating without shortcuts.
+
+For VSE++, both for the \ac{Flickr30k} and \ac{MS-COCO} dataset, we do not observe that $\ifm{}$ outperforms the $\infonce{}$, both with and without shortcuts present in the training data. 
+We even observe that $\ifm{}$, when training without shortcuts, results in a decrease in performance across all recall@$k$ metrics.
+When training with $\ifm{}$ and with unique shortcuts in the training data, the evaluation performance still collapses to around 0.
+The results in Table~\ref{tab:ifm} show that IFM is not sufficient to prevent models trained from scratch from fully collapsing to the artificial shortcut solutions we introduce in this work (as opposed to LTD).
+
+\subsection{Upshot}
+
+In this section, we have evaluated two methods for reducing shortcut learning on our \ac{SVL} framework: \ac{LTD} and \ac{IFM}.
+	\ac{LTD} proves effective in reducing shortcut learning for both CLIP and VSE++.
+	\ac{IFM} demonstrates its efficacy solely during the fine-tuning of CLIP.
+	These findings indicate that our \ac{SVL} framework is a challenging and interesting framework to study and evaluate shortcut learning for contrastive \ac{VL} models.
+	Moreover, our results show that shortcut learning is only partially addressed by the evaluated methods since the evaluation results are not on par with the results on data lacking synthetic shortcuts.

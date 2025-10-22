@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{. Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{. Related Work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{. Pre-training for Autonomous Driving}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{. Spatial-Temporal Modeling for Autonomous Driving}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{. World Models}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{. DriveWorld}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{. Memory State-Space Model}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{. 3D Occupancy Prediction}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{. Task Prompt}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{. Pre-training Objective}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.5}{. Fine-tuning on Downstream Tasks}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{. Experiments}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{. Experimental Setup}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{. Ablation Studies}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{. Main Results}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{. Qualitative Results}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{. Conclusion}{}% 17
+\BOOKMARK [1][-]{section.6}{. Pre-training Objective}{}% 18
+\BOOKMARK [1][-]{section.7}{. Lower Bound Derivation}{}% 19
+\BOOKMARK [1][-]{section.8}{. Dataset}{}% 20
+\BOOKMARK [1][-]{section.9}{. Task Prompt}{}% 21
+\BOOKMARK [1][-]{section.10}{. Differences between RSSM and MSSM}{}% 22
+\BOOKMARK [1][-]{section.11}{. Graphical Model}{}% 23
+\BOOKMARK [1][-]{section.12}{. Qualitative Results}{}% 24

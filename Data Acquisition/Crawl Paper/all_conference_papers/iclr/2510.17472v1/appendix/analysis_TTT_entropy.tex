@@ -1,0 +1,120 @@
+Let $\mathbf{X} = (X_1, \dots, X_n)$ denote the set of i.i.d. answers to a given prompt corresponding to rollouts  $\mathbf{Y} = (Y_1, \dots, Y_n)$. Define $N_j = \sum_i \mathbf{1}\{X_i = j\}$. In the main text, we proposed a group-level reward function based on the plug-in estimator of the negative entropy
+\begin{equation*}
+    r_n^{(2)}(\mathbf{Y})=\sum_{j:\ N_j>0}\frac{N_j}{n}\log\left(\frac{N_j}{n}\right).
+\end{equation*}
+This estimator is known to overestimate $\mathbb{E}[\log X]$, with an error of approximately $(k-1)/(2n)$, where $k$ is the total number of classes of the distribution. An alternative approach is to introduce a Dirichlet prior on the class probabilities, $(p_1, \dots, p_k)\sim\text{Dir}(k, \alpha, \dots, \alpha)$.
+Since the data are multinomial, the posterior distribution of the probabilities is also Dirichlet. After $n$ observations we obtain
+$$
+(p_1, \dots, p_k)|\mathbf{Y},\alpha\sim \text{Dir}(k, \alpha + N_1, \dots, \alpha+N_k)
+$$
+This leads to the alternative estimator
+\begin{equation*}
+    \hat r_n^{(2)}(\mathbf{Y}) = \sum_{j}\frac{N_j+\alpha}{n+\alpha}\log\left(\frac{N_j+\alpha}{n+\alpha}\right).
+\end{equation*}
+Because our ensembles of voters are typically small, this Bayesian smoothing can help mitigate fluctuations, especially when prior information is available.
+
+By using the reward functions $r_n^{(2)}(\mathbf{Y})$ or $\hat r_n^{(2)}(\mathbf{Y})$, the goal is to minimise the entropy of the answer distribution. 
+In particular, our objective (without regularisation) is
+\begin{align*}
+&\max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[r_n^{(2)}(\mathbf{Y})\right]= \max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[\sum_{j:\ N_j>0}\frac{N_j}{n}\log\left(\frac{N_j}{n}\right)\right].
+\end{align*}
+As in the previous section, $r_n^{(2)}(\mathbf{Y})$ is a biased estimator of the negative entropy $\mathbb{E}[\log X]$.  However, in the large-sample limit we obtain the approximation
+\begin{align*}
+&\max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[r_n^{(2)}(\mathbf{Y})\right]\approx \max_\phi \sum_{j:\ p_{j,\phi}>0} p_{j,\phi}\log p_{j,\phi}= \max_\phi \mathbb{E}_{Y\sim  \pi_{\phi}(\cdot|pr)}[\log X].
+\end{align*}
+To reduce the variance of the gradient estimates of the group-level reward, we also employ the effective advantage functions introduced in (\ref{eq:effective_advantage_reinforce}) and (\ref{eq:effective_advantage_GRPO}), for the REINFORCE and GRPO algorithms, respectively.
+
+
+\paragraph{Optimisation of the regularised objective.} 
+Let $\pi_{\mathrm{ref}}(Y_{0:\tau})$ denote the reference distribution over reasoning trajectories with terminal variable
+$X=g(Y_{\tau:})$, and write $p_{\mathrm{ref}}(x)=\pi_{\mathrm{ref}}(X=x)$ for its induced marginal.
+As mentioned in the main text, the KL-regularised variational problem over the base measure reduces to one over the marginal $q(x) = \pi_\phi(x)$ alone, with the following loss
+\begin{align*}
+    L(q) &=  H( q) + \beta\ \KL(q || p_{\text{ref}})\\
+    &=  \beta\left(1/\beta\ H( q) + \beta\ \KL(q || p_{\text{ref}})\right)\\
+    &\propto \mathbb{E}_{pr \sim Q}\ \mathbb{E}_{X\sim q(\cdot | pr)}\left[-1/\beta \log q(X | pr)\right] + \KL(q(\cdot|pr) || p_{\text{ref}}(\cdot | pr))\\
+    & =\mathbb{E}_{pr \sim Q}\ \mathbb{E}_{X\sim q(\cdot | pr)}\left[(1-1/\beta) \log q(X | pr)  -\log p_{\text{ref}}(X | pr))\right],
+\end{align*}
+where $\beta>1$. 
+Since the mapping $q\mapsto (1-1/\beta)\int q\log q$ is {strictly} convex, and the second
+term is linear, it follows that $L$ is strictly convex on the space of probability distributions. Consequently, any stationary point is necessarily the unique global minimiser.
+
+As in Section \ref{app:subsec_analysis_TTRL}, to compute the optimiser we introduce a Lagrange multiplier $\lambda$ to enforce normalisation and consider a perturbation
+$q_\varepsilon = q + \varepsilon\varphi$ with $\int\varphi\,d\mu = 0$.
+The directional derivative at $\varepsilon=0$ is
+$$
+\left.\frac{d}{d\varepsilon}
+\left[ L[q_\varepsilon] + \lambda\!\int q_\varepsilon\,d\mu \right]
+\right|_{\varepsilon=0}
+=
+\int_{\Omega}\left[(1-1/\beta)(1+\log q) - \log p_{\text{ref}} + \lambda\right]\ \varphi\,d\mu .
+$$
+Since this must vanish for all admissible $\varphi$, the pointwise stationarity condition is
+$$
+(1-1/\beta)\bigl(1+\log q(x)\bigr) - \log p_{\text{ref}}(x) + \lambda = 0.
+$$
+Solving for $q$ yields
+$$
+\log q(x)
+=
+\frac{\log p_{\text{ref}}(x) - \lambda - (1-1/\beta)}{1-1/\beta}
+\;=\;
+\kappa\log p_{\text{ref}}(x) + C,
+$$
+where $\kappa = \beta/(\beta-1)>1$ and 
+$C=\bigl[-\lambda - (1-1/\beta)\bigr]/(1-1/\beta)$ is a constant.
+Exponentiating and renormalising gives the tempered distribution
+$$
+q(x)=\frac{e^{C} p_{\text{ref}}(x)^{\kappa}}{\int_{\Omega}e^{C} p_{\text{ref}}(x)^{\kappa}\,d\mu}
+     \;=\;\frac{ p_{\text{ref}}(x)^{\kappa}}{Z_\beta},
+$$
+with $Z_\beta$ the normalisation constant. 
+
+Let $p_j=p_{\text{ref}}(j)$. Under the optimal distribution $q^\star$, the signal-to-noise ratio $\text{SNR}_{\Delta_{j^\star}}$ takes the form
+\begin{align*}
+    \text{SNR}_{\Delta_{j^\star}}(\kappa) =&\frac{(q_{\hat{c}}^\star- q^\star_{j^\star})^2}{(q^\star_{\hat{c}}+q^\star_{j^\star})-(q_{\hat{c}}^\star- q^\star_{j^\star})^2}
+    = \frac{(p_{\hat{c}}^\kappa - p_{j^\star}^\kappa)^2}{(p_{\hat{c}}^\kappa+p_{j^\star}^\kappa)\sum_i p_{i}^\kappa -(p_{\hat{c}}^\kappa - p_{j^\star}^\kappa)^2} \\=& \frac{(p_{\hat{c}}^\kappa - p_{j^\star}^\kappa)^2}{4p_{\hat{c}}^\kappa p_{j^\star}^\kappa + (p_{\hat{c}}^\kappa + p_{j^\star}^\kappa)\sum_{i\neq \hat{c}, j^\star} p_{i}^\kappa}
+    = \frac{\left(\left(\tfrac{p_{\hat{c}}}{p_{j^\star}}\right)^\kappa-1\right)^2}{4\left(\tfrac{p_{\hat{c}}}{p_{j^\star}}\right)^\kappa + \left(\left(\tfrac{p_{\hat{c}}}{p_{j^\star}}\right)^\kappa+ 1\right)\sum_{i\neq \hat{c}, j^\star} \left(\tfrac{p_{i}}{p_{j^\star}}\right)^\kappa}.
+\end{align*}
+To study the behaviour of $\text{SNR}_{\Delta_{j^\star}}$ as a function of $\kappa$, we calculate its derivative with respect to $\kappa$. 
+To do so define 
+$$s(\kappa) = \left(\frac{p_{\hat{c}}}{p_{j^\star}}\right)^\kappa\geq 1\quad \text{and} \quad r(\kappa) = \sum_{i\neq \hat{c}, j^\star} \left(\frac{p_{i}}{p_{j^\star}}\right)^\kappa\geq 0.$$ Differentiating $\text{SNR}_{\Delta_{j^\star}}(\kappa)$ with respect to $\kappa$ gives
+
+\begin{align*}
+    \frac{d}{d\kappa}\text{SNR}_{\Delta_{j^\star}}(\kappa) =& s'(\kappa)\frac{2(s(\kappa)-1)\left(4s(\kappa) + \left(s(\kappa)+ 1\right)r(\kappa)\right)-(s(\kappa)-1)^2(4+r(\kappa))}{\left(4s(\kappa) + \left(s(\kappa)+ 1\right)r(\kappa)\right)^2}\\
+    &- r'(\kappa)\frac{(s(\kappa)-1)^2(s(\kappa)+1)}{\left(4s(\kappa) + \left(s(\kappa)+ 1\right)r(\kappa)\right)^2}\\
+    =& s'(\kappa)(s(\kappa)-1)\frac{4s(\kappa) + 3r(\kappa)+ s(\kappa)r(\kappa)+4}{\left(4s(\kappa) + \left(s(\kappa)+ 1\right)r(\kappa)\right)^2}\\
+    &- r'(\kappa)\frac{(s(\kappa)-1)^2(s(\kappa)+1)}{\left(4s(\kappa) + \left(s(\kappa)+ 1\right)r(\kappa)\right)^2}\\
+\end{align*}
+Since $s(\kappa)-1 \geq 0$ and $r(\kappa)\geq 0$, it is sufficient to show that $s'(\kappa)\geq 0$ and $r'(\kappa)\leq 0$ in order to conclude that $\frac{d}{d\kappa}\text{SNR}_{\Delta_{j^\star}}(\kappa)\geq 0$.
+Indeed,
+\begin{align*}
+       s'(\kappa) =  \left(\frac{p_{\hat{c}}}{p_{j^\star}}\right)^\kappa \ln  \left(\frac{p_{\hat{c}}}{p_{j^\star}}\right) \geq 0
+\end{align*}
+and 
+\begin{align*}
+       r'(\kappa) =  \sum_{i\neq \hat{c}, j^\star}\left(\frac{p_{i}}{p_{j^\star}}\right)^\kappa \ln  \left(\frac{p_{i}}{p_{j^\star}}\right) \leq 0,
+\end{align*}
+since $p_i\leq p_{j^\star}$ for $i\neq \hat{c}, j^\star$.
+
+This implies that $\text{SNR}_{\Delta_{j^\star}}(\kappa)$ is non-decreasing for $\kappa\geq1$, showing that entropy-penalising rewards reduce the number of samples required for certification. 
+
+
+
+\paragraph{Differences from existing entropy-penalising methods.}
+We highlight how our approach differs from that of \citep{agarwal2025unreasonableeffectivenessentropyminimization}.
+Their method minimises individual rewards for a trajectory $(Y_t)_{t\geq 0}$, corresponding to an answer $X = g(Y_{\tau:})$ where $\tau$ is a random stopping time. Specifically, they define two entropy-based reward functions
+\begin{itemize}
+    \item Negative trajectory-level entropy estimator. The reward for a full trajectory $(Y_t)_{t\geq 0}$ is
+    $$
+    {r}_{\text{traj}}(Y_t)=\sum_{t=1}^{|Y^i_t|}\log\pi(Y_t^i|Y_{<t}^i).
+    $$
+    \item  Negative token level entropy. In this case, the reward is of the form
+    $$
+    r_{\text{tok}}(Y_t) =\sum_{t=1}^{|Y^i_t|}\sum_{j\in\mathcal{V}}\pi(j|Y_{<t}^i)\log\pi(j|Y_{<t}^i),
+    $$
+    where $\mathcal{V}$ denotes the vocabulary.
+\end{itemize}
+While both trajectory-level and token-level rewards aim to minimise entropy, they influence RL training differently: minimising trajectory entropy encourages policies with lower entropy over entire trajectories, whereas minimising token-level entropy encourages policies with low entropy at each generation step. 
+In contrast, our group-level reward function targets the entropy of the final answer distribution, directly improving the model’s confidence in its final output while allowing exploration of diverse pathways during the chain-of-thought reasoning process.
+

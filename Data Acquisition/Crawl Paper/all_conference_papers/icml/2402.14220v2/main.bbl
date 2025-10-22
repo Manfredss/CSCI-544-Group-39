@@ -1,0 +1,198 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Awasthi et~al.(2022)Awasthi, Das, Sen, and Suresh]{awasthi2021benefits}
+Awasthi, P., Das, A., Sen, R., and Suresh, A.~T.
+\newblock On the benefits of maximum likelihood estimation for regression and forecasting.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Bertsekas(2014)]{bertsekas2014constrained}
+Bertsekas, D.~P.
+\newblock \emph{Constrained optimization and Lagrange multiplier methods}.
+\newblock Academic press, 2014.
+
+\bibitem[Blei et~al.(2003)Blei, Ng, and Jordan]{lda_blei_2003}
+Blei, D.~M., Ng, A.~Y., and Jordan, M.~I.
+\newblock Latent dirichlet allocation.
+\newblock \emph{Journal of machine Learning research}, 3\penalty0 (Jan):\penalty0 993--1022, 2003.
+
+\bibitem[Bouguila(2010)]{bouguila2010count}
+Bouguila, N.
+\newblock Count data modeling and classification using finite mixtures of distributions.
+\newblock \emph{IEEE Transactions on Neural Networks}, 22\penalty0 (2):\penalty0 186--198, 2010.
+
+\bibitem[Bradley \& Terry(1952)Bradley and Terry]{bradley1952rank}
+Bradley, R.~A. and Terry, M.~E.
+\newblock Rank analysis of incomplete block designs: I. the method of paired comparisons.
+\newblock \emph{Biometrika}, 39\penalty0 (3/4):\penalty0 324--345, 1952.
+
+\bibitem[Choi \& Crossley(2022)Choi and Crossley]{choi2022advances}
+Choi, J.~S. and Crossley, S.~A.
+\newblock Advances in readability research: A new readability web app for english.
+\newblock In \emph{2022 International Conference on Advanced Learning Technologies (ICALT)}, pp.\  1--5. IEEE, 2022.
+
+\bibitem[Crossley et~al.(2023)Crossley, Heintz, Choi, Batchelor, Karimi, and Malatinszky]{crossley2023large}
+Crossley, S., Heintz, A., Choi, J.~S., Batchelor, J., Karimi, M., and Malatinszky, A.
+\newblock A large-scaled corpus for assessing text readability.
+\newblock \emph{Behavior Research Methods}, 55\penalty0 (2):\penalty0 491--507, 2023.
+
+\bibitem[Darroch(1958)]{capture-recapture-1958}
+Darroch, J.~N.
+\newblock The multiple-recapture census: I. estimation of a closed population.
+\newblock \emph{Biometrika}, 1958.
+
+\bibitem[De~Simone et~al.(2019)De~Simone, Rossetti, and Pagani]{de2019chromium}
+De~Simone, M., Rossetti, G., and Pagani, M.
+\newblock Chromium 10x single-cell 3 mrna sequencing of tumor-infiltrating lymphocytes.
+\newblock \emph{Single Cell Methods: Sequencing and Proteomics}, pp.\  87--110, 2019.
+
+\bibitem[DePatta~Pillar(1998)]{depatta1998sampling}
+DePatta~Pillar, V.
+\newblock Sampling sufficiency in ecological surveys.
+\newblock \emph{Abstracta Botanica}, pp.\  37--48, 1998.
+
+\bibitem[Eggenberger \& Pólya(1923)Eggenberger and Pólya]{eggenberger_uber_1923}
+Eggenberger, F. and Pólya, G.
+\newblock Über die {Statistik} verketteter {Vorgänge}.
+\newblock \emph{ZAMM - Zeitschrift für Angewandte Mathematik und Mechanik}, 3\penalty0 (4), 1923.
+
+\bibitem[Faggioli et~al.(2020)Faggioli, Polato, and Aiolli]{faggioli2020recency}
+Faggioli, G., Polato, M., and Aiolli, F.
+\newblock Recency aware collaborative filtering for next basket recommendation.
+\newblock In \emph{Proceedings of the 28th ACM Conference on User Modeling, Adaptation and Personalization}, pp.\  80--87, 2020.
+
+\bibitem[Feuerverger et~al.(2012)Feuerverger, He, and Khatri]{feuerverger2012statistical}
+Feuerverger, A., He, Y., and Khatri, S.
+\newblock Statistical significance of the netflix challenge.
+\newblock 2012.
+
+\bibitem[Goldberg(2022)]{goldberg2022neural}
+Goldberg, Y.
+\newblock \emph{Neural network methods for natural language processing}.
+\newblock Springer Nature, 2022.
+
+\bibitem[Gr{\o}nbech et~al.(2020)Gr{\o}nbech, Vording, Timshel, S{\o}nderby, Pers, and Winther]{gronbech2020scvae}
+Gr{\o}nbech, C.~H., Vording, M.~F., Timshel, P.~N., S{\o}nderby, C.~K., Pers, T.~H., and Winther, O.
+\newblock scvae: variational auto-encoders for single-cell gene expression data.
+\newblock \emph{Bioinformatics}, 36\penalty0 (16):\penalty0 4415--4422, 2020.
+
+\bibitem[Holmes \& Huber(2018)Holmes and Huber]{holmes2018modern}
+Holmes, S.~H. and Huber, W.
+\newblock \emph{Modern statistics for modern biology}.
+\newblock Cambridge university press, 2018.
+
+\bibitem[Inouye et~al.(2017)Inouye, Yang, Allen, and Ravikumar]{inouye2017review}
+Inouye, D.~I., Yang, E., Allen, G.~I., and Ravikumar, P.
+\newblock A review of multivariate distributions for count data derived from the poisson distribution.
+\newblock \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, 9\penalty0 (3):\penalty0 e1398, 2017.
+
+\bibitem[Kingma \& Welling(2014)Kingma and Welling]{kingma_auto-encoding_2014}
+Kingma, D.~P. and Welling, M.
+\newblock Auto-encoding variational bayes.
+\newblock \emph{arXiv preprint}, 2014.
+
+\bibitem[Kuo et~al.(2023)Kuo, Hansen, and Hicks]{kuo_quantification_2022}
+Kuo, A., Hansen, K.~D., and Hicks, S.~C.
+\newblock Quantification and statistical modeling of droplet-based single-nucleus {RNA}-sequencing data.
+\newblock \emph{Biostatistics}, May 2023.
+
+\bibitem[Lambert(1992)]{lambert1992zero}
+Lambert, D.
+\newblock Zero-inflated poisson regression, with an application to defects in manufacturing.
+\newblock \emph{Technometrics}, 34\penalty0 (1):\penalty0 1--14, 1992.
+
+\bibitem[Liang et~al.(2018)Liang, Krishnan, Hoffman, and Jebara]{liang_variational_2018}
+Liang, D., Krishnan, R.~G., Hoffman, M.~D., and Jebara, T.
+\newblock Variational autoencoders for collaborative filtering.
+\newblock In \emph{Proceedings of the 2018 World Wide Web Conference}, pp.\  689–698, 2018.
+
+\bibitem[Lim et~al.(2020)Lim, Jiang, and Yi]{lim2020deep}
+Lim, K.-L., Jiang, X., and Yi, C.
+\newblock Deep clustering with variational autoencoder.
+\newblock \emph{IEEE Signal Processing Letters}, 27:\penalty0 231--235, 2020.
+
+\bibitem[Lopez et~al.(2018)Lopez, Regier, Cole, Jordan, and Yosef]{lopez_deep_2018}
+Lopez, R., Regier, J., Cole, M.~B., Jordan, M.~I., and Yosef, N.
+\newblock Deep generative modeling for single-cell transcriptomics.
+\newblock \emph{Nature Methods}, 15\penalty0 (12), December 2018.
+
+\bibitem[Moivre(1711)]{Moivre1711}
+Moivre, A.
+\newblock \emph{De mensura sortis, seu, de probabilitate eventuum in ludis a casu fortuito pendentibus}.
+\newblock 1711.
+
+\bibitem[Morton et~al.(2019{\natexlab{a}})Morton, Aksenov, Nothias, Foulds, Quinn, Badri, Swenson, Van~Goethem, Northen, Vazquez-Baeza, et~al.]{morton2019learning}
+Morton, J.~T., Aksenov, A.~A., Nothias, L.~F., Foulds, J.~R., Quinn, R.~A., Badri, M.~H., Swenson, T.~L., Van~Goethem, M.~W., Northen, T.~R., Vazquez-Baeza, Y., et~al.
+\newblock Learning representations of microbe--metabolite interactions.
+\newblock \emph{Nature methods}, 16\penalty0 (12):\penalty0 1306--1314, 2019{\natexlab{a}}.
+
+\bibitem[Morton et~al.(2019{\natexlab{b}})Morton, Marotz, Washburne, Silverman, Zaramela, Edlund, Zengler, and Knight]{morton2019establishing}
+Morton, J.~T., Marotz, C., Washburne, A., Silverman, J., Zaramela, L.~S., Edlund, A., Zengler, K., and Knight, R.
+\newblock Establishing microbial composition measurement standards with reference frames.
+\newblock \emph{Nature communications}, 10\penalty0 (1):\penalty0 2719, 2019{\natexlab{b}}.
+
+\bibitem[Oberhofer \& Kaufmann(1987)Oberhofer and Kaufmann]{oberhofer_maximum_1987}
+Oberhofer, W. and Kaufmann, H.
+\newblock Maximum {Likelihood} {Estimation} of a {Multivariate} {Hypergeometric} {Distribution}.
+\newblock \emph{Sankhyā: The Indian Journal of Statistics, Series B (1960-2002)}, 49\penalty0 (2), 1987.
+
+\bibitem[Santos \& Embrechts(2009)Santos and Embrechts]{santos2009use}
+Santos, J.~M. and Embrechts, M.
+\newblock On the use of the adjusted rand index as a metric for evaluating supervised classification.
+\newblock In \emph{International conference on artificial neural networks}, pp.\  175--184. Springer, 2009.
+
+\bibitem[Sarti et~al.(2021)Sarti, Brunato, and Dell’Orletta]{sarti2021looks}
+Sarti, G., Brunato, D., and Dell’Orletta, F.
+\newblock That looks hard: Characterizing linguistic complexity in humans and language models.
+\newblock In \emph{Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics}, pp.\  48--60, 2021.
+
+\bibitem[Shapiro et~al.(2013)Shapiro, Biezuner, and Linnarsson]{shapiro2013single}
+Shapiro, E., Biezuner, T., and Linnarsson, S.
+\newblock Single-cell sequencing-based technologies will revolutionize whole-organism science.
+\newblock \emph{Nature Reviews Genetics}, 14\penalty0 (9):\penalty0 618--630, 2013.
+
+\bibitem[Sutter et~al.(2022)Sutter, Manduchi, Ryser, and Vogt]{sutter_learning_2022}
+Sutter, T.~M., Manduchi, L., Ryser, A., and Vogt, J.~E.
+\newblock Learning {Group} {Importance} using the {Differentiable} {Hypergeometric} {Distribution}.
+\newblock 2022.
+
+\bibitem[Svensson et~al.(2018)Svensson, Vento-Tormo, and Teichmann]{svensson2018exponential}
+Svensson, V., Vento-Tormo, R., and Teichmann, S.~A.
+\newblock Exponential scaling of single-cell rna-seq in the past decade.
+\newblock \emph{Nature protocols}, 13\penalty0 (4):\penalty0 599--604, 2018.
+
+\bibitem[Tohma et~al.(1991)Tohma, Yamano, Ohba, and Jacoby]{tohma_estimation_1991}
+Tohma, Y., Yamano, H., Ohba, M., and Jacoby, R.
+\newblock The {Estimation} of {Parameters} of the {Hypergeometric} {Distribution} and {Its} {Application} to the {Software} {Reliability} {Growth} {Model}.
+\newblock \emph{IEEE Transactions on Software Engineering}, 17\penalty0 (5), May 1991.
+
+\bibitem[Van~den Oord et~al.(2013)Van~den Oord, Dieleman, and Schrauwen]{van2013deep}
+Van~den Oord, A., Dieleman, S., and Schrauwen, B.
+\newblock Deep content-based music recommendation.
+\newblock \emph{Advances in neural information processing systems}, 26, 2013.
+
+\bibitem[Vayansky \& Kumar(2020)Vayansky and Kumar]{vayansky2020review}
+Vayansky, I. and Kumar, S.~A.
+\newblock A review of topic modeling methods.
+\newblock \emph{Information Systems}, 94:\penalty0 101582, 2020.
+
+\bibitem[Waudby-Smith \& Ramdas(2020)Waudby-Smith and Ramdas]{waudby-smith_confidence_2020}
+Waudby-Smith, I. and Ramdas, A.
+\newblock Confidence sequences for sampling without replacement.
+\newblock In \emph{Advances in {Neural} {Information} {Processing} {Systems}}, volume~33, 2020.
+
+\bibitem[Zhao et~al.(2021)Zhao, Cai, Zhang, Tang, and Li]{zhao2021learning}
+Zhao, Y., Cai, H., Zhang, Z., Tang, J., and Li, Y.
+\newblock Learning interpretable cellular and gene signature embeddings from single-cell transcriptomic data.
+\newblock \emph{Nature communications}, 12\penalty0 (1):\penalty0 5261, 2021.
+
+\bibitem[Ziegenhain et~al.(2022)Ziegenhain, Hendriks, Hagemann-Jensen, and Sandberg]{ziegenhain_molecular_2022}
+Ziegenhain, C., Hendriks, G.-J., Hagemann-Jensen, M., and Sandberg, R.
+\newblock Molecular spikes: a gold standard for single-cell {RNA} counting.
+\newblock \emph{Nature Methods}, 19, 2022.
+
+\end{thebibliography}
