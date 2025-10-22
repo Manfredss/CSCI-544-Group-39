@@ -1,0 +1,42 @@
+标题: Exact Linear Convergence Rate Analysis for Low-Rank Symmetric Matrix Completion via Gradient Descent
+arXiv ID: 2102.02396v2
+发布时间: 2021-02-04 03:41:54+00:00
+作者: Trung Vu, Raviv Raich
+摘要: Factorization-based gradient descent is a scalable and efficient algorithm
+for solving low-rank matrix completion. Recent progress in structured
+non-convex optimization has offered global convergence guarantees for gradient
+descent under certain statistical assumptions on the low-rank matrix and the
+sampling set. However, while the theory suggests gradient descent enjoys fast
+linear convergence to a global solution of the problem, the universal nature of
+the bounding technique prevents it from obtaining an accurate estimate of the
+rate of convergence. In this paper, we perform a local analysis of the exact
+linear convergence rate of gradient descent for factorization-based matrix
+completion for symmetric matrices. Without any additional assumptions on the
+underlying model, we identify the deterministic condition for local convergence
+of gradient descent, which only depends on the solution matrix and the sampling
+set. More crucially, our analysis provides a closed-form expression of the
+asymptotic rate of convergence that matches exactly with the linear convergence
+observed in practice. To the best of our knowledge, our result is the first one
+that offers the exact rate of convergence of gradient descent for matrix
+factorization in Euclidean space for matrix completion.
+URL: http://arxiv.org/abs/2102.02396v2
+图片输出目录: all_conference_papers/icml/2102.02396v2/extracted_images
+LaTeX文件数量: 1
+图片文件总数: 1
+匹配图片数量: 1
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/icml/2102.02396v2/main.tex
+
+==================================================
+图片引用列表:
+  - fig1_revised
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/icml/2102.02396v2/fig1_revised.eps
+
+==================================================
+所有图片文件:
+  - all_conference_papers/icml/2102.02396v2/fig1_revised.eps

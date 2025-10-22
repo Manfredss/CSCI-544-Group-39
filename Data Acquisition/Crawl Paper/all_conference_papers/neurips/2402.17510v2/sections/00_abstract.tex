@@ -1,0 +1,15 @@
+% !TEX root = ../main.tex
+
+\Acfp{VLM} mainly rely on contrastive training to learn general-purpose representations of images and captions.
+We focus on the situation when one image is associated with several captions, each caption containing both information shared among all captions and unique information per caption about the scene depicted in the image.
+In such cases, it is unclear whether contrastive losses are sufficient for learning task-optimal representations that contain all the information provided by the captions or whether the contrastive learning setup encourages the learning of a simple shortcut that minimizes contrastive loss.
+We introduce \textit{\acl{SVL}}: a training and evaluation framework where we inject synthetic shortcuts into image-text data.
+We show that contrastive \ac{VLM}s trained from scratch or fine-tuned with data containing these synthetic shortcuts mainly learn features that represent the shortcut. 
+Hence, contrastive losses are not sufficient to learn task-optimal representations, i.e., representations that contain all task-relevant information shared between the image and associated captions.
+We examine two methods to reduce shortcut learning in our training and evaluation framework:
+\begin{enumerate*}[label=(\roman*)]
+\item \acl{LTD} and 
+\item \acl{IFM}.
+\end{enumerate*}
+We show empirically that both methods improve performance on the evaluation task, but only partially reduce shortcut learning when training and evaluating with our shortcut learning framework.
+Hence, we show the difficulty and challenge of our shortcut learning framework for contrastive \acl{VL} representation learning.

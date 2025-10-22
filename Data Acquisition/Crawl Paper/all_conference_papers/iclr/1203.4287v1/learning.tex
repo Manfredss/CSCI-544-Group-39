@@ -1,0 +1,258 @@
+\section{Learning}
+\label{sec:Learning}
+
+We use the expectation-maximization algorithm~\cite{DempsterEM} to learn the distribution parameters from data. First we show how to compute the expected sufficient statistics (ESS) of the random variables and then describe our algorithm.
+
+
+The ESS of a discrete random variable is a n-tuple where $n$ is the
+number of values that the discrete variable takes. Suppose that a
+discrete random variable $V$ takes $v_{1}, v_{2}, ..., v_{n}$ as
+values. Then the ESS of $V$ is $(ESS^{V=v_{1}}, ESS^{V=v_{2}}, ...,
+ESS^{V=v_{n}})$ where $ESS^{V=v_{i}}$ is the expected number of times
+variable $V$ had valuation $v_i$ in all possible proofs for a goal.  
+The ESS of a Gaussian random variable $X$ is a triple $(ESS^{X,\mu},
+ESS^{X,\sigma^{2}}, ESS^{X,count})$ where the components denote the
+expected sum, expected sum of squares and the expected number of uses
+of random variable $X$, respectively, in all possible proofs of a
+goal.  When derivations are enumerated, the ESS for each random
+variable can be represented by a tuple of reals.  To accommodate
+\emph{symbolic} derivations, we lift each component of ESS to a
+function, represented as described below.
+
+\paragraph{Representation of ESS functions:}
+For each component $\nu$ (discrete variable valuation, mean, variance, total counts) of a random variable, its ESS function in a goal $G$ is represented as follows:
+\[
+\xi^{\nu}_{G} = \sum_{i} \langle \chi_{i} \phi_{i}, C_{i} \rangle.
+\]
+where $\langle \phi_{i}, C_{i} \rangle$ is a constrained PPDF function and 
+\[
+\chi_{i}  = \left\{
+\begin{array}{ll}
+\overline{a}_{i} \cdot \overline{X}_{i}+b_{i} & \text{if $\nu$ = $X,\mu$}\\
+\overline{a}_{i} \cdot \overline{X}_{i}^{2}+b_{i} & \text{if $\nu$ =$X,\sigma^2$}\\
+b_{i}  & \text{otherwise}\\
+\end{array}\right.
+\]
+
+\noindent
+Here $\overline{a}_{i}, b_{i}$ are constants, and $\overline{X}_{i} = V_{c}(G)$. 
+
+Note that the representation of ESS function is same as that of
+success function for discrete random variable valuations and total
+counts. \emph{Join} and \emph{Marginalize} operations, defined earlier
+for success functions, can be readily defined for ESS functions as
+well.  The computation of ESS functions for a goal, based on the
+symbolic derivation, uses the extended \emph{join} and
+\emph{marginalize} operations.  The set of all ESS functions is closed
+under the extended \emph{Join} and \texttt{Marginalize} operations. 
+
+
+\paragraph{ESS functions of base predicates:}
+The ESS function of the $i^{th}$ parameter of a discrete random variable $V$ is $P(V=v_i)\delta_{v_{i}}(V)$.
+The ESS function of the mean of a continuous random variable $X$ is $X
+\mathcal{N}_{X}(\mu, \sigma^{2})$, and the ESS function of the
+variance of a continuous random variable $X$ is $X^{2}
+\mathcal{N}_{X}(\mu, \sigma^{2})$. Finally, the ESS function of the
+total count of a continuous random variable $X$ is
+$\mathcal{N}_{X}(\mu, \sigma^{2})$. 
+
+\begin{Ex}
+In this example, we compute the ESS functions of the random variables (\texttt{m}, \texttt{w(a)}, and \texttt{w(b)}) in Example~\ref{ex:fmm}.
+According to the definition of ESS function of base predicates, the ESS functions of these random variables for goals $msw(m, M)$ and  $msw(w(M), X)$ are
+ \begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  ESS & for $msw(m, M)$ & for $msw(w(M), X)$ \\ \hline
+  $\xi^{k}$ & $p_{k} \delta_{k}(M)$ & $0$  \\ \hline
+  $\xi^{\mu_{k}}$ & $0$ & $X \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{\sigma^{2}_{k}}$ & $0$ & $X^{2} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{count_{k}}$ & $0$ & $\delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+\end{tabular}
+\end{center}
+where $k \in \{a,b\}$.
+\qed
+\end{Ex}
+
+
+\paragraph{ESS functions of user-defined predicates:}
+If $G \rightarrow G'$ is a step in a derivation, then the ESS 
+function of a random variable for $G$ is computed bottom-up based on
+the its ESS
+function for $G'$. 
+
+The ESS function of a random variable component in a derivation is defined as
+follows.
+\begin{Def}[ESS functions in a derivation]
+ Let $G \rightarrow G'$.  Then the ESS function of a random variable component $\nu$ in the goal $G$, denoted by
+ $\xi^{\nu}_G$, is computed from that of $G'$, based on the way $G'$ was derived:
+\begin{description}
+\item[PCR:] $\xi^{\nu}_G = \marginalize(\xi^{\nu}_{G'}, V(G') - V(G))$.
+\item[MSW:] Let $G= \kw{msw}(\rv(\overline{X}), Y), G_1$.
+  Then $\xi^{\nu}_G = \psi_{msw(rv(\overline{X}),Y)} * \xi^{\nu}_{G'} + \psi_{G'} * \xi^{\nu}_{msw}$.
+\item[CONS:] Let $G= Constr, G_1$.  Then
+  $\xi_G^{\nu} = \psi_{Constr} * \xi^{\nu}_{G'}.$
+\end{description}
+\end{Def}
+
+
+\begin{Ex}
+Using the definition of ESS function of a derivation involving MSW, we compute the ESS function 
+of the random variables in goal $G_{2}$ of Fig.~\ref{fig:fmmderivation}.
+ \begin{center}
+\begin{tabular}{|c|c|c|}
+  \hline
+  &  ESS functions for goal $G_{2}$ \\ \hline
+  $\xi^{k}$ & $ p_{k} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{\mu_{k}}$ & $X p_{k} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{\sigma^{2}_{k}}$ & $X^{2} p_{k} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{count_{k}}$ & $p_{k} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+\end{tabular}
+\end{center}
+Notice the way $\xi^{k}_{G_{2}}$ is computed. 
+\begin{align*}
+\xi^{k}_{G_{2}} &= \psi_{msw(m, M)} \xi^{k}_{G_{3}} + \psi_{G_{3}} \xi^{k}_{msw(m,M)}\\
+&= [p_{a} \delta_{a}(M) + p_{b} \delta_{b}(M)]. 0 \\&+  [\delta_{a}(M)
+  \mathcal{N}_{X}(\mu_{a}, \sigma^{2}_{a}) + \delta_{b}(M) \mathcal{N}_{X}(\mu_{b}, \sigma^{2}_{b})].  p_{k} \delta_{k}(M)\\
+&= p_{k} \delta_{k}(M) \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})
+\end{align*}
+
+Finally, for goal $G_{1}$ we marginalize the ESS functions w.r.t. $M$. 
+\begin{center}
+\begin{tabular}{|c|c|c|}
+  \hline
+  &  ESS functions for goal $G_{1}$ \\ \hline
+  $\xi^{k}$ & $ p_{k} \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{\mu_{k}}$ & $X p_{k}  \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{\sigma^{2}_{k}}$ & $X^{2} p_{k}  \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi^{count_{k}}$ & $p_{k}  \mathcal{N}_{X}(\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+\end{tabular}
+\end{center}\qed
+\end{Ex}
+
+The algorithm for learning distribution parameters ($\Theta$) uses a fixed set of training examples ($t_{1}, t_{2}, ..., t_{N}$). Note that the success and ESS functions for $t_{i}$'s are constants as the training examples are variable free (i.e., all the variables get marginalized over). 
+
+\begin{Algo}[Expectation-Maximization]
+\label{EMalgo}
+Initialize the distribution parameters $\Theta$.
+\begin{enumerate}
+\item 
+Construct the symbolic derivations for $\psi$ and $\xi$ using current $\Theta$.
+\item
+\textbf{E-step:} For each training example $t_{i}$ ($1\leq i \leq N$),
+compute the ESS ($\xi_{t_{i}}$) of the random variables, and success
+probabilities $\psi_{t_{i}}|$ w.r.t. $\Theta$. \\
+\textbf{M-step:} Compute the MLE of the distribution parameters given the ESS and success probabilities (i.e., evaluate $\Theta'$).
+$\Theta'$ contains updated distribution parameters ($p', \mu', \sigma'^{2}$).
+More specifically, for a discrete random variable $V$, its parameters are updated as follows:
+\begin{align*}
+p'_{V= v}  =  \frac {\eta_{V=v}} {\sum_{u \in values(V)} \eta_{V=u}}
+\end{align*}
+where 
+\begin{align*}
+\eta_{V=v} = \sum_{i=1}^{N} \frac{\xi^{V=v}_{t_{i}}} {\psi_{t_{i}}}.
+\end{align*}
+
+For each continuous random variable $X$, its mean and variances are updated as follows: 
+\begin{align*}
+\mu'_{X}  =  \frac {\sum_{i=1}^{N} \frac{\xi^{X,\mu}_{t_{i}}} {\psi_{t_{i}}}} {N_{X}} 
+\end{align*}
+\begin{align*}
+\sigma_{X}^{'2} &=  \frac {\sum_{i=1}^{N} \frac{\xi^{X,\sigma^{2}}_{t_{i}}  } {\psi_{t_{i}}}} {N_{X}} -  \mu_{X}^{'2} 
+\end{align*}
+where $N_{X}$ is the expected total count of $X$.
+\begin{align*}
+N_{X}  =  \sum_{i=1}^{N} \frac{\xi^{X,count}_{t_{i}}} {\psi_{t_{i}}}
+\end{align*}
+\item
+Evaluate the log likelihood ($\ln P(t_{1},..,t_{N}|\Theta') = \sum_{i}
+\ln \psi_{t_i}$) and check for convergence. Otherwise let $\Theta \leftarrow \Theta'$ and return to step 1. 
+\end{enumerate}
+\end{Algo}
+
+
+\begin{Thm}
+Algorithm~\ref{EMalgo} correctly computes the MLE which (locally) maximizes the likelihood.
+\end{Thm}
+
+\noindent (Proof) Sketch. The main routine of Algorithm~\ref{EMalgo}
+for discrete case is same as the \emph{learn-naive} algorithm of \mycite{sato}, except the computation of $\eta_{V=v}$. 
+\begin{align*}
+\eta_{V=v} = \sum_{\text{for each goal } g} \frac{1} {\psi_{g}} \sum_{S} P(S)N^{v}_{S}.
+\end{align*}
+where $S$ is an explanation for goal $g$ and $N^{v}_{S}$ is the total number of times $V=v$ in $S$. 
+
+We show that $\xi^{V=v}_{g} = \sum_{S} P(S)N^{v}_{S}$.
+
+Let the goal $g$ has a single explanation $S$ where $S$ is a conjunction of subgoals (i.e., $S_{1:n} = g_{1}, g_{2}, ...,g_{n}$). Thus we need to show that $\xi^{V=v}_{g} = P(S)N^{v}_{S}$. 
+
+We prove this by induction on the length of $S$. The definition of $\xi$ for base predicates gives the desired result for $n=1$. Let the above equation holds for length $n$ i.e., $\xi^{V=v}_{g_{1:n}} = P(S_{1:n})N_{1:n}$. For $S_{1:n+1} = g_{1}, g_{2}, ..., g_{n}, g_{n+1}$,
+\begin{align*}
+P(S_{1:n+1})N_{1:n+1} &= P(g_{1}, g_{2}, ..., g_{n}, g_{n+1})N_{1:n+1}\\
+ &= \scriptstyle P(g_{1}, g_{2}, ..., g_{n}) P(g_{n+1}) (N_{1:n}+N_{n+1})\\
+&= \scriptstyle P(S_{1:n}) P(g_{n+1}) N_{1:n} + P(S_{1:n}) P(g_{n+1}) N_{n+1}\\
+&= \scriptstyle P(g_{n+1}) [P(S_{1:n})N_{1:n}] + P(S_{1:n}) [P(g_{n+1}) N_{n+1}]\\
+&= P(g_{n+1}) \xi^{V=v}_{g_{1:n}}  + P(S_{1:n}) \xi^{V=v}_{g_{n+1}}\\
+&= \xi^{V=v}_{g_{1:n+1}}
+\end{align*}
+The last step follows from the definition of $\xi$ in a derivation. 
+
+Now based on the exclusiveness assumption, for disjunction (or multiple explanations) like $g = g_{1} \vee g_{2}$ it trivially follows that $\xi^{V=v}_{g} = \xi^{V=v}_{g_{1}} + \xi^{V=v}_{g_{2}}$.
+
+
+\begin{Ex}
+Let $x_{1}, x_{2}, ..., x_{N}$ be the observations. For a given training example $t_{i} = fmix(x_{i})$, the ESS functions are 
+ \begin{center}
+\begin{tabular}{|c|c|c|}
+  \hline
+  &  ESS functions for goal $fmix(x_{i})$ \\ \hline
+  $\xi_{k}$ & $ p_{k} \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi_{\mu_{k}}$ & $x_{i} p_{k}  \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi_{\sigma^{2}_{k}}$ & $x_{i}^{2} p_{k}  \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+  $\xi_{count_{k}}$ & $p_{k}  \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})$  \\ \hline
+\end{tabular}
+\end{center}
+The E-step of the EM algorithm involves computation of the above ESS functions.
+
+In the M-step, we update the model parameters from the computed ESS functions.
+\begin{align}
+\label{pa}
+p'_{k} = \frac{\sum_{i=1}^{N} \frac{\xi^{k}_{t_i}} {\psi_{t_i}}} {\sum_{i=1}^{N} \frac{\xi^{a}_{t_i}} {\psi_{t_i}} + \frac{\xi^{b}_{t_i}} {\psi_{t_i}}} = \frac{\sum_{i=1}^{N} \frac{\xi^{k}_{t_i}} {\psi_{t_i}}} {N}
+\end{align}
+Similarly, 
+\begin{align}
+\label{mua}
+\mu'_{k} &= \frac {\sum_{i=1}^{N} \frac{\xi^{\mu_{k}}_{t_i}} {\psi_{t_i}}} {N_{k}}
+\end{align}
+\begin{align}
+\sigma_{k}^{'2}  &= \frac {\sum_{i=1}^{N} \frac{\xi^{\sigma_{k}^{2}}_{t_i}} {\psi_{t_i}}} {N_{k}} - \mu_{k}^{'2}
+\end{align}
+where $k \in \{a,b\}$ and
+\begin{align}
+N_{k} = \sum_{i=1}^{N} \frac{\xi^{count_k}_{t_i}} {\psi_{t_i}}
+\end{align}
+\end{Ex}
+
+
+\begin{Ex}
+This example illustrates that for the mixture model example, our ESS computation does the same computation as standard EM learning algorithm for mixture models~\cite{bishop}. 
+
+Notice that for Equation~\ref{pa}, $\frac{\xi^{k}_{t_i}} {\psi_{t_i}} = \frac {p_{k}\mathcal{N}_{k}(x_{i}|\mu_{k},\sigma^{2}_{k}) } {\sum_{l} p_{l}\mathcal{N}_{l}(x_{i}|\mu_{l},\sigma^{2}_{l})}$ which is nothing but the posterior responsibilities presented in~\cite{bishop}. 
+\begin{align*}
+p'_{k} &= \frac{\sum_{i=1}^{N} \frac{\xi^{k}_{t_i}} {\psi_{t_i}}} {N}
+&= \frac {\sum_{i=1}^{N} \frac{p_{k} \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})} {\sum_{l} p_{l}\mathcal{N}_{l}(x_{i}|\mu_{l},\sigma^{2}_{l})} } {N}
+\end{align*}
+Similarly for Equation~\ref{mua}, 
+\begin{align*}
+\mu'_{k} &= \frac {\sum_{i=1}^{N} \frac{\xi^{\mu_{k}}_{t_i}} {\psi_{t_i}}} {N_{k}}
+&= \frac {\sum_{i=1}^{N} \frac{ x_{i} p_{k} \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})} {\sum_{l} p_{l}\mathcal{N}_{l}(x_{i}|\mu_{l},\sigma^{2}_{l})}}
+{\sum_{i=1}^{N}  \frac{p_{k} \mathcal{N}_{X}(x_{i}|\mu_{k}, \sigma^{2}_{k})} {\sum_{l} p_{l}\mathcal{N}_{l}(x_{i}|\mu_{l},\sigma^{2}_{l})}}.
+\end{align*}
+Variances are updated similarly. 
+\qed
+\end{Ex}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

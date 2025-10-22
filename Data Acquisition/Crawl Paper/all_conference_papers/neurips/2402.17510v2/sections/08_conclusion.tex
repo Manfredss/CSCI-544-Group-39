@@ -1,0 +1,37 @@
+% !TEX root = ../main.tex
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this work, we focus on the shortcut learning problem of contrastive learning in the context of \acf{VL} representation learning with multiple captions per image.
+We have proposed \acf{SVL}: a training and evaluation framework to examine the problem of shortcut learning in a controlled way. 
+The key component of this framework is synthetic shortcuts that we add to image-text data. 
+Synthetic shortcuts represent additional, easily identifiable information that is shared between images and captions.
+We fine-tune CLIP and train a VSE++ model from scratch using our training framework to evaluate how prone contrastive \ac{VL} models are to shortcut learning.
+Next, we have evaluated how shortcut learning can be partially mitigated using \acl{LTD} and \acl{IFM}.
+
+\header{Main Findings} We have conducted experiments on two distinct \ac{VL} models, CLIP and VSE++, and have evaluated the performance on \ac{Flickr30k} and \ac{MS-COCO}.
+We have found that when training with unique shortcuts, CLIP suppresses pre-trained features in favor of the shortcuts.
+	VSE++ only learns to represent the shortcuts, when using unique shortcuts, showing that none of the remaining task-relevant (both shared and unique) information is captured by the encoders when training a model from scratch.
+	When using \textit{$n$ bits of shortcuts}, we have shown that the more bits we use, the more the contrastive \ac{VL} models rely on the synthetic shortcuts.
+	Our results demonstrate that contrastive \ac{VL} methods tend to depend on easy-to-learn discriminatory features shared among images and all matching captions while suppressing the remaining task-relevant information. 
+	Next, we have evaluated two methods for reducing shortcut learning on our framework of synthetic shortcuts for image-caption datasets.
+	Both methods partially mitigate shortcut learning when training and evaluating with our shortcut learning framework.
+	These findings show that our framework is a challenging framework to study and evaluate shortcut learning for contrastive \ac{VL} and underline the complexity of our framework in studying and evaluating shortcut learning within the context of contrastive \ac{VL} representation learning.
+
+\header{Implications} The implications of our findings are twofold.
+First, we examine the limitations of contrastive optimization objectives for \ac{VL} representation learning, demonstrating that they predominantly capture features that are easily discriminable but may not necessarily constitute task-optimal representations.
+Second, our work contributes a novel framework for investigating shortcut learning problem in the context of \ac{VL} representation learning with multiple captions per image, providing insights into the extent to which models rely on shortcuts when they are available and how existing shortcut reduction methods are capable of reducing shortcut learning when training with our framework.
+
+\header{Limitations} Some of the limitations of our work are related to the fact that we focused on two specific models, one optimization objective (InfoNCE), and two datasets, and the generalizability of our findings to other \ac{VL} models, optimization objectives, and datasets warrants further exploration. 
+Additionally, the synthetic shortcuts introduced in this work are not dependent on image-caption pairs. 
+Our training and evaluation setup shows that, in the presence of shortcuts in the training data, contrastive \ac{VL} models mainly rely on the easy-to-detect shortcut features, which indicates that the InfoNCE loss cannot learn tasks-optimal representations for \ac{VL} tasks when multiple captions are used for training.
+However, it remains unclear to what degree the unique information of the captions is captured by the contrastive loss \ac{VL} models.
+
+\header{Future Work} 
+We suggest working on the development of optimization objectives that specifically address the shortcut learning problem for \ac{VL} training with multiple captions per image.
+We also suggest extending our synthetic shortcuts for image-caption datasets to a framework with unique shortcut information per caption. 
+By having unique shortcut information per caption, it becomes possible to measure how much of the shared/caption-specific shortcut information is captured by encoder models.
+Another future direction includes investigating alternative training strategies or loss functions to further mitigate shortcut learning problems. 
+Another promising direction for future work includes the improvement of existing methods or the exploration of novel techniques that address the limitations of existing shortcut reduction methods, potentially through the combination of multiple approaches.
+Extending the SVL framework to better capture nuances and complexities of natural data is another important  direction that would facilitate a more comprehensive understanding of the implications of shortcut learning in real-world scenarios and datasets.

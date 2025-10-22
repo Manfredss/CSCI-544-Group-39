@@ -1,0 +1,34 @@
+\begin{proof}
+    Using the Chernoff-Markov inequality, for any $\lambda<0$ we have
+    \begin{align*}
+    \mathbb{P}\left[Z_j^{(n)}\leq 0\right] &= \mathbb{P}\left[e^{\lambda Z_j^{(n)}}\geq 1\right] \leq \mathbb{E}\left[e^{\lambda Z_j^{(n)}}\right] 
+    = \left(\mathbb{E}\left[e^{\lambda Y_1^j}\right]\right)^n,
+    \end{align*}
+where we have used that the random variables $Y_i^j$ are independent and identically distributed. The moment generating function of $Y_1^j$ is 
+$$
+M(\lambda) = \mathbb{E}\left[e^{\lambda Y_1^j}\right] = p_{c^\star} e^{\lambda} + p_j e^{-\lambda} + 1- (p_{c^\star}+p_j).
+$$
+We now optimise $M(\lambda)$ over $\lambda<0$.
+Since $p_{c^\star} > p_j$, there is no minimiser in $\lambda > 0$, so we can just extend the optimisation to $\lambda \in \mathbb{R}$.
+    Setting the derivative to zero,
+    $$M'(\lambda) = p_{c^\star} e^{\lambda} - p_j e^{-\lambda} = 0$$
+    gives the minimiser 
+    \begin{equation*}
+    \lambda^\star = \frac{1}{2}\log(p_j/p_{c^\star}) < 0
+    \end{equation*}
+    with corresponding value
+$$
+M(\lambda^*) = 1-(p_{c^\star}+p_j) + 2\sqrt{p_{c^\star}p_j}.
+$$
+Thus, the Chernoff-Markov bound becomes
+\begin{align*}  
+\mathbb{P}\left[Z_j^{(n)}\leq 0\right]&\leq \left(1-(p_{c^\star}+p_j) + 2\sqrt{p_{c^\star}p_j}\right)^n = \exp\left(n\log\left(1-(p_{c^\star}+p_j) + 2\sqrt{p_{c^\star}p_j}\right)\right)\\
+& = \exp\left(n\log\left(1-(\sqrt{p_{c^\star}}-\sqrt{p_j})^2\right)\right).
+\end{align*}
+Consequently, we have
+$$
+\mathbb{P}\bigl[\hat{c}_n\neq c^\star\bigr]
+\le \sum_{j\neq c^\star}\mathbb{P}\bigl[Z_j^{(n)}\le 0\bigr]
+\le \sum_{j\neq c^\star} \exp\left(n\log\left(1-(\sqrt{p_{c^\star}}-\sqrt{p_j})^2\right)\right).
+$$
+\end{proof}

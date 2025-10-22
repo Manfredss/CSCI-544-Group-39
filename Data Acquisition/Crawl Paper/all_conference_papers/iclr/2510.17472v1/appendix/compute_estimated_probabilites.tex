@@ -1,0 +1,15 @@
+For convenience, we describe below how to compute $1-\hat\varepsilon$, which provides a lower bound $1-\hat{\varepsilon}\leq\mathbb{P}[\widehat{c}_n = c^\star]$.
+Before doing so, recall that if $a$ and $b$ denote two possible outcomes of a multinomial distribution, then
+$$
+\mathbb{P}[p_a>p_b] = \mathbb{P}\left[\theta_{ab}=\tfrac{p_b}{p_a+p_b}<\tfrac{1}{2}\right].
+$$
+This probability can be estimated using a Beta approximation. Assuming a Beta prior on $\theta_{ab}$ with parameters $(1,1)$, and letting $N_a$ and $N_b$ denote the observed counts for each outcome, we obtain
+$$
+\mathbb{P}[\theta_{ab}<\tfrac{1}{2}] = \frac{\Gamma(N_a,N_b)}{\Gamma(N_a)\Gamma(N_b)}\int_0^{1/2} \theta^{N_a-1} (1-\theta)^{N_b-1}\, d\theta :=I_{1/2}(N_a, N_b).
+$$
+Therefore, we have
+\begin{align}
+    \mathbb{P}[\hat{c}_n = c^\star]&\gtrsim \min\left(\mathbb{P}(p_{\hat{c}_n}>p_{{j^\star_n}}), \mathbb{P}(p_{\hat{c}_n}>p_{{\hat{o}_n}})\right)\nonumber\\
+    &\approx \min\left(I_{1/2}(f_n + 1, s_n+1), I_{1/2}({o}_n + 1, s_n+1)\right).\label{eq:lower_bound_for_estimator_correct_no_true}
+\end{align}
+

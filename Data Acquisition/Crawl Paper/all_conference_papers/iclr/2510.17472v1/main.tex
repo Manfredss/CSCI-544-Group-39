@@ -1,0 +1,527 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{style_file,times}
+
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{amsfonts}
+\usepackage[noend]{algpseudocode}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor,pifont}
+\usepackage{bm}
+\usepackage{authblk}
+\newcommand*\colourcheck[1]{%
+  \expandafter\newcommand\csname #1check\endcsname{\textcolor{#1}{\ding{52}}}%
+}
+\colourcheck{blue}
+\colourcheck{green}
+\colourcheck{red}
+\newcommand{\xmark}{\ding{55}}
+\usepackage{fontawesome} 
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\newcommand{\ad}[1]{\textcolor{green}{AD: #1}}
+
+\DeclareMathOperator*{\kl}{KL}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}{A\hspace{-2pt}}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+
+
+\title{\centering \textbf{Certified Self-Consistency:}\\ Statistical Guarantees and Test-Time Training for Reliable Reasoning in LLMs}
+
+\author[ ]{P. Cordero-Encinar}
+\author[ ]{A. B. Duncan}
+\affil[ ]{Department of Mathematics, Imperial College London, UK.}
+\affil[ ]{\textit{\{paula.cordero-encinar22, a.duncan\}@imperial.ac.uk}}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\iclrfinalcopy 
+\begin{document}
+
+
+\maketitle
+\vspace{-30pt}
+\begin{center}
+\faBook\ \href{https://paulaoak.github.io/certified_self_consistency_website/}{\textbf{Website}} \quad
+\faGithub\ \href{https://github.com/paulaoak/certified_self_consistency}{\textbf{Code}}
+\end{center}
+
+\vspace{15pt}
+\begin{abstract}
+Recent advances such as self-consistency and test-time reinforcement learning (TTRL) improve the reliability of large language models (LLMs) without additional supervision, yet their underlying mechanisms and statistical guarantees remain poorly understood.
+We present a unified framework for certifiable inference in LLMs, showing that majority voting provides a statistical certificate of self-consistency: under mild assumptions, the aggregated answer coincides with the mode of the model’s terminal distribution with high probability. We derive finite-sample and anytime-valid concentration bounds that quantify this confidence, and introduce the Martingale Majority Certificate (MMC), a sequential stopping rule that adaptively determines when sufficient samples have been drawn.
+We further prove that label-free post-training methods such as TTRL implicitly sharpen the answer distribution by exponentially tilting it toward its mode, thereby reducing the number of samples required for certification. Building on this insight, we propose new post-training objectives that explicitly optimise this trade-off between sharpness and bias.  Together, these results explain and connect two central test-time scaling strategies, self-consistency and TTRL,  within a single statistical framework for label-free, certifiable reliability in reasoning LLMs.
+\end{abstract}
+
+
+\section{Introduction}\label{sec:introduction}
+Large language models (LLMs) have demonstrated striking performance across a range of reasoning tasks, from mathematical problem solving to code generation \citep{brown2020gpt3,openai2023gpt4}. 
+A key advance has been \emph{chain-of-thought} (CoT) prompting, which guides models to produce explicit intermediate steps before returning a final answer \citep{wei2022cot,kojima2022zeroshot}. 
+CoT substantially improves accuracy on problem-solving benchmarks \citep{cobbe2021gsm8k,lewkowycz2022minerva}. 
+The quality of CoT reasoning depends strongly on the {decoding strategy} adopted at inference time.  Deterministic decoding (e.g.\ greedy or low-temperature sampling) yields a single trajectory but limits exploration, often causing the model to commit early to an incorrect reasoning path.    By contrast, stochastic decoding methods such as nucleus or temperature sampling encourage diversity over reasoning paths, revealing alternative chains of thought that may reach the correct solution.  This is exploited in \emph{test-time scaling} strategies, which seek to improve the reliability and accuracy of model responses at inference time by exploring and aggregating information through multiple rollouts of the model.   While this requires more compute at test time, such approaches demonstrably improve performance without the need for retraining \citep{yao2023treeofthoughts,besta2024graphofthoughts}, particularly for small-footprint models \citep{chan2025lean}.   In the context of LLMs, a wide range of test-time scaling approaches have emerged, ranging from sampling and aggregation approaches (e.g. majority voting, self-consistency); trajectory extension approaches,
+which force longer rollouts to encourage more complete reasoning (e.g. budget forcing, multi-hop reasoning); or search-and-exploration based approaches, which systematically explore multiple reasoning branches through search (e.g. Tree of Thoughts, MCST). If available, a verifier (e.g. a proof checker or an external model), can be used to guide these strategies towards higher quality outputs.
+\\\\
+We can formalise an LLM rollout as a stochastic decoding process
+\[
+(Y_t)_{t \ge 0}, \quad Y_t \in \mathcal{V},
+\]
+where $\mathcal{V}$ is the vocabulary and the process is initialised by a prompt $pr$. 
+At each step the model samples
+\[
+Y_t \sim \pi_\phi(\cdot \mid Y_{<t}, pr),
+\]
+from a conditional policy parametrised by weights~$\phi$. 
+The \emph{thinking phase} consists of the random evolution of this sequence until a termination token is produced, at which point the model emits the response, starting from a random stopping time~$\tau$. 
+We denote by
+\[
+X := g(Y_{\tau:}) \in \mathcal{A}
+\]
+the canonicalised terminal answer, obtained by applying a deterministic extraction map $g$. 
+The induced terminal distribution $\mathbf p = \mathrm{Law}(X)$ over the answer set $\mathcal{A}$ captures the model’s epistemic uncertainty about its own final output. 
+In an ideal reasoning model, we would like rollouts to exhibit rich variability in $Y_{1:\tau-1}$ (the reasoning trajectories), yet concentrate mass in the final answer $X$ (the outcome). That is, we seek {diversity over reasoning paths, but consistency over terminal responses}.
+\\\\
+In supervised or verifier-equipped settings, correctness can be externally validated. 
+In open-ended reasoning tasks, such supervision is unavailable. 
+In the absence of external rewards, a model must act relative to its own uncertainty. 
+Letting $a \in \mathcal{A}$ denote the chosen output and $X \sim \mathbf p$ the stochastic model response, the expected $0$--$1$ loss is $\mathbb{E}[1\{a \neq X\}]$. 
+The Bayes-optimal decision minimising this loss is the mode
+\[
+c^\star = \arg\max_j p_j,
+\]
+which corresponds to the model’s most probable self-consistent answer. 
+Hence, under symmetric loss, recovering the mode is the optimal \emph{model-relative} prediction. 
+When a verifier is absent, certifying that a model’s reported answer coincides with this mode provides a natural measure of reliability.
+
+\paragraph{Statistical certificates of self-consistency.}
+In practice, the terminal probabilities $\mathbf p$ are unknown and can be estimated only through multiple independent rollouts $X_1,\ldots,X_n$. 
+The simplest estimator of the mode is the \emph{majority vote}
+\[
+\widehat{c}_n := \arg\max_j \hat p_{n,j}, 
+\qquad
+\hat p_{n,j} = \frac{1}{n}\sum_{i=1}^{n}\mathbf{1}\{X_i=j\}.
+\]
+This estimator forms the basis of \emph{self-consistency} test-time scaling \citep{wang2022selfconsistency,madaan2023selfrefine}, which has been shown to stabilise CoT reasoning and improve benchmark accuracy \citep{anil2023palm,zuo2025ttrl}.  
+From a statistical standpoint, majority voting is the Bayes-optimal estimator of $c^\star$ under 0--1 loss, and an associated upper bound on $\mathbb{P}[\widehat{c}_n \neq c^*]$ provides a \emph{statistical certificate of self-consistency}: a quantitative guarantee that the aggregated answer coincides with the mode of the terminal law~$\mathbf p$ with high probability. 
+Under standard regularity conditions (e.g.\ conditional independence of rollouts and a unique mode of $\mathbf p$), the majority-vote estimator is consistent, satisfying $\Pr[\widehat{c}_n = c^\star] \to 1$ as $n \to \infty$.  
+A more practical question concerns the finite-sample regime: how large must $n$ be to guarantee, with confidence $1-\varepsilon$, that $\widehat{c}_n$ already equals $c^\star$?
+
+
+To address this, we derive a hierarchy of finite-sample and asymptotic certificates, leveraging Hoeffding, Bernstein, Chernoff--Markov, and Sanov concentration bounds for the error probability $\mathbb{P}[\widehat{c}_n \neq c^\star]$. 
+Although not tight in the small-sample regime, these bounds clarify how reliability scales with the ensemble size and with the \emph{mode margin} $\delta = p_{c^\star} - p_{j^\star}$, i.e.\ the gap between the top two answer probabilities.
+\\\\
+If the probabilities $p_j$ were known, one could invert these bounds to determine the number of samples required to achieve a desired confidence $1-\varepsilon$. 
+In reality, both $p_j$ and $\delta$ must be estimated on the fly. 
+This motivates a \emph{sequential} formulation: as rollouts arrive, can we determine adaptively when the current majority is statistically reliable? 
+We introduce the \emph{Martingale Majority Certificate (MMC)}, a sequential procedure based on $e$-values and Ville’s inequality \citep{ville1939collectif,howard2021confidenceseq}, which adaptively tests whether the empirical leader remains significantly ahead of its nearest rival and of all others combined. This guarantees that at the (random) stopping time~$\tau$,
+\[
+\Pr[\widehat{c}_{n_\tau} \neq c^\star] \le \varepsilon,
+\]
+thus providing an \emph{anytime-valid certificate} of model self-consistency.
+
+\paragraph{Why test-time training helps.}
+Recent work on label-free post-training, such as \emph{test-time reinforcement learning} (TTRL), adapts model parameters online by optimising KL-regularised objectives with respect to its own rollouts \citep{zuo2025ttrl,akyurek2025ttt}. 
+These methods empirically improve reliability but their mechanism remains opaque. 
+We show that such objectives correspond to an \emph{exponential tilting} of the terminal law $\mathbf p$, yielding a sharpened distribution more concentrated around its mode. 
+This transformation increases the mode margin, improving the signal-to-noise ratio of the margin random variable 
+\(
+\Delta_{j^\star} = \mathbf{1}\{X=c^\star\}-\mathbf{1}\{X=j^\star\},
+\)
+and thereby reducing the number of samples required for certification. 
+However, it also introduces a controlled bias relative to the original distribution, governed by the KL regularisation strength. 
+Thus, TTRL provides a complementary lever: by reshaping $\mathbf p$ to enlarge $\delta$, it lowers the compute required for reliable self-consistency.
+
+\paragraph{Emergent calibration in reasoning models.}
+Beyond the theoretical and algorithmic results, our experiments reveal a notable empirical regularity: the
+\emph{signal-to-noise ratio} (SNR) of the margin variable 
+\(\Delta_{j^\star} = \mathbf 1\{X = c^\star\} - \mathbf 1\{X = j^\star\}\),
+which quantifies the sharpness of the model’s terminal answer distribution,
+correlates strongly with external measures of problem difficulty (Figure~\ref{fig:QWEN-MATH-1.5B-SNR-0.1}).
+Across the MATH-500 benchmark, harder problems exhibit systematically lower and more variable SNR values,
+while easier problems yield sharply peaked distributions concentrated around a single answer.
+\\\\
+This behaviour is non-trivial: the model has no access to ground-truth difficulty labels, yet its own epistemic
+uncertainty, reflected in the variability of its rollouts, aligns closely with these labels.
+This suggests an \emph{emergent form of calibration} in reasoning LLMs:
+without explicit supervision or external verification, models appear to ``know when they do not know.''
+In statistical terms, the SNR acts as a label-free proxy for epistemic uncertainty and, consequently, for task difficulty.
+\\\\
+This observation links our theoretical framework to observable model behaviour.
+The same margin variable that governs finite-sample concentration and sequential certification (Sections~\ref{sec:theoretical_bounds}--\ref{sec:stopping_rule})
+also provides a practical signal for compute-adaptive inference:
+when the SNR is low, additional rollouts or verifier checks can be triggered,
+whereas high-SNR cases can be certified with fewer samples.
+Hence, the SNR not only underpins the theory of certified self-consistency,
+but also yields a measurable and actionable indicator of reliability in reasoning models.
+
+\paragraph{Our contributions.}
+We develop a framework for \emph{certifiable inference in chain-of-thought LLMs}, viewing majority voting as a statistical certificate for the terminal law $\mathbf p=\mathrm{Law}(X)$. 
+Specifically:
+\begin{enumerate}
+\item \textbf{Finite-sample and asymptotic certificates.}
+We derive explicit Hoeffding, Bernstein, and Sanov-type bounds for $\mathbb{P}[\widehat{c}_n \neq c^\star]$, characterising how reliability improves with ensemble size as a function of the mode margin~$\delta$.
+\item \textbf{Anytime-valid stopping certificates.}
+We propose the \emph{Martingale Majority Certificate (MMC)}, a sequential test that adaptively determines when sufficient rollouts have been drawn, guaranteeing $\Pr[\widehat{c}_n \neq c^\star]\le \varepsilon$ at stopping.
+\item \textbf{Explaining test-time reinforcement learning.}
+We formalise the connection between KL-regularised TTRL objectives and exponential tilting of $\mathbf p$, explaining why these methods improve reliability by increasing the mode margin and thereby reducing the sample complexity for certification. 
+Building on this insight, we introduce alternative post-training objectives optimising this trade-off between sharpness and bias.
+\item \textbf{Empirical link between uncertainty and problem difficulty.}
+We show that the signal-to-noise ratio (SNR) of the margin variable $\Delta_{j^\star}$, which governs our statistical  certificates, correlates strongly with externally defined difficulty levels,
+revealing an emergent form of calibration in reasoning LLMs.
+\end{enumerate}
+
+Together, these results provide a principled strategy for \emph{certifying that an LLM’s output coincides with its own most probable prediction} through self-consistency.  By linking concentration bounds, martingale stopping rules, and test-time reinforcement learning, we provide a unified statistical framework of when and why self-consistency yields certifiable reliability in reasoning models, and how test-time adaptation can further reduce the computational cost of this certification. Figure \ref{fig:framework} summarises the components of our framework.
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figs/condorcet_framework.pdf}
+    \caption{
+    \textbf{Overview of the proposed framework.}
+    Given a prompt, the model generates multiple reasoning rollouts from the
+    reference distribution $\pi_{\mathrm{ref}}(\cdot|{pr})$.
+    The resulting terminal answers are aggregated via majority voting, viewed
+    as mode estimation under sampling uncertainty.
+    The Martingale Majority Certificate (MMC) monitors the empirical margin and
+    provides an \emph{anytime-valid} stopping rule for certification.
+    Test-time training with SNR or entropy-based adaptation sharpens the
+    terminal distribution, thereby increasing the
+    signal-to-noise ratio (SNR) and reducing the number of samples required for
+    certification. 
+    }
+    \label{fig:framework}
+\end{figure}
+
+
+\section{Statistical guarantees for majority voting}\label{sec:theoretical_bounds}
+
+It is well known that majority voting is \emph{consistent}: under i.i.d.\ rollouts and a unique mode
+$p_{c^\star}>\max_{j\neq c^\star}p_j$, we have that $\widehat{c}_n\to c^\star$ a.s.\ as $n\to\infty$.  This is a direct extension of Condorcet's original jury theory \citep{condorcet1785essai} to the multi-class setting \citep{list2001epistemic}.    Our goal in this section is to quantify the error, $\mathbb{P}[\widehat{c}_n \neq c^\star]$, i.e. when the majority vote over $n$ i.i.d.\ rollouts
+$X_1,\dots,X_n \sim \mathrm{Cat}(\mathbf p)$ fails to return the true mode
+$c^\star = \arg\max_j p_j$, and how this error scales with the ensemble size $n$.
+
+\paragraph{Setting and scope.}
+We analyse an oracle setting where the terminal answer distribution $\mathbf p=(p_1,\dots,p_k)$ is {known}. 
+This isolates what drives certainty under majority aggregation, specifically, how the error $\Pr[\widehat{c}_n\neq c^\star]$ scales with the mode margin $\delta=p_{c^\star}-p_{j^\star}$, the variances $\sigma_j^2$ of the margin random variables $\Delta_j ={ \mathbf 1\{X=\hat c\}-\mathbf 1\{X=j\}}$, and the signal-to-noise ratio of $\Delta_{j^\star}$. 
+The resulting finite-sample bounds and asymptotic rates provide {insight} into the determinants of reliability, and form the basis of an operational certificate for inference in Section \ref{sec:stopping_rule}, where we demonstrate how $\mathbf{p}$ can be simultaneously inferred from rollouts.  Throughout we assume i.i.d.\ rollouts (conditional on the prompt) and a unique mode $p_{c^\star}>\max_{j\neq c^\star}p_j$; violations (e.g., strong correlations or ties) weaken guarantees and are handled adaptively by MMC.
+
+Figure~\ref{fig:comparison_bounds_majority_vote} compares the main bounds below with empirical estimates; full proofs are deferred to Appendix \ref{app:proofs_for_theoretical_bounds}.
+
+\subsection{Exact error probability with oracle $\mathbf p$}
+\label{subsec:small_sample}
+
+When $\mathbf p$ is known, the error probability admits an exact multinomial expression.
+
+\begin{theorem}[Exact small-sample probability]\label{thm:bounds_small_regime}
+For all $n\ge 1$,
+\[
+\Pr[\widehat{c}_n\neq c^\star]
+\;=\;
+\sum_{\substack{x\in\mathbb N^k\\ x_1+\cdots+x_k=n\\ x_{c^\star}\le \max_{j\neq c^\star}x_j}}
+\frac{n!}{x_1!\cdots x_k!}\,p_1^{x_1}\cdots p_k^{x_k}.
+\]
+\end{theorem}
+
+This formula provides the ground truth for the oracle setting and is particularly useful for validating bounds.   For small ensembles ($n\lesssim 50$), it is possible to compute this effectively via a dynamic-programming scheme (see Appendix~\ref{app:small_regime_bounds}), but quickly becomes intractable for increasing $n$.    Theorem \ref{thm:bounds_small_regime} is not illuminating about the {drivers} of certainty.   To see these more clearly, we leverage concentration bounds which provide exponentially decaying finite-sample bounds.
+
+
+\subsection{Finite-sample certificates}
+\label{subsec:finite_sample}
+
+Under a unique mode and conditional independence of rollouts, majority voting admits exponentially decaying error bounds which are valid for any finite number of samples. We collect the main instances into a single statement.
+
+\begin{theorem}[Finite-sample certificate]\label{thm:finite_sample_unified}
+Assume $p_{c^\star}>\max_{j\neq c^\star}p_j$. Then for all $n\ge 1$,
+\begin{align*}
+\Pr[\widehat{c}_n\neq c^\star]
+\;\le\;
+\sum_{j\neq c^\star}
+\min\Bigg\{
+&\underbrace{\exp\!\Big(-\tfrac{n}{2}(p_{c^\star}-p_j)^2\Big)}_{\text{\emph{Hoeffding}}},\quad
+\underbrace{\exp\!\Big(-\,\tfrac{n (p_{c^\star}-p_j)^2}{\,2\sigma_j^2+\frac{2}{3}(p_{c^\star}-p_j)+\frac{2}{3}(p_{c^\star}-p_j)^2}\Big)}_{\text{\emph{Bernstein}}},\\
+&\underbrace{\exp\!\Big(n\log\big(1-(\sqrt{p_{c^\star}}-\sqrt{p_j})^2\big)\Big)}_{\text{\emph{Chernoff--Markov}}}
+\Bigg\}.
+\end{align*}
+\end{theorem}
+
+Introducing the probability gap $\delta^2 = \min_{j \neq c^\star}(p_{c^\star} - p_j)^2$, Hoeffding's inequality implies that
+\small
+$$
+\mathbb{P}[\widehat{c}_n \neq c^\star] \leq (k-1)e^{-n\delta^2/2}.
+$$
+\normalsize
+From this we obtain that
+$
+n \geq -\tfrac{2}{\delta^2}\log\left(\tfrac{\varepsilon}{k-1}\right)
+$
+samples are sufficient to guarantee that the majority vote is correct with probability at least $1-\varepsilon$.
+
+\noindent
+\textit{Interpretation.} We observe that the probability gaps $p_{c^\star} - p_j$ play a major role in these bounds. 
+While Hoeffding's rate depends only on the gap,  Bernstein tightens the rate when variances are smaller, offering an advantage when few rivals have non-negligible mass.  
+These bounds can be further tightened through the introduction of additional prefactors \citep{bahadur-rao}. A full statement with explicit constants and proofs can be found in Appendices~\ref{app:hoeffding_bound}-\ref{app:chernoff-markov_bound}.   A weighted-majority extension (heterogeneous experts) of Hoeffding's bound is deferred to Appendix~\ref{app:weighted_majority_vote}.
+
+\subsection{Asymptotic consistency and the governing rate}
+\label{subsec:asymptotics}
+
+As $n$ grows, the above finite sample bounds yield \emph{exponential} improvement in reliability.   In the asymptotic regime ($n\rightarrow \infty$) we are able to leverage additional strategies which yield different perspectives on the driving factors.  There are two complementary asymptotic lenses:
+
+\emph{(i) Gaussian/CLT regime.}
+Viewing the multinomial counts through a multivariate central limit theorem (CLT) yields normal tail
+approximations for the pairwise margins $N_{c^\star}-N_j$. These can be further refined through Berry–Esseen corrections, which provide $O(n^{-1/2})$ refinements. 
+
+\emph{(ii) Large-deviations (Sanov/Cramér) regime.}
+A large-deviation analysis \citep{dembo2010ldp} characterises the exact first-order exponent:
+$\Pr[\widehat{c}_n\neq c^\star]=\exp(-n I^\star(\mathbf p)+o(n))$, where $I^\star(\mathbf p)$ is the
+minimal KL divergence to a distribution in which a rival ties the leader. Bahadur–Rao–type refinements provide $\Theta(n^{-1/2})$ prefactors to further tighten these approximations.
+
+The two views agree to second order: for small margins $\delta=p_{c^\star}-p_{j^\star}\ll p_{j^\star}$,
+the large-deviation exponent expands as $I^\star(\mathbf p)=\delta^2/(2\sigma_{j^\star}^2)+O(\delta^3)$,
+matching the CLT rate (\ref{eq:clt-rate}). Practically, the CLT bound gives a transparent dependence on SNR and is
+useful for interpretable sample-complexity proxies, while the Sanov rate is preferable when a sharp
+exponent is needed or when inverting for $n$.
+
+The results are detailed in the following theorem, which summarises both the CLT and large-deviations regimes.
+
+\begin{theorem}[Asymptotic consistency]\label{thm:majority_rates}
+Assume $p_{c^\star}>\max_{j\neq c^\star}p_j$. Then, as $n\to\infty$,
+\begin{align}
+\Pr[\widehat{c}_n=c^\star]
+&= 1 - \sum_{j\neq c^\star}\Phi\!\Big(-\,\tfrac{(p_{c^\star}-p_j)\sqrt n}{\sigma_j}\Big)\,[1+O(n^{-1/2})]
+\nonumber\\[-1mm]
+&\ge 1 - \frac{k-1}{2}\exp\!\Big\{-\frac{n}{2}\min_{j\neq c^\star}\Big(\tfrac{p_{c^\star}-p_j}{\sigma_j}\Big)^2\Big\},\label{eq:clt-rate}
+\end{align}
+where $\Phi$ is the standard normal CDF and $\sigma_j^2=p_{c^\star}+p_j-(p_{c^\star}-p_j)^2$.
+Moreover,
+\begin{gather*}
+\Pr[\widehat{c}_n\neq c^\star] \;=\; \exp\big(-n\,I^\star(\mathbf p)+o(n)\big),\\
+\qquad
+I^\star(\mathbf p)
+= \min_{j\neq c^\star}\inf_{\mathbf q:\,q_{c^\star}=q_j}D_{\mathrm{KL}}(\mathbf q\Vert \mathbf p)
+= -\log\!\Big(1-(\sqrt{p_{c^\star}}-\sqrt{p_{j^\star}})^2\Big).
+\end{gather*}
+\end{theorem}
+
+Motivated by the Gaussian bound we define the \emph{signal-to-noise ratio} (SNR) by
+\begin{equation*}
+\mbox{SNR}(\Delta_{j^\star}) = \frac{\delta^2}{\,2p_{c^\star}-\delta-\delta^2\,}
+\end{equation*}
+where $\delta = p_{c^\star} - p_{j^\star}$.  
+\noindent
+The Gaussian bound reveals that the decay rate is governed by the \emph{worst} signal-to-noise ratio of the margin variables:
+\begin{equation}\label{eq:SNR_winner_runner_up}
+\min_{j\neq c^\star}\Big(\tfrac{p_{c^\star}-p_j}{\sigma_j}\Big)^2
+\;=\;
+\Big(\tfrac{p_{c^\star}-p_{j^\star}}{\sigma_{j^\star}}\Big)^2
+\;=\;
+\mathrm{SNR}(\Delta_{j^\star}).
+\end{equation}
+We also note that the rate function $I^\star(\mathbf{p})$ recovers the same rate as the Chernoff-Markov bound in Theorem~\ref{thm:finite_sample_unified}.  For small margins $\delta\ll p_{j^\star}$, the large-deviation exponent admits the expansion
+$$I^\star(\mathbf p)=\delta^2/\big(2\sigma_{j^\star}^2\big)+O(\delta^3),$$
+consistent with the Gaussian rate. Proofs are given in Appendices~\ref{app:majority-clt} and \ref{app:sanov_bound}.
+
+\medskip
+
+From these results, we see that majority voting acts as a statistical amplifier: under a unique mode and conditionally-independent rollouts,
+the error probability decays {exponentially} in $n$.
+The governing rate is the SNR of the margin $\Delta_{j^\star}$ in (\ref{eq:SNR_winner_runner_up}).
+This same quantity controls the Martingale Majority Certificate (Section~\ref{sec:stopping_rule}) and motivates
+test-time training objectives that enlarge the mode margin and improve sample efficiency (Section~\ref{sec:test_time_training_loss}).
+
+
+\section{Martingale Majority Certificate: a practical stopping rule}\label{sec:stopping_rule} 
+\input{mmc}
+
+\section{Optimising sample efficiency through test-time training}
+\label{sec:test_time_training_loss}
+\input{test_time_training_loss}
+\input{snr_problem_difficulty}
+
+
+
+
+\section{Numerical experiments}\label{sec:numerical_experiments}
+The goal of this section is threefold: (1) to evaluate the performance of our proposed test-time RL objectives (Section \ref{sec:test_time_training_loss}), (2) to empirically demonstrate that inference-time training strategies reduce the number of samples required by the MMC stopping rule (Algorithm \ref{alg:stopping_rule}) to obtain statistical certificates, compared to pre-trained models, and (3) to show that the SNR serves as a label-free proxy for problem difficulty. Additional experimental details are provided in Appendix~\ref{app:numerical_experiments_details}.
+\input{numerical_experiments}
+
+\section{Related work}\label{sec:related_work}
+\paragraph{Classical majority aggregation.}  
+The study of majority voting as a mechanism for error reduction dates back to Condorcet’s jury theorem, which shows that under independence and competence above chance, majority aggregation recovers the correct decision with probability approaching one as the ensemble size grows \citep{condorcet1785essai}. Subsequent work has analysed correlated jurors \citep{ladha1992condorcet}, multiclass outcomes \citep{list2001epistemic}, and asymptotic behaviour \citep{boland1989majority}.  Concentration inequalities have long been used to control majority error in the binary case, providing simple finite-sample bounds on the probability of incorrect aggregation.   In this work, we build on these results with the aim of systematically understanding the multinomial setting relevant for LLM outputs, and to reinterpret the resulting bounds explicitly as \emph{certificates} of model reliability.  Various extensions to Condorcet's original formalism have been considered.   A closely related line of work models heterogeneous and possibly biased voters via the Dawid–Skene framework \citep{dawid_skene_79}, which introduces latent {confusion matrices} for each voter, estimating them via Expectation-Maximisation. This generalises majority vote to settings with unequal competence and asymmetric errors in the multiclass case. Subsequent extensions incorporate item difficulty and worker ability, yielding models akin to Item Response Theory \citep{bock1997brief}, Bayesian treatments and priors over confusion matrices \citep{raykar2010learning,liu2012variational,kim2012bayesian}.   These frameworks have been leveraged in the context of LLMs, both for assessing quality of data annotation e.g. \cite{whitehill2009whose,welinder2010multidimensional}, as well as for aggregation and combination of outputs from heterogeneous models \citep{yao2024bayesian, song2025irt}, or for uncertainty quantification \citep{kang2025uncertainty}.  Adapting our  anytime statistical certificates in these more general settings will be the scope of future work. 
+
+\paragraph{Self-consistency and ensembles in LLMs.}  
+In the context of chain-of-thought (CoT) prompting, majority voting is widely known as \emph{self-consistency} \citep{wang2022selfconsistency}.
+By sampling multiple reasoning trajectories and returning the empirical mode, self-consistency significantly improves accuracy on reasoning benchmarks.  Extensions include iterative refinement and self-feedback loops
+\citep{madaan2023selfrefine,shinn2023reflexion} and ensemble-style aggregation in large-scale systems such as PaLM~2 \citep{anil2023palm} and GPT-4~\citep{openai2023gpt4}.
+These approaches demonstrate empirically that aggregation mitigates stochasticity in reasoning and that the marginal benefit of additional samples is highly instance-dependent.
+
+More recent work has begun to address this dependency explicitly through
+\emph{adaptive self-consistency}, where the number of sampled trajectories is
+determined dynamically through a stopping rule, informed by model uncertainty or rollout agreement. \citep{aggarwal2023let,liescape, wan2025reasoning}.   
+Difficulty-adaptive sampling schemes
+\citep{wang2025make}
+and early-stopping strategies such as
+\emph{Self-Truncation Best-of-$N$} (ST-BoN; \cite{wang2025sampling})
+aim to minimise test-time compute while maintaining accuracy by
+halting when the vote distribution stabilises.
+Related adaptive compute frameworks learn to predict, mid-generation, whether
+further sampling would change the outcome
+\citep{manvi2024adaptive,liu2024speculative,chen2024ee},
+thereby allocating more samples to difficult or ambiguous prompts and fewer to easy ones.
+\\\\
+While the above adaptive self-consistency strategies share the same goal of
+halting rollouts when the empirical vote distribution stabilises, they provide no formal
+control over reliability.  Our Martingale Majority Certificate (MMC) makes this
+principle explicit by framing aggregation as an \emph{anytime-valid} hypothesis
+test through $e$-values \citep{STA-002}.  This guarantees uniform, finite-sample error control for all stopping times,
+offering a statistically grounded analogue to these heuristic adaptive-sampling
+strategies.
+
+
+\paragraph{Test-time training and reinforcement learning.}  
+A complementary line of work has investigated \emph{test-time adaptation}, in which the model is updated online at inference time. Early approaches include entropy minimisation and self-training in computer vision. More recently, test-time reinforcement learning (TTRL) has been introduced for LLMs, where the model is adapted by optimising KL-regularised objectives with respect to its own rollouts \citep{zuo2025ttrl}. Related methods such as \cite{akyurek2025ttt} and \cite{prasadself} similarly adapt models at inference time to sharpen predictions and improve reliability.   Similarly, \cite{wen2025unsupervised}, propose a method called Internal Coherence Maximization (ICM), which fine-tunes pretrained language models without any external labels by maximising mutual predictability and logical consistency among the model's own generated labels.  In \cite{prabhudesai2025maximizing} and \cite{kang2025scalable} the authors use token-level negative entropy as a reward signal for test-time reinforcement learning.  Finally, \cite{shafayat2025large} explores RL post-training leveraging a consensus reward identical to \cite{zuo2025ttrl}, but without KL-regularisation with respect to the base measure,  demonstrating it can generate measurable improvements, before the inevitable collapse.
+
+While these approaches empirically demonstrate measurable improvements, their mechanism has not been theoretically clarified. Firstly, our analysis provides a unifying perspective: KL-regularised TTRL objectives correspond to exponential tilting of the terminal distribution, and entropy-penalising rewards are equivalent to marginal tempering. This explains why such methods increase the mode margin and thereby reduce the number of samples required for certification.   Secondly, our work clarifies the essential role played by the KL-regularisation, without which the model eventually collapses under post-training.
+
+
+\section{Discussion}\label{sec:discussion}
+Our results unify several strands of recent work on reliable inference in LLMs, self-consistency,
+adaptive compute allocation, and test-time reinforcement learning (TTRL), under a common
+statistical perspective.  Through this lens, majority voting emerges naturally as a means of estimating the mode of the terminal distribution.  The validity of the majority vote as an estimate of the mode can be  {certified} by finite-sample and asymptotic bounds. The Martingale Majority Certificate (MMC)
+extends this view by providing an {operational} test-time algorithm that determines, from model
+rollouts alone, when a response is statistically self-consistent.  This recasts test-time scaling as a sequential decision problem with formal coverage guarantees, contrasting with heuristic
+stopping rules based on agreement or entropy thresholds.
+\\\\
+Our analysis clarifies the underlying mechanism by which TTRL and related post-training
+approaches improve reasoning reliability: KL-regularised optimisation corresponds to an
+{exponential tilting} of the terminal law, sharpening it around its mode and increasing the
+signal-to-noise ratio (SNR) of the margin variable.  This insight explains empirical observations of
+enhanced consistency after test-time adaptation, and motivates new label-free objectives such as
+our SNR- and entropy-based rewards, which explicitly target this trade-off between sharpness and
+bias.  Unlike prior work that tunes temperature or per-token distributions, our formulation operates
+on the terminal marginal, preserving exploration during reasoning while promoting confidence in the
+final answer.
+\\\\
+Beyond immediate applications to reasoning benchmarks, our framework offers a principled path
+toward {certifiable reliability} in language models.  By unifying classical concentration theory,
+martingale testing, and reinforcement-style post-training within one formal structure, we obtain
+statistical interpretability for inference-time adaptation.  This could extend naturally to multi-agent
+ensembles, verifier–generator systems, and other domains where LLMs operate under uncertainty.
+Future work will explore applying anytime-valid certificates to correlated rollouts, structured output
+spaces, and multi-verifier settings, as well as combining them with learned difficulty estimators for
+dynamic compute scheduling.   
+\\\\
+In this work, we have demonstrated the efficacy of anytime-valid certificates in the simplified setting of problems with discrete, multiple-choice outputs.   It is worth emphasising that the MMC does not require a-priori knowledge of the set of possible answers. While this would enable one to apply similar approaches to free-text answers, this would still require some degree of response canonicalisation.  Future work will explore alternative reformulations of MMC, which circumvent the need for `binning' similar responses, while still providing statistical certificates.
+
+\section{Limitations}\label{app:limitations}
+Our analysis assumes conditionally independent rollouts given a fixed prompt
+and context, corresponding exactly to standard stochastic decoding (e.g.\
+temperature or nucleus sampling).  This assumption holds for the inference
+regime considered here, where each completion is sampled independently from the
+model’s conditional distribution, but future extensions could address adaptive
+or verifier-guided sampling strategies that introduce dependencies across
+rollouts.  A second limitation concerns calibration: our SNR- and
+entropy-based quantities rely on the model’s internal probabilities to reflect
+true epistemic uncertainty, which may not hold for all models or decoding
+temperatures.  Empirically, our evaluation focuses on single-turn reasoning
+benchmarks; applying the framework to multi-turn dialogue, program synthesis,
+and structured prediction remains an open direction.  Although
+anytime-valid stopping improves expected efficiency, generating multiple
+trajectories still incurs substantial compute cost.  Future work will explore
+correlated-rollout models, calibration corrections, and hierarchical extensions
+to improve the robustness and scalability of certified reasoning. 
+
+\newpage
+\bibliography{references}
+\bibliographystyle{references}
+
+\newpage
+\appendix
+\section{Proofs of Section \ref{sec:theoretical_bounds}}\label{app:proofs_for_theoretical_bounds}
+
+\subsection{Small sample regime}\label{app:small_regime_bounds}
+\input{appendix/small_regime_bounds}
+
+\subsection{Hoeffding bound}\label{app:hoeffding_bound}
+\input{appendix/hoeffding_bound}
+
+\subsection{Bernstein bound}\label{app:bernstein_bound}
+\input{appendix/bernstein_bound}
+
+\subsection{Chernoff-Markov bound}\label{app:chernoff-markov_bound}
+\input{appendix/chernoff_markov_bound}
+
+\subsection{CLT bound}\label{app:majority-clt}
+\input{appendix/CLT_asymptotic_bound}
+
+\subsection{Large-deviations regime}\label{app:sanov_bound}
+\input{appendix/sanov_bound}
+
+\subsection{Comparison of the different bounds}\label{app:subsec_comparison_bounds}
+We perform numerical experiments on synthetic examples to empirically verify the tightness of the derived bounds. 
+We consider a categorical probability distribution with  $k=3$ categories and a small probability gap $\delta = p_{{c}^\star}-p_{j^\star}$. In particular, we set $p_1 = 0.38$, $p_2 = 0.35$,  $p_3 = 0.27$.   
+To compute the empirical estimates of $P[\widehat{c}_n \neq c^\star]$, we employ a Monte Carlo approach with $10^6$ samples.  
+
+The results are shown in Figure \ref{fig:comparison_bounds_majority_vote}. We observe that the CLT bound, with continuity and Berry–Esseen corrections (CLT + CC + BE), provides a very tight estimate that converges to the exact multinomial result as the panel size of voters increases.
+In contrast, the Hoeffding, Bernstein and Chernoff bounds are noticeably looser. Finally, the Sanov bound with Bahadur-Rao correction (Sanov + BR) is expected to become increasingly tight for larger panels. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{figs/empirical_vs_theoreticalbounds.pdf}
+\end{center}
+\caption{Comparison of empirical and theoretical bounds on $P[\widehat{c}_n \neq c^\star]$ for the probability distribution $\mathbf{p} = (0.38, 0.35, 0.27)$.}
+\label{fig:comparison_bounds_majority_vote}
+\end{figure}
+
+\section{Analysis of the stopping rule}\label{app:details_stopping_rule}
+\input{appendix/analysis_mmc}
+
+
+\section{Test-time training objectives}\label{app:details_test_time_training_loss}
+
+\subsection{Test-time reinforcement learning (TTRL)}\label{app:subsec_analysis_TTRL}
+\input{appendix/analysis_TTRL}
+
+\subsection{SNR-based test-time RL objective}\label{app:details_new_TTT_loss}
+\input{appendix/details_new_TTT_loss}
+
+\subsection{Entropy-based test-time RL objective}\label{app:subsec_analysis_TTTEntropy}
+\input{appendix/analysis_TTT_entropy}
+
+\section{Experimental details}\label{app:numerical_experiments_details}
+\input{appendix/further_experimental_details}
+
+\end{document}

@@ -1,0 +1,46 @@
+TTRL leverages majority voting over $n$ responses $X_1, \dots, X_n$ as a proxy for the correct answer, and defines the reward function $r_n(Y_i) = \mathbf{1}\{X_i = \widehat{c}_n\}$, where $\widehat{c}_n$ is the majority vote. 
+The regularised objective it minimises is of the form
+$$
+L(\pi) := -\mathbb{E}_{pr \sim Q}\ \mathbb{E}_{Y\sim \pi(\cdot | pr)}[\mathbf{1}\{X=\widehat{c}_n\}] + \beta\ \KL(\pi(\cdot | pr) || \pi_{\text{ref}}(\cdot | pr)),
+$$
+where $\pi$ is the candidate distribution and $\pi_{\text{ref}}$ is a pre-trained reference model. Note that $L$ is strictly convex and therefore admits a unique global minimiser.
+
+\paragraph{Optimisation of the regularised objective.} To compute the optimiser, we introduce a Lagrange multiplier $\lambda$ to enforce normalisation and consider a perturbation
+$\pi_\varepsilon = \pi + \varepsilon\varphi$ with $\int\varphi\,d\mu = 0$.
+The directional derivative at $\varepsilon=0$ is
+$$
+\left.\frac{d}{d\varepsilon}
+\left[ L[\pi_\varepsilon] + \lambda \int \pi_\varepsilon\,d\mu \right]
+\right|_{\varepsilon=0}
+=
+\int_{\Omega} \left[-\delta_{\widehat{c}_n} + \beta\left(1+\log\frac{\pi}{\pi_{\text{ref}}}\right) + \lambda\right]\varphi\,d\mu .
+$$
+Since this must vanish for all admissible $\varphi$, we obtain the pointwise stationarity condition
+$$
+-\mathbf{1}\{x=\widehat{c}_n\} + \beta\left(1+\log\frac{\pi(x)}{\pi_{\text{ref}}(x)}\right) + \lambda = 0.
+$$
+Solving this yields the tilted distribution
+\begin{equation*}
+\pi^\star(y | pr) \propto e^{\mathbf{1}\{x=\widehat{c}_n\}/\beta}\pi_{\text{ref}}(y | pr) = \left(1 + \mathbf{1}\{x=\widehat{c}_n\}\left(e^{\frac{1}{\beta}}-1\right)\right)\pi_{\text{ref}}(y|pr).
+\end{equation*}
+As $\beta\rightarrow 0$, the model converges to a Dirac delta centred at $\widehat{c}_n$.   For non-zero regularisation values $\beta$, the solution retains some  structure from the reference model. Assuming $\pi_{\text{ref}}$ is normalised and $e^{1/\beta} > 1$, we can write
+$$
+\pi^\star(y | pr) = \frac{e^{\mathbf{1}\{x=\widehat{c}_n\}/\beta}\pi_{\text{ref}}(y| pr)}{\pi_{\text{ref}}(\widehat{c}_n|pr)e^{1/\beta} +\sum_{x'\neq \widehat{c}_n} \pi_{\text{ref}}(y'|pr)} =  \frac{e^{\mathbf{1}\{x=\widehat{c}_n\}/\beta}\pi_{\text{ref}}(y | pr)}{1 + \pi_{\text{ref}}(\widehat{c}_n|pr)(e^{1/\beta}-1)}. 
+$$
+
+Let $\kappa = 1/\beta$ and $p_j=\pi_{\text{ref}}(j)$. We now analyse the behaviour of $\text{SNR}({\Delta_{j^\star}})$ as a function of $\kappa$. To do so, we compute its derivative with respect to $\kappa$
+\begin{align*}
+    \frac{d}{d\kappa}\text{SNR}_{\Delta_{j^\star}}(\kappa) =& \frac{d}{d\kappa}\frac{(\pi_{\hat{c}}^\star- \pi^\star_{j^\star})^2}{(\pi^\star_{\hat{c}}+\pi^\star_{j^\star})-(\pi_{\hat{c}}^\star- \pi^\star_{j^\star})^2}\\
+    =& \frac{d}{d\kappa}\frac{(p_{\hat{c}}e^\kappa - p_{j^\star})^2}{(p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2}\\
+    =& \frac{2(p_{\hat{c}}e^\kappa - p_{j^\star})p_{\hat{c}}e^\kappa\left[(p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2\right]}{((p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2)^2} \\
+    &- \frac{(p_{\hat{c}}e^\kappa - p_{j^\star})^2p_{\hat{c}}e^\kappa\left[(1+(e^\kappa-1)p_{\hat{c}}) + (p_{\hat{c}}e^\kappa+p_{j^\star})\right]}{\left((p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2\right)^2}\\
+    &+ \frac{2(p_{\hat{c}}e^\kappa-p_{j^\star})p_{\hat{c}}e^\kappa(p_{\hat{c}}e^\kappa - p_{j^\star})^2}{\left((p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2\right)^2}\\
+    =& \frac{(\square)}{((p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}})-(p_{\hat{c}}e^\kappa - p_{j^\star})^2)^2}.
+\end{align*}
+The denominator is clearly positive, so we focus on the numerator. After cancelling out common terms, the numerator reduces to
+\begin{align*}
+       (\square) =& (p_{\hat{c}}e^\kappa - p_{j^\star})p_{\hat{c}}e^\kappa\Big[2(p_{\hat{c}}e^\kappa+p_{j^\star})(1+(e^\kappa-1)p_{\hat{c}}) - (1+(e^\kappa-1)p_{\hat{c}})(p_{\hat{c}}e^\kappa-p_{j^\star}) \\
+       &- (p_{\hat{c}}e^\kappa+p_{j^\star})(p_{\hat{c}}e^\kappa-p_{j^\star})\Big]\\
+       =& (p_{\hat{c}}e^\kappa - p_{j^\star})p_{\hat{c}}e^\kappa\Big[2p_{j^\star}(1+(e^\kappa-1)p_{\hat{c}})+(p_{\hat{c}}e^\kappa+p_{j^\star})(1-p_{\hat{c}}+p_{j^\star})\Big].
+\end{align*}
+Since $\kappa\geq 0$ and $0\leq p_{j^\star}\leq p_{\hat{c}}\leq 1$, it follows that $(\square)\geq 0$, with equality if and only if $p_{\hat{c}}=1$. Therefore, for $0<p_{\hat{c}}<1$, $ \frac{d}{d\kappa}\text{SNR}_{\Delta_{j^\star}}(\kappa)>0$, which implies that  $\text{SNR}_{\Delta_{j^\star}}(\kappa)$ is an increasing function of $\kappa$. This demonstrates that optimising the TTRL objective reduces the number of samples required to achieve statistical certificates. 

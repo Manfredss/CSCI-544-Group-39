@@ -1,0 +1,60 @@
+% Sample LaTeX file for creating a paper in the Morgan Kaufmannn two
+% column, 8 1/2 by 11 inch proceedings format.
+
+\documentclass{article}
+
+
+\usepackage{aaai}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage[compact]{titlesec}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\floatstyle{boxed}
+\restylefloat{figure}
+
+\newfloat{program}{thp}{}
+\floatname{program}{Program}
+
+
+\input{command}
+
+\title{Parameter Learning in PRISM~Programs with Continuous~Random~Variables}
+
+\author{ {\bf Muhammad Asiful Islam, C.R. Ramakrishnan, I.V. Ramakrishnan} \\
+Dept. of Computer Science\\
+Stony Brook University\\
+Stony Brook, NY 11794 \\
+\{maislam, cram, ram\}@cs.sunysb.edu\\
+}
+
+\begin{document}
+
+\maketitle
+
+\input{abstract}
+\input{intro}
+\input{prism}
+\input{inference}
+\input{learning}
+\input{conclusion}
+
+
+\bibliographystyle{aaai}
+\bibliography{biblio}
+
+\end{document}
+
+
+
+
+

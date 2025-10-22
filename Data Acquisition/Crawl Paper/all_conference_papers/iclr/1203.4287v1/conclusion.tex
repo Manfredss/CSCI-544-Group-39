@@ -1,0 +1,17 @@
+\section{Discussion and Concluding Remarks}
+\label{sec:extn}
+
+The symbolic inference and learning procedures enable us to reason over 
+a large class of statistical models such as hybrid Bayesian networks with discrete child-discrete parent, continuous child-discrete parent (finite mixture model), and continuous child-continuous parent (Kalman filter), which was hitherto not possible in PLP frameworks.  It can also be used for  hybrid models, e.g., models that mix discrete and Gaussian distributions.  For instance, consider the mixture model example (Example~\ref{ex:fmm}) where \texttt{w(a)} is Gaussian but \texttt{w(b)} is a discrete distribution with values $1$ and $2$ with $0.5$ probability each. The density of the mixture distribution can be written as 
+\begin{align*}
+f(X) = 0.3 \mathcal{N}_{X}(2.0, 1.0)  + 0.35  \delta_{1.0}(X)  + 0.35  \delta_{2.0}(X)
+\end{align*}
+Thus the language can be used to model problems that lie outside traditional hybrid Bayesian networks.
+
+ProbLog and LPAD do not impose PRISM's mutual exclusion and independence restrictions.  Their inference technique first materializes the set of explanations for each query, and represents this set as a BDD, where each node in the BDD is a (discrete) random variable.  Distinct paths in the BDD are mutually exclusive and variables in a single path are all independent. Probabilities of query answers are computed trivially based on this BDD representation.  The technical development in this paper is limited to PRISM and imposes its restrictions.  However, by materializing the set of symbolic derivations first, representing them in a factored form (such as a BDD) and then computing success functions on this representation, we can readily lift the restrictions for the parameter learning technique.
+
+ 
+This paper considered only univariate
+Gaussian distributions.  Traditional parameter learning techniques have been described for multivariate distributions without introducing additional machinery.  Extending our learning algorithm to the multivariate case is a topic of future work. 
+
+

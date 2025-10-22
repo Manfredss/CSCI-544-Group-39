@@ -1,0 +1,149 @@
+标题: Memorize What Matters: Emergent Scene Decomposition from Multitraverse
+arXiv ID: 2405.17187v2
+发布时间: 2024-05-27 14:11:17+00:00
+作者: Yiming Li, Zehong Wang, Yue Wang, Zhiding Yu, Zan Gojcic, Marco Pavone, Chen Feng, Jose M. Alvarez
+摘要: Humans naturally retain memories of permanent elements, while ephemeral
+moments often slip through the cracks of memory. This selective retention is
+crucial for robotic perception, localization, and mapping. To endow robots with
+this capability, we introduce 3D Gaussian Mapping (3DGM), a self-supervised,
+camera-only offline mapping framework grounded in 3D Gaussian Splatting. 3DGM
+converts multitraverse RGB videos from the same region into a Gaussian-based
+environmental map while concurrently performing 2D ephemeral object
+segmentation. Our key observation is that the environment remains consistent
+across traversals, while objects frequently change. This allows us to exploit
+self-supervision from repeated traversals to achieve environment-object
+decomposition. More specifically, 3DGM formulates multitraverse environmental
+mapping as a robust differentiable rendering problem, treating pixels of the
+environment and objects as inliers and outliers, respectively. Using robust
+feature distillation, feature residuals mining, and robust optimization, 3DGM
+jointly performs 2D segmentation and 3D mapping without human intervention. We
+build the Mapverse benchmark, sourced from the Ithaca365 and nuPlan datasets,
+to evaluate our method in unsupervised 2D segmentation, 3D reconstruction, and
+neural rendering. Extensive results verify the effectiveness and potential of
+our method for self-driving and robotics.
+URL: http://arxiv.org/abs/2405.17187v2
+图片输出目录: all_conference_papers/neurips/2405.17187v2/extracted_images
+LaTeX文件数量: 8
+图片文件总数: 35
+匹配图片数量: 33
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/neurips/2405.17187v2/neurips_2024.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/1-introduction.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/3-preliminary.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/6-acknowledgement.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/5-experiment.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/4-method.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/2-related_work.tex
+  - all_conference_papers/neurips/2405.17187v2/sections/appendix.tex
+
+==================================================
+图片引用列表:
+  - teaser_compressed
+  - depth_comb_compressed
+  - seg-loc
+  - envrendering_compressed
+  - featmask_compressed
+  - overview_compressed
+  - ablation-iteration_compressed
+  - limitation-small_compressed
+  - featmask-supp_compressed
+  - ithaca-2_compressed
+  - ablation-dimension_compressed
+  - ithaca-1_compressed
+  - limitation-reflect_compressed
+  - limitation-shadow_compressed
+  - seg-compare_compressed
+  - EmerSeg-loc3_compressed
+  - EmerSeg-loc6_compressed
+  - ablation-backbone_compressed
+  - EmerSeg-loc4_compressed
+  - limitation-large_compressed
+  - vegas-2_compressed
+  - EmerSeg-loc5_compressed
+  - ablation-resolution_compressed
+  - nuplan-rendering_compressed
+  - nuplan-depth-app_compressed
+  - nuplan-iou-locations
+  - ithaca-depth-app_compressed
+  - EmerSeg-loc1_compressed
+  - reconstruction_compressed
+  - EmerSeg-loc2_compressed
+  - envrendering-supp_compressed
+  - vegas-1_compressed
+  - ablation-traversal_compressed
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/envrendering_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/teaser_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc4_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-depth-app_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc3_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-iou-locations.png
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/vegas-2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/envrendering-supp_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-small_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc5_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/reconstruction_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/depth_comb_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-reflect_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-shadow_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/featmask_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/featmask-supp_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/vegas-1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-rendering_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc6_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-depth-app_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/seg-compare_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-dimension_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/overview_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-resolution_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-iteration_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-large_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-backbone_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/seg-loc.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-traversal_compressed.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/neurips/2405.17187v2/paper.pdf
+  - all_conference_papers/neurips/2405.17187v2/output.png
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/envrendering_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/teaser_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc4_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-depth-app_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc3_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-iou-locations.png
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/vegas-2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/envrendering-supp_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-small_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc5_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/reconstruction_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/depth_comb_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-reflect_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-shadow_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/featmask_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/featmask-supp_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/vegas-1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/nuplan-rendering_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/EmerSeg-loc6_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-depth-app_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/seg-compare_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-dimension_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/overview_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-resolution_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-2_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-iteration_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/limitation-large_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-backbone_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/seg-loc.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ithaca-1_compressed.pdf
+  - all_conference_papers/neurips/2405.17187v2/figs_compressed/ablation-traversal_compressed.pdf

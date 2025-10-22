@@ -1,0 +1,28 @@
+\section{SNR as a label-free estimator of task difficulty} 
+\label{sec:snr-difficulty}
+
+The preceding analysis establishes that signal-to-noise ratio  plays a governing role in certifying self-consistency, as well as in the associated  test-time
+training objectives.  Given $n$ rollouts $\{Y_{i}\}_{i=1}^n$ from a prompt ${pr}$,
+with terminal answers $X_i = g(Y_{i,\tau:})$, let
+$\widehat c_n$ and $j^\star_n$ denote the empirical leader and runner-up.
+We compute an empirical estimate of the SNR given by,
+\begin{equation}\label{eq:snr_for_difficulty_estimation}
+\widehat{\mathrm{SNR}}(\Delta_{j^\star_n})(\mathbf{X})
+= \frac{(N_{\hat c_n} - N_{j^\star_n})^2}{
+n(N_{\hat c_n} + N_{j^\star_n})
+ - (N_{\hat c_n} - N_{j^\star_n})^2},
+\end{equation}
+where $N_j = \sum_i 1\{X_i = j\}$.
+This statistic can be computed directly from model rollouts and requires no
+access to external signals.
+\\\\
+In 
+Figures~\ref{fig:QWEN-MATH-1.5B-SNR-0.1} and \ref{fig:QWEN-MATH-7B-SNR-0.1} we plot the estimated SNR values, generated over the MATH-500 benchmark against the reported problem level, with 1 being the easiest and 5 being the hardest,  \cite{lightman2023let}.   We observe that $\widehat{\mathrm{SNR}}$ values correlate strongly with
+ground-truth difficulty levels:  harder problems exhibit systematically lower
+SNR and greater variability.
+This emergent calibration occurs without supervision: the model's own
+epistemic uncertainty, quantified via SNR, consistently aligns with external difficulty
+labels.   As values of $\widehat{\mathrm{SNR}}$ correspond to sharply peaked terminal
+marginals in which the model consistently produces the same answer across
+rollouts, we observe that ``easy'' prompts yield  high-SNR and thus low epistemic uncertainty.   Conversely, low SNR values arise for diffuse or multi-modal terminal
+distributions, suggesting that reasoning models demonstrate uncertainty around harder or more ambiguous questions.   The observations align with previous works which seek to use uncertainty as a proxy for problem difficulty, \cite{wang2025make, wan2025reasoning,fu2025deep}, with the aim of dynamically allocating resources.

@@ -1,0 +1,215 @@
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Altman(1992)]{knn}
+Naomi Altman.
+\newblock An introduction to kernel and nearest neighbor nonparametric regression.
+\newblock \emph{The American Statistician}, 46(3):175-185, 1992.
+\newblock URL \url{https://www.jstor.org/stable/2685209}.
+
+\bibitem[Amram et~al.(2022)Amram, Dunn, and Zhuo]{optimal-policy-trees}
+Maxime Amram, Jack Dunn, and Ying~Daisy Zhuo.
+\newblock Optimal policy trees.
+\newblock \emph{Machine Learning}, 11:\penalty0 2741--2768, 2022.
+
+\bibitem[Athey \& Imbens(2016)Athey and Imbens]{athey}
+Susan Athey and Guido Imbens.
+\newblock Recursive partitioning for heterogeneous causal effects.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 113\penalty0 (27):\penalty0 7353--7360, 2016.
+\newblock URL \url{https://doi.org/10.1073/pnas.1510489113}.
+
+\bibitem[Bayati et~al.(2014)Bayati, Braverman, Gillam, Mack, Ruiz, Smith, and Horvitz]{heart-failure}
+Mohsen Bayati, Mark Braverman, Michael Gillam, Karen~M. Mack, George Ruiz, Mark~S. Smith, and Eric Horvitz.
+\newblock Data-driven decisions for reducing readmissions for heart failure: General methodology and case study.
+\newblock \emph{PLOS ONE}, 9(10), 2014.
+\newblock URL \url{https://doi.org/10.1371/journal.pone.0109264}.
+
+\bibitem[Bergman et~al.(2022)Bergman, Huang, Brooks, Lodi, and Raghunathan]{bergman2022janos}
+David Bergman, Teng Huang, Philip Brooks, Andrea Lodi, and Arvind~U Raghunathan.
+\newblock Janos: an integrated predictive and prescriptive modeling framework.
+\newblock \emph{INFORMS Journal on Computing}, 34\penalty0 (2):\penalty0 807--816, 2022.
+
+\bibitem[Bertsimas \& Dunn(2017)Bertsimas and Dunn]{optimal-classification-trees}
+Dimitris Bertsimas and Jack Dunn.
+\newblock Optimal classification trees.
+\newblock \emph{Machine Learning}, 106:\penalty0 1039–1082, 2017.
+
+\bibitem[Bertsimas \& Dunn(2019)Bertsimas and Dunn]{MLbook}
+Dimitris Bertsimas and Jack Dunn.
+\newblock \emph{Machine Learning under a Modern Optimization Lens}.
+\newblock Dynamic Ideas, 2019.
+
+\bibitem[Bertsimas \& Kallus(2020)Bertsimas and Kallus]{predictive-to-prescriptive-analytics}
+Dimitris Bertsimas and Nathan Kallus.
+\newblock From predictive to prescriptive analytics.
+\newblock \emph{Management Science}, 66(3):1025-1044, 2020.
+\newblock URL \url{https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3253}.
+
+\bibitem[Bertsimas \& Kallus(2022)Bertsimas and Kallus]{observational-data-pricing}
+Dimitris Bertsimas and Nathan Kallus.
+\newblock The power and limits of predictive approaches to observational data-driven optimization: The case of pricing.
+\newblock \emph{INFORMS Journal on Optimization}, 5\penalty0 (1), 2022.
+\newblock URL \url{https://www.researchgate.net/publication/302568371_Pricing_from_Observational_Data}.
+
+\bibitem[Bertsimas et~al.(2017{\natexlab{a}})Bertsimas, Kallus, Weinstein, and Zhuo]{personalized-diabetes}
+Dimitris Bertsimas, Nathan Kallus, Alexander~M Weinstein, and Daisy~Ying Zhuo.
+\newblock Personalized diabetes management using electronic medical records.
+\newblock \emph{Diabetes care}, 40(2):210–217, 2017{\natexlab{a}}.
+\newblock URL \url{https://pubmed.ncbi.nlm.nih.gov/27920019/}.
+
+\bibitem[Bertsimas et~al.(2017{\natexlab{b}})Bertsimas, Pawlowski, and Zhuo]{Bertsimas2017FromPM}
+Dimitris Bertsimas, Colin Pawlowski, and Ying~Daisy Zhuo.
+\newblock From predictive methods to missing data imputation: An optimization approach.
+\newblock \emph{J. Mach. Learn. Res.}, 18:\penalty0 196:1--196:39, 2017{\natexlab{b}}.
+
+\bibitem[Bertsimas et~al.(2019)Bertsimas, Dunn, and Mundru]{optimal-prescriptive-trees}
+Dimitris Bertsimas, Jack Dunn, and Nishanth Mundru.
+\newblock Optimal prescriptive trees.
+\newblock \emph{INFORMS Journal on Optimization}, 1(2):164–183, 2019.
+\newblock URL \url{https://jack.dunn.nz/papers/OptimalPrescriptiveTrees.pdf}.
+
+\bibitem[Biggs et~al.(2021)Biggs, Sun, and Ettl]{groceries-article}
+Max Biggs, Wei Sun, and Markus Ettl.
+\newblock Model distillation for revenue optimization: Interpretable personalized pricing, 2021.
+
+\bibitem[Breiman(2001)]{rf}
+Leo Breiman.
+\newblock Random forests.
+\newblock \emph{Machine learning}, 45(1):5–32, 2001.
+\newblock URL \url{https://www.jstor.org/stable/2685209}.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Stone, and Olshen]{cart}
+Leo Breiman, Jerome Friedman, Charles Stone, and Richard Olshen.
+\newblock Classification and regression trees.
+\newblock \emph{CRC press}, 1984.
+
+\bibitem[Cleveland \& Devlin(1988)Cleveland and Devlin]{loess}
+William~S. Cleveland and Susan~J. Devlin.
+\newblock Locally weighted regression: An approach to regression analysis by local fitting.
+\newblock \emph{Journal of the American Statistical Association}, 83(403):596-610, 1988.
+\newblock URL \url{https://www.jstor.org/stable/2685209}.
+
+\bibitem[Colbrook et~al.(2022)Colbrook, Antun, and Hansen]{colbrook2022difficulty}
+Matthew~J Colbrook, Vegard Antun, and Anders~C Hansen.
+\newblock The difficulty of computing stable and accurate neural networks: On the barriers of deep learning and smale’s 18th problem.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 119\penalty0 (12):\penalty0 e2107151119, 2022.
+
+\bibitem[Dudik et~al.(2011)Dudik, Langford, and Li]{doubly-robust-policy}
+Miroslav Dudik, John Langford, and Lihong Li.
+\newblock Doubly robust policy evaluation and learning.
+\newblock \emph{arXiv preprint arXiv:11034601}, 2011.
+\newblock URL \url{https://arxiv.org/abs/1103.4601}.
+
+\bibitem[Ferkingstad et~al.(2011)Ferkingstad, Løland, and Wilhelmsen]{electricity-markets}
+Egil Ferkingstad, Anders Løland, and Mathilde Wilhelmsen.
+\newblock Causal modeling and inference for electricity markets.
+\newblock \emph{Energy Economics}, 33(3):404-412, 2011.
+\newblock URL \url{https://doi.org/10.1016/j.eneco.2010.10.006}.
+
+\bibitem[Georg et~al.(2014)Georg, Christina, Peter, and Volker]{georg2014accuracy}
+Homann Georg, Toschke Christina, Gassmann Peter, and Vieth Volker.
+\newblock Accuracy of the aast organ injury scale for ct evaluation of traumatic liver and spleen injuries.
+\newblock \emph{Chinese Journal of Traumatology}, 17\penalty0 (01):\penalty0 25--30, 2014.
+
+\bibitem[Kallus(2017)]{recursive-partitioning}
+Nathan Kallus.
+\newblock Recursive partitioning for personalization using observational data.
+\newblock \emph{Proceedings of Machine Learning Research}, 70:1789-1798, 2017.
+\newblock URL \url{https://proceedings.mlr.press/v70/kallus17a.html}.
+
+\bibitem[Leone et~al.(2023)Leone, Scotti, Ho, Assafin, Doolittle, Chau, Slipczuk, Levitus, Regazzoli, Mangieri, et~al.]{leone2023prosthesis}
+Pier~Pasquale Leone, Andrea Scotti, Edwin~C Ho, Manaf Assafin, James Doolittle, Mei Chau, Leandro Slipczuk, Matthew Levitus, Damiano Regazzoli, Antonio Mangieri, et~al.
+\newblock Prosthesis tailoring for patients undergoing transcatheter aortic valve implantation.
+\newblock \emph{Journal of Clinical Medicine}, 12\penalty0 (1):\penalty0 338, 2023.
+
+\bibitem[Li et~al.(2022)Li, Wehbe, Ahmad, Wang, and Luo]{clinical-longformer}
+Yikuan Li, Ramsey~M. Wehbe, Faraz~S. Ahmad, Hanyin Wang, and Yuan Luo.
+\newblock Clinical-longformer and clinical-bigbird: Transformers for long clinical sequences, 2022.
+\newblock URL \url{https://arxiv.org/abs/2201.11838}.
+
+\bibitem[Lugauer et~al.(2020)Lugauer, Buechler, Gilbride, and Heilman]{groceries-dataset}
+Steven Lugauer, Steven Buechler, Timothy Gilbride, and Carrie Heilman.
+\newblock The complete journey, 2020.
+\newblock Data retrieved from dunnhumby, \url{http://www.dunnhumby.com/source-files/}.
+
+\bibitem[Mitsis et~al.(2022)Mitsis, Yuan, Eftychiou, Avraamides, and Nienaber]{Mitsisi2022}
+Andreas Mitsis, Xun Yuan, Christos Eftychiou, Panayiotis Avraamides, and Christoph~A. Nienaber.
+\newblock Personalised treatment in aortic stenosis: A patient-tailored transcatheter aortic valve implantation approach.
+\newblock \emph{Journal of Cardiovascular Development and Disease}, 9\penalty0 (11), 2022.
+\newblock ISSN 2308-3425.
+\newblock \doi{10.3390/jcdd9110407}.
+\newblock URL \url{https://www.mdpi.com/2308-3425/9/11/407}.
+
+\bibitem[Patil et~al.(2024)Patil, Hoppe, and Mintz]{other-pnn}
+Vrishabh Patil, Kara Hoppe, and Yonatan Mintz.
+\newblock Applications of 0-1 neural networks in prescription and prediction.
+\newblock A key challenge in medical decision making is learning treatment policies for patients with limited observational data. This challenge is particularly evident in personalized healthcare decision-making, where models need to take into account the intricate relationships between patient characteristics, treatment options, and health outcomes. To address this, we introduce prescriptive networks (PNNs), shallow 0-1 neural networks trained with mixed integer programming that can be used with counterfactual estimation to optimize policies in medium data settings. These models offer greater interpretability than deep neural networks and can encode more complex policies than common models such as decision trees. We show that PNNs can outperform existing methods in both synthetic data experiments and in a case study of assigning treatments for postpartum hypertension. In particular, PNNs are shown to produce policies that could reduce peak blood pressure by 5.47 mm Hg (p=0.02) over existing clinical
+  practice, and by 2 mm Hg (p=0.01) over the next best prescriptive modeling technique. Moreover PNNs were more likely than all other models to correctly identify clinically significant features while existing models relied on potentially dangerous features such as patient insurance information and race that could lead to bias in treatment., 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.18851}.
+
+\bibitem[Powers et~al.(2018)Powers, Qian, Jung, Schuler, Shah, Hastie, and Tibshirani]{powers_qian_jung_schuler_shah_hastie_tibshirani_2018}
+Scott Powers, Junyang Qian, Kenneth Jung, Alejandro Schuler, Nigam~H. Shah, Trevor Hastie, and Robert Tibshirani.
+\newblock Some methods for heterogeneous treatment effect estimation in high dimensions.
+\newblock \emph{Statistics in Medicine}, 37\penalty0 (11):\penalty0 1767–1787, 2018.
+\newblock \doi{10.1002/sim.7623}.
+
+\bibitem[Quiza \& Davim(2011)Quiza and Davim]{fnn-image}
+Ramon Quiza and J.~Davim.
+\newblock \emph{Computational Methods and Optimization}, pp.\  177--208.
+\newblock Springer-Verlag, 01 2011.
+\newblock ISBN 978-1-84996-449-4.
+\newblock \doi{10.1007/978-1-84996-450-0}.
+
+\bibitem[Siddique et~al.(2019)Siddique, Schnitzer, Bahamyirou, Wang, Holtz, Migliori, Sotgiu, Gandhi, Vargas, Menzies, and Benedetti]{tuberculosis-causal-inference}
+Arman~Alam Siddique, Mireille~E Schnitzer, Asma Bahamyirou, Guanbo Wang, Timothy~H Holtz, Giovanni~B Migliori, Giovanni Sotgiu, Neel~R Gandhi, Mario~H Vargas, Dick Menzies, and Andrea Benedetti.
+\newblock Causal inference with multiple concurrent medications: A comparison of methods and an application in multidrug-resistant tuberculosis.
+\newblock \emph{Stat Methods Med Research}, 28(12):3534–3549, 2019.
+\newblock URL \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6511477/}.
+
+\bibitem[Smith et~al.(2011)Smith, Leon, Mack, Miller, Moses, Svensson, Tuzcu, Webb, Fontana, Makkar, et~al.]{smith2011transcatheter}
+Craig~R Smith, Martin~B Leon, Michael~J Mack, D~Craig Miller, Jeffrey~W Moses, Lars~G Svensson, E~Murat Tuzcu, John~G Webb, Gregory~P Fontana, Raj~R Makkar, et~al.
+\newblock Transcatheter versus surgical aortic-valve replacement in high-risk patients.
+\newblock \emph{New England Journal of Medicine}, 364\penalty0 (23):\penalty0 2187--2198, 2011.
+
+\bibitem[Soenksen et~al.(2022)Soenksen, Ma, Zeng, Boussioux, Villalobos~Carballo, Na, Wiberg, Li, Fuentes, and Bertsimas]{haim}
+Luis~R. Soenksen, Yu~Ma, Cynthia Zeng, Leonard Boussioux, Kimberly Villalobos~Carballo, Liangyuan Na, Holly~M. Wiberg, Michael~L. Li, Ignacio Fuentes, and Dimitris Bertsimas.
+\newblock Integrated multimodal artificial intelligence framework for healthcare applications.
+\newblock \emph{NPJ Digital Medicine}, 5, 149\penalty0 (1), 2022.
+\newblock URL \url{https://www.nature.com/articles/s41746-022-00689-4}.
+
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and Salakhutdinov]{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdinov.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock \emph{The journal of machine learning research}, 15\penalty0 (1):\penalty0 1929--1958, 2014.
+
+\bibitem[Sun \& Tsiourvas(2023)Sun and Tsiourvas]{asterios}
+Wei Sun and Asterios Tsiourvas.
+\newblock Learning prescriptive {R}e{LU} networks.
+\newblock In Andreas Krause, Emma Brunskill, Kyunghyun Cho, Barbara Engelhardt, Sivan Sabato, and Jonathan Scarlett (eds.), \emph{Proceedings of the 40th International Conference on Machine Learning}, volume 202 of \emph{Proceedings of Machine Learning Research}, pp.\  33044--33060. PMLR, 23--29 Jul 2023.
+\newblock URL \url{https://proceedings.mlr.press/v202/sun23j.html}.
+
+\bibitem[Wager \& Athey(2018)Wager and Athey]{causal-forests}
+Stefan Wager and Susan Athey.
+\newblock Estimation and inference of heterogeneous treatment effects using random forests.
+\newblock \emph{Journal of the American Statistical Association}, 113\penalty0 (523):\penalty0 1228--1242, 2018.
+\newblock \doi{10.1080/01621459.2017.1319839}.
+\newblock URL \url{https://doi.org/10.1080/01621459.2017.1319839}.
+
+\bibitem[Webb \& Wood(2012)Webb and Wood]{Webb2012}
+John~G. Webb and David~A. Wood.
+\newblock Current status of transcatheter aortic valve replacement.
+\newblock \emph{Journal of the American College of Cardiology}, 60\penalty0 (6):\penalty0 483--492, 2012.
+\newblock \doi{10.1016/j.jacc.2012.01.071}.
+\newblock URL \url{https://www.jacc.org/doi/abs/10.1016/j.jacc.2012.01.071}.
+
+\bibitem[Zhou et~al.(2023)Zhou, Athey, and Wager]{Zhou_Athey_Wager_2023}
+Zhengyuan Zhou, Susan Athey, and Stefan Wager.
+\newblock Offline multi-action policy learning: Generalization and optimization.
+\newblock \emph{Operations Research}, 71\penalty0 (1):\penalty0 148–183, 2023.
+\newblock \doi{10.1287/opre.2022.2271}.
+
+\end{thebibliography}

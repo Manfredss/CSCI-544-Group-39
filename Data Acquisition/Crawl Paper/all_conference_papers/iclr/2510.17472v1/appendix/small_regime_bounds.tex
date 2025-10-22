@@ -1,0 +1,69 @@
+Hoeffding, Bernstein, and Chernoff–Markov bounds become less effective in the small-sample regime, i.e., when the number of voters satisfies $n\lesssim 50$. In this setting, the exact error probability can be obtained by leveraging the properties of the  multinomial distribution.
+We provide below an efficient dynamic programming (DP) approach to compute this probability.
+
+
+\subsubsection{Dynamic programming for exact multinomial probabilities}\label{app:subsubsec_dynamic_programming}
+For each category $j$, define 
+$$
+P_j(x) =\frac{p_j^{x}}{x!} , \quad x = 0, \dots, n,
+$$
+and store the values $P_j= (P_j(0),\dots, P_j(n))$ in an array of length $n+1$.
+The entries can be generated iteratively using the recurrence 
+$$P_j(x+1) = \frac{p_j}{(x+1)}P_j(x).$$
+
+After processing a subset of the rival categories, we define a state of the dynamic program as
+$$
+  \text{state }(t,m,s)\quad
+  \text{with}\quad
+  \begin{cases}
+     t &=\text{votes for the true category }c^\star,\\
+     m &=\text{current {\it maximum} vote count among the rivals processed so far,}\\
+    s &=\text{{\it total} vote count allocated to processed categories.}
+  \end{cases}
+$$
+Formally, the DP table is
+$$
+  \text{DP}_{i}(t,m,s)
+  \;=\;\frac{1}{s!}\,
+  \mathbb{P}\Bigl[N_{c^\star}^{(s)}=t,\;
+           \max_{j\in\{1,\dots,i\}\setminus\{c^\star\}}N_j^{(s)} = m, \; \sum_{j\in\{c^\star, 1, \dots, i\}}N_i^{(s)} =s\Bigr],
+$$
+where $i$ denotes the number of categories processed.
+
+\paragraph{Initial table.}
+Before incorporating any rivals, we only consider the true category $c^\star$
+$$
+  \text{DP}_{1}(t,0,t)=P_{c^\star}(t),\qquad
+  t=0,\dots,n.
+$$
+since the maximum vote count among zero rivals is naturally $0$.
+
+\paragraph{Transition when adding a new rival $j$.}
+Suppose we have already computed $\text{DP}_{i}(\cdot,\cdot, \cdot)$. 
+We now incorporate category $j$.
+For each triple $(t, m, s)$, we consider vote counts  $x=0,\dots,n-s$ drawn from $P_j(x)$ and define
+$$
+  \text{newMax}=\max\{m,x\}.
+$$
+The DP table is updated according to
+$$
+  \text{DP}_{i+1}(t,\text{newMax}, s+x)
+  \;+\!=\;
+  \text{DP}_{i}(t,m,s)\;P_j(x).
+$$
+
+This implementation stores states $(t,m,s)$ with $t+m\leq s\leq n$, and transitions $x=0, \dots, n-s$. 
+Because of these constraints, the total number of reachable states is $\mathcal{O}(n^{3})$, rather than the naive $\mathcal{O}(n^{4})$. Iterating over all $k$ categories therefore yields a worst-case time complexity of
+$$\mathcal{O}(kn^{3}).$$
+The memory complexity is $\mathcal{O}(n^{3})$.
+
+After processing all $k-1$ rivals, the DP table $\text{DP}_{k}(\cdot,\cdot,\cdot)$ is complete.
+The error probability is then obtained by summing over all states where the true category does not have a strict majority and the total number of votes is equal to $n$, 
+$$
+  \mathbb{P}(\hat{c}_n \neq c^\star)
+  \;=\;
+  \sum_{t=0}^{n}\,
+  \sum_{m=t}^{n}
+  n!\;\text{DP}_{k}(t,m,n).
+$$
+For large values of $n$, factorial terms may cause numerical underflow or overflow. To prevent this, we compute the entries of the DP table in log space.

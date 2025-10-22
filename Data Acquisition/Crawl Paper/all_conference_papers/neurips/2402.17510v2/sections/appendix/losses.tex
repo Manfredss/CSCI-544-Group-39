@@ -1,0 +1,83 @@
+% !TEX root = ../../main.tex
+
+\section{Optimization Objectives}\label{app:losses}
+
+\subsection{InfoNCE}\label{app:info}
+In this work, we use InfoNCE loss, $\infonce{}$~\citep{oord2018representation}.
+Given a dual-encoder setup, we optimize a model in two directions: \acf{i2t} and \acf{t2i}.
+The loss is defined as follows: 
+
+\begin{subequations}
+\begin{align*}
+	\infonce{i2t} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}^{}\log \frac{
+		\exp(\zimg{i}{}\zcapt{i}{}/\tau)
+	}
+	{\exp(\zimg{i}{}\zcapt{i}{}/\tau) + \sum_{j \neq i }^{} \exp(\zimg{i}{}\zcapt{j}{}/\tau)}, 
+\end{align*}
+\begin{align*}
+	\infonce{i2t} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}^{}\log \frac{
+		\exp(\zimg{i}{}\zcapt{i}{}/\tau)
+	}
+	{\exp(\zimg{i}{}\zcapt{i}{}/\tau) + \sum_{j \neq i }^{} \exp(\zimg{j}{}\zcapt{i}{}/\tau)}, 
+\end{align*}
+\begin{align*}
+ 	\infonce{} =  \frac{1}{2}  	\infonce{i2t} +  \frac{1}{2}  	\infonce{t2i}.
+\end{align*}
+\end{subequations}
+
+
+\subsection{Latent Target Decoding}\label{app:ltd}
+
+\Acf{LTD}~\citep{bleeker2023reducing} is an optimization objective that reduces predictive feature suppression for resource-constrained \ac{VL} methods.
+\ac{LTD} consists of $\infonce{}$ and a reconstruction loss $ \mathcal{L}_{recon}$, which reconstructs the input caption from the latent representation $\zcapt{}{}$.
+
+In \citep{bleeker2023reducing}, \ac{LTD} is implemented in two ways. 
+Firstly, as a dual optimization objective:
+\begin{align*}
+	\ltd = \infonce{} + \beta \mathcal{L}_{recon}.
+\end{align*}
+Secondly, as an optimization constraint in combination with gradient descent by using the method of Lagrange multipliers:
+\begin{align*}
+	\max_{\lambda} \min_{}  \ltd=  \infonce{}  + \lambda \left( \frac{\mathcal{L}_{recon}}{\eta} - 1 \right).
+\end{align*}
+
+This optimization objective is minimized w.r.t. model parameter, while also being maximized w.r.t. $\lambda$. 
+The value of $\lambda$ is automatically tuned by gradient ascent, such that the reconstruction bound $\eta$ is met.
+In this work, we use both \ac{LTD} as a dual optimization objective and an optimization constraint. 
+We select the loss with the highest evaluation scores on the validation set for evaluation.
+
+
+\subsection{Implicit Feature Modification}\label{app:ifm}
+
+\Acf{IFM}~\citep{robinson2021can} is a contrastive loss, with an additional perturbation budget $\epsilon$.
+\ac{IFM} perturbs the logits value of the similarity scores between the images and captions, such that the model avoids using shortcut solutions for a correct similarity score.
+\ac{IFM} subtracts $\epsilon/\tau$ from the positive logit values and adds $\epsilon/\tau$ to the negative logits values.
+
+\begin{subequations}
+\begin{align*}
+	\mathcal{L}_{\text{IFM}}^{t2i} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}^{}\log \frac{
+		\exp(
+		(\zimg{i}{}\zcapt{i}{} - \epsilon)
+		/\tau
+		)
+	}
+	{\exp((\zimg{i}{}\zcapt{i}{}) - \epsilon)/\tau) + \sum_{j \neq i }^{} \exp((\zimg{i}{}\zcapt{j}{} + \epsilon)/\tau)},
+\end{align*}
+\begin{align*}
+	\mathcal{L}_{\text{IFM}}^{i2t} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}^{}\log \frac{
+		\exp(
+		(\zimg{i}{}\zcapt{i}{} - \epsilon)
+		/\tau
+		)
+	}
+	{\exp((\zimg{i}{}\zcapt{i}{}) - \epsilon)/\tau) + \sum_{j \neq i }^{} \exp((\zimg{j}{}\zcapt{i}{} + \epsilon)/\tau)},
+\end{align*}
+\begin{align*}
+	\mathcal{L}_{\text{IFM}}^{} =  \frac{1}{2}  	\mathcal{L}_{\text{IFM}}^{t2i}+  \frac{1}{2}  		\mathcal{L}_{\text{IFM}}^{i2t},
+\end{align*}
+\begin{align*}
+\ifm =  \frac{1}{2}  	\mathcal{L}_{\text{IFM}}^{}  +  \frac{1}{2}  \infonce{}.
+\end{align*}
+\end{subequations}
+
+Similar to ~\cite{robinson2021can}, we combine \ac{IFM} and the InfoNCE in a dual optimization objective. 

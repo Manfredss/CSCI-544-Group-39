@@ -1,0 +1,332 @@
+\begin{thebibliography}{63}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agarwal et~al.(2025)Agarwal, Zhang, Yuan, Han, and Peng]{agarwal2025unreasonableeffectivenessentropyminimization}
+Shivam Agarwal, Zimin Zhang, Lifan Yuan, Jiawei Han, and Hao Peng.
+\newblock {The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning}.
+\newblock \emph{arXiv preprint arXiv:2505.15134}, 2025.
+
+\bibitem[Aggarwal et~al.(2023)Aggarwal, Madaan, Yang, et~al.]{aggarwal2023let}
+Pranjal Aggarwal, Aman Madaan, Yiming Yang, et~al.
+\newblock Let's sample step by step: Adaptive-consistency for efficient reasoning and coding with llms.
+\newblock In \emph{The 2023 Conference on Empirical Methods in Natural Language Processing}, 2023.
+
+\bibitem[Aky{\"u}rek et~al.(2025)Aky{\"u}rek, Damani, Zweiger, Qiu, Guo, Pari, Kim, and Andreas]{akyurek2025ttt}
+Ekin Aky{\"u}rek, Mehul Damani, Adam Zweiger, Linlu Qiu, Han Guo, Jyothish Pari, Yoon Kim, and Jacob Andreas.
+\newblock {The Surprising Effectiveness of Test-Time Training for Few-Shot Learning}.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine Learning (ICML)}, 2025.
+
+\bibitem[Anil et~al.(2023)Anil, Chi, Chowdhery, and et~al.]{anil2023palm}
+Rohan Anil, Ed~H Chi, Aakanksha Chowdhery, and et~al.
+\newblock {PaLM 2 Technical Report}.
+\newblock \emph{arXiv preprint arXiv:2305.10403}, 2023.
+
+\bibitem[Bahadur \& Rao(1960)Bahadur and Rao]{bahadur-rao}
+R.~R. Bahadur and R.~Ranga Rao.
+\newblock {On Deviations of the Sample Mean}.
+\newblock \emph{The Annals of Mathematical Statistics}, 31\penalty0 (4):\penalty0 1015--1027, 1960.
+
+\bibitem[Besta et~al.(2024)Besta, Blach, Kubicek, Gerstenberger, Podstawski, Gianinazzi, Gajda, Lehmann, Niewiadomski, Nyczyk, and Hoefler]{besta2024graphofthoughts}
+Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Michal Podstawski, Lukas Gianinazzi, Joanna Gajda, Tomasz Lehmann, Hubert Niewiadomski, Piotr Nyczyk, and Torsten Hoefler.
+\newblock Graph of thoughts: Solving elaborate problems with large language models.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 2024.
+\newblock \doi{10.1609/aaai.v38i16.29720}.
+
+\bibitem[Bock(1997)]{bock1997brief}
+R~Darrell Bock.
+\newblock A brief history of item theory response.
+\newblock \emph{Educational measurement: issues and practice}, 16\penalty0 (4):\penalty0 21--33, 1997.
+
+\bibitem[Boland(1989)]{boland1989majority}
+Philip~J. Boland.
+\newblock Majority systems and the condorcet jury theorem.
+\newblock \emph{Journal of the Royal Statistical Society. Series D (The Statistician)}, 38\penalty0 (3):\penalty0 181--189, 1989.
+\newblock ISSN 00390526, 14679884.
+\newblock URL \url{http://www.jstor.org/stable/2348873}.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.]{brown2020gpt3}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in Neural Information Processing Systems}, 33, 2020.
+
+\bibitem[Chan et~al.(2025)Chan, Nanni, Lazauskas, Wood, Yong, Tarassenko, Girolami, Geddes, and Duncan]{chan2025lean}
+Ryan Sze-Yin Chan, Federico Nanni, Tomas Lazauskas, Rosie Wood, Penelope Yong, Lionel Tarassenko, Mark Girolami, James Geddes, and Andrew Duncan.
+\newblock Retrieval-augmented reasoning with lean language models.
+\newblock \emph{The Alan Turing Institute}, 2025.
+\newblock \doi{10.5281/ZENODO.16408412}.
+
+\bibitem[Chen et~al.(2024)Chen, Pan, Li, Ding, and Zhou]{chen2024ee}
+Yanxi Chen, Xuchen Pan, Yaliang Li, Bolin Ding, and Jingren Zhou.
+\newblock Ee-llm: Large-scale training and inference of early-exit large language models with 3d parallelism.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  7163--7189. PMLR, 2024.
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser, Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman]{cobbe2021gsm8k}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems.
+\newblock \emph{arXiv preprint arXiv:2110.14168}, 2021.
+
+\bibitem[Dawid \& Skene(1979)Dawid and Skene]{dawid_skene_79}
+A.~P. Dawid and A.~M. Skene.
+\newblock {Maximum Likelihood Estimation of Observer Error-Rates Using the EM Algorithm}.
+\newblock \emph{Journal of the Royal Statistical Society. Series C (Applied Statistics)}, 28\penalty0 (1):\penalty0 20--28, 1979.
+
+\bibitem[de~Condorcet(1785)]{condorcet1785essai}
+Marie Jean Antoine Nicolas~Caritat de~Condorcet.
+\newblock \emph{Essai sur l'application de l'analyse \`a la probabilit\'e des d\'ecisions rendues \`a la pluralit\'e des voix}.
+\newblock Imprimerie Royale, Paris, 1785.
+\newblock Reprint: AMS Chelsea, 1972.
+
+\bibitem[Dembo \& Zeitouni(2010)Dembo and Zeitouni]{dembo2010ldp}
+Amir Dembo and Ofer Zeitouni.
+\newblock \emph{{Large Deviations Techniques and Applications}}.
+\newblock Springer Berlin, Heidelberg, 2010.
+
+\bibitem[Fu et~al.(2025)Fu, Wang, Tian, and Zhao]{fu2025deep}
+Yichao Fu, Xuewei Wang, Yuandong Tian, and Jiawei Zhao.
+\newblock Deep think with confidence.
+\newblock \emph{arXiv preprint arXiv:2508.15260}, 2025.
+
+\bibitem[Grattafiori et~al.(2024)Grattafiori, Dubey, Jauhri, Pandey, Kadian, Al-Dahle, Letman, Mathur, Schelten, Vaughan, Yang, et~al.]{grattafiori2024llama3herdmodels}
+Aaron Grattafiori, Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Alex Vaughan, Amy Yang, et~al.
+\newblock {The Llama 3 Herd of Models}.
+\newblock \emph{arXiv preprint arXiv:2407.21783}, 2024.
+
+\bibitem[Hendrycks et~al.(2021)Hendrycks, Burns, Kadavath, Arora, Basart, Tang, Song, and Steinhardt]{hendrycks2021measuring}
+Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul Arora, Steven Basart, Eric Tang, Dawn Song, and Jacob Steinhardt.
+\newblock Measuring mathematical problem solving with the {MATH} dataset.
+\newblock In \emph{Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)}, 2021.
+
+\bibitem[Howard et~al.(2021)Howard, Ramdas, McAuliffe, and Sekhon]{howard2021confidenceseq}
+Steven~R Howard, Aaditya Ramdas, Jon McAuliffe, and Jasjeet Sekhon.
+\newblock Time-uniform, nonparametric, nonasymptotic confidence sequences.
+\newblock \emph{The Annals of Statistics}, 49\penalty0 (2):\penalty0 1055--1080, 2021.
+
+\bibitem[Huang et~al.(2025)Huang, Zeng, Zeng, Zhu, and He]{huang2025pitfalls}
+Yuzhen Huang, Weihao Zeng, Xingshan Zeng, Qi~Zhu, and Junxian He.
+\newblock Pitfalls of rule-and model-based verifiers--a case study on mathematical reasoning.
+\newblock \emph{arXiv preprint arXiv:2505.22203}, 2025.
+
+\bibitem[Kang et~al.(2025{\natexlab{a}})Kang, Bakman, Yaldiz, Buyukates, and Avestimehr]{kang2025uncertainty}
+Sungmin Kang, Yavuz~Faruk Bakman, Duygu~Nur Yaldiz, Baturalp Buyukates, and Salman Avestimehr.
+\newblock Uncertainty quantification for hallucination detection in large language models: Foundations, methodology, and future directions.
+\newblock \emph{arXiv preprint arXiv:2510.12040}, 2025{\natexlab{a}}.
+
+\bibitem[Kang et~al.(2025{\natexlab{b}})Kang, Zhao, and Song]{kang2025scalable}
+Zhewei Kang, Xuandong Zhao, and Dawn Song.
+\newblock Scalable best-of-n selection for large language models via self-certainty.
+\newblock \emph{arXiv preprint arXiv:2502.18581}, 2025{\natexlab{b}}.
+
+\bibitem[Kim \& Ghahramani(2012)Kim and Ghahramani]{kim2012bayesian}
+Hyun-Chul Kim and Zoubin Ghahramani.
+\newblock Bayesian classifier combination.
+\newblock In \emph{Artificial Intelligence and Statistics}, pp.\  619--627. PMLR, 2012.
+
+\bibitem[Kojima et~al.(2022)Kojima, Gu, Reid, Matsuo, and Iwasawa]{kojima2022zeroshot}
+Takeshi Kojima, Shixiang~Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa.
+\newblock Large language models are zero-shot reasoners.
+\newblock \emph{Advances in Neural Information Processing Systems}, 35:\penalty0 22199--22213, 2022.
+
+\bibitem[Ladha(1992)]{ladha1992condorcet}
+K.K. Ladha.
+\newblock {The Condorcet Jury Theorem, Free Speech and Correlated Votes}.
+\newblock \emph{American Journal of Political Science}, 36\penalty0 (3):\penalty0 617--634, 1992.
+
+\bibitem[Lewkowycz et~al.(2022)Lewkowycz, Andreassen, Dohan, Dyer, Michalewski, Ramasesh, Slone, Anil, Schlag, Gutman-Solo, Wu, Neyshabur, Gur-Ari, and Misra]{lewkowycz2022minerva}
+Aitor Lewkowycz, Anders Andreassen, David Dohan, Ethan Dyer, Henryk Michalewski, Vinay Ramasesh, Ambrose Slone, Cem Anil, Imanol Schlag, Theo Gutman-Solo, Yuhuai Wu, Behnam Neyshabur, Guy Gur-Ari, and Vedant Misra.
+\newblock Solving quantitative reasoning problems with language models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[Li et~al.(2024{\natexlab{a}})Li, Beeching, Tunstall, Lipkin, Soletskyi, Huang, Rasul, Yu, Jiang, Shen, et~al.]{li2024numinamath}
+Jia Li, Edward Beeching, Lewis Tunstall, Ben Lipkin, Roman Soletskyi, Shengyi Huang, Kashif Rasul, Longhui Yu, Albert~Q Jiang, Ziju Shen, et~al.
+\newblock Numinamath: The largest public dataset in ai4maths with 860k pairs of competition math problems and solutions.
+\newblock \emph{Hugging Face repository}, 13\penalty0 (9):\penalty0 9, 2024{\natexlab{a}}.
+
+\bibitem[Li et~al.(2024{\natexlab{b}})Li, Yuan, Feng, Pan, Wang, Sun, Wang, and Li]{liescape}
+Yiwei Li, Peiwen Yuan, Shaoxiong Feng, Boyuan Pan, Xinglin Wang, Bin Sun, Heda Wang, and Kan Li.
+\newblock {Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning}.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2024{\natexlab{b}}.
+
+\bibitem[Lightman et~al.(2023)Lightman, Kosaraju, Burda, Edwards, Baker, Lee, Leike, Schulman, Sutskever, and Cobbe]{lightman2023let}
+Hunter Lightman, Vineet Kosaraju, Yuri Burda, Harrison Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe.
+\newblock Let's verify step by step.
+\newblock In \emph{The Twelfth International Conference on Learning Representations}, 2023.
+
+\bibitem[List \& Goodin(2001)List and Goodin]{list2001epistemic}
+Christian List and {Robert E.} Goodin.
+\newblock Epistemic democracy: Generalizing the condorcet jury theorem.
+\newblock \emph{Journal of Political Philosophy}, 9\penalty0 (3):\penalty0 277--306, 2001.
+\newblock ISSN 0963-8016.
+\newblock \doi{10.1111/1467-9760.00128}.
+
+\bibitem[Liu et~al.(2024)Liu, Wang, Wang, and Cai]{liu2024speculative}
+Jiahao Liu, Qifan Wang, Jingang Wang, and Xunliang Cai.
+\newblock Speculative decoding via early-exiting for faster llm inference with thompson sampling control mechanism.
+\newblock \emph{arXiv preprint arXiv:2406.03853}, 2024.
+
+\bibitem[Liu et~al.(2012)Liu, Peng, and Ihler]{liu2012variational}
+Qiang Liu, Jian Peng, and Alexander~T Ihler.
+\newblock Variational inference for crowdsourcing.
+\newblock \emph{Advances in neural information processing systems}, 25, 2012.
+
+\bibitem[Ma et~al.(2025)Ma, Liu, Jiang, Zhang, Ma, and Chen]{ma2025general}
+Xueguang Ma, Qian Liu, Dongfu Jiang, Ge~Zhang, Zejun Ma, and Wenhu Chen.
+\newblock General-reasoner: Advancing llm reasoning across all domains.
+\newblock \emph{arXiv preprint arXiv:2505.14652}, 2025.
+
+\bibitem[Madaan et~al.(2023)Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, Dziri, Prabhumoye, Yang, Gupta, Majumder, Hermann, Welleck, Yazdanbakhsh, and Clark]{madaan2023selfrefine}
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank Gupta, Bodhisattwa~Prasad Majumder, Katherine Hermann, Sean Welleck, Amir Yazdanbakhsh, and Peter Clark.
+\newblock {Self-Refine: Iterative Refinement with Self-Feedback}.
+\newblock In \emph{Thirty-seventh Conference on Neural Information Processing Systems}, 2023.
+
+\bibitem[Manvi et~al.(2024)Manvi, Singh, and Ermon]{manvi2024adaptive}
+Rohin Manvi, Anikait Singh, and Stefano Ermon.
+\newblock Adaptive inference-time compute: Llms can predict if they can do better, even mid-generation.
+\newblock \emph{arXiv preprint arXiv:2410.02725}, 2024.
+
+\bibitem[OpenAI(2023)]{openai2023gpt4}
+OpenAI.
+\newblock {GPT-4} technical report.
+\newblock \emph{arXiv preprint arXiv:2303.08774}, 2023.
+
+\bibitem[Prabhudesai et~al.(2025)Prabhudesai, Chen, Ippoliti, Fragkiadaki, Liu, and Pathak]{prabhudesai2025maximizing}
+Mihir Prabhudesai, Lili Chen, Alex Ippoliti, Katerina Fragkiadaki, Hao Liu, and Deepak Pathak.
+\newblock Maximizing confidence alone improves reasoning.
+\newblock \emph{arXiv preprint arXiv:2505.22660}, 2025.
+
+\bibitem[Prasad et~al.(2025)Prasad, Yuan, Pang, Xu, Fazel-Zarandi, Bansal, Sukhbaatar, Weston, and Yu]{prasadself}
+Archiki Prasad, Weizhe Yuan, Richard~Yuanzhe Pang, Jing Xu, Maryam Fazel-Zarandi, Mohit Bansal, Sainbayar Sukhbaatar, Jason~E Weston, and Jane Yu.
+\newblock Self-consistency preference optimization.
+\newblock In \emph{Forty-second International Conference on Machine Learning}, 2025.
+
+\bibitem[Ramdas \& Wang(2025)Ramdas and Wang]{STA-002}
+Aaditya Ramdas and Ruodu Wang.
+\newblock Hypothesis testing with e-values.
+\newblock \emph{Foundations and Trends® in Statistics}, 1\penalty0 (1-2):\penalty0 1--390, 2025.
+\newblock ISSN 2978-4212.
+\newblock \doi{10.1561/3600000002}.
+
+\bibitem[Raykar et~al.(2010)Raykar, Yu, Zhao, Valadez, Florin, Bogoni, and Moy]{raykar2010learning}
+Vikas~C Raykar, Shipeng Yu, Linda~H Zhao, Gerardo~Hermosillo Valadez, Charles Florin, Luca Bogoni, and Linda Moy.
+\newblock Learning from crowds.
+\newblock \emph{Journal of machine learning research}, 11\penalty0 (4), 2010.
+
+\bibitem[Shafayat et~al.(2025)Shafayat, Tajwar, Salakhutdinov, Schneider, and Zanette]{shafayat2025large}
+Sheikh Shafayat, Fahim Tajwar, Ruslan Salakhutdinov, Jeff Schneider, and Andrea Zanette.
+\newblock Can large reasoning models self-train?
+\newblock \emph{arXiv preprint arXiv:2505.21444}, 2025.
+
+\bibitem[Shao et~al.(2024)Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu, and Guo]{shao2024deepseekmathpushinglimitsmathematical}
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, Y.~K. Li, Y.~Wu, and Daya Guo.
+\newblock {DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models}.
+\newblock \emph{arXiv preprint arXiv:2402.03300}, 2024.
+
+\bibitem[Sheng et~al.(2024)Sheng, Zhang, Ye, Wu, Zhang, Zhang, Peng, Lin, and Wu]{sheng2024hybridflow}
+Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru~Zhang, Yanghua Peng, Haibin Lin, and Chuan Wu.
+\newblock {HybridFlow: A Flexible and Efficient RLHF Framework}.
+\newblock \emph{arXiv preprint arXiv: 2409.19256}, 2024.
+
+\bibitem[Shinn et~al.(2023)Shinn, Cassano, Gopinath, Narasimhan, and Yao]{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36:\penalty0 8634--8652, 2023.
+
+\bibitem[Song et~al.(2025)Song, Huang, Cheng, Gao, Xu, Zhao, Wang, and Wu]{song2025irt}
+Wei Song, Zhenya Huang, Cheng Cheng, Weibo Gao, Bihan Xu, GuanHao Zhao, Fei Wang, and Runze Wu.
+\newblock Irt-router: Effective and interpretable multi-llm routing via item response theory.
+\newblock \emph{arXiv preprint arXiv:2506.01048}, 2025.
+
+\bibitem[Tang et~al.(2025)Tang, Zheng, Synnaeve, and Munos]{tang2025optimizing}
+Yunhao Tang, Kunhao Zheng, Gabriel Synnaeve, and Remi Munos.
+\newblock {Optimizing Language Models for Inference Time Objectives using Reinforcement Learning}.
+\newblock In \emph{Forty-second International Conference on Machine Learning}, 2025.
+
+\bibitem[Tao et~al.(2025)Tao, Kulikov, Saha, Wang, Xu, Li, Weston, and Yu]{tao2025hybrid}
+Leitian Tao, Ilia Kulikov, Swarnadeep Saha, Tianlu Wang, Jing Xu, Yixuan Li, Jason~E Weston, and Ping Yu.
+\newblock Hybrid reinforcement: When reward is sparse, it's better to be dense.
+\newblock \emph{arXiv preprint arXiv:2510.07242}, 2025.
+
+\bibitem[Ville(1939)]{ville1939collectif}
+Jean Ville.
+\newblock \emph{\'Etude critique de la notion de collectif}.
+\newblock Gauthier-Villars, 1939.
+
+\bibitem[Wan et~al.(2025)Wan, Wu, Chen, and Li]{wan2025reasoning}
+Guangya Wan, Yuqi Wu, Jie Chen, and Sheng Li.
+\newblock {Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling}.
+\newblock In \emph{Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)}, pp.\  3613--3635, 2025.
+
+\bibitem[Wang et~al.(2020)Wang, Hsieh, Chang, Chen, Pan, Wei, and Juan]{wang2020contextual}
+Pei-Hsin Wang, Sheng-Iou Hsieh, Shih-Chieh Chang, Yu-Ting Chen, Jia-Yu Pan, Wei Wei, and Da-Chang Juan.
+\newblock Contextual temperature for language modeling.
+\newblock \emph{arXiv preprint arXiv:2012.13575}, 2020.
+
+\bibitem[Wang et~al.(2025{\natexlab{a}})Wang, Feng, Li, Yuan, Zhang, Tan, Pan, Hu, and Li]{wang2025make}
+Xinglin Wang, Shaoxiong Feng, Yiwei Li, Peiwen Yuan, Yueqi Zhang, Chuyi Tan, Boyuan Pan, Yao Hu, and Kan Li.
+\newblock Make every penny count: Difficulty-adaptive self-consistency for cost-efficient reasoning.
+\newblock In \emph{Findings of the Association for Computational Linguistics: NAACL 2025}, pp.\  6904--6917, 2025{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Bosma, Chi, Le, and Zhou]{wang2022selfconsistency}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, Quoc~V. Le, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language models.
+\newblock \emph{arXiv preprint arXiv:2203.11171}, 2022.
+
+\bibitem[Wang et~al.(2025{\natexlab{b}})Wang, Zhang, Huang, Yang, Zhang, Huang, and Wang]{wang2025sampling}
+Yiming Wang, Pei Zhang, Siyuan Huang, Baosong Yang, Zhuosheng Zhang, Fei Huang, and Rui Wang.
+\newblock Sampling-efficient test-time scaling: Self-estimating the best-of-n sampling in early decoding.
+\newblock \emph{arXiv preprint arXiv:2503.01422}, 2025{\natexlab{b}}.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, and Zhou]{wei2022cot}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed~H. Chi, Quoc~V. Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language models.
+\newblock \emph{Advances in Neural Information Processing Systems}, 35, 2022.
+
+\bibitem[Welinder et~al.(2010)Welinder, Branson, Perona, and Belongie]{welinder2010multidimensional}
+Peter Welinder, Steve Branson, Pietro Perona, and Serge Belongie.
+\newblock The multidimensional wisdom of crowds.
+\newblock \emph{Advances in neural information processing systems}, 23, 2010.
+
+\bibitem[Wen et~al.(2025)Wen, Ankner, Somani, Hase, Marks, Goldman-Wetzler, Petrini, Sleight, Burns, He, et~al.]{wen2025unsupervised}
+Jiaxin Wen, Zachary Ankner, Arushi Somani, Peter Hase, Samuel Marks, Jacob Goldman-Wetzler, Linda Petrini, Henry Sleight, Collin Burns, He~He, et~al.
+\newblock Unsupervised elicitation of language models.
+\newblock \emph{arXiv preprint arXiv:2506.10139}, 2025.
+
+\bibitem[Whitehill et~al.(2009)Whitehill, Wu, Bergsma, Movellan, and Ruvolo]{whitehill2009whose}
+Jacob Whitehill, Ting-fan Wu, Jacob Bergsma, Javier Movellan, and Paul Ruvolo.
+\newblock Whose vote should count more: Optimal integration of labels from labelers of unknown expertise.
+\newblock \emph{Advances in neural information processing systems}, 22, 2009.
+
+\bibitem[Williams(1992)]{reinforce_92}
+Ronald~J. Williams.
+\newblock Simple statistical gradient-following algorithms for connectionist reinforcement learning.
+\newblock \emph{Mach. Learn.}, 8\penalty0 (3–4):\penalty0 229–256, 1992.
+
+\bibitem[Yang et~al.(2024)Yang, Zhang, Hui, Gao, Yu, Li, Liu, Tu, Zhou, Lin, Lu, Xue, Lin, Liu, Ren, and Zhang]{yang2024qwen25mathtechnicalreportmathematical}
+An~Yang, Beichen Zhang, Binyuan Hui, Bofei Gao, Bowen Yu, Chengpeng Li, Dayiheng Liu, Jianhong Tu, Jingren Zhou, Junyang Lin, Keming Lu, Mingfeng Xue, Runji Lin, Tianyu Liu, Xingzhang Ren, and Zhenru Zhang.
+\newblock {Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement}.
+\newblock \emph{arXiv preprint arXiv:2409.12122}, 2024.
+
+\bibitem[Yang et~al.(2025)Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, Huang, Wei, Lin, Yang, Tu, Zhang, Yang, Yang, Zhou, Lin, Dang, Lu, Bao, Yang, Yu, Li, Xue, Zhang, Zhu, Men, Lin, Li, Tang, Xia, Ren, Ren, Fan, Su, Zhang, Wan, Liu, Cui, Zhang, and Qiu]{qwen2025qwen25technicalreport}
+An~Yang, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo~Zheng, Bowen Yu, Chengyuan Li, Dayiheng Liu, Fei Huang, Haoran Wei, Huan Lin, Jian Yang, Jianhong Tu, Jianwei Zhang, Jianxin Yang, Jiaxi Yang, Jingren Zhou, Junyang Lin, Kai Dang, Keming Lu, Keqin Bao, Kexin Yang, Le~Yu, Mei Li, Mingfeng Xue, Pei Zhang, Qin Zhu, Rui Men, Runji Lin, Tianhao Li, Tianyi Tang, Tingyu Xia, Xingzhang Ren, Xuancheng Ren, Yang Fan, Yang Su, Yichang Zhang, Yu~Wan, Yuqiong Liu, Zeyu Cui, Zhenru Zhang, and Zihan Qiu.
+\newblock {Qwen2.5 Technical Report}.
+\newblock \emph{arXiv preprint arXiv:2412.15115}, 2025.
+
+\bibitem[Yao et~al.(2024)Yao, Mathew, Singh, Firmani, and Barbosa]{yao2024bayesian}
+Peiran Yao, Jerin~George Mathew, Shehraj Singh, Donatella Firmani, and Denilson Barbosa.
+\newblock A bayesian approach towards crowdsourcing the truths from llms.
+\newblock In \emph{NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty}, 2024.
+
+\bibitem[Yao et~al.(2023)Yao, Yu, Zhao, Shafran, Griffiths, Cao, and Narasimhan]{yao2023treeofthoughts}
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas~L. Griffiths, Yuan Cao, and Karthik Narasimhan.
+\newblock Tree of thoughts: Deliberate problem solving with large language models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem[Zuo et~al.(2025)Zuo, Zhang, Qu, Sheng, Zhu, Qi, Sun, Cui, Ding, and Zhou]{zuo2025ttrl}
+Yuxin Zuo, Kaiyan Zhang, Shang Qu, Li~Sheng, Xuekai Zhu, Biqing Qi, Youbang Sun, Ganqu Cui, Ning Ding, and Bowen Zhou.
+\newblock {TTRL: Test-Time Reinforcement Learning}.
+\newblock \emph{arXiv preprint arXiv:2504.16084}, 2025.
+
+\end{thebibliography}

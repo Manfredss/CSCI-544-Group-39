@@ -1,0 +1,190 @@
+\begin{proof}[Proof]
+Let $\mathbf{p} = (p_1, \dots, p_k)$ denote the true probability distribution, and let $\mathbf{\hat{p}_n} = (\hat{{p}}_{n,1}, \dots, \hat{{p}}_{n,k})$ be the empirical measure, where $\hat{p}_{n,j}$ are the empirical frequencies for each category
+$$
+\hat p_{n,j}=\frac1n\sum_{i=1}^n\mathbf 1\{X_i=j\}.
+$$
+Recall that $p_{c^\star} = \max_j p_j$.
+Define the set $\mathcal{B}\subseteq\Delta_k$ by
+\begin{equation}\label{eq:bad_set}
+\mathcal B
+=\left\{\mathbf q\in\Delta_k:\;q_{c^\star}\le\max_{j \neq c^\star}q_j\right\}= \left\{ \mathbf q \in \Delta_k : q_{c^\star} \leq q_j, \mbox{ for some } j \neq c^\star\right\}.    
+\end{equation}
+
+    \paragraph{Step 1. Sanov upper bound.} 
+Sanov’s theorem (large--deviation principle for types) states that for
+any Borel set $\mathcal A\subseteq\Delta_k$,
+$$
+-\inf_{\mathbf{q}\in\mathring{\mathcal A}}D_{\mathrm{KL}}(\mathbf{q}\|\mathbf p)
+\le
+\liminf_{n\to\infty}\frac1n\log
+\mathbb P\left(\hat{\mathbf p}_n\in\mathcal A\right)
+\le
+\limsup_{n\to\infty}\frac1n\log
+\mathbb P\left(\hat{\mathbf p}_n\in\mathcal A\right)
+\le
+-\inf_{\mathbf{q}\in\overline{\mathcal A}}D_{\mathrm{KL}}(\mathbf q\|\mathbf p),
+$$
+where $\mathring{\mathcal A}$ and $\overline{\mathcal A}$ denote the interior and closure of $\mathcal{A}$, respectively. 
+
+For our purposes, let $\mathcal{A} = \mathcal{B}$ as defined in Eq. (\ref{eq:bad_set}). Then
+$$
+\mathring{\mathcal B} = \{\mathbf q \in \Delta_k : q_{c^\star} < q_j \text{ for some } j \neq c^\star \}, 
+\quad \overline{\mathcal B} = \mathcal B,
+$$
+since $\mathcal{B}$ is closed.
+
+    \paragraph{Step 2. Error event as a type set.}
+    The majority rule is \emph{incorrect} (i.e. $\hat{c}_n = \arg\max_j \,\hat{{p}}_{n,j}\neq c^\star$) 
+    exactly when $\hat{\mathbf p}_n\in\mathcal B$. 
+Hence, applying Sanov’s bounds yields
+$$
+\mathbb P\left[\hat{c}_n\neq c^\star\right] = 
+\exp\left(-n\,\inf_{\mathbf q\in\mathcal B}D_{\mathrm{KL}}(\mathbf q\|\mathbf p)
++o(n)\right).
+$$
+    \paragraph{Step 3. Positivity of the exponent.}
+    If $p_{c^\star}>p_j$ for every $j \neq c^\star$, then the true distribution satisfies $\mathbf p\notin\mathcal B$.
+    The infimum of the KL divergence over $\mathcal B$ is therefore attained on the boundary, i.e., at some $\mathbf q^\star \in \mathcal B$ with $q^\star_{c^\star} = q^\star_{j}$ for some $j \neq c^\star$. 
+Thus, the large-deviation exponent is
+$$
+I^\star (\mathbf{p})
+=\min_{j \neq c^\star}\;
+\inf_{\mathbf{q}:\,q_{c^\star}=q_j}D_{\mathrm{KL}}(\mathbf q\|\mathbf p)
+>0,
+$$
+and the error probability decays exponentially
+$$
+\mathbb P[\hat{c}_n \neq c^\star] = \exp(-n I^\star(\mathbf p) + o(n)).
+$$
+\end{proof}
+\subsubsection{Sanov exponent}
+The Sanov exponent $I^\star(\mathbf{p})$ admits a closed-form expression. We provide a detailed derivation below.
+
+Recall that our objective is to compute
+\begin{equation}\label{eq:bad_set_sanov_exponent}
+    I^\star(\mathbf{p}) = \inf_{\mathbf{q}\in\mathcal{B}} D_\text{KL}(\mathbf{q}\Vert \mathbf{p}),\quad\,\, \mathcal{B} = \{\mathbf{q}\in \Delta_k:\,q_{c^\star}\leq \max_{j \neq c^\star} q_j\}.
+\end{equation}
+Let the runner-up (second-largest competitor) be
+$${j^\star} = \arg\max_{j \neq c^\star}\,\, p_j.$$ 
+Then the optimisation problem can be equivalently written as
+$$
+I^\star(\mathbf{p}) = \min_{\mathbf q \in \Delta_k}\left[\sum_{i=1}^k q_i \log\left (\frac{q_i}{p_i}\right) \,: q_{j^\star} \geq q_{c^\star}\right].
+$$
+Introducing Lagrange multipliers, we define the Lagrangian
+$$
+\mathcal{L}(q, \lambda, \mu) = \sum_{i=1}^kq_i\log \frac{q_i}{p_i} + \lambda\left(\sum_{i=1}^k q_i - 1\right) + \mu(q_{c^\star} - q_{j^\star}),
+$$
+where $\lambda\in\mathbb{R}$ and $\mu\geq 0$, to enforce $q_{c^\star}\leq q_{j^\star}$. 
+The first-order conditions yield
+$$
+\partial_{q_i}\mathcal{L} = \log q_i + 1 - \log p_i + \lambda = 0, \quad \,\, \text{for \,\,\,}i \neq c^\star, j^\star,
+$$
+which implies
+$$
+q_i = p_i e^{-(1 + \lambda)}, \quad \,\, \text{for \,\,\,}i \neq c^\star, j^\star.
+$$
+Similarly, for $q_{c^\star}$ and $q_{j^\star}$ we obtain
+$$
+\begin{aligned}
+q_{c^\star} = p_{c^\star} e^{-(1+\lambda+\mu)},\qquad
+q_{j^\star}=p_{j^\star}e^{-(1+\lambda-\mu)}.
+\end{aligned}
+$$
+Defining $Z = e^{-(1+\lambda)}$ and $s = e^{\mu}$, we can rewrite the solution as
+$$
+\begin{aligned}
+q_i &= p_i Z, \quad\,\, i \neq c^\star, j^\star\\
+q_{c^\star} &= p_{c^\star} Z/s \\
+q_{j^\star} &= p_{j^\star}Zs.
+\end{aligned}
+$$
+Solving for $s$, we have
+$$
+s = \sqrt{\frac{q_{j^\star}}{p_{j^\star}} \frac{p_{c^\star}}{q_{c^\star}}}.
+$$
+Enforcing the constraint $q_{j^\star} \geq q_{c^\star}$ gives
+$$
+s \geq \sqrt{\frac{p_{c^\star}}{p_{j^\star}}}.
+$$
+On the other hand, enforcing the simplex constraint $\sum_i q_i = 1$ gives
+$$
+Z\left[(1 - p_{c^\star} - p_{j^\star}) + \frac{p_{c^\star}}{s} + p_{j^\star}s\right] = 1.
+$$
+    Note that $Z>0$. Substituting this, the KL divergence can be expressed as a function of $s$ (since $Z$ itself depends on $s$)
+    \begin{align*}
+    D_{\text{KL}}(\mathbf{q}(s)\Vert \mathbf{p} ) &= Z\log Z\left[(1-p_{c^\star}-p_{j^\star})+\frac{p_{c^\star}}{s}+p_{j^\star}s\right]
+    +Z\log s\left(p_{j^\star}s-\frac{p_{c^\star}}{s}\right) 
+    \\&= \log Z + Z \log s\left(p_{j^\star} s - \frac{p_{c^\star}}{s}\right).
+    \end{align*}
+    Minimising over $\mathbf q$ is equivalent to optimising over $s \geq \sqrt{p_{c^\star}/p_{j^\star}}$.   
+    Focusing on the first term, we observe that
+    $$
+    \frac{d}{ds}\log Z = -\frac{-p_{c^\star}/s^2 + p_{j^\star}}{\left((1 - p_{c^\star} - p_{j^\star}) + p_{c^\star}/s + p_{j^\star}s\right)} \leq 0, \quad\mbox{ for } s \geq \sqrt{p_{c^\star}/p_{j^\star}}.
+    $$
+    Therefore, $\log Z$ is strictly decreasing for $s\in\left(\sqrt{p_{c^\star}/p_{j^\star}}, \infty\right)$. 
+
+Furthermore, the derivative of the KL divergence with respect to $s$ is
+\begin{align*}
+\frac{d}{ds}D_{\text{KL}}(\mathbf{q}(s)\Vert \mathbf{p} ) &= Z \log s\left(p_{j^\star}  + \frac{p_{c^\star}}{s^2} -Zs\left(p_{j^\star}-\frac{p_{c^\star}}{s^2}\right)^2\right), \quad\,\, s \geq \sqrt{p_{c^\star}/p_{j^\star}}> 0.
+\end{align*}
+Note that 
+\begin{align*}
+ s\left[\left(p_{j^\star}+\frac{p_{c^\star}}{s^{2}}\right)
+- Z\left(p_{j^\star}-\frac{p_{c^\star}}{s^2}\right)^2
+\right] &\geq \left[\left(p_{j^\star}s+\frac{p_{c^\star}}{s}\right)
+-
+\frac{(p_{j^\star} s-p_{c^\star}/s)^{2}}{\,p_{j^\star} s + {p_{c^\star}}/{s}}
+\right] \\&\geq \left[\left(p_{j^\star}s+\frac{p_{c^\star}}{s}\right)
+\;-\;
+\frac{(p_{j^\star} s+p_{c^\star}/s)^{2}}{\,p_{j^\star} s + p_{c^\star}/s}
+\right]  \geq 0.
+\end{align*}
+In particular, for $s>\sqrt{p_{c^\star}/p_{j^\star}}$
+$$
+ s\left[\left(p_{j^\star}+\frac{p_{c^\star}}{s^{2}}\right)
+- Z\left(p_{j^\star}-\frac{p_{c^\star}}{s^2}\right)^2
+\right] >0.
+$$
+Using this together with the fact that $Z>0$ and $\log s>0$ (since $s> 1$), it follows that
+$$
+\frac{d}{ds}D_{\text{KL}}(\mathbf{q}(s)\Vert \mathbf{p} )>0, \quad\mbox{ for } s > \sqrt{p_{c^\star}/p_{j^\star}}.
+$$
+Hence, $D_{\text{KL}}(\mathbf{q}(s)\Vert \mathbf{p} )$ is strictly increasing for $s\in(\sqrt{p_{c^\star}/p_{j^\star}}, \infty)$. The minimum is therefore attained at $s = \sqrt{p_{c^\star}/p_{j^\star}}$, which leads to
+\begin{align*}
+I^\star(\mathbf{p}) &=\min_{\substack{\mathbf{q}\in\Delta_k\\q_{j^\star}\ge q_{c^\star}}} 
+D_{\text{KL}}(\mathbf{q}\Vert \mathbf{p})
+=-\log \left(1-p_{c^\star}-p_{j^\star}+2\sqrt{p_{c^\star} p_{j^\star}}\right) \\
+&= -\log\left(1-\left(\sqrt{p_{c^\star}}-\sqrt{p_{j^\star}}\right)^2\right).
+\end{align*}
+
+\begin{remark}
+\leavevmode
+\begin{enumerate}
+\item If there are multiple runners-up, there may be several minimisers $\mathbf q^\star$ in the set $\mathcal{B}$ defined in Eq. (\ref{eq:bad_set_sanov_exponent}), but they all yield the same KL value. Therefore $I^\star(\mathbf{p})$ remains unchanged regardless of the number of runners-up.
+\item If $p_{c^\star} = p_{j^\star}$, then $I^\star(\mathbf{p}) = 0$.
+\end{enumerate}
+\end{remark}
+\vspace{8pt}
+\begin{remark}
+By expanding the Sanov exponent in terms of the probability gap, we recover the error rate obtained via direct application of the central limit theorem. Specifically, for $\delta = p_{c^\star} - p_{j^\star} \ll p_{j^\star}$,
+$$
+I^\star(\mathbf{p}) = \frac{\delta^2}{4 p_{j^\star}}\left[1 + O(\delta/p_{j^\star})\right].
+$$
+On the other hand, since $\sigma_{j^\star}^2 = 2p_{j^\star} + \delta - \delta^2$, we have $
+2 \sigma_{j^\star}^2 = 4 p_{j^\star} + O(\delta).
+$
+Therefore,
+$$
+\frac{\delta^2}{2\sigma_{j^\star}^2} = \frac{\delta^2}{4p_{j^*}}[1 + O(\delta/p_{j^*})],
+$$
+which yields
+$$
+I^\star(\mathbf{p}) = \frac{\delta^2}{2\sigma_{j^\star}^2} + O(\delta^3).
+$$
+\end{remark}
+
+\subsubsection{Bahadur-Rao correction}
+\input{appendix/bahadur_rao_correction}
+
+
+

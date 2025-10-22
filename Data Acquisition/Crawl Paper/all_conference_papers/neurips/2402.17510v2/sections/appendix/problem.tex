@@ -1,0 +1,49 @@
+% !TEX root = ../../main.tex
+
+\section{Problem Definition and Assumptions}
+\label{appendix:problem}
+
+In this work, we solely focus on contrastive \ac{VL} representation learning. 
+We work in a setting where we investigate the problem by fine-tuning a large pre-trained foundation model \citep[CLIP,][]{radford2021learning} and training a resource-constrained image-text method from scratch \citep[VSE++,][]{faghri2018improving}.
+We train and evaluate using two benchmark datasets where multiple captions per image are available: \acl{Flickr30k} \citep{young2014image} and \acl{MS-COCO} \citep{lin2014microsoft}. 
+Both datasets come with 5 captions per image.
+We work in a dual-encoder setup, i.e., we have a separate image and caption encoder, which do not share parameters.
+
+\subsection{Evaluation Task}
+\label{appendix:task}
+
+The \acf{ICR} evaluation task, consists of two sub-tasks: \acf{i2t} and \acf{t2i} retrieval.
+In \ac{ICR}, either an image or a caption is used as  a query and the goal is to rank a set of candidates in the other modality.
+In this work, we follow the standard \ac{ICR} evaluation procedure \citep[see, e.g.,][]{faghri2018improving, lee2018stacked, li2019visual}.
+The evaluation metric for the \ac{ICR} task is Recall$@k$, with $k=\{1, 5, 10\}$.
+For \ac{t2i} retrieval, there is one matching/positive image per query caption (when using the \ac{Flickr30k} or \ac{MS-COCO} or dataset). 
+Hence, the Recall$@k$ metric represents how often the correct image is present in the top-$k$ of the ranking. 
+For \ac{i2t} retrieval, however, there are 5 matching captions per image. 
+Therefore, only the highest-ranked correct caption is taken into account when measuring the Recall$@k$ (i.e., in the highest-ranked caption present in the top $k$).
+Standard practice to select the best model checkpoint during training is to use the \emph{recall sum} (rsum) as a validation metric. 
+The recall sum is the sum of recall at 1, 5, and 10, for both \ac{i2t} and \ac{t2i}.
+Therefore, the maximum value of the recall sum is 600. 
+
+\subsection{Assumptions}
+\label{app:assumptions}
+
+Throughout this work, we rely on several assumptions about the problem definition. 
+Our assumptions are defined at the level of an image-text tuple. Following Section~\ref{sec:background}, we formalize the assumptions on the case where one image is associated with two captions: $\left(\img{}, \{ \capt{}{A}, \capt{}{B} \} \right)$.
+
+\begin{assumption}
+\label{asm:shared-unique}
+	Each caption in the tuple contain information that is distinct from the other captions in the tuple and all captions and image in the tuple contain shared and unique information:
+	\begin{align*}
+		&I(\img{}; \capt{}{A}; \capt{}{B}) > 0 \\
+		&I(\img{}; \capt{}{A} \mid \capt{}{B}) > 0,\  I(\img{}; \capt{}{B} \mid \capt{}{A}) > 0\ \text{and}\  I(\capt{}{A}; \capt{}{B} \mid \img{}) > 0 \\
+		&H(\img{} \mid \capt{}{A}, \capt{}{B}) > 0,\ H(\capt{}{A} \mid \img{}, \capt{}{B}) > 0\ \text{and}\ H(\capt{}{B} \mid \img{}, \capt{}{A}) > 0.
+	\end{align*}
+\end{assumption}
+
+\begin{assumption}
+\label{asm:task-relevant-info}
+	Task-relevant information $R$ is the combination of all the information shared between an image and each caption in the tuple:
+	\begin{align*}
+		R = I(\img{}; \capt{}{A} \mid \capt{}{B})  + I(\img{}; \capt{}{B} \mid \capt{}{A}) + I(\img{}; \capt{}{A}; \capt{}{B}).
+	\end{align*}
+\end{assumption}

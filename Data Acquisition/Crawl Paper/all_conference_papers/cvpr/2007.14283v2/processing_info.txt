@@ -1,0 +1,84 @@
+标题: Faster Mean-shift: GPU-accelerated clustering for cosine embedding-based cell segmentation and tracking
+arXiv ID: 2007.14283v2
+发布时间: 2020-07-28 14:52:51+00:00
+作者: Mengyang Zhao, Aadarsh Jha, Quan Liu, Bryan A. Millis, Anita Mahadevan-Jansen, Le Lu, Bennett A. Landman, Matthew J. Tyskac, Yuankai Huo
+摘要: Recently, single-stage embedding based deep learning algorithms gain
+increasing attention in cell segmentation and tracking. Compared with the
+traditional "segment-then-associate" two-stage approach, a single-stage
+algorithm not only simultaneously achieves consistent instance cell
+segmentation and tracking but also gains superior performance when
+distinguishing ambiguous pixels on boundaries and overlaps. However, the
+deployment of an embedding based algorithm is restricted by slow inference
+speed (e.g., around 1-2 mins per frame). In this study, we propose a novel
+Faster Mean-shift algorithm, which tackles the computational bottleneck of
+embedding based cell segmentation and tracking. Different from previous
+GPU-accelerated fast mean-shift algorithms, a new online seed optimization
+policy (OSOP) is introduced to adaptively determine the minimal number of
+seeds, accelerate computation, and save GPU memory. With both embedding
+simulation and empirical validation via the four cohorts from the ISBI cell
+tracking challenge, the proposed Faster Mean-shift algorithm achieved 7-10
+times speedup compared to the state-of-the-art embedding based cell instance
+segmentation and tracking algorithm. Our Faster Mean-shift algorithm also
+achieved the highest computational speed compared to other GPU benchmarks with
+optimized memory consumption. The Faster Mean-shift is a plug-and-play model,
+which can be employed on other pixel embedding based clustering inference for
+medical image analysis. (Plug-and-play model is publicly available:
+https://github.com/masqm/Faster-Mean-Shift)
+URL: http://arxiv.org/abs/2007.14283v2
+图片输出目录: all_conference_papers/cvpr/2007.14283v2/extracted_images
+LaTeX文件数量: 1
+图片文件总数: 15
+匹配图片数量: 12
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/cvpr/2007.14283v2/generic-color.tex
+
+==================================================
+图片引用列表:
+  - a1
+  - 5
+  - 8
+  - ap1
+  - 3
+  - 4
+  - 1
+  - 7
+  - 9
+  - 2
+  - 6
+  - ap3
+  - ap2
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/cvpr/2007.14283v2/9.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap3.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap2.pdf
+  - all_conference_papers/cvpr/2007.14283v2/8.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap1.pdf
+  - all_conference_papers/cvpr/2007.14283v2/6.pdf
+  - all_conference_papers/cvpr/2007.14283v2/7.pdf
+  - all_conference_papers/cvpr/2007.14283v2/5.pdf
+  - all_conference_papers/cvpr/2007.14283v2/4.pdf
+  - all_conference_papers/cvpr/2007.14283v2/1.pdf
+  - all_conference_papers/cvpr/2007.14283v2/3.pdf
+  - all_conference_papers/cvpr/2007.14283v2/2.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/cvpr/2007.14283v2/fig6.PNG
+  - all_conference_papers/cvpr/2007.14283v2/9.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap3.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap2.pdf
+  - all_conference_papers/cvpr/2007.14283v2/8.pdf
+  - all_conference_papers/cvpr/2007.14283v2/ap1.pdf
+  - all_conference_papers/cvpr/2007.14283v2/LOGO-generic-web.pdf
+  - all_conference_papers/cvpr/2007.14283v2/LOGO-generic-web.eps
+  - all_conference_papers/cvpr/2007.14283v2/6.pdf
+  - all_conference_papers/cvpr/2007.14283v2/7.pdf
+  - all_conference_papers/cvpr/2007.14283v2/5.pdf
+  - all_conference_papers/cvpr/2007.14283v2/4.pdf
+  - all_conference_papers/cvpr/2007.14283v2/1.pdf
+  - all_conference_papers/cvpr/2007.14283v2/3.pdf
+  - all_conference_papers/cvpr/2007.14283v2/2.pdf

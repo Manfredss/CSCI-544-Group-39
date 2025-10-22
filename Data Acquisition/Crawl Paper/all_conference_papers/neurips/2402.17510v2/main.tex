@@ -1,0 +1,57 @@
+\documentclass[preprint, 10pt]{article}
+
+\input{packages}
+\input{math_commands.tex}
+\input{definitions}
+
+\def\month{08}  % Insert correct month for camera-ready version
+\def\year{2024}
+\def\openreview{\url{https://openreview.net/forum?id=gfANevPraH}} % Insert correct link to OpenReview for camera-ready version
+
+\title{Demonstrating and Reducing Shortcuts in Vision-Language Representation Learning}
+
+\input{authors}
+
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+ 
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+%\textbf{TL;DR}: \emph{We propose a framework to examine the shortcut learning problem of \ac{CL} in the context of \acf{VL} representation learning with multiple captions per image and show how this problem can be partially mitigated using a form of text reconstruction and using \acf{IFM}.}
+
+\acresetall
+
+\input{sections/01_introduction}
+\input{sections/02_background}
+
+\input{sections/03_shortcuts_setup}
+\input{sections/04_shortcuts_results}
+
+\input{sections/05_evaluation_setup}
+\input{sections/06_evaluation_results}
+
+\input{sections/07_related_work}
+\input{sections/08_conclusion}
+\input{sections/09_impact}
+
+\section*{Acknowledgements}
+We thank Marco Federici and Mathijs Henquet for the discussions on mutual information and feedback on the draft. Additionally, we thank Shashank Gupta and Panagiotis Efstratiadis for helpful feedback. 
+
+This research was supported by the Nationale Politie, Ahold Delhaize, project IDEAS with project number VI.Vidi.223.166 of the NWO Talent Programme, which is (partly) financed by the Dutch Research Council (NWO), the Hybrid Intelligence Center, a 10-year program funded by the Dutch Ministry of Education, Culture and Science through the Netherlands Organisation for Scientific Research, \url{https://hybrid-intelligence-centre.nl}, project LESSEN with project number NWA.1389.20.183 of the research program NWA ORC 2020/21, which is (partly) financed by the Dutch Research Council (NWO), project ROBUST with project number KICH3.LTP.20.006, which is (partly) financed by the Dutch Research Council (NWO), DPG Media, RTL, and the Dutch Ministry of Economic Affairs and Climate Policy (EZK) under the program LTP KIC 2020-2023, and the FINDHR (Fairness and Intersectional Non-Discrimination in Human Recommendation) project that received funding from the European Union’s Horizon Europe research and innovation program under grant agreement No 101070212.
+All content represents the opinion of the authors, which is not necessarily shared or endorsed by their respective employers and/or sponsors.
+
+\bibliography{references}  
+\bibliographystyle{tmlr}
+
+\appendix
+\input{sections/appendix/appendix}
+
+
+\end{document}

@@ -1,0 +1,216 @@
+\backcite {implicit}{{1}{1}{figure.caption.1}}
+\backcite {driveanywhere}{{1}{1}{figure.caption.1}}
+\backcite {uniad}{{1}{1}{figure.caption.1}}
+\backcite {nunes2023temporal}{{1}{1}{figure.caption.1}}
+\backcite {wu2023spatiotemporal}{{1}{1}{figure.caption.1}}
+\backcite {pimae}{{1}{1}{figure.caption.1}}
+\backcite {bert}{{1}{1}{figure.caption.1}}
+\backcite {rebuffi2017learning}{{1}{1}{figure.caption.1}}
+\backcite {wang2023mvcontrast}{{1}{1}{figure.caption.1}}
+\backcite {ponderv2}{{1}{1}{figure.caption.1}}
+\backcite {uniad}{{2}{1}{figure.caption.1}}
+\backcite {bevdet}{{2}{1}{figure.caption.1}}
+\backcite {bevdepth}{{2}{1}{figure.caption.1}}
+\backcite {bevformer}{{2}{1}{figure.caption.1}}
+\backcite {petr}{{2}{1}{figure.caption.1}}
+\backcite {detr3d}{{2}{1}{figure.caption.1}}
+\backcite {beverse}{{2}{1}{figure.caption.1}}
+\backcite {resnet}{{2}{1}{figure.caption.1}}
+\backcite {dd3d}{{2}{1}{figure.caption.1}}
+\backcite {uniscene}{{2}{1}{figure.caption.1}}
+\backcite {occnet}{{2}{1}{figure.caption.1}}
+\backcite {unipad}{{2}{1}{figure.caption.1}}
+\backcite {dd3d}{{2}{1}{figure.caption.1}}
+\backcite {occnet}{{2}{1}{figure.caption.1}}
+\backcite {uniscene}{{2}{1}{figure.caption.1}}
+\backcite {unipad}{{2}{1}{figure.caption.1}}
+\backcite {world_models}{{2}{1}{figure.caption.1}}
+\backcite {lecun}{{2}{1}{figure.caption.1}}
+\backcite {dreamerv1}{{2}{1}{figure.caption.1}}
+\backcite {dreamerv2}{{2}{1}{figure.caption.1}}
+\backcite {dreamerv3}{{2}{1}{figure.caption.1}}
+\backcite {mile}{{2}{1}{figure.caption.1}}
+\backcite {carla}{{2}{1}{figure.caption.1}}
+\backcite {contextwm}{{2}{1}{figure.caption.1}}
+\backcite {swim}{{2}{1}{figure.caption.1}}
+\backcite {gaia}{{2}{1}{figure.caption.1}}
+\backcite {drivedreamer}{{2}{1}{figure.caption.1}}
+\backcite {hu}{{2}{1}{figure.caption.1}}
+\backcite {uncertainty}{{2}{1}{figure.caption.1}}
+\backcite {nuscenes}{{2}{1}{figure.caption.1}}
+\backcite {openscene}{{2}{1}{figure.caption.1}}
+\backcite {resnet}{{2}{1}{figure.caption.1}}
+\backcite {uniscene}{{2}{1}{figure.caption.1}}
+\backcite {occnet}{{2}{1}{figure.caption.1}}
+\backcite {bevdistill}{{2}{1}{figure.caption.1}}
+\backcite {fei2023self}{{2}{2.1}{subsection.2.1}}
+\backcite {ad-pt}{{2}{2.1}{subsection.2.1}}
+\backcite {uni3d}{{2}{2.1}{subsection.2.1}}
+\backcite {chen2021multisiam}{{2}{2.1}{subsection.2.1}}
+\backcite {survey2}{{2}{2.1}{subsection.2.1}}
+\backcite {liang2022effective}{{2}{2.1}{subsection.2.1}}
+\backcite {chen2022co}{{2}{2.1}{subsection.2.1}}
+\backcite {strl}{{2}{2.1}{subsection.2.1}}
+\backcite {gcc3d}{{2}{2.1}{subsection.2.1}}
+\backcite {bevcontrast}{{2}{2.1}{subsection.2.1}}
+\backcite {sheng2023contrastive}{{2}{2.1}{subsection.2.1}}
+\backcite {proposalcontrast}{{2}{2.1}{subsection.2.1}}
+\backcite {voxel-mae}{{2}{2.1}{subsection.2.1}}
+\backcite {occupancy-mae}{{2}{2.1}{subsection.2.1}}
+\backcite {geomae}{{2}{2.1}{subsection.2.1}}
+\backcite {mv-jar}{{2}{2.1}{subsection.2.1}}
+\backcite {gd-mae}{{2}{2.1}{subsection.2.1}}
+\backcite {also}{{2}{2.1}{subsection.2.1}}
+\backcite {occupancy-mae}{{2}{2.1}{subsection.2.1}}
+\backcite {spot}{{2}{2.1}{subsection.2.1}}
+\backcite {iscc}{{2}{2.1}{subsection.2.1}}
+\backcite {dd3d}{{2}{2.1}{subsection.2.1}}
+\backcite {ppgeo}{{2}{2.1}{subsection.2.1}}
+\backcite {occnet}{{2}{2.1}{subsection.2.1}}
+\backcite {uniscene}{{2}{2.1}{subsection.2.1}}
+\backcite {unipad}{{2}{2.1}{subsection.2.1}}
+\backcite {ponderv2}{{2}{2.1}{subsection.2.1}}
+\backcite {bevdistill}{{2}{2.1}{subsection.2.1}}
+\backcite {distillbev}{{2}{2.1}{subsection.2.1}}
+\backcite {geomim}{{2}{2.1}{subsection.2.1}}
+\backcite {bevformer}{{3}{2.2}{subsection.2.2}}
+\backcite {bevdet4d}{{3}{2.2}{subsection.2.2}}
+\backcite {bevdet}{{3}{2.2}{subsection.2.2}}
+\backcite {bevstereo}{{3}{2.2}{subsection.2.2}}
+\backcite {sts}{{3}{2.2}{subsection.2.2}}
+\backcite {solofusion}{{3}{2.2}{subsection.2.2}}
+\backcite {mvs}{{3}{2.2}{subsection.2.2}}
+\backcite {petrv2}{{3}{2.2}{subsection.2.2}}
+\backcite {streampetr}{{3}{2.2}{subsection.2.2}}
+\backcite {stp3}{{3}{2.2}{subsection.2.2}}
+\backcite {uniad}{{3}{2.2}{subsection.2.2}}
+\backcite {world_models}{{3}{2.3}{subsection.2.3}}
+\backcite {dreamerv2}{{3}{2.3}{subsection.2.3}}
+\backcite {lecun}{{3}{2.3}{subsection.2.3}}
+\backcite {dreamerv2}{{3}{2.3}{subsection.2.3}}
+\backcite {pan2022iso}{{3}{2.3}{subsection.2.3}}
+\backcite {seo2023multi}{{3}{2.3}{subsection.2.3}}
+\backcite {bogdoll2023exploring}{{3}{2.3}{subsection.2.3}}
+\backcite {gao2022enhance}{{3}{2.3}{subsection.2.3}}
+\backcite {gaia}{{3}{2.3}{subsection.2.3}}
+\backcite {wavbi}{{3}{2.3}{subsection.2.3}}
+\backcite {world_models}{{3}{2.3}{subsection.2.3}}
+\backcite {recurrent_wm}{{3}{2.3}{subsection.2.3}}
+\backcite {dreamerv1}{{3}{2.3}{subsection.2.3}}
+\backcite {dreamerv2}{{3}{2.3}{subsection.2.3}}
+\backcite {dreamerv3}{{3}{2.3}{subsection.2.3}}
+\backcite {contextwm}{{3}{2.3}{subsection.2.3}}
+\backcite {swim}{{3}{2.3}{subsection.2.3}}
+\backcite {occupancy}{{3}{2.3}{subsection.2.3}}
+\backcite {mile}{{3}{2.3}{subsection.2.3}}
+\backcite {gaia}{{3}{2.3}{subsection.2.3}}
+\backcite {drivedreamer}{{3}{2.3}{subsection.2.3}}
+\backcite {wavbi}{{3}{2.3}{subsection.2.3}}
+\backcite {detr3d}{{4}{3}{section.3}}
+\backcite {lss}{{4}{3}{section.3}}
+\backcite {contextwm}{{4}{3.1}{subsection.3.1}}
+\backcite {vae}{{4}{3.1}{section*.3}}
+\backcite {plas_wm}{{4}{3.1}{section*.3}}
+\backcite {mile}{{4}{3.1}{section*.3}}
+\backcite {mile}{{4}{3.1}{equation.3.2}}
+\backcite {streampetr}{{4}{3.1}{figure.caption.5}}
+\backcite {occupancy}{{5}{3.2}{subsection.3.2}}
+\backcite {khurana2022differentiable}{{5}{3.2}{subsection.3.2}}
+\backcite {liu2023lidar}{{5}{3.2}{subsection.3.2}}
+\backcite {mahjourian2022occupancy}{{5}{3.2}{subsection.3.2}}
+\backcite {occnet}{{5}{3.2}{subsection.3.2}}
+\backcite {dreamerv2}{{5}{3.2}{subsection.3.2}}
+\backcite {gaia}{{5}{3.2}{subsection.3.2}}
+\backcite {dd3d}{{5}{3.2}{subsection.3.2}}
+\backcite {ppgeo}{{5}{3.2}{subsection.3.2}}
+\backcite {mile}{{5}{3.2}{subsection.3.2}}
+\backcite {occnet}{{5}{3.2}{subsection.3.2}}
+\backcite {uniscene}{{5}{3.2}{subsection.3.2}}
+\backcite {liang2023visual}{{5}{3.3}{subsection.3.3}}
+\backcite {wang2023tsp}{{5}{3.3}{subsection.3.3}}
+\backcite {sp}{{5}{3.3}{subsection.3.3}}
+\backcite {liang2023visual}{{5}{3.3}{subsection.3.3}}
+\backcite {bert}{{5}{3.3}{subsection.3.3}}
+\backcite {clip}{{5}{3.3}{subsection.3.3}}
+\backcite {mile}{{5}{3.3}{subsection.3.3}}
+\backcite {openscene}{{5}{3.4}{equation.3.3}}
+\backcite {dreamerv2}{{5}{3.4}{equation.3.3}}
+\backcite {mile}{{5}{3.4}{equation.3.3}}
+\backcite {vae}{{5}{3.4}{equation.3.3}}
+\backcite {nuscenes}{{6}{4.1}{section*.7}}
+\backcite {openscene}{{6}{4.1}{section*.7}}
+\backcite {uniad}{{6}{4.1}{section*.7}}
+\backcite {bevformer}{{6}{4.1}{section*.8}}
+\backcite {uniad}{{6}{4.1}{section*.8}}
+\backcite {resnet}{{6}{4.1}{section*.8}}
+\backcite {bevformer}{{6}{4.1}{section*.9}}
+\backcite {uniad}{{6}{4.1}{section*.9}}
+\backcite {uniad}{{6}{4.2}{subsection.4.2}}
+\backcite {plas_wm}{{6}{4.2}{section*.10}}
+\backcite {detr3d}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {uvtr}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {bevformer}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {fcos3d}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {occnet}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {uniscene}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {bevdistill}{{6}{\caption@xref {??}{ on input line 99}}{table.caption.13}}
+\backcite {bevformer}{{6}{3}{table.caption.13}}
+\backcite {resnet}{{6}{3}{table.caption.13}}
+\backcite {bevformer}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {beverse}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {uniad}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {occnet}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {uniscene}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {bevdistill}{{6}{\caption@xref {??}{ on input line 124}}{table.caption.14}}
+\backcite {resnet}{{7}{4.3}{subsection.4.3}}
+\backcite {fcos3d}{{7}{4.3}{subsection.4.3}}
+\backcite {bevdistill}{{7}{4.3}{subsection.4.3}}
+\backcite {occnet}{{7}{4.3}{subsection.4.3}}
+\backcite {uniscene}{{7}{4.3}{subsection.4.3}}
+\backcite {nuscenes}{{7}{4.3}{subsection.4.3}}
+\backcite {openscene}{{7}{4.3}{subsection.4.3}}
+\backcite {uniad}{{7}{4.3}{subsection.4.3}}
+\backcite {resnet}{{7}{4.3}{section*.16}}
+\backcite {qd3dt}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {mutr3d}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {uniad}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {occnet}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {uniscene}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {bevdistill}{{7}{\caption@xref {??}{ on input line 164}}{table.caption.18}}
+\backcite {pnpnet}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {vip3d}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {uniad}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {occnet}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {uniscene}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {bevdistill}{{7}{\caption@xref {??}{ on input line 189}}{table.caption.19}}
+\backcite {stp3}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {beverse}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {uniad}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {occnet}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {uniscene}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {bevdistill}{{7}{\caption@xref {??}{ on input line 213}}{table.caption.20}}
+\backcite {stp3}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {bevgpt}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {uniad}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {occnet}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {uniscene}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {bevdistill}{{7}{\caption@xref {??}{ on input line 242}}{table.caption.21}}
+\backcite {uniad}{{8}{4}{figure.caption.22}}
+\backcite {dreamerv2}{{13}{6}{equation.6.8}}
+\backcite {mile}{{13}{6}{equation.6.8}}
+\backcite {plas_wm}{{13}{6}{equation.6.8}}
+\backcite {nuscenes}{{15}{8}{figure.caption.29}}
+\backcite {openscene}{{15}{8}{figure.caption.29}}
+\backcite {uniscene}{{15}{8}{figure.caption.29}}
+\backcite {occnet}{{15}{8}{figure.caption.29}}
+\backcite {nerf2}{{15}{8}{figure.caption.29}}
+\backcite {nerf}{{15}{8}{figure.caption.29}}
+\backcite {3dgs}{{15}{8}{figure.caption.29}}
+\backcite {aa-rmvsnet}{{15}{8}{figure.caption.29}}
+\backcite {bi}{{15}{8}{figure.caption.29}}
+\backcite {mvsnet}{{15}{8}{figure.caption.29}}
+\backcite {dreamerv1}{{16}{10}{section.10}}
+\backcite {dreamerv2}{{16}{10}{section.10}}
+\backcite {dreamerv3}{{16}{10}{section.10}}
+\backcite {mile}{{16}{10}{section.10}}
+\backcite {latent}{{16}{10}{section.10}}

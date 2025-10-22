@@ -1,0 +1,4 @@
+1: 'A bathroom sink with wood finish cabinets.  0 3 9 9 6 5' coco_id: COCO_val2014_000000067727.jpg
+2: 'A guy in a brown shirt has just hit a tennis ball.  0 7 7 1 1 4' coco_id: COCO_train2014_000000377901.jpg
+3: 'A man in shorts is laying on the beach. 0 0 6 9 9 3' coco_id: 'COCO_val2014_000000047740.jpg'
+4: 'A player up to bat in a baseball game. 1 0 1 9 9 2' coco_id: 'COCO_train2014_000000256535.jpg'

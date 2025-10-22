@@ -1,0 +1,49 @@
+% !TEX root = ../../main.tex
+
+\clearpage
+\section{Notation}
+\label{appendix:notation}
+
+\begin{table}[htb!]
+\centering
+	\setlength{\tabcolsep}{1pt}
+	\setlength\extrarowheight{-1.25pt}
+\caption{Notation used in the paper.}
+\label{tab:notation}
+\begin{tabular}{p{.14\textwidth} p{.86\textwidth}} 
+\toprule
+\textbf{Symbol} & \textbf{Description} \\ \midrule
+$\infonce{}$ & InfoNCE loss \\ \cmidrule{2-2}
+$\ltd{}$ & Loss that combines InfoNCE and \acf{LTD} \\ \cmidrule{2-2}
+$\ifm{}$ & Loss that combines InfoNCE and \acf{IFM} \\ \cmidrule{2-2}
+$\mathcal{L}_{recon}$  & Reconstruction loss \\ \cmidrule{2-2}
+$\mathcal{D}$ & Dataset $\mathcal{D}$ that comprises $N$ image-caption tuples: $\mathcal{D} = \left\{\left(\img{i}, \{\capt{i}{j}\}_{j=1}^{k} \right) \right\}_{i=1}^{N}$; $i$-th image-caption tuple in the dataset $\mathcal{D}$ consist out of an image $\img{i}$ and $k$ associated captions $\{\capt{i}{j}\}_{j=1}^{k}$ 
+\\ \cmidrule{2-2}
+$\mathcal{B}$ & Batch of image-caption pairs \\ \cmidrule{2-2}
+$\img{}$ & Image \\ \cmidrule{2-2}
+$\capt{}{}$ & Caption \\ \cmidrule{2-2}
+$\zimg{}{}$ & Latent representation of image $\img{}$ \\ \cmidrule{2-2}
+$\zcapt{}{}$ & Latent representation of caption $\capt{}{}$ \\ \cmidrule{2-2}
+$\zcaptsuff{}{}$ & Latent representation of caption $\capt{}{}$ that is sufficient for image $\img{}$ \\ \cmidrule{2-2}
+$\zimgsuff{}$ & Latent representation of image $\img{}$ sufficient for caption $\capt{}{}$ 
+\\ \cmidrule{2-2}
+$\zminsuff{}$ & Latent representation of image $\img{}$ that is minimal sufficient for caption $\capt{}{}$ 
+\\ \cmidrule{2-2}
+$\zoptimal{}{K}$ & Latent representation of image $\img{}$ that is optimal for set of captions $K$ given  task $T$  \\ \cmidrule{2-2}
+$R$ & Task-relevant information \\ \cmidrule{2-2}
+$\neg R$ & Task-irrelevant information \\ \cmidrule{2-2}
+$C$ & Task-relevant information specific for a caption $\capt{}{}$ \\ \cmidrule{2-2}
+$\sct{}$ & Synthetic shortcut \\ \cmidrule{2-2}
+$S$ & Original shared information \\ \cmidrule{2-2}
+$S^{+}$ & Shared information that includes synthetic shortcut  \\ \cmidrule{2-2}
+$R^{+}$ & Task-relevant information that contains synthetic shortcut \\ \cmidrule{2-2}
+$f_{\theta}(\cdot)$ & Image encoder parametrised by $\theta$; takes image $\img{}$ as input and returns its latent representation $\zimg{}{}$: $\zimg{}{} := f_{\theta}(\img{})$  
+\\ \cmidrule{2-2}
+$g_{\phi}(\cdot)$ & Caption encoder parametrised by $\phi$; takes caption $\capt{}{}$ as input and returns its latent representation $\zcapt{}{}$: $\zcapt{}{} := g_{\phi}(\zcapt{}{})$ 
+\\  \cmidrule{2-2}
+$\tau$ & Temperature paramater of $\infonce{}$ \\  \cmidrule{2-2}
+$\epsilon$ & Perturbation budget for $\mathcal{L}_{\text{IFM}}$\\  \cmidrule{2-2}
+$\eta$ & Reconstruction bound  for $\mathcal{L}_{\text{LTD}}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

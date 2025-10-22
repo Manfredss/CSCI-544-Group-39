@@ -1,0 +1,102 @@
+标题: Federated Recommendation with Additive Personalization
+arXiv ID: 2301.09109v4
+发布时间: 2023-01-22 12:13:25+00:00
+作者: Zhiwei Li, Guodong Long, Tianyi Zhou
+摘要: Building recommendation systems via federated learning (FL) is a new emerging
+challenge for advancing next-generation Internet service and privacy
+protection. Existing approaches train shared item embedding by FL while keeping
+the user embedding private on client side. However, item embedding identical
+for all clients cannot capture users' individual differences on perceiving the
+same item and thus leads to poor personalization. Moreover, dense item
+embedding in FL results in expensive communication cost and latency. To address
+these challenges, we propose Federated Recommendation with Additive
+Personalization (FedRAP), which learns a global view of items via FL and a
+personalized view locally on each user. FedRAP enforces sparsity of the global
+view to save FL's communication cost and encourages difference between the two
+views through regularization. We propose an effective curriculum to learn the
+local and global views progressively with increasing regularization weights. To
+produce recommendations for an user, FedRAP adds the two views together to
+obtain a personalized item embedding. FedRAP achieves the best performance in
+FL setting on multiple benchmarks. It outperforms recent federated
+recommendation methods and several ablation study baselines.
+URL: http://arxiv.org/abs/2301.09109v4
+图片输出目录: all_conference_papers/iclr/2301.09109v4/extracted_images
+LaTeX文件数量: 2
+图片文件总数: 28
+匹配图片数量: 17
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/iclr/2301.09109v4/main.tex
+  - all_conference_papers/iclr/2301.09109v4/math_commands.tex
+
+==================================================
+图片引用列表:
+  - new-framework
+  - ablation_effective_MovieLens-100k
+  - ablation_distribution_tsne_FedRAP_C_and_D_785
+  - results
+  - ablation_distribution_tsne_FedRAP_C_785
+  - ablation_distribution_tsne_FedRAP_C_and_D_586
+  - ablation_distribution_tsne_FedRAP_C_43
+  - ablation_distribution_FedRAP
+  - ablation_params
+  - ablation_distribution_tsne_FedRAP_D_785
+  - ablation_params_types
+  - ablation_distribution_FedRAP-L2
+  - ablation_distribution_tsne_FedRAP_C_and_D_43
+  - MovieLens-100k
+  - ablation_distribution_tsne_FedRAP_D_586
+  - ablation_distribution_tsne_FedRAP_C_586
+  - ablation_distribution_tsne_FedRAP_D_43
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/results.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_FedRAP-L2.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/MovieLens-100k.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params_types.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_FedRAP.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/new-framework.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_effective_MovieLens-100k.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/iclr/2301.09109v4/ablation_lambda.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_and_D_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_effective_MovieLens-100k_HR.pdf
+  - all_conference_papers/iclr/2301.09109v4/results.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params_HR.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_FedRAP-L2.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/fig1-1.pdf
+  - all_conference_papers/iclr/2301.09109v4/MovieLens-100k.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params_types.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_D_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/MovieLens-100k_NDCG.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_FedRAP.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_43.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_586.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_distribution_tsne_FedRAP_C_785.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_mu.pdf
+  - all_conference_papers/iclr/2301.09109v4/new-framework.pdf
+  - all_conference_papers/iclr/2301.09109v4/framework.png
+  - all_conference_papers/iclr/2301.09109v4/ablation_effective_MovieLens-100k_NDCG.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_params_NDCG.pdf
+  - all_conference_papers/iclr/2301.09109v4/framework.pdf
+  - all_conference_papers/iclr/2301.09109v4/MovieLens-100k_HR.pdf
+  - all_conference_papers/iclr/2301.09109v4/ablation_effective_MovieLens-100k.pdf

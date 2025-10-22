@@ -1,0 +1,27 @@
+\begin{proof}
+Let the random variable $Y_i^{j} = \mathbf 1\{X_i=c^\star\}-\mathbf 1\{X_i=j\}$. We have that 
+$$\mathbb{E}\left[Y_i^j- (p_{c^\star}-p_j)\right] = 0,$$
+    $$
+    \left \lvert Y_i^j - (p_{c^\star}-p_j)\right\rvert = \left \lvert\mathbf 1\{X_i=c\}-\mathbf 1\{X_i=j\}- (p_{c^\star}-p_j)  \right\rvert\leq 1+(p_{c^\star}-p_j),
+    $$ 
+    and
+    $$
+    \sigma_j^2 = \mathbb{E}\left[\left(Y_i^j- (p_{c^\star}-p_j)\right)^2\right] = p_{c^\star} + p_j - (p_{c^\star}-p_j)^2.
+    $$
+    Consider $Z_j^{(n)}=\sum_i^n Y_i^j$. 
+    Applying Bernstein's inequality gives
+    $$
+      \mathbb{P}\bigl[Z_j^{(n)} \leq 0\bigr] \leq \mathbb{P}\left[-\frac{Z_j^{(n)}}{n}+ \mu_j\geq \mu_j\right]  \leq \exp\left(-\frac{n(p_{c^\star}-p_j)^2}{2\sigma_j^2 + \frac{2}{3}(p_{c^\star}-p_j) + \frac{2}{3}(p_{c^\star}-p_j)^2}\right).
+    $$
+    Since the event $\{\hat{c}_n\neq c^\star\}$ implies $Z_j^{(n)}\le 0$ for some $j\neq c^\star$, we obtain the bound
+$$
+    \mathbb{P}\bigl[\hat{c}_n\neq c^\star\bigr]
+    \le \sum_{j\neq c^\star}\mathbb{P}\bigl[Z_j^{(n)}\le 0\bigr]
+    \le \sum_{j\neq c^\star}\exp\left(-\frac{n(p_{c^\star}-p_j)^2}{2\sigma_j^2 + \frac{2}{3}(p_{c^\star}-p_j) + \frac{2}{3}(p_{c^\star}-p_j)^2}\right).
+$$ 
+Noting that $p_{c^\star} + p_j \leq 1$, we can obtain a simpler but looser bound 
+$$
+\mathbb{P}[\hat{c}_n \neq c^\star] \leq \sum_{j \neq c^\star}\exp\left(-\frac{n (p_{c^\star} - p_j)^2}{2\left(1 - \frac{2}{3}(p_{c^\star} - p_j)^2\right) + \frac{2}{3}(p_{c^\star} - p_j)}\right),
+$$
+which only depends on the probability gaps $\delta_j = p_{c^\star} - p_j$.
+\end{proof}

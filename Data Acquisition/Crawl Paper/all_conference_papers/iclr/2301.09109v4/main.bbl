@@ -1,0 +1,338 @@
+\begin{thebibliography}{47}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abadi et~al.(2016)Abadi, Chu, Goodfellow, McMahan, Mironov, Talwar,
+  and Zhang]{abadi2016deep}
+Martin Abadi, Andy Chu, Ian Goodfellow, H~Brendan McMahan, Ilya Mironov, Kunal
+  Talwar, and Li~Zhang.
+\newblock Deep learning with differential privacy.
+\newblock In \emph{Proceedings of the 2016 ACM SIGSAC conference on computer
+  and communications security}, pp.\  308--318, 2016.
+
+\bibitem[Alamgir et~al.(2022)Alamgir, Khan, and Karim]{alamgir2022federated}
+Zareen Alamgir, Farwa~K Khan, and Saira Karim.
+\newblock Federated recommenders: methods, challenges and future.
+\newblock \emph{Cluster Computing}, 25\penalty0 (6):\penalty0 4075--4096, 2022.
+
+\bibitem[Ammad-Ud-Din et~al.(2019)Ammad-Ud-Din, Ivannikova, Khan, Oyomno, Fu,
+  Tan, and Flanagan]{ammad2019federated}
+Muhammad Ammad-Ud-Din, Elena Ivannikova, Suleiman~A Khan, Were Oyomno, Qiang
+  Fu, Kuan~Eeik Tan, and Adrian Flanagan.
+\newblock Federated collaborative filtering for privacy-preserving personalized
+  recommendation system.
+\newblock \emph{arXiv preprint arXiv:1901.09888}, 2019.
+
+\bibitem[Arivazhagan et~al.(2019)Arivazhagan, Aggarwal, Singh, and
+  Choudhary]{arivazhagan2019federated}
+Manoj~Ghuhan Arivazhagan, Vinay Aggarwal, Aaditya~Kumar Singh, and Sunav
+  Choudhary.
+\newblock Federated learning with personalization layers.
+\newblock \emph{arXiv preprint arXiv:1912.00818}, 2019.
+
+\bibitem[Cantador et~al.(2011)Cantador, Brusilovsky, and
+  Kuflik]{Cantador:RecSys2011}
+Iv'{a}n Cantador, Peter Brusilovsky, and Tsvi Kuflik.
+\newblock 2nd workshop on information heterogeneity and fusion in recommender
+  systems (hetrec 2011).
+\newblock In \emph{Proceedings of the 5th ACM conference on Recommender
+  systems}, RecSys 2011, New York, NY, USA, 2011. ACM.
+
+\bibitem[Chai et~al.(2020)Chai, Wang, Chen, and Yang]{chai2020secure}
+Di~Chai, Leye Wang, Kai Chen, and Qiang Yang.
+\newblock Secure federated matrix factorization.
+\newblock \emph{IEEE Intelligent Systems}, 36\penalty0 (5):\penalty0 11--20,
+  2020.
+
+\bibitem[Chen et~al.(2019)Chen, Mathews, Ouyang, and
+  Beaufays]{chen2019federated}
+Mingqing Chen, Rajiv Mathews, Tom Ouyang, and Fran{\c{c}}oise Beaufays.
+\newblock Federated learning of out-of-vocabulary words.
+\newblock \emph{arXiv preprint arXiv:1903.10635}, 2019.
+
+\bibitem[Collins et~al.(2021)Collins, Hassani, Mokhtari, and
+  Shakkottai]{collins2021exploiting}
+Liam Collins, Hamed Hassani, Aryan Mokhtari, and Sanjay Shakkottai.
+\newblock Exploiting shared representations for personalized federated
+  learning.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  2089--2099. PMLR, 2021.
+
+\bibitem[Das et~al.(2017)Das, Sahoo, and Datta]{das2017survey}
+Debashis Das, Laxman Sahoo, and Sujoy Datta.
+\newblock A survey on recommendation system.
+\newblock \emph{International Journal of Computer Applications}, 160\penalty0
+  (7), 2017.
+
+\bibitem[Donoho(1995)]{donoho1995noising}
+David~L Donoho.
+\newblock De-noising by soft-thresholding.
+\newblock \emph{IEEE transactions on information theory}, 41\penalty0
+  (3):\penalty0 613--627, 1995.
+
+\bibitem[Flanagan et~al.(2020)Flanagan, Oyomno, Grigorievskiy, Tan, Khan, and
+  Ammad-Ud-Din]{flanagan2020federated}
+Adrian Flanagan, Were Oyomno, Alexander Grigorievskiy, Kuan~E Tan, Suleiman~A
+  Khan, and Muhammad Ammad-Ud-Din.
+\newblock Federated multi-view matrix factorization for personalized
+  recommendations.
+\newblock In \emph{Joint European Conference on Machine Learning and Knowledge
+  Discovery in Databases}, pp.\  324--347. Springer, 2020.
+
+\bibitem[Hao et~al.(2021)Hao, El-Khamy, Lee, Zhang, Liang, Chen, and
+  Duke]{hao2021towards}
+Weituo Hao, Mostafa El-Khamy, Jungwon Lee, Jianyi Zhang, Kevin~J Liang,
+  Changyou Chen, and Lawrence~Carin Duke.
+\newblock Towards fair federated learning with zero-shot data augmentation.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition}, pp.\  3310--3319, 2021.
+
+\bibitem[Hard et~al.(2018)Hard, Rao, Mathews, Ramaswamy, Beaufays, Augenstein,
+  Eichner, Kiddon, and Ramage]{hard2018federated}
+Andrew Hard, Kanishka Rao, Rajiv Mathews, Swaroop Ramaswamy, Fran{\c{c}}oise
+  Beaufays, Sean Augenstein, Hubert Eichner, Chlo{\'e} Kiddon, and Daniel
+  Ramage.
+\newblock Federated learning for mobile keyboard prediction.
+\newblock \emph{arXiv preprint arXiv:1811.03604}, 2018.
+
+\bibitem[He et~al.(2015)He, Chen, Kan, and Chen]{he2015trirank}
+Xiangnan He, Tao Chen, Min-Yen Kan, and Xiao Chen.
+\newblock Trirank: Review-aware explainable recommendation by modeling aspects.
+\newblock In \emph{Proceedings of the 24th ACM international on conference on
+  information and knowledge management}, pp.\  1661--1670, 2015.
+
+\bibitem[He et~al.(2017)He, Liao, Zhang, Nie, Hu, and Chua]{he2017neural}
+Xiangnan He, Lizi Liao, Hanwang Zhang, Liqiang Nie, Xia Hu, and Tat-Seng Chua.
+\newblock Neural collaborative filtering.
+\newblock In \emph{Proceedings of the 26th international conference on world
+  wide web}, pp.\  173--182, 2017.
+
+\bibitem[Huang et~al.(2020)Huang, Chu, Zhou, Wang, Liu, Pei, and
+  Zhang]{huang2020personalized}
+Yutao Huang, Lingyang Chu, Zirui Zhou, Lanjun Wang, Jiangchuan Liu, Jian Pei,
+  and Yong Zhang.
+\newblock Personalized federated learning: An attentive collaboration approach.
+\newblock \emph{arXiv preprint arXiv:2007.03797}, 1:\penalty0 2, 2020.
+
+\bibitem[Ji et~al.(2019)Ji, Pan, Long, Li, Jiang, and Huang]{ji2019learning}
+Shaoxiong Ji, Shirui Pan, Guodong Long, Xue Li, Jing Jiang, and Zi~Huang.
+\newblock Learning private neural language modeling with attentive aggregation.
+\newblock In \emph{2019 International joint conference on neural networks
+  (IJCNN)}, pp.\  1--8. IEEE, 2019.
+
+\bibitem[Karimireddy et~al.(2020{\natexlab{a}})Karimireddy, Kale, Mohri, Reddi,
+  Stich, and Suresh]{karimireddy2020scaffold}
+Sai~Praneeth Karimireddy, Satyen Kale, Mehryar Mohri, Sashank Reddi, Sebastian
+  Stich, and Ananda~Theertha Suresh.
+\newblock Scaffold: Stochastic controlled averaging for federated learning.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  5132--5143. PMLR, 2020{\natexlab{a}}.
+
+\bibitem[Karimireddy et~al.(2020{\natexlab{b}})Karimireddy, Kale, Mohri, Reddi,
+  Stich, and Suresh]{pmlr-v119-karimireddy20a}
+Sai~Praneeth Karimireddy, Satyen Kale, Mehryar Mohri, Sashank Reddi, Sebastian
+  Stich, and Ananda~Theertha Suresh.
+\newblock {SCAFFOLD}: Stochastic controlled averaging for federated learning.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine
+  Learning}, volume 119 of \emph{Proceedings of Machine Learning Research},
+  pp.\  5132--5143. PMLR, 2020{\natexlab{b}}.
+
+\bibitem[Lee \& Seung(2000)Lee and Seung]{lee2000algorithms}
+Daniel Lee and H~Sebastian Seung.
+\newblock Algorithms for non-negative matrix factorization.
+\newblock \emph{Advances in neural information processing systems}, 13, 2000.
+
+\bibitem[Li et~al.(2020)Li, Sahu, Zaheer, Sanjabi, Talwalkar, and
+  Smith]{li2020federated}
+Tian Li, Anit~Kumar Sahu, Manzil Zaheer, Maziar Sanjabi, Ameet Talwalkar, and
+  Virginia Smith.
+\newblock Federated optimization in heterogeneous networks.
+\newblock \emph{Proceedings of Machine Learning and Systems}, 2:\penalty0
+  429--450, 2020.
+
+\bibitem[Li et~al.(2021)Li, Hu, Beirami, and Smith]{li2021ditto}
+Tian Li, Shengyuan Hu, Ahmad Beirami, and Virginia Smith.
+\newblock Ditto: Fair and robust federated learning through personalization.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  6357--6368. PMLR, 2021.
+
+\bibitem[Liang et~al.(2021)Liang, Pan, and Ming]{liang2021fedrec++}
+Feng Liang, Weike Pan, and Zhong Ming.
+\newblock Fedrec++: Lossless federated recommendation with explicit feedback.
+\newblock In \emph{Proceedings of the AAAI conference on artificial
+  intelligence}, volume~35, pp.\  4224--4231, 2021.
+
+\bibitem[Lin et~al.(2020)Lin, Liang, Pan, and Ming]{lin2020fedrec}
+Guanyu Lin, Feng Liang, Weike Pan, and Zhong Ming.
+\newblock Fedrec: Federated recommendation with explicit feedback.
+\newblock \emph{IEEE Intelligent Systems}, 36\penalty0 (5):\penalty0 21--30,
+  2020.
+
+\bibitem[Luo et~al.(2021)Luo, Chen, Hu, Zhang, Liang, and Feng]{luo2021no}
+Mi~Luo, Fei Chen, Dapeng Hu, Yifan Zhang, Jian Liang, and Jiashi Feng.
+\newblock No fear of heterogeneity: Classifier calibration for federated
+  learning with non-iid data.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  34:\penalty0 5972--5984, 2021.
+
+\bibitem[Luo et~al.(2022)Luo, Xiao, and Song]{luo2022personalized}
+Sichun Luo, Yuanzhang Xiao, and Linqi Song.
+\newblock Personalized federated recommendation via joint representation
+  learning, user clustering, and model adaptation.
+\newblock In \emph{Proceedings of the 31st ACM International Conference on
+  Information \& Knowledge Management}, pp.\  4289--4293, 2022.
+
+\bibitem[Luo et~al.(2023)Luo, Xiao, Zhang, Liu, Ding, and
+  Song]{luo2023perfedrec++}
+Sichun Luo, Yuanzhang Xiao, Xinyi Zhang, Yang Liu, Wenbo Ding, and Linqi Song.
+\newblock Perfedrec++: Enhancing personalized federated recommendation with
+  self-supervised pre-training.
+\newblock \emph{arXiv preprint arXiv:2305.06622}, 2023.
+
+\bibitem[McMahan et~al.(2017)McMahan, Moore, Ramage, Hampson, and
+  y~Arcas]{mcmahan2017communication}
+Brendan McMahan, Eider Moore, Daniel Ramage, Seth Hampson, and Blaise~Aguera
+  y~Arcas.
+\newblock Communication-efficient learning of deep networks from decentralized
+  data.
+\newblock In \emph{Artificial intelligence and statistics}, pp.\  1273--1282.
+  PMLR, 2017.
+
+\bibitem[McMahan et~al.(2018)McMahan, Andrew, Erlingsson, Chien, Mironov,
+  Papernot, and Kairouz]{mcmahan2018general}
+H~Brendan McMahan, Galen Andrew, Ulfar Erlingsson, Steve Chien, Ilya Mironov,
+  Nicolas Papernot, and Peter Kairouz.
+\newblock A general approach to adding differential privacy to iterative
+  training procedures.
+\newblock \emph{arXiv preprint arXiv:1812.06210}, 2018.
+
+\bibitem[Minto et~al.(2021)Minto, Haller, Livshits, and
+  Haddadi]{minto2021stronger}
+Lorenzo Minto, Moritz Haller, Benjamin Livshits, and Hamed Haddadi.
+\newblock Stronger privacy for federated collaborative filtering with implicit
+  feedback.
+\newblock In \emph{Proceedings of the 15th ACM Conference on Recommender
+  Systems}, pp.\  342--350, 2021.
+
+\bibitem[Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan,
+  Killeen, Lin, Gimelshein, Antiga, et~al.]{paszke2019pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock \emph{Advances in neural information processing systems}, 32, 2019.
+
+\bibitem[Perifanis \& Efraimidis(2022)Perifanis and
+  Efraimidis]{perifanis2022federated}
+Vasileios Perifanis and Pavlos~S Efraimidis.
+\newblock Federated neural collaborative filtering.
+\newblock \emph{Knowledge-Based Systems}, 242:\penalty0 108441, 2022.
+
+\bibitem[Pillutla et~al.(2022)Pillutla, Malik, Mohamed, Rabbat, Sanjabi, and
+  Xiao]{pillutla2022federated}
+Krishna Pillutla, Kshitiz Malik, Abdel-Rahman Mohamed, Mike Rabbat, Maziar
+  Sanjabi, and Lin Xiao.
+\newblock Federated learning with partial model personalization.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  17716--17758. PMLR, 2022.
+
+\bibitem[Singhal et~al.(2021)Singhal, Sidahmed, Garrett, Wu, Rush, and
+  Prakash]{singhal2021federated}
+Karan Singhal, Hakim Sidahmed, Zachary Garrett, Shanshan Wu, J~Keith Rush, and
+  Sushant Prakash.
+\newblock Federated reconstruction: Partially local federated learning.
+\newblock In A.~Beygelzimer, Y.~Dauphin, P.~Liang, and J.~Wortman Vaughan
+  (eds.), \emph{Advances in Neural Information Processing Systems}, 2021.
+\newblock URL \url{https://openreview.net/forum?id=Hk0olMdZOIU}.
+
+\bibitem[Sun et~al.(2022)Sun, Xu, Liu, He, Jiang, Wu, and Cui]{sun2022survey}
+Zehua Sun, Yonghui Xu, Yong Liu, Wei He, Yali Jiang, Fangzhao Wu, and Lizhen
+  Cui.
+\newblock A survey on federated recommendation systems.
+\newblock \emph{arXiv preprint arXiv:2301.00767}, 2022.
+
+\bibitem[T~Dinh et~al.(2020)T~Dinh, Tran, and Nguyen]{t2020personalized}
+Canh T~Dinh, Nguyen Tran, and Josh Nguyen.
+\newblock Personalized federated learning with moreau envelopes.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 21394--21405, 2020.
+
+\bibitem[Tan et~al.(2022)Tan, Yu, Cui, and Yang]{tan2022towards}
+Alysa~Ziying Tan, Han Yu, Lizhen Cui, and Qiang Yang.
+\newblock Towards personalized federated learning.
+\newblock \emph{IEEE Transactions on Neural Networks and Learning Systems},
+  2022.
+
+\bibitem[Van~der Maaten \& Hinton(2008)Van~der Maaten and
+  Hinton]{van2008visualizing}
+Laurens Van~der Maaten and Geoffrey Hinton.
+\newblock Visualizing data using t-sne.
+\newblock \emph{Journal of machine learning research}, 9\penalty0 (11), 2008.
+
+\bibitem[Voigt \& Von~dem Bussche(2017)Voigt and Von~dem Bussche]{voigt2017eu}
+Paul Voigt and Axel Von~dem Bussche.
+\newblock The eu general data protection regulation (gdpr).
+\newblock \emph{A Practical Guide, 1st Ed., Cham: Springer International
+  Publishing}, 10\penalty0 (3152676):\penalty0 10--5555, 2017.
+
+\bibitem[Wu \& Wang(2021)Wu and Wang]{wu2021fast}
+Hongda Wu and Ping Wang.
+\newblock Fast-convergent federated learning with adaptive weighting.
+\newblock \emph{IEEE Transactions on Cognitive Communications and Networking},
+  7\penalty0 (4):\penalty0 1078--1088, 2021.
+
+\bibitem[Yang et~al.(2018)Yang, Andrew, Eichner, Sun, Li, Kong, Ramage, and
+  Beaufays]{yang2018applied}
+Timothy Yang, Galen Andrew, Hubert Eichner, Haicheng Sun, Wei Li, Nicholas
+  Kong, Daniel Ramage, and Fran{\c{c}}oise Beaufays.
+\newblock Applied federated learning: Improving google keyboard query
+  suggestions.
+\newblock \emph{arXiv preprint arXiv:1812.02903}, 2018.
+
+\bibitem[Yousefpour et~al.(2021)Yousefpour, Shilov, Sablayrolles, Testuggine,
+  Prasad, Malek, Nguyen, Ghosh, Bharadwaj, Zhao, et~al.]{yousefpour2021opacus}
+Ashkan Yousefpour, Igor Shilov, Alexandre Sablayrolles, Davide Testuggine,
+  Karthik Prasad, Mani Malek, John Nguyen, Sayan Ghosh, Akash Bharadwaj,
+  Jessica Zhao, et~al.
+\newblock Opacus: User-friendly differential privacy library in pytorch.
+\newblock \emph{arXiv preprint arXiv:2109.12298}, 2021.
+
+\bibitem[Yuan et~al.(2022)Yuan, Yuan, Li, Kong, Li, Chen, Yang, YU, Hu, Li, Xu,
+  and Qie]{Tenrec}
+Guanghu Yuan, Fajie Yuan, Yudong Li, Beibei Kong, Shujie Li, Lei Chen, Min
+  Yang, Chenyun YU, Bo~Hu, Zang Li, Yu~Xu, and Xiaohu Qie.
+\newblock Tenrec: A large-scale multipurpose benchmark dataset for recommender
+  systems.
+\newblock In \emph{Thirty-sixth Conference on Neural Information Processing
+  Systems Datasets and Benchmarks Track}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=PfuW84q25y9}.
+
+\bibitem[Zhang et~al.(2021)Zhang, Xie, Bai, Yu, Li, and Gao]{zhang2021survey}
+Chen Zhang, Yu~Xie, Hang Bai, Bin Yu, Weihong Li, and Yuan Gao.
+\newblock A survey on federated learning.
+\newblock \emph{Knowledge-Based Systems}, 216:\penalty0 106775, 2021.
+
+\bibitem[Zhang et~al.(2023{\natexlab{a}})Zhang, Long, Zhou, Yan, Zhang, Zhang,
+  and Yang]{zhangdual}
+Chunxu Zhang, Guodong Long, Tianyi Zhou, Peng Yan, Zijian Zhang, Chengqi Zhang,
+  and Bo~Yang.
+\newblock Dual personalization on federated recommendation.
+\newblock \emph{arXiv preprint arXiv:2301.08143}, 2023{\natexlab{a}}.
+
+\bibitem[Zhang et~al.(2023{\natexlab{b}})Zhang, Luo, Wu, He, and
+  Li]{zhang2023lightfr}
+Honglei Zhang, Fangyuan Luo, Jun Wu, Xiangnan He, and Yidong Li.
+\newblock Lightfr: Lightweight federated recommendation with privacy-preserving
+  matrix factorization.
+\newblock \emph{ACM Transactions on Information Systems}, 41\penalty0
+  (4):\penalty0 1--28, 2023{\natexlab{b}}.
+
+\bibitem[Zhao et~al.(2018)Zhao, Li, Lai, Suda, Civin, and
+  Chandra]{zhao2018federated}
+Yue Zhao, Meng Li, Liangzhen Lai, Naveen Suda, Damon Civin, and Vikas Chandra.
+\newblock Federated learning with non-iid data.
+\newblock \emph{arXiv preprint arXiv:1806.00582}, 2018.
+
+\end{thebibliography}

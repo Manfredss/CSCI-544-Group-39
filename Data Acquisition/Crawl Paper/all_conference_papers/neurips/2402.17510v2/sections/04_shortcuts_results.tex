@@ -1,0 +1,62 @@
+% !TEX root = ../main.tex
+\section{Synthetic Shortcuts and their Impact on Learned Representations and Evaluation Performance}
+\label{eval:results}
+
+\begin{figure}[t!]
+\centering
+\begin{subfigure}[b]{\textwidth}
+	\includegraphics[width=1\linewidth]{figures/results/CLIP-f30k-coco-shortcut-eval-linear.pdf}
+	\vspace*{-6mm}
+	\caption{Evaluation results for the CLIP model when using different shortcut sampling setups. }
+	\label{fig:results_clip}
+\end{subfigure}
+
+\vspace*{4mm}
+\begin{subfigure}[b]{\textwidth}
+	\includegraphics[width=1\linewidth]{figures/results/VSE-f30k-coco-shortcut-eval-linear.pdf}
+	\vspace*{-6mm}
+	\caption{Evaluation results for the VSE++ model when using different shortcut sampling setups. }
+	\label{fig:results_vse} 
+\end{subfigure}
+\caption{Effect of synthetic shortcuts on CLIP and VSE++ performance on \ac{ICR} task.
+The dotted line represents the maximum achievable recall sum, while the dashed line for CLIP indicates its zero-shot evaluation performance
+(Best viewed in color.)}
+\label{fig:shortcuts_results}
+\end{figure}
+
+\subsection{Findings}
+First, we train and evaluate both a CLIP and VSE++  without shortcuts on the \ac{Flickr30k} and \ac{MS-COCO} dataset for the image-caption retrieval task as a baseline. 
+We use the recall sum (i.e., the sum of $R@1, R@5$, and $R@10$ for both \ac{i2t} and \ac{t2i} retrieval) as evaluation metric (see Appendix~\ref{appendix:task} for the evaluation task description). 
+We visualize the results in~Figure~\ref{fig:shortcuts_results}.
+The dotted line (in Figure~\ref{fig:results_clip} and~\ref{fig:results_vse}) indicates the maximum evaluation score (i.e., 600). 
+For CLIP, we also provide the zero-shot performance of the model, indicated by the dashed line in Figure~\ref{fig:results_clip}. 
+When referring to specific results in~Figure~\ref{fig:shortcuts_results}, we use the color of the corresponding bar and legend key in brackets in the text.
+
+Based on Figure~\ref{fig:shortcuts_results}, we draw the following conclusions: 
+\begin{enumerate}[label=\Roman*]
+	\item When training CLIP and VSE++ with only shortcuts on either the caption modality (in Figure~\ref{fig:shortcuts_results}, the corresponding bar/legend box is colored \caponly) or on the image modality~(\imgonly, in Figure~\ref{fig:shortcuts_results}), we do not observe a drop in evaluation scores for CLIP compared to the baseline model (\baseline, in Figure~\ref{fig:results_clip}).
+	For VSE++ we only observe a slight drop in evaluation score when training with shortcuts on the caption modality (again \caponly, mainly for \ac{MS-COCO}, in Figure~\ref{fig:results_vse}).  
+	Therefore, we conclude that the synthetic shortcuts do not interfere with the original shared information $S$ or other task-relevant information.
+	
+	\item When training the models with \textit{unique shortcuts}, we observe for both CLIP and VSE++ that when evaluating with shortcuts~(\uswith, in Figure~\ref{fig:shortcuts_results}), the models obtain a perfect evaluation score. 
+	When evaluating without shortcuts (\uswithout, in Figure~\ref{fig:shortcuts_results}) the evaluation score for VSE++ drops to zero and for CLIP below the zero-shot performance. 
+	We conclude that with unique shortcuts:
+	\begin{enumerate*}[label=(\roman*)]
+		\item both CLIP and VSE++ fully rely on the shortcuts to solve the evaluation task,
+		\item VSE++ has not learned any other shared or task-relevant information other than the shortcuts (since it is trained from scratch, only detecting the shortcuts is sufficient to minimize the contrastive loss), and 
+		\item fine-tuned CLIP has suppressed original features from the zero-shot model in favor of the shortcuts.	
+	\end{enumerate*}
+	
+	\item When training the models with \textit{N bits of shortcuts}, we observe for both CLIP and VSE++ that the larger the number of bits we use during training and when evaluating without shortcuts~(\bswithout, in Figure~\ref{fig:shortcuts_results}), the bigger the drop in evaluation performance. 
+	When we evaluate with shortcuts~(\mbox{\bswith,} in Figure~\ref{fig:shortcuts_results}), the evaluation performance improves as we use more bits compared to the baseline without shortcuts~\baseline, in Figure~\ref{fig:shortcuts_results}). 
+	For VSE++, evaluating without shortcuts~(\bswithout, in Figure~\ref{fig:results_vse}) results in a drop to zero when having a large number of bits.
+	 For CLIP, the evaluation performance drops below the zero-shot performance. 
+	 If we train with 0 bits of shortcuts (i.e., the shortcut is a constant) we do not observe any drop or increase in evaluation scores for CLIP.
+\end{enumerate}
+
+\subsection{Upshot}
+Given the findings based on Figure~\ref{fig:shortcuts_results} we conclude that a contrastive loss (i.e., InfoNCE) mainly learns the easy-to-detect minimal shared features among image-caption pairs that are sufficient to minimize the contrastive objective while suppressing the remaining shared and/or task-relevant information.  
+If contrastive losses are sufficient to learn task-optimal representations for image-caption matching, these shortcuts should not adversely impact the evaluation performance.
+Moreover, if the contrastive loss would only learn features that are shared among the image and all captions (i.e, $S$), we should not observe a drop in performance to 0 for the VSE++ model when training with unique shortcuts, since there is still a lot of task-relevant information present in $S$.
+Especially in a training setup where a model is trained from scratch or fine-tuned on small datasets, the easy-to-detect features are likely not equivalent to all task-relevant information in the images and captions.
+Hence, we conclude that contrastive loss itself is not sufficient to learn task-optimal representations of the images (and sufficient representations of captions) and that it only learns the minimal easy-to-detect features that are needed to minimize the contrastive objective.

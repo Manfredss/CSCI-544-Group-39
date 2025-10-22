@@ -1,0 +1,79 @@
+标题: Unsupervised Person Re-Identification: A Systematic Survey of Challenges and Solutions
+arXiv ID: 2109.06057v2
+发布时间: 2021-09-01 00:01:35+00:00
+作者: Xiangtan Lin, Pengzhen Ren, Chung-Hsing Yeh, Lina Yao, Andy Song, Xiaojun Chang
+摘要: Person re-identification (Re-ID) has been a significant research topic in the
+past decade due to its real-world applications and research significance. While
+supervised person Re-ID methods achieve superior performance over unsupervised
+counterparts, they can not scale to large unlabelled datasets and new domains
+due to the prohibitive labelling cost. Therefore, unsupervised person Re-ID has
+drawn increasing attention for its potential to address the scalability issue
+in person Re-ID. Unsupervised person Re-ID is challenging primarily due to
+lacking identity labels to supervise person feature learning. The corresponding
+solutions are diverse and complex, with various merits and limitations.
+Therefore, comprehensive surveys on this topic are essential to summarise
+challenges and solutions to foster future research. Existing person Re-ID
+surveys have focused on supervised methods from classifications and
+applications but lack detailed discussion on how the person Re-ID solutions
+address the underlying challenges. This survey review recent works on
+unsupervised person Re-ID from the perspective of challenges and solutions.
+Specifically, we provide an in-depth analysis of highly influential methods
+considering the four significant challenges in unsupervised person Re-ID: 1)
+lacking ground-truth identity labels to supervise person feature learning; 2)
+learning discriminative person features with pseudo-supervision; 3) learning
+cross-camera invariant person feature, and 4) the domain shift between
+datasets. We summarise and analyse evaluation results and provide insights on
+the effectiveness of the solutions. Finally, we discuss open issues and suggest
+some promising future research directions.
+URL: http://arxiv.org/abs/2109.06057v2
+图片输出目录: all_conference_papers/cvpr/2109.06057v2/extracted_images
+LaTeX文件数量: 3
+图片文件总数: 14
+匹配图片数量: 8
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/cvpr/2109.06057v2/main.tex
+  - all_conference_papers/cvpr/2109.06057v2/doc/elsdoc-cas.tex
+  - all_conference_papers/cvpr/2109.06057v2/doc/glyphtounicode.tex
+
+==================================================
+图片引用列表:
+  - gan
+  - fullyclustering
+  - timeline
+  - preid
+  - clustering
+  - feature
+  - Fig2
+  - dc-sample
+  - sc-sample
+  - Fig1
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/cvpr/2109.06057v2/feature.png
+  - all_conference_papers/cvpr/2109.06057v2/preid.png
+  - all_conference_papers/cvpr/2109.06057v2/clustering.png
+  - all_conference_papers/cvpr/2109.06057v2/gan.png
+  - all_conference_papers/cvpr/2109.06057v2/timeline.PNG
+  - all_conference_papers/cvpr/2109.06057v2/fullyclustering.png
+  - all_conference_papers/cvpr/2109.06057v2/doc/sc-sample.pdf
+  - all_conference_papers/cvpr/2109.06057v2/doc/dc-sample.pdf
+
+==================================================
+所有图片文件:
+  - all_conference_papers/cvpr/2109.06057v2/feature.png
+  - all_conference_papers/cvpr/2109.06057v2/preid.png
+  - all_conference_papers/cvpr/2109.06057v2/clustering.png
+  - all_conference_papers/cvpr/2109.06057v2/gan.png
+  - all_conference_papers/cvpr/2109.06057v2/timeline.PNG
+  - all_conference_papers/cvpr/2109.06057v2/fullyclustering.png
+  - all_conference_papers/cvpr/2109.06057v2/doc/sc-sample.pdf
+  - all_conference_papers/cvpr/2109.06057v2/doc/dc-sample.pdf
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-email.jpeg
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-linkedin.jpeg
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-gplus.jpeg
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-url.jpeg
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-facebook.jpeg
+  - all_conference_papers/cvpr/2109.06057v2/thumbnails/cas-twitter.jpeg

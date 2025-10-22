@@ -1,0 +1,106 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+% \usepackage{cvpr}              % To produce the CAMERA-READY version
+% \usepackage[review]{cvpr}      % To produce the REVIEW version
+\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+\usepackage{booktabs}
+\usepackage{balance}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\definecolor{mygray}{gray}{.85}
+\definecolor{myhighlight}{RGB}{193,210,240}
+\usepackage{mwe}
+\usepackage{algorithmic,float}
+\usepackage[linesnumbered,ruled,vlined,noline]{algorithm2e}
+\usepackage{etoolbox}
+\usepackage{relsize}
+\usepackage{comment}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{soul}
+\input{preamble}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue]{hyperref}
+
+
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\paperID{8991} % *** Enter the Paper ID here
+\def\confName{CVPR}
+\def\confYear{2024}
+
+\begin{document}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{Memory-based Adapters for Online 3D Scene Perception}
+
+\author{Xiuwei Xu\textsuperscript{1}\thanks{}, ~Chong Xia\textsuperscript{1}\footnotemark[1], ~Ziwei Wang\textsuperscript{2}, ~Linqing Zhao\textsuperscript{3}, ~Yueqi Duan\textsuperscript{1}, ~Jie Zhou\textsuperscript{1}, ~Jiwen Lu\textsuperscript{1}\thanks{}\\
+\textsuperscript{1}Tsinghua University, ~\textsuperscript{2}Carnegie Mellon University, ~\textsuperscript{3}Tianjin University \\
+}
+
+
+% \maketitle
+\twocolumn[{
+\maketitle
+\vspace{-8mm}
+\begin{figure}[H]
+\hsize=\textwidth
+\centering
+\includegraphics[width=2.1\linewidth]{figures/teaser2.pdf}
+\caption{We propose a general framework for online 3D scene perception. With the presented memory-based adapters, we empower existing offline models in different tasks with online perception ability, which is valuable for robotics applications.}
+\label{teaser}
+\end{figure}
+}]
+{
+  \renewcommand{\thefootnote}%
+    {\fnsymbol{footnote}}
+  \footnotetext[1]{Equal contribution. ~~\textsuperscript{\dag}Corresponding author.}
+}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+  \input{./tex/abstract}
+\end{abstract}
+
+%%%%%%%%% BODY TEXT
+\section{Introduction}
+  \input{./tex/introduction}
+  
+\section{Related Work}
+  \input{./tex/related}
+
+\section{Approach}
+  \input{./tex/approach}
+  
+\section{Experiment}
+  \input{./tex/experiment}
+  
+\section{Conclusion}
+  \input{./tex/conclusion}
+
+
+\clearpage
+\appendix
+\section*{Supplementary Material}
+\input{./tex/supp}
+
+
+%%%%%%%%% REFERENCES
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+\end{document}

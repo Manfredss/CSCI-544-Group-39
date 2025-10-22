@@ -1,0 +1,248 @@
+\section{Inference}
+\label{sec:inference}
+
+\newcommand{\marginalize}{\mathbb{M}}
+\newcommand{\integrate}{\mathbb{I}}
+\newcommand{\project}{\mathbb{P}}
+
+
+The key to inference in the presence of
+continuous random variables is avoiding enumeration by 
+representing the derivations and their attributes symbolically.  A single
+step in the construction of a symbolic derivation is defined below.
+
+\begin{Def}[Symbolic Derivation]
+A goal $G$ \emph{directly derives}  goal $G'$, denoted $G \rightarrow
+G'$,  if:
+\begin{description}
+\item[PCR:] $G = q_1(\overline{X_1}), G_1$, and there exists a
+  clause in the program, $q_1(\overline{Y}) \mbox{:-} r_1(\overline{Y_1}),
+  r_2(\overline{Y_2}), \ldots, r_m(\overline{Y_m})$, such that $\theta =
+  \mgu(q_1(\overline{X_1}), q_1(\overline{Y}))$; then, $G' =
+  (r_1(\overline{Y_1}), r_2(\overline{Y_2}), \ldots,
+  r_m(\overline{Y_m}), G_1)\theta$; 
+\item[MSW:] $G = \mathtt{msw}(\rv(\overline{X}), Y), G_1$: then
+  $G' = G_1$;
+\item[CONS:]$G = \id{Constr}, G_1$ and $\id{Constr}$ is satisfiable: then $G' = G_1$.
+\end{description}
+A \emph{symbolic derivation} of $G$ is a sequence of goals $G_0, G_1,
+\ldots$ such that $G=G_0$ and, for all $i \geq 0$, $G_i \rightarrow G_{i+1}$.
+\end{Def}
+Note that the traditional notion of derivation in a logic program
+coincides with that of symbolic derivation when the selected subgoal
+(literal) is not an \texttt{msw} or a constraint. When the selected
+subgoal is an \texttt{msw}, PRISM's inference will construct the next
+step by enumerating the values of the random variable.  In contrast,
+symbolic derivation skips \texttt{msw}'s and constraints and
+continues with the remaining subgoals in a goal.  The effect of these
+constructs is computed by associating (a) variable type information
+and (b) a success function (defined below) with each goal in the
+derivation.  The symbolic derivation for the goal \texttt{fmix(X)} over the program
+in Example~\ref{ex:fmm} is shown in
+Fig.~\ref{fig:fmmderivation}.
+
+\begin{figure}
+\centering
+\begin{minipage}[t]{1.5in}
+\begin{displaymath}
+\scriptsize{
+  \xymatrix @=10pt {
+    G_{1}: fmix(X) \ar[d]  \\
+    G_{2}: msw(m,M), msw(w(M), X).  \ar[d]   \\
+    G_{3}: msw(w(M), X).  
+  }
+}
+\end{displaymath}
+\end{minipage}
+\caption{Symbolic derivation for goal \texttt{fmix(X)}}
+\label{fig:fmmderivation}
+\end{figure}
+
+
+\paragraph{Success Functions:}
+Goals in a symbolic derivation may contain variables whose values are
+determined by \texttt{msw}'s appearing subsequently in the
+derivation.  With each goal $G_i$ in a symbolic derivation, we
+associate a set of variables, $V(G_i)$, that is a subset of variables
+in $G_i$.  The set $V(G_i)$ is such that the variables in $V(G_i)$ 
+subsequently appear as parameters or
+outcomes of \texttt{msw}'s in some subsequent  goal $G_j$, $j \geq i$.
+We can further partition $V$ into two disjoint sets, $V_c$ and $V_d$,
+representing continuous and discrete variables,
+respectively.  
+
+Given a goal $G_i$ in a symbolic derivation, we can associate with it a
+\emph{success function}, which is a function from the set of all
+valuations of $V(G_i)$ to $[0,1]$.  Intuitively, the success function
+represents the probability that the symbolic derivation represents a
+successful derivation for each valuation of $V(G_i)$. 
+Note that the success function computation uses a set of distribution parameters $\Theta$.
+For simplicity, we often omit it in the equations and use it when it's not clear from the context.
+ 
+\paragraph{Representation of success functions:}
+Given a set of variables $\mathbf{V}$, let $\mathbf{C}$ denote the set
+of all linear equality constraints over reals using
+$\mathbf{V}$.  Let $\mathbf{L}$ be the set of all linear functions over
+$\mathbf{V}$ with real coefficients.  Let
+$\mathcal{N}_{X}(\mu,\sigma^2)$ be the PDF of a univariate Gaussian
+distribution with mean $\mu$ and variance $\sigma^2$, and $\delta_{x}(X)$ be the Dirac delta function which is zero everywhere except at $x$ and integration of the delta function over its entire range is 1.  Expressions of
+the form $k*\prod_{l} \delta_{v}(V_{l}) \prod_{i} \mathcal{N}_{f_i}$, where $k$ is a non-negative
+real number and $f_i \in \mathbf{L}$, are called \emph{product PDF
+  (PPDF) functions 
+  over} $\mathbf{V}$.  We use $\phi$ (possibly subscripted) to denote
+such functions.  A pair $\langle \phi, C\rangle$ where $C \subseteq \mathbf{C}$ is
+called a \emph{constrained PPDF function}. A sum of a finite number of
+constrained PPDF functions is called a \emph{success function}, represented as
+$\sum_{i} \langle \phi_{i}, C_{i} \rangle$.
+
+We use $C_{i}(\psi)$ to denote the
+constraints (i.e., $C_{i}$) in the $i^{th}$ constrained PPDF function of
+success function $\psi$;
+and $D_{i}(\psi)$ to denote the $i^{th}$ PPDF
+function of $\psi$.
+
+
+\paragraph{Success functions of base predicates:}
+The success function of a constraint $C$ is $\langle 1, C\rangle$.
+The success function of \emph{true} is $\langle 1, \id{true}\rangle$.
+The PPDF component of $\mathtt{msw}(\rv(\overline{X}), Y)$'s success
+function  is the
+probability density function of $\rv$'s distribution if $\rv$ is
+continuous, and its probability mass function if $\rv$ is discrete; its constraint component
+is \id{true}.
+
+\begin{Ex}
+The success function of \texttt{msw(m,M)} for the program in
+Example~\ref{ex:fmm} is $\psi_1 = 0.3 \delta_{a}(M) + 0.7 \delta_{b}(M)$.
+
+The success function \texttt{msw(w(M), X)} for the program in
+Example~\ref{ex:fmm} is 
+$\psi_2 =  \delta_{a}(M) \mathcal{N}_{X}(2.0, 1.0) +  \delta_{b}(M) \mathcal{N}_{X}(3.0, 1.0)$.
+\qed
+\end{Ex}
+
+
+\paragraph{Success functions of user-defined predicates:}
+If $G \rightarrow G'$ is a step in a derivation, then the success
+function of $G$ is computed bottom-up based on the success
+function of $G'$.  This computation is done using \emph{join} and
+\emph{marginalize} operations on success functions.
+
+\begin{Def} [Join]
+Let $\psi_{1}=\sum_{i} \langle D_{i}, C_{i} \rangle$ and $\psi_{2} =
+\sum_{j} \langle D_{j}, C_{j} \rangle$ be two success functions, then
+join of $\psi_{1}$ and $\psi_{2}$ represented as $\psi_{1} * \psi_{2}$
+is the success function $\sum_{i,j} \langle D_{i}D_{j}, C_{i} \wedge
+C_{j} \rangle$. 
+\end{Def}
+
+
+Given a success function $\psi$ for a goal $G$, the success function
+for $\exists X.\ G$ is computed by the marginalization operation.
+Marginalization w.r.t. a discrete variable is straightforward and
+omitted.  Below we
+define marginalization w.r.t. continuous variables in two steps: first
+rewriting the success function in a projected form and then doing the
+required integration.
+
+Projection eliminates any linear constraint on $V$, where $V$ is the continuous variable to marginalize over. The projection operation, denoted by $\psi\downarrow_{V}$, involves finding a linear constraint 
+(i.e., $V = \overline{a} \cdot \overline{X}+b$) on $V$ and replacing all occurrences of $V$ in the success function by  $\overline{a} \cdot \overline{X}+b$.
+
+\begin{Pro}
+\label{integration}
+Integration of a PPDF function with respect to a variable $V$ is a PPDF function, i.e., 
+\begin{align*}
+ \alpha \int^{\infty}_{-\infty} \prod_{k=1}^{m}
+\mathcal{N}_{(\overline{a_{k}} \cdot
+  \overline{X_{k}}+b_{k})}(\mu_{k},\sigma^{2}_{k}) dV \\= \alpha' \prod_{l=1}^{m'}
+\mathcal{N}_{(\overline{a'_{l}} \cdot
+  \overline{X'_{l}})+b'_{l}}(\mu'_{l},\sigma'^{2}_{l})
+\end{align*}
+where $V \in \overline{X_{k}}$ and $V \not\in \overline{X'_{l}}$.\\
+\end{Pro}
+
+
+\begin{Def} [Integration]
+Let $\psi$ be a success function that does not contain any linear constraints on $V$. Then integration of $\psi$ with
+ respect to $V$, denoted by $\oint_{V}\psi$ is a
+success function $\psi'$ such that
+$\forall i. D_{i}(\psi') = \int D_{i}(\psi) dV$.
+\end{Def}
+
+
+\begin{Def} [Marginalize]
+Marginalization of a success function $\psi$ with respect to a
+variable $V$, denoted by $\marginalize(\psi, V)$, is a success
+function $\psi'$ such that
+\begin{align*}
+\psi'  &= \oint_{V} \psi \downarrow_{V} 
+\end{align*}
+\end{Def}
+
+We overload $\marginalize$ to denote marginalization over a set of
+variables, defined such that
+$\marginalize(\psi, \{V\} \cup \overline{X}) =
+\marginalize(\marginalize(\psi, V), \overline{X})$ and
+$\marginalize(\psi, \{\}) = \psi$.
+
+The success function for a derivation is defined as
+follows.
+\begin{Def}[Success function of a derivation]
+ Let $G \rightarrow G'$.  Then the success function of $G$, denoted by
+ $\psi_G$, is computed from that of $G'$, based on the way $G'$ was derived:
+\begin{description}
+\item[PCR:] $\psi_G = \marginalize(\psi_{G'}, V(G') - V(G))$.
+\item[MSW:] Let $G= \kw{msw}(\rv(\overline{X}), Y), G_1$.
+  Then $\psi_G = \psi_{msw(rv(\overline{X}),Y)} * \psi_{G'}$.
+\item[CONS:] Let $G= Constr, G_1$.  Then
+  $\psi_G = \psi_{Constr} * \psi_{G'}.$
+\end{description}
+\end{Def}
+Note that the above definition carries PRISM's assumption that an
+instance of a random variable occurs at most once in any derivation.
+In particular, the PCR step marginalizes success functions w.r.t. a
+set of variables; the valuations of the set of variables must be 
+mutually exclusive for correctness of this step.  The MSW step joins
+success functions; the goals joined must use independent random
+variables for the join operation to correctly compute success
+functions in this step. 
+
+
+\begin{Ex}
+  Fig.~\ref{fig:fmmderivation} shows the symbolic derivation
+  for goal \texttt{fmix(X)} over the finite mixture model program in
+  Example~\ref{ex:fmm}.  Success function of goal $G_{3}$ is
+  $\psi_{msw(w(M),X)}(M,X)$, hence $\psi_{G_3} = \delta_{a}(M)
+  \mathcal{N}_{X}(\mu_{a}, \sigma^{2}_{a}) + \delta_{b}(M) \mathcal{N}_{X}(\mu_{b}, \sigma^{2}_{b})$.
+
+  $\psi_{G_{2}}$ is $\psi_{msw(m, M)}(M) * \psi_{G_{3}}(M,X)$ which yields $\psi_{G_2} = p_{a} \delta_{a}(M)
+   \mathcal{N}_{X}(\mu_{a}, \sigma^{2}_{a}) +  p_{b} \delta_{b}(M) \mathcal{N}_{X}(\mu_{b}, \sigma^{2}_{b})$.
+Note that  $\delta_{b}(M)\delta_{a}(M)=0$ as $M$ can not be both $a$ and $b$ at the same time.
+Also $\delta_{a}(M)\delta_{a}(M) = \delta_{a}(M)$.
+
+  Finally, $\psi_{G_1} = \marginalize(\psi_{G_2}, M)$ which is $p_{a} 
+  \mathcal{N}_{X}(\mu_{a}, \sigma^{2}_{a}) + p_{b}  \mathcal{N}_{X}(\mu_{b}, \sigma^{2}_{b})$.  Note
+  that $\psi_{G_1}$ represents the mixture distribution ~\cite{fmm} of
+  mixture of two Gaussian distributions.  
+  
+  Here $p_{a} = 0.3, p_{b} = 0.7, \mu_{a} = 2.0, \mu_{b} = 3.0$, and $\sigma^{2}_{a} = \sigma^{2}_{b} = 1.0$.
+  \qed
+\end{Ex}
+
+
+Note that for a program with only discrete random variables, there may be
+exponentially fewer symbolic derivations than concrete derivations
+\emph{a la} PRISM.  The compactness is only in terms of \emph{number}
+of derivations and not the total size of the representations.  In
+fact, for programs with only discrete random variables, there is a
+one-to-one correspondence between the entries in the tabular
+representation of success functions and PRISM's answer tables.  For
+such programs, it is easy to show that the time complexity of the
+inference presented in this paper is same as that of PRISM.
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

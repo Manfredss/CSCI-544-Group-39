@@ -1,0 +1,85 @@
+\begin{table*}
+\caption{Representative results comparing the hypergeometric (HG), multinomial (MN) and Poisson (P) likelihood estimates on simulated datasets (additional results in Appendix \ref{appendix:extra_results}). Ground-truth distributions are uniformly under-sampled by $20-60\%$. Metrics are adjusted Rand index (ARI), median percentage error (MPE), and mean absolute error (MAE), averaged over 5 simulation random seeds.}
+\label{table:results}
+\vskip 0.1in
+\begin{center}
+\begin{scriptsize}
+\begin{sc}
+% \begin{tabular}{l||m{4em}|m{4em}|m{4em}||m{4em}|m{4em}||m{4em}|m{4em}|}
+\begin{tabular}{l||c|c|c||c|c||c|c}
+ & \multicolumn{3}{c||}{ARI} & \multicolumn{2}{c||}{MPE} & \multicolumn{2}{c}{MAE} \\
+ & HG (ours) & MN & P & HG (ours) & P & HG (ours) & P \\
+\hline
+% simulation 240125_184331
+\makecell{3 distributions (2 unique), $10^3$ categories,\\$10^3$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.45$\\$\pm 0.01$} & \makecell{$0.45$\\$\pm 0.15$} & 
+\makecell{$2.8$\\$\pm 0.3\%$} & \makecell{$26.1$\\$\pm 0.1\%$} & 
+\makecell{$416$\\$\pm 49$} & \makecell{$3471$\\$\pm 2$} \\
+\hline
+% simulation 240125_204750
+\makecell{3 distributions (2 unique), $10^4$ categories,\\$10^4$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.45$\\$\pm 0.01$} & \makecell{$0.50$\\$\pm 0.01$} & 
+\makecell{$3.9$\\$\pm 0.9\%$} & \makecell{$23.3$\\$\pm 0.8\%$} & 
+\makecell{$573$\\$\pm 152$} & \makecell{$3744$\\$\pm 23$} \\
+\hline
+% simulation 240129_215227
+\makecell{10 distributions (9 unique), $10^3$ categories,\\$10^5$ obs/distribution, $10^5$ ground-truth total} & 
+\makecell{$0.99$\\$\pm 0.01$} & \makecell{$0.89$\\$\pm 0.01$} & \makecell{$0.87$\\$\pm 0.01$} & 
+\makecell{$1.6$\\$\pm 0.1\%$} & \makecell{$6.5$\\$\pm 0.1\%$} & 
+\makecell{$225$\\$\pm 6$} & \makecell{$7309$\\$\pm 43$} \\
+\hline
+% simulation 240129_215230
+\makecell{10 distributions, $10^1$ categories,\\$10^3$ obs/distribution, $10^3$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.978$\\$\pm 0.023$} & 
+\makecell{$2.5$\\$\pm 0.2\%$} & \makecell{$64$\\$\pm 1\%$} & 
+\makecell{$27$\\$\pm 3$} & \makecell{$6.2$\\$\pm 0.1$} \\
+\hline
+% simulation 240129_220142
+\makecell{100 distributions, $10^3$ categories,\\$10^4$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$0.97$\\$\pm 0.01$} & \makecell{$0.10$\\$\pm 0.04$} & \makecell{$0.98$\\$\pm 0.01$} & 
+\makecell{$0.8$\\$\pm 0.1\%$} & \makecell{$0.7$\\$\pm 0.1\%$} & 
+\makecell{$99$\\$\pm 11$} & \makecell{$65$\\$\pm 1$} \\
+\hline
+% simulation 240125_204909
+\makecell{3 distributions (2 unique), $10^3$ categories,\\$10^3$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$0.89$\\$\pm 0.18$} & \makecell{$0.50$\\$\pm 0.01$} & \makecell{$0.50$\\$\pm 0.01$} & 
+\makecell{$6.6$\\$\pm 1.2\%$} & \makecell{$23.0$\\$\pm 0.2\%$} & 
+\makecell{$1438$\\$\pm 101$} & \makecell{$3772$\\$\pm 17$} \\
+\hline
+% simulation 240125_204947
+\makecell{10 distributions, $10^3$ categories,\\$10^3$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.72$\\$\pm 0.11$} & 
+\makecell{$4.8$\\$\pm 1.2\%$} & \makecell{$10.3$\\$\pm 0.1\%$} & 
+\makecell{$485$\\$\pm 119$} & \makecell{$943$\\$\pm 13$} \\
+\hline
+% simulation 240125_220806
+\makecell{10 distributions, $10^3$ categories,\\$10^3$ obs/distribution, $10^5$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.51$\\$\pm 0.11$} & 
+\makecell{$9.0$\\$\pm 5.5\%$} & \makecell{$10.3$\\$\pm 0.1\%$} & 
+\makecell{$8767$\\$\pm 5331$} & \makecell{$9538$\\$\pm 86$} \\
+\hline
+% simulation 240129_215527
+\makecell{10 distributions, 10 categories,\\$10^5$ obs/distribution, $10^3$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.78$\\$\pm 0.01$} & 
+\makecell{$5.2$\\$\pm 1.5\%$} & \makecell{$6.3$\\$\pm 0.1\%$} & 
+\makecell{$52$\\$\pm 15$} & \makecell{$63$\\$\pm 1$} \\
+\hline
+% simulation 240129_214255
+\makecell{10 distributions, 100 categories,\\$10^4$ obs/distribution, $10^4$ ground-truth total} & 
+\makecell{$1.00$\\$\pm 0.01$} & \makecell{$1.00$\\$\pm 0.01$} & \makecell{$0.89$\\$\pm 0.01$} & 
+\makecell{$4.8$\\$\pm 0.1\%$} & \makecell{$6.3$\\$\pm 0.1\%$} & 
+\makecell{$481$\\$\pm 12$} & \makecell{$633$\\$\pm 1$} \\
+\hline
+% simulation 240129_215229
+\makecell{10 distributions (9 unique), 10 categories,\\$10^4$ obs/distribution, $10^3$ ground-truth total} & 
+\makecell{$0.89$\\$\pm 0.01$} & \makecell{$0.89$\\$\pm 0.01$} & \makecell{$0.89$\\$\pm 0.01$} & 
+\makecell{$3.5$\\$\pm 0.1\%$} & \makecell{$6.5$\\$\pm 0.1\%$} & 
+\makecell{$48$\\$\pm 12$} & \makecell{$73$\\$\pm 1$} \\
+\hline
+
+\end{tabular}
+\end{sc}
+\end{scriptsize}
+\end{center}
+\vskip -0.1in
+\end{table*}

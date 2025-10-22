@@ -1,0 +1,122 @@
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+
+\acrodef{ICR}{image-caption retrieval}
+\acrodef{SSL}{self-supervised learning}
+\acrodef{CL}{contrastive learning}
+\acrodef{MS-COCO}{MS-COCO Captions}
+\acrodef{Flickr30k}{Flickr30k}
+\acrodef{i2t}{image-to-text}
+\acrodef{t2i}{text-to-image}
+\acrodef{VL}{vision-language}
+\acrodef{VLM}{vision-language model}
+\acrodef{SOTA}{state-of-the-art}
+\acrodef{MI}{mutual information}
+\acrodef{LTD}{latent target decoding}
+\acrodef{IFM}{implicit feature modification}
+\acrodef{SBERT}{Sentence-BERT}
+\acrodef{SVL}{synthetic shortcuts for vision-language}
+\acrodef{i2t}{image-to-text}
+\acrodef{t2i}{text-to-image}
+
+\definecolor{cblue}{RGB}{0, 83, 155}
+\definecolor{cred}{RGB}{238, 49, 42}
+\definecolor{cyellow}{RGB} {255, 223, 0}
+\definecolor{corange}{RGB} {245, 132, 43}
+\definecolor{cpurple}{RGB}{123, 67, 154}
+\definecolor{clightblue}{RGB}{0, 174, 239}
+\definecolor{cburgundy}{RGB}{198, 12, 70}
+\definecolor{cgreen}{RGB}{0, 158, 71}
+\definecolor{cpurpler}{RGB}{158, 32, 110}
+\definecolor{update_green}{RGB}{0, 153, 0}
+
+
+% Figure colors
+\definecolor{baseline}{rgb}{0.18, 0.55, 0.34}
+\definecolor{cap_only}{rgb}{0.8, 0.52, 0.25}
+\definecolor{img_only}{rgb}{0.5, 0.0, 0.0}
+\definecolor{us_with}{rgb}{0.539361783929258, 0.31820069204152246, 0.6458285274894272}
+\definecolor{us_without}{rgb}{0.6054901960784314, 0.7074509803921569, 0.8392156862745098}
+\definecolor{bs_with}{rgb}{0.0196078431372549, 0.18823529411764706, 0.3803921568627451}
+\definecolor{bs_without}{rgb}{0.974163783160323, 0.7508650519031141, 0.6424452133794694}
+\definecolor{improve}{rgb}{152.9, 255.0, 77.5}
+
+
+\newcommand{\xmark}{\ding{55}}%
+
+\newcommand{\headernodot}[1]{\vspace{1mm}\noindent\textbf{#1}}
+\newcommand{\header}[1]{\headernodot{#1.}}
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}} 
+\newcommand{\remove}[1]{\textcolor{gray}{\textbf{[Might be removed: #1]}}} 
+\newcommand{\suggested}[1]{\textcolor{cgreen}{[suggestion: #1]}}
+\newcommand{\updated}[1]{\textcolor{update_green}{ #1}}
+
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\img}[1]{\mathbf{x}_{\mathcal{I}}^{#1}}
+\newcommand{\capt}[2]{\mathbf{x}_{\mathcal{C}_{#2}}^{#1}}
+\newcommand{\zimg}[2]{\mathbf{z}_{\mathcal{I}_{#2}}^{#1}}
+\newcommand{\zcapt}[2]{\mathbf{z}_{\mathcal{C}_{#2}}^{#1}}
+
+\newcommand{\zimgsuff}[1]{\mathbf{z}_{ \mathcal{I} \rightarrow \mathcal{C}_{#1}}^{\textit{SUF}}}
+\newcommand{\zcaptsuff}[2]{\mathbf{z}_{\mathcal{C}_{#2} \rightarrow \mathcal{I}}^{#1{\textit{SUF}}}}
+\newcommand{\zminsuff}[1]{\mathbf{z}_{ \mathcal{I} \rightarrow \mathcal{C}_{#1}}^{\textit{MIN}}}
+\newcommand{\zoptimal}[2]{\mathbf{z}_{\mathcal{I} \rightarrow #2}^{\textit{OPT}}{#1}}
+\newcommand{\sorig}{S_{orig}}
+\newcommand{\sct}{S_{SynSC}}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+\newtheorem{definition}{Definition}[section]
+\newcommand{\positive}{\textcolor{ForestGreen}{\boldsymbol{\uparrow}}}
+\newcommand{\negative}{\textcolor{Red}{\boldsymbol{\downarrow}}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+ \newcommand{\baseline}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=baseline,baseline] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\caponly}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=cap_only,cap_only] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\imgonly}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=img_only,img_only] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\uswith}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=us_with,us_with] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\uswithout}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=us_without,us_without] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\bswith}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=bs_with,bs_with] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}
+
+ \newcommand{\bswithout}{
+	\tikz[line width = 0pt, line join = round,]{
+		\draw[fill=bs_without,bs_without] (0,0) rectangle (5.0mm,1.7mm);
+	}
+}

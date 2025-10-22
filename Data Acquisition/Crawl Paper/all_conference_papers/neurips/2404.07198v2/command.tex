@@ -1,0 +1,51 @@
+% ULTRA - Unified learnable and transferable KG representations
+\newcommand{\method}{\textsc{UltraQuery}\xspace}
+\newcommand{\methodlp}{\textsc{UltraQuery LP}\xspace}
+\newcommand{\clqa}{CLQA\xspace}
+\newcommand{\ultra}{\textsc{Ultra}\xspace}
+\newcommand{\cqda}{$\text{CQD}^{\mathcal{A}}$\xspace}
+\newcommand{\mathbbm}[1]{\text{\usefont{U}{bbm}{m}{n}#1}}
+\newcommand{\ozero}{\textcircled{\scriptsize{0}}}
+\newcommand{\oone}{\textcircled{\scriptsize{1}}}
+\newcommand{\restatableeq}[3]{\label{#3}#2\gdef#1{#2\tag{\ref{#3}}}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+
+\newcommand{\graph}{\mathcal{G}}
+\newcommand{\grel}{\mathcal{G}_r}
+\newcommand{\gtrain}{\mathcal{G}_{\textit{train}}}
+\newcommand{\ginf}{\mathcal{G}_{\textit{inf}}}
+\newcommand{\ghat}{\hat{\mathcal{G}}_{\textit{inf}}}
+\newcommand{\etrain}{\mathcal{V}_{\textit{train}}}
+\newcommand{\einf}{\mathcal{V}_{\textit{inf}}}
+\newcommand{\rtrain}{\mathcal{R}_{\textit{train}}}
+\newcommand{\rinf}{\mathcal{R}_{\textit{inf}}}
+\newcommand{\ttrain}{\mathcal{E}_{\textit{train}}}
+\newcommand{\tinf}{\mathcal{E}_{\textit{inf}}}
+\newcommand{\tpred}{\mathcal{E}_{\textit{pred}}}
+\newcommand{\that}{\hat{\mathcal{E}}_{\textit{inf}}}
+
+\newcommand{\ents}{\mathcal{V}}
+\newcommand{\rels}{\mathcal{R}}
+\newcommand{\edges}{\mathcal{E}}
+\newcommand{\rfund}{\gR_{\textit{fund}}}
+\newcommand{\vrfund}{\mR_{\textit{fund}}}
+
+\newcommand{\zz}[1]{\textcolor{blue}{Zhaocheng: #1}}
+\newcommand{\mg}[1]{\textcolor{purple}{MG: #1}}
+
+% smaller citation font to be used in tables
+% \makeatletter
+% \DeclareRobustCommand\citeps
+% {\begingroup\footnotesize\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
+%     \@ifstar{\NAT@fulltrue\NAT@citetp}{\NAT@fullfalse\NAT@citetp}}
+% \makeatother
+
+\let\realcitet\citet
+\newcommand*{\citets}[1]{{\footnotesize\realcitet{#1}}}
+
+%\let\realcitet\citet
+\newcommand*{\citeps}[1]{{\footnotesize\citep{#1}}}
+
+\newcommand{\yes}{$\Large\color{teal}{\checkmark}$}
+\newcommand{\nope}{$\Large\color{red}{\pmb\times}$}

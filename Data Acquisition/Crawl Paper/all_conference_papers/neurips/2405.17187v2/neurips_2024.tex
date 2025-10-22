@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2024}
+\usepackage{diagbox}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{changepage}
+\usepackage{bm}
+\usepackage{cite}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{scrwfile}
+\TOCclone[\contentsname~(\appendixname)]{toc}{atoc}
+\newcommand\StartAppendixEntries{}
+\AfterTOCHead[toc]{%
+  \renewcommand\StartAppendixEntries{\value{tocdepth}=-10000\relax}%
+}
+\AfterTOCHead[atoc]{%
+  \edef\maintocdepth{\the\value{tocdepth}}%
+  \value{tocdepth}=-10000\relax%
+  \renewcommand\StartAppendixEntries{\value{tocdepth}=\maintocdepth\relax}%
+}
+\newcommand*\appendixwithtoc{%
+  \cleardoublepage
+  \appendix
+  \addtocontents{toc}{\protect\StartAppendixEntries}
+  \listofatoc
+}
+%
+\usepackage{blindtext}
+\usepackage{enumitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{cite}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{graphicx}  
+\definecolor{eccvblue}{rgb}{0.12,0.49,0.85}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=nvgreen]{hyperref}
+\hypersetup{citecolor=[RGB]{119,185,0}}
+
+
+\definecolor{fg}{rgb}{0.75, 0.7, 0.8} 
+\definecolor{bg}{rgb}{0.65, 0.8, 0.85} 
+
+
+\title{\textit{Memorize What Matters}: \\Emergent Scene Decomposition from Multitraverse}
+
+
+\author{Yiming Li$^{1,2}$ \quad  Zehong Wang$^{1}$ \quad  Yue Wang$^{2,3}$ \quad Zhiding Yu$^{2}$ \\ \textbf{Zan Gojcic$^{2}$} \quad \textbf{Marco Pavone$^{2,4}$} \quad \textbf{Chen Feng$^{1}$} \quad \textbf{Jose M. Alvarez$^{2}$}
+\\
+$^{1}$NYU \quad $^{2}$NVIDIA \quad $^{3}$USC \quad $^{4}$Stanford University\\
+\\
+\texttt{\{yimingli,cfeng\}@nyu.edu} \\
+\texttt{\{yuewang,zhidingy,zgojcic,mpavone,josea\}@nvidia.com}
+}
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+% \vspace{-1mm}
+Humans naturally retain memories of permanent elements, while ephemeral moments often slip through the cracks of memory. This selective retention is crucial for robotic perception, localization, and mapping. To endow robots with this capability, we introduce \texttt{3D Gaussian Mapping (3DGM)}, a \textit{self-supervised}, \textit{camera-only} offline mapping framework grounded in 3D Gaussian Splatting. \texttt{3DGM} converts multitraverse RGB videos from the same region into a Gaussian-based environmental map while concurrently performing 2D ephemeral object segmentation. Our key observation is that the environment remains consistent across traversals, while objects frequently change. This allows us to exploit self-supervision from repeated traversals to achieve environment-object decomposition. More specifically, \texttt{3DGM} formulates multitraverse environmental mapping as a robust differentiable rendering problem, treating pixels of the environment and objects as inliers and outliers, respectively. Using robust feature distillation, feature residuals mining, and robust optimization, \texttt{3DGM} jointly performs 2D segmentation and 3D mapping without human intervention. We build the Mapverse benchmark, sourced from the Ithaca365 and nuPlan datasets, to evaluate our method in unsupervised 2D segmentation, 3D reconstruction, and neural rendering. Extensive results verify the effectiveness and potential of our method for self-driving and robotics.
+
+\end{abstract}
+
+\input{sections/1-introduction}
+\input{sections/2-related_work}
+\input{sections/3-preliminary}
+\input{sections/4-method}
+\input{sections/5-experiment}
+\input{sections/6-acknowledgement}
+
+\bibliographystyle{unsrt}
+\bibliography{main}
+
+\input{sections/appendix}
+
+\end{document}

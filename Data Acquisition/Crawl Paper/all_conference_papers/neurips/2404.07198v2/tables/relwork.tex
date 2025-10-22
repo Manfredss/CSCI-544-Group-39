@@ -1,0 +1,16 @@
+%\begin{table}[!htp]
+%\centering
+\vskip -0.25in
+\caption{Comparison with existing \clqa approaches. \emph{Ind.} denotes inductive generalization to new entities \emph{(e)} and relations \emph{(r)}. \method is the first inductive method the generalizes to queries over new entities and relations at inference time.} \label{tab:rel_work}
+%\scriptsize
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lcccc}\toprule
+\textbf{Method} &\textbf{Ind. $e$} &\textbf{Ind. $r$} &\textbf{Ind. Logical Ops} \\\midrule
+Query2Box~\cite{q2b}, BetaE~\cite{betae} & \nope & \nope & Parametric, \nope \\
+CQD~\cite{cqd}, FuzzQE~\cite{fuzz_qe}, QTO~\cite{qto} & \nope & \nope & Fuzzy, \yes \\
+GNN-QE~\cite{gnn_qe}, NodePiece-QE~\cite{galkin2022} & \yes & \nope &Fuzzy, \yes \\
+\method \textbf{(this work)} & \yes & \yes &Fuzzy, \yes \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+%\end{table}

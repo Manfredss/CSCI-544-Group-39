@@ -1,0 +1,659 @@
+\begin{thebibliography}{99}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agro et~al.(2023)Agro, Sykora, Casas, and Urtasun]{implicit}
+Ben Agro, Quinlan Sykora, Sergio Casas, and Raquel Urtasun.
+\newblock Implicit occupancy flow fields for perception and prediction in
+  self-driving.
+\newblock In \emph{CVPR}, pages 1379--1388, 2023.
+
+\bibitem[Barron et~al.(2021)Barron, Mildenhall, Tancik, Hedman, Martin-Brualla,
+  and Srinivasan]{nerf2}
+Jonathan~T Barron, Ben Mildenhall, Matthew Tancik, Peter Hedman, Ricardo
+  Martin-Brualla, and Pratul~P Srinivasan.
+\newblock Mip-nerf: A multiscale representation for anti-aliasing neural
+  radiance fields.
+\newblock In \emph{ICCV}, pages 5855--5864, 2021.
+
+\bibitem[Bogdoll et~al.(2023)Bogdoll, Bosch, Joseph, Gremmelmaier, Yang, and
+  Z{\"o}llner]{bogdoll2023exploring}
+Daniel Bogdoll, Lukas Bosch, Tim Joseph, Helen Gremmelmaier, Yitian Yang, and
+  J~Marius Z{\"o}llner.
+\newblock Exploring the potential of world models for anomaly detection in
+  autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2308.05701}, 2023.
+
+\bibitem[Boulch et~al.(2023)Boulch, Sautier, Michele, Puy, and Marlet]{also}
+Alexandre Boulch, Corentin Sautier, Bj{\"o}rn Michele, Gilles Puy, and Renaud
+  Marlet.
+\newblock Also: Automotive lidar self-supervision by occupancy estimation.
+\newblock In \emph{CVPR}, pages 13455--13465, 2023.
+
+\bibitem[Caesar et~al.(2020)Caesar, Bankiti, Lang, Vora, Liong, Xu, Krishnan,
+  Pan, Baldan, and Beijbom]{nuscenes}
+Holger Caesar, Varun Bankiti, Alex~H Lang, Sourabh Vora, Venice~Erin Liong,
+  Qiang Xu, Anush Krishnan, Yu Pan, Giancarlo Baldan, and Oscar Beijbom.
+\newblock nuscenes: A multimodal dataset for autonomous driving.
+\newblock In \emph{CVPR}, pages 11621--11631, 2020.
+
+\bibitem[Chen et~al.(2023{\natexlab{a}})Chen, Zhang, Zhang, Wang, Lu, Guo, and
+  Zhang]{pimae}
+Anthony Chen, Kevin Zhang, Renrui Zhang, Zihan Wang, Yuheng Lu, Yandong Guo,
+  and Shanghang Zhang.
+\newblock Pimae: Point cloud and image interactive masked autoencoders for 3d
+  object detection.
+\newblock In \emph{CVPR}, pages 5291--5301, 2023{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2021)Chen, Hong, Xu, Li, and Yeung]{chen2021multisiam}
+Kai Chen, Lanqing Hong, Hang Xu, Zhenguo Li, and Dit-Yan Yeung.
+\newblock Multisiam: Self-supervised multi-instance siamese representation
+  learning for autonomous driving.
+\newblock In \emph{ICCV}, pages 7546--7554, 2021.
+
+\bibitem[Chen et~al.(2022{\natexlab{a}})Chen, Mu, Xu, Shao, Jiang, Xu, Li, and
+  Luo]{chen2022co}
+Runjian Chen, Yao Mu, Runsen Xu, Wenqi Shao, Chenhan Jiang, Hang Xu, Zhenguo
+  Li, and Ping Luo.
+\newblock Co\^{} 3: Cooperative unsupervised 3d representation learning for
+  autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2206.04028}, 2022{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2023{\natexlab{b}})Chen, Si, Zhang, Wang, Wang, and
+  Tan]{sp}
+Wentao Chen, Chenyang Si, Zhang Zhang, Liang Wang, Zilei Wang, and Tieniu Tan.
+\newblock Semantic prompt for few-shot image recognition.
+\newblock In \emph{CVPR}, pages 23581--23591, 2023{\natexlab{b}}.
+
+\bibitem[Chen et~al.(2022{\natexlab{b}})Chen, Li, Zhang, Fang, Jiang, and
+  Zhao]{bevdistill}
+Zehui Chen, Zhenyu Li, Shiquan Zhang, Liangji Fang, Qinhong Jiang, and Feng
+  Zhao.
+\newblock Bevdistill: Cross-modal bev distillation for multi-view 3d object
+  detection.
+\newblock In \emph{ICLR}, 2022{\natexlab{b}}.
+
+\bibitem[Contributors(2023)]{openscene}
+OpenScene Contributors.
+\newblock Openscene: The largest up-to-date 3d occupancy prediction benchmark
+  in autonomous driving, 2023.
+
+\bibitem[Dosovitskiy et~al.(2017)Dosovitskiy, Ros, Codevilla, Lopez, and
+  Koltun]{carla}
+Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
+  Koltun.
+\newblock Carla: An open urban driving simulator.
+\newblock In \emph{CoRL}, pages 1--16. PMLR, 2017.
+
+\bibitem[Elfes(1989)]{occupancy}
+Alberto Elfes.
+\newblock Using occupancy grids for mobile robot perception and navigation.
+\newblock \emph{Computer}, 22\penalty0 (6):\penalty0 46--57, 1989.
+
+\bibitem[Fei et~al.(2023)Fei, Yang, Liu, Luo, Zhang, Li, and He]{fei2023self}
+Ben Fei, Weidong Yang, Liwen Liu, Tianyue Luo, Rui Zhang, Yixuan Li, and Ying
+  He.
+\newblock Self-supervised learning for pre-training 3d point clouds: A survey.
+\newblock \emph{arXiv preprint arXiv:2305.04691}, 2023.
+
+\bibitem[Fox and {\"U}lk{\"u}men(2011)]{uncertainty}
+Craig~R Fox and G{\"u}lden {\"U}lk{\"u}men.
+\newblock Distinguishing two dimensions of uncertainty.
+\newblock 2011.
+
+\bibitem[Gao et~al.(2022)Gao, Mu, Shen, Chen, Ren, Chen, Li, Luo, and
+  Lu]{gao2022enhance}
+Zeyu Gao, Yao Mu, Ruoyan Shen, Chen Chen, Yangang Ren, Jianyu Chen,
+  Shengbo~Eben Li, Ping Luo, and Yanfeng Lu.
+\newblock Enhance sample efficiency and robustness of end-to-end urban
+  autonomous driving via semantic masked world model.
+\newblock \emph{arXiv preprint arXiv:2210.04017}, 2022.
+
+\bibitem[Gu et~al.(2023)Gu, Hu, Zhang, Chen, Wang, Wang, and Zhao]{vip3d}
+Junru Gu, Chenxu Hu, Tianyuan Zhang, Xuanyao Chen, Yilun Wang, Yue Wang, and
+  Hang Zhao.
+\newblock Vip3d: End-to-end visual trajectory prediction via 3d agent queries.
+\newblock In \emph{CVPR}, pages 5496--5506, 2023.
+
+\bibitem[Ha and Schmidhuber(2018{\natexlab{a}})]{recurrent_wm}
+David Ha and J{\"u}rgen Schmidhuber.
+\newblock Recurrent world models facilitate policy evolution.
+\newblock In \emph{NIPS}, 2018{\natexlab{a}}.
+
+\bibitem[Ha and Schmidhuber(2018{\natexlab{b}})]{world_models}
+David Ha and J{\"u}rgen Schmidhuber.
+\newblock World models.
+\newblock \emph{arXiv preprint arXiv:1803.10122}, 2018{\natexlab{b}}.
+
+\bibitem[Hafner et~al.(2019{\natexlab{a}})Hafner, Lillicrap, Ba, and
+  Norouzi]{dreamerv1}
+Danijar Hafner, Timothy Lillicrap, Jimmy Ba, and Mohammad Norouzi.
+\newblock Dream to control: Learning behaviors by latent imagination.
+\newblock In \emph{ICLR}, 2019{\natexlab{a}}.
+
+\bibitem[Hafner et~al.(2019{\natexlab{b}})Hafner, Lillicrap, Fischer, Villegas,
+  Ha, Lee, and Davidson]{latent}
+Danijar Hafner, Timothy Lillicrap, Ian Fischer, Ruben Villegas, David Ha,
+  Honglak Lee, and James Davidson.
+\newblock Learning latent dynamics for planning from pixels.
+\newblock In \emph{ICML}, pages 2555--2565, 2019{\natexlab{b}}.
+
+\bibitem[Hafner et~al.(2020)Hafner, Lillicrap, Norouzi, and Ba]{dreamerv2}
+Danijar Hafner, Timothy~P Lillicrap, Mohammad Norouzi, and Jimmy Ba.
+\newblock Mastering atari with discrete world models.
+\newblock In \emph{ICLR}, 2020.
+
+\bibitem[Hafner et~al.(2023)Hafner, Pasukonis, Ba, and Lillicrap]{dreamerv3}
+Danijar Hafner, Jurgis Pasukonis, Jimmy Ba, and Timothy Lillicrap.
+\newblock Mastering diverse domains through world models.
+\newblock \emph{arXiv preprint arXiv:2301.04104}, 2023.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{CVPR}, pages 770--778, 2016.
+
+\bibitem[Hess et~al.(2023)Hess, Jaxing, Svensson, Hagerman, Petersson, and
+  Svensson]{voxel-mae}
+Georg Hess, Johan Jaxing, Elias Svensson, David Hagerman, Christoffer
+  Petersson, and Lennart Svensson.
+\newblock Masked autoencoder for self-supervised pre-training on lidar point
+  clouds.
+\newblock In \emph{WACVW}, pages 350--359, 2023.
+
+\bibitem[Hu(2023)]{hu}
+Anthony Hu.
+\newblock Neural world models for computer vision, 2023.
+
+\bibitem[Hu et~al.(2022{\natexlab{a}})Hu, Corrado, Griffiths, Murez, Gurau,
+  Yeo, Kendall, Cipolla, and Shotton]{mile}
+Anthony Hu, Gianluca Corrado, Nicolas Griffiths, Zachary Murez, Corina Gurau,
+  Hudson Yeo, Alex Kendall, Roberto Cipolla, and Jamie Shotton.
+\newblock Model-based imitation learning for urban driving.
+\newblock In \emph{NIPS}, pages 20703--20716, 2022{\natexlab{a}}.
+
+\bibitem[Hu et~al.(2023{\natexlab{a}})Hu, Russell, Yeo, Murez, Fedoseev,
+  Kendall, Shotton, and Corrado]{gaia}
+Anthony Hu, Lloyd Russell, Hudson Yeo, Zak Murez, George Fedoseev, Alex
+  Kendall, Jamie Shotton, and Gianluca Corrado.
+\newblock Gaia-1: A generative world model for autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2309.17080}, 2023{\natexlab{a}}.
+
+\bibitem[Hu et~al.(2022{\natexlab{b}})Hu, Yang, Fischer, Darrell, Yu, and
+  Sun]{qd3dt}
+Hou-Ning Hu, Yung-Hsu Yang, Tobias Fischer, Trevor Darrell, Fisher Yu, and Min
+  Sun.
+\newblock Monocular quasi-dense 3d object tracking.
+\newblock \emph{PAMI}, 45\penalty0 (2):\penalty0 1992--2008,
+  2022{\natexlab{b}}.
+
+\bibitem[Hu et~al.(2022{\natexlab{c}})Hu, Chen, Wu, Li, Yan, and Tao]{stp3}
+Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li, Junchi Yan, and Dacheng Tao.
+\newblock St-p3: End-to-end vision-based autonomous driving via
+  spatial-temporal feature learning.
+\newblock In \emph{ECCV}, pages 533--549. Springer, 2022{\natexlab{c}}.
+
+\bibitem[Hu et~al.(2023{\natexlab{b}})Hu, Yang, Chen, Li, Sima, Zhu, Chai, Du,
+  Lin, Wang, Lu, Jia, Liu, Dai, Qiao, and Li]{uniad}
+Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai,
+  Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu,
+  Jifeng Dai, Yu Qiao, and Hongyang Li.
+\newblock Planning-oriented autonomous driving.
+\newblock In \emph{CVPR}, 2023{\natexlab{b}}.
+
+\bibitem[Huang and Huang(2022)]{bevdet4d}
+Junjie Huang and Guan Huang.
+\newblock Bevdet4d: Exploit temporal cues in multi-camera 3d object detection.
+\newblock \emph{arXiv preprint arXiv:2203.17054}, 2022.
+
+\bibitem[Huang et~al.(2021{\natexlab{a}})Huang, Huang, Zhu, and Du]{bevdet}
+Junjie Huang, Guan Huang, Zheng Zhu, and Dalong Du.
+\newblock Bevdet: High-performance multi-camera 3d object detection in
+  bird-eye-view.
+\newblock \emph{arXiv preprint arXiv:2112.11790}, 2021{\natexlab{a}}.
+
+\bibitem[Huang et~al.(2021{\natexlab{b}})Huang, Xie, Zhu, and Zhu]{strl}
+Siyuan Huang, Yichen Xie, Song-Chun Zhu, and Yixin Zhu.
+\newblock Spatio-temporal self-supervised representation learning for 3d point
+  clouds.
+\newblock In \emph{ICCV}, pages 6535--6545, 2021{\natexlab{b}}.
+
+\bibitem[Kenton and Toutanova(2019)]{bert}
+Jacob Devlin Ming-Wei~Chang Kenton and Lee~Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In \emph{ACL}, page~2, 2019.
+
+\bibitem[Kerbl et~al.(2023)Kerbl, Kopanas, Leimk{\"u}hler, and Drettakis]{3dgs}
+Bernhard Kerbl, Georgios Kopanas, Thomas Leimk{\"u}hler, and George Drettakis.
+\newblock 3d gaussian splatting for real-time radiance field rendering.
+\newblock \emph{ToG}, 42\penalty0 (4):\penalty0 1--14, 2023.
+
+\bibitem[Khurana et~al.(2022)Khurana, Hu, Dave, Ziglar, Held, and
+  Ramanan]{khurana2022differentiable}
+Tarasha Khurana, Peiyun Hu, Achal Dave, Jason Ziglar, David Held, and Deva
+  Ramanan.
+\newblock Differentiable raycasting for self-supervised occupancy forecasting.
+\newblock In \emph{ECCV}, pages 353--369. Springer, 2022.
+
+\bibitem[Kingma and Welling(2013)]{vae}
+Diederik~P Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock \emph{arXiv preprint arXiv:1312.6114}, 2013.
+
+\bibitem[LeCun(2022)]{lecun}
+Yann LeCun.
+\newblock A path towards autonomous machine intelligence version 0.9. 2,
+  2022-06-27.
+\newblock \emph{Open Review}, 62, 2022.
+
+\bibitem[Li et~al.(2023{\natexlab{a}})Li, Sima, Dai, Wang, Lu, Wang, Xie, Li,
+  Deng, Tian, et~al.]{survey2}
+Hongyang Li, Chonghao Sima, Jifeng Dai, Wenhai Wang, Lewei Lu, Huijie Wang,
+  Enze Xie, Zhiqi Li, Hanming Deng, Hao Tian, et~al.
+\newblock Delving into the devils of bird's-eye-view perception: A review,
+  evaluation and recipe.
+\newblock \emph{PAMI}, 2023{\natexlab{a}}.
+
+\bibitem[Li et~al.(2022{\natexlab{a}})Li, Chen, Qi, Li, Sun, and Jia]{uvtr}
+Yanwei Li, Yilun Chen, Xiaojuan Qi, Zeming Li, Jian Sun, and Jiaya Jia.
+\newblock Unifying voxel-based representation with transformer for 3d object
+  detection.
+\newblock \emph{NIPS}, 35:\penalty0 18442--18455, 2022{\natexlab{a}}.
+
+\bibitem[Li et~al.(2023{\natexlab{b}})Li, Bao, Ge, Yang, Sun, and
+  Li]{bevstereo}
+Yinhao Li, Han Bao, Zheng Ge, Jinrong Yang, Jianjian Sun, and Zeming Li.
+\newblock Bevstereo: Enhancing depth estimation in multi-view 3d object
+  detection with temporal stereo.
+\newblock In \emph{AAAI}, pages 1486--1494, 2023{\natexlab{b}}.
+
+\bibitem[Li et~al.(2023{\natexlab{c}})Li, Ge, Yu, Yang, Wang, Shi, Sun, and
+  Li]{bevdepth}
+Yinhao Li, Zheng Ge, Guanyi Yu, Jinrong Yang, Zengran Wang, Yukang Shi,
+  Jianjian Sun, and Zeming Li.
+\newblock Bevdepth: Acquisition of reliable depth for multi-view 3d object
+  detection.
+\newblock In \emph{AAAI}, pages 1477--1485, 2023{\natexlab{c}}.
+
+\bibitem[Li et~al.(2022{\natexlab{b}})Li, Wang, Li, Xie, Sima, Lu, Qiao, and
+  Dai]{bevformer}
+Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Yu Qiao,
+  and Jifeng Dai.
+\newblock Bevformer: Learning bird’s-eye-view representation from
+  multi-camera images via spatiotemporal transformers.
+\newblock In \emph{ECCV}, pages 1--18. Springer, 2022{\natexlab{b}}.
+
+\bibitem[Liang et~al.(2021)Liang, Jiang, Feng, Chen, Xu, Liang, Zhang, Li, and
+  Van~Gool]{gcc3d}
+Hanxue Liang, Chenhan Jiang, Dapeng Feng, Xin Chen, Hang Xu, Xiaodan Liang, Wei
+  Zhang, Zhenguo Li, and Luc Van~Gool.
+\newblock Exploring geometry-aware contrast and clustering harmonization for
+  self-supervised 3d object detection.
+\newblock In \emph{ICCV}, pages 3293--3302, 2021.
+
+\bibitem[Liang et~al.(2020)Liang, Yang, Zeng, Chen, Hu, Casas, and
+  Urtasun]{pnpnet}
+Ming Liang, Bin Yang, Wenyuan Zeng, Yun Chen, Rui Hu, Sergio Casas, and Raquel
+  Urtasun.
+\newblock Pnpnet: End-to-end perception and prediction with tracking in the
+  loop.
+\newblock In \emph{CVPR}, pages 11553--11562, 2020.
+
+\bibitem[Liang et~al.(2022)Liang, Wu, Han, Xu, Xu, and
+  Liang]{liang2022effective}
+Xiwen Liang, Yangxin Wu, Jianhua Han, Hang Xu, Chunjing Xu, and Xiaodan Liang.
+\newblock Effective adaptation in multi-task co-training for unified autonomous
+  driving.
+\newblock In \emph{NIPS}, pages 19645--19658, 2022.
+
+\bibitem[Liang et~al.(2023)Liang, Niu, Han, Xu, Xu, and Liang]{liang2023visual}
+Xiwen Liang, Minzhe Niu, Jianhua Han, Hang Xu, Chunjing Xu, and Xiaodan Liang.
+\newblock Visual exemplar driven task-prompting for unified perception in
+  autonomous driving.
+\newblock In \emph{CVPR}, pages 9611--9621, 2023.
+
+\bibitem[Liu et~al.(2023{\natexlab{a}})Liu, Wang, Liu, Zhang, Liu, and
+  Li]{geomim}
+Jihao Liu, Tai Wang, Boxiao Liu, Qihang Zhang, Yu Liu, and Hongsheng Li.
+\newblock Towards better 3d knowledge transfer via masked image modeling for
+  multi-view 3d understanding.
+\newblock \emph{arXiv preprint arXiv:2303.11325}, 2023{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{b}})Liu, Gong, Fang, Xie, Li, Zhao, and
+  Feng]{liu2023lidar}
+Xinhao Liu, Moonjun Gong, Qi Fang, Haoyu Xie, Yiming Li, Hang Zhao, and Chen
+  Feng.
+\newblock Lidar-based 4d occupancy completion and forecasting.
+\newblock \emph{arXiv preprint arXiv:2310.11239}, 2023{\natexlab{b}}.
+
+\bibitem[Liu et~al.(2022)Liu, Wang, Zhang, and Sun]{petr}
+Yingfei Liu, Tiancai Wang, Xiangyu Zhang, and Jian Sun.
+\newblock Petr: Position embedding transformation for multi-view 3d object
+  detection.
+\newblock In \emph{ECCV}, pages 531--548. Springer, 2022.
+
+\bibitem[Liu et~al.(2023{\natexlab{c}})Liu, Yan, Jia, Li, Gao, Wang, and
+  Zhang]{petrv2}
+Yingfei Liu, Junjie Yan, Fan Jia, Shuailin Li, Aqi Gao, Tiancai Wang, and
+  Xiangyu Zhang.
+\newblock Petrv2: A unified framework for 3d perception from multi-camera
+  images.
+\newblock In \emph{ICCV}, pages 3262--3272, 2023{\natexlab{c}}.
+
+\bibitem[Mahjourian et~al.(2022)Mahjourian, Kim, Chai, Tan, Sapp, and
+  Anguelov]{mahjourian2022occupancy}
+Reza Mahjourian, Jinkyu Kim, Yuning Chai, Mingxing Tan, Ben Sapp, and Dragomir
+  Anguelov.
+\newblock Occupancy flow fields for motion forecasting in autonomous driving.
+\newblock \emph{RA-L}, 7\penalty0 (2):\penalty0 5639--5646, 2022.
+
+\bibitem[Mendonca et~al.(2023)Mendonca, Bahl, and Pathak]{swim}
+Russell Mendonca, Shikhar Bahl, and Deepak Pathak.
+\newblock Structured world models from human videos.
+\newblock \emph{arXiv preprint arXiv:2308.10901}, 2023.
+
+\bibitem[Mildenhall et~al.(2021)Mildenhall, Srinivasan, Tancik, Barron,
+  Ramamoorthi, and Ng]{nerf}
+Ben Mildenhall, Pratul~P Srinivasan, Matthew Tancik, Jonathan~T Barron, Ravi
+  Ramamoorthi, and Ren Ng.
+\newblock Nerf: Representing scenes as neural radiance fields for view
+  synthesis.
+\newblock \emph{Communications of the ACM}, 65\penalty0 (1):\penalty0 99--106,
+  2021.
+
+\bibitem[Min et~al.(2023)Min, Xiao, Zhao, Nie, and Dai]{occupancy-mae}
+Chen Min, Liang Xiao, Dawei Zhao, Yiming Nie, and Bin Dai.
+\newblock Occupancy-mae: Self-supervised pre-training large-scale lidar point
+  clouds with masked occupancy autoencoders.
+\newblock \emph{TIV}, 2023.
+
+\bibitem[Min et~al.(2024)Min, Xiao, Zhao, Nie, and Dai]{uniscene}
+Chen Min, Liang Xiao, Dawei Zhao, Yiming Nie, and Bin Dai.
+\newblock Multi-camera unified pre-training via 3d scene reconstruction.
+\newblock \emph{RA-L}, 2024.
+
+\bibitem[Nunes et~al.(2023)Nunes, Wiesmann, Marcuzzi, Chen, Behley, and
+  Stachniss]{nunes2023temporal}
+Lucas Nunes, Louis Wiesmann, Rodrigo Marcuzzi, Xieyuanli Chen, Jens Behley, and
+  Cyrill Stachniss.
+\newblock Temporal consistent 3d lidar representation learning for semantic
+  perception in autonomous driving.
+\newblock In \emph{CVPR}, pages 5217--5228, 2023.
+
+\bibitem[Pan et~al.(2022)Pan, Zhu, Wang, and Yang]{pan2022iso}
+Minting Pan, Xiangming Zhu, Yunbo Wang, and Xiaokang Yang.
+\newblock Iso-dream: Isolating and leveraging noncontrollable visual dynamics
+  in world models.
+\newblock In \emph{NIPS}, pages 23178--23191, 2022.
+
+\bibitem[Park et~al.(2021)Park, Ambrus, Guizilini, Li, and Gaidon]{dd3d}
+Dennis Park, Rares Ambrus, Vitor Guizilini, Jie Li, and Adrien Gaidon.
+\newblock Is pseudo-lidar needed for monocular 3d object detection?
+\newblock In \emph{ICCV}, pages 3142--3152, 2021.
+
+\bibitem[Park et~al.(2022)Park, Xu, Yang, Keutzer, Kitani, Tomizuka, and
+  Zhan]{solofusion}
+Jinhyung Park, Chenfeng Xu, Shijia Yang, Kurt Keutzer, Kris~M Kitani, Masayoshi
+  Tomizuka, and Wei Zhan.
+\newblock Time will tell: New outlooks and a baseline for temporal multi-view
+  3d object detection.
+\newblock In \emph{ICLR}, 2022.
+
+\bibitem[Philion and Fidler(2020)]{lss}
+Jonah Philion and Sanja Fidler.
+\newblock Lift, splat, shoot: Encoding images from arbitrary camera rigs by
+  implicitly unprojecting to 3d.
+\newblock In \emph{ECCV}, pages 194--210. Springer, 2020.
+
+\bibitem[Radford et~al.(2021)Radford, Kim, Hallacy, Ramesh, Goh, Agarwal,
+  Sastry, Askell, Mishkin, Clark, et~al.]{clip}
+Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh,
+  Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark,
+  et~al.
+\newblock Learning transferable visual models from natural language
+  supervision.
+\newblock In \emph{ICML}, pages 8748--8763, 2021.
+
+\bibitem[Rebuffi et~al.(2017)Rebuffi, Bilen, and Vedaldi]{rebuffi2017learning}
+Sylvestre-Alvise Rebuffi, Hakan Bilen, and Andrea Vedaldi.
+\newblock Learning multiple visual domains with residual adapters.
+\newblock In \emph{NIPS}, 2017.
+
+\bibitem[Sautier et~al.(2024)Sautier, Puy, Boulch, Marlet, and
+  Lepetit]{bevcontrast}
+Corentin Sautier, Gilles Puy, Alexandre Boulch, Renaud Marlet, and Vincent
+  Lepetit.
+\newblock Bevcontrast: Self-supervision in bev space for automotive lidar point
+  clouds.
+\newblock In \emph{3DV}, 2024.
+
+\bibitem[Seo et~al.(2023)Seo, Kim, James, Lee, Shin, and Abbeel]{seo2023multi}
+Younggyo Seo, Junsu Kim, Stephen James, Kimin Lee, Jinwoo Shin, and Pieter
+  Abbeel.
+\newblock Multi-view masked world models for visual robotic manipulation.
+\newblock In \emph{ICML}, 2023.
+
+\bibitem[Sheng et~al.(2023)Sheng, Shen, and Xiao]{sheng2023contrastive}
+Xiaoxiao Sheng, Zhiqiang Shen, and Gang Xiao.
+\newblock Contrastive predictive autoencoders for dynamic point cloud
+  self-supervised learning.
+\newblock In \emph{AAAI}, 2023.
+
+\bibitem[Tian et~al.(2023)Tian, Ran, Wang, and Zhao]{geomae}
+Xiaoyu Tian, Haoxi Ran, Yue Wang, and Hang Zhao.
+\newblock Geomae: Masked geometric target prediction for self-supervised point
+  cloud pre-training.
+\newblock In \emph{CVPR}, pages 13570--13580, 2023.
+
+\bibitem[Tong et~al.(2023)Tong, Sima, Wang, Chen, Wu, Deng, Gu, Lu, Luo, Lin,
+  et~al.]{occnet}
+Wenwen Tong, Chonghao Sima, Tai Wang, Li Chen, Silei Wu, Hanming Deng, Yi Gu,
+  Lewei Lu, Ping Luo, Dahua Lin, et~al.
+\newblock Scene as occupancy.
+\newblock In \emph{ICCV}, pages 8406--8415, 2023.
+
+\bibitem[Wang et~al.(2023{\natexlab{a}})Wang, Xu, and Kang]{wang2023mvcontrast}
+Luequan Wang, Hongbin Xu, and Wenxiong Kang.
+\newblock Mvcontrast: Unsupervised pretraining for multi-view 3d object
+  recognition.
+\newblock \emph{MIR}, pages 1--12, 2023{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2023{\natexlab{b}})Wang, Zhu, Lu, Zhong, Chen, Shen, Wang,
+  and Wang]{bevgpt}
+Pengqin Wang, Meixin Zhu, Hongliang Lu, Hui Zhong, Xianda Chen, Shaojie Shen,
+  Xuesong Wang, and Yinhai Wang.
+\newblock Bevgpt: Generative pre-trained large model for autonomous driving
+  prediction, decision-making, and planning.
+\newblock \emph{arXiv preprint arXiv:2310.10357}, 2023{\natexlab{b}}.
+
+\bibitem[Wang et~al.(2023{\natexlab{c}})Wang, Li, Zhao, Lian, Huang, Wang, Li,
+  and Gao]{wang2023tsp}
+Shuo Wang, Jing Li, Zibo Zhao, Dongze Lian, Binbin Huang, Xiaomei Wang,
+  Zhengxin Li, and Shenghua Gao.
+\newblock Tsp-transformer: Task-specific prompts boosted transformer for
+  holistic scene understanding.
+\newblock \emph{arXiv preprint arXiv:2311.03427}, 2023{\natexlab{c}}.
+
+\bibitem[Wang et~al.(2023{\natexlab{d}})Wang, Liu, Wang, Li, and
+  Zhang]{streampetr}
+Shihao Wang, Yingfei Liu, Tiancai Wang, Ying Li, and Xiangyu Zhang.
+\newblock Exploring object-centric temporal modeling for efficient multi-view
+  3d object detection.
+\newblock In \emph{ICCV}, 2023{\natexlab{d}}.
+
+\bibitem[Wang et~al.(2021)Wang, Zhu, Pang, and Lin]{fcos3d}
+Tai Wang, Xinge Zhu, Jiangmiao Pang, and Dahua Lin.
+\newblock Fcos3d: Fully convolutional one-stage monocular 3d object detection.
+\newblock In \emph{ICCV}, pages 913--922, 2021.
+
+\bibitem[Wang et~al.(2023{\natexlab{e}})Wang, Maalouf, Xiao, Ban, Amini,
+  Rosman, Karaman, and Rus]{driveanywhere}
+Tsun-Hsuan Wang, Alaa Maalouf, Wei Xiao, Yutong Ban, Alexander Amini, Guy
+  Rosman, Sertac Karaman, and Daniela Rus.
+\newblock Drive anywhere: Generalizable end-to-end autonomous driving with
+  multi-modal foundation models.
+\newblock \emph{arXiv preprint arXiv:2310.17642}, 2023{\natexlab{e}}.
+
+\bibitem[Wang et~al.(2023{\natexlab{f}})Wang, Zhu, Huang, Chen, and
+  Lu]{drivedreamer}
+Xiaofeng Wang, Zheng Zhu, Guan Huang, Xinze Chen, and Jiwen Lu.
+\newblock Drivedreamer: Towards real-world-driven world models for autonomous
+  driving.
+\newblock \emph{arXiv preprint arXiv:2309.09777}, 2023{\natexlab{f}}.
+
+\bibitem[Wang et~al.(2022{\natexlab{a}})Wang, Guizilini, Zhang, Wang, Zhao, and
+  Solomon]{detr3d}
+Yue Wang, Vitor~Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang, Hang Zhao,
+  and Justin Solomon.
+\newblock Detr3d: 3d object detection from multi-view images via 3d-to-2d
+  queries.
+\newblock In \emph{CoRL}, pages 180--191, 2022{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2022{\natexlab{b}})Wang, Min, Ge, Li, Li, Yang, and
+  Huang]{sts}
+Zengran Wang, Chen Min, Zheng Ge, Yinhao Li, Zeming Li, Hongyu Yang, and Di
+  Huang.
+\newblock Sts: Surround-view temporal stereo for multi-view 3d detection.
+\newblock \emph{arXiv preprint arXiv:2208.10145}, 2022{\natexlab{b}}.
+
+\bibitem[Wang et~al.(2023{\natexlab{g}})Wang, Li, Luo, Xie, and
+  Yang]{distillbev}
+Zeyu Wang, Dingwen Li, Chenxu Luo, Cihang Xie, and Xiaodong Yang.
+\newblock Distillbev: Boosting multi-camera 3d object detection with
+  cross-modal knowledge distillation.
+\newblock In \emph{ICCV}, pages 8637--8646, 2023{\natexlab{g}}.
+
+\bibitem[Wei et~al.(2021)Wei, Zhu, Min, Chen, and Wang]{aa-rmvsnet}
+Zizhuang Wei, Qingtian Zhu, Chen Min, Yisong Chen, and Guoping Wang.
+\newblock Aa-rmvsnet: Adaptive aggregation recurrent multi-view stereo network.
+\newblock In \emph{ICCV}, pages 6187--6196, 2021.
+
+\bibitem[Wei et~al.(2022)Wei, Zhu, Min, Chen, and Wang]{bi}
+Zizhuang Wei, Qingtian Zhu, Chen Min, Yisong Chen, and Guoping Wang.
+\newblock Bidirectional hybrid lstm based recurrent neural network for
+  multi-view stereo.
+\newblock \emph{TVCG}, 2022.
+
+\bibitem[Wu et~al.(2023{\natexlab{a}})Wu, Ma, Deng, and Long]{contextwm}
+Jialong Wu, Haoyu Ma, Chaoyi Deng, and Mingsheng Long.
+\newblock Pre-training contextualized world models with in-the-wild videos for
+  reinforcement learning.
+\newblock In \emph{NIPS}, 2023{\natexlab{a}}.
+
+\bibitem[Wu et~al.(2023{\natexlab{b}})Wu, Chen, Li, Jia, Yan, and Qiao]{ppgeo}
+Penghao Wu, Li Chen, Hongyang Li, Xiaosong Jia, Junchi Yan, and Yu Qiao.
+\newblock Policy pre-training for end-to-end autonomous driving via
+  self-supervised geometric modeling.
+\newblock In \emph{ICLR}, 2023{\natexlab{b}}.
+
+\bibitem[Wu et~al.(2023{\natexlab{c}})Wu, Zhang, Ke, S{\"u}sstrunk, and
+  Salzmann]{wu2023spatiotemporal}
+Yanhao Wu, Tong Zhang, Wei Ke, Sabine S{\"u}sstrunk, and Mathieu Salzmann.
+\newblock Spatiotemporal self-supervised learning for point clouds in the wild.
+\newblock In \emph{CVPR}, pages 5251--5260, 2023{\natexlab{c}}.
+
+\bibitem[Xu et~al.(2023)Xu, Wang, Zhang, Chen, Cao, Pang, and Lin]{mv-jar}
+Runsen Xu, Tai Wang, Wenwei Zhang, Runjian Chen, Jinkun Cao, Jiangmiao Pang,
+  and Dahua Lin.
+\newblock Mv-jar: Masked voxel jigsaw and reconstruction for lidar-based
+  self-supervised pre-training.
+\newblock In \emph{CVPR}, pages 13445--13454, 2023.
+
+\bibitem[Yan et~al.(2023)Yan, Chen, Zhang, Yuan, Cai, Shi, Shao, Yan, Luo, and
+  Qiao]{spot}
+Xiangchao Yan, Runjian Chen, Bo Zhang, Jiakang Yuan, Xinyu Cai, Botian Shi,
+  Wenqi Shao, Junchi Yan, Ping Luo, and Yu Qiao.
+\newblock Spot: Scalable 3d pre-training via occupancy prediction for
+  autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2309.10527}, 2023.
+
+\bibitem[Yang et~al.(2023{\natexlab{a}})Yang, He, Liu, Chen, Wu, Lin, He, and
+  Ouyang]{gd-mae}
+Honghui Yang, Tong He, Jiaheng Liu, Hua Chen, Boxi Wu, Binbin Lin, Xiaofei He,
+  and Wanli Ouyang.
+\newblock Gd-mae: generative decoder for mae pre-training on lidar point
+  clouds.
+\newblock In \emph{CVPR}, pages 9403--9414, 2023{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2023{\natexlab{b}})Yang, Zhang, Huang, Wu, Zhu, He, Tang,
+  Zhao, Qiu, Lin, et~al.]{unipad}
+Honghui Yang, Sha Zhang, Di Huang, Xiaoyang Wu, Haoyi Zhu, Tong He, Shixiang
+  Tang, Hengshuang Zhao, Qibo Qiu, Binbin Lin, et~al.
+\newblock Unipad: A universal pre-training paradigm for autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2310.08370}, 2023{\natexlab{b}}.
+
+\bibitem[Yao et~al.(2018)Yao, Luo, Li, Fang, and Quan]{mvsnet}
+Yao Yao, Zixin Luo, Shiwei Li, Tian Fang, and Long Quan.
+\newblock Mvsnet: Depth inference for unstructured multi-view stereo.
+\newblock In \emph{ECCV}, pages 767--783, 2018.
+
+\bibitem[Yin et~al.(2022)Yin, Zhou, Zhang, Fang, Xu, Shen, and
+  Wang]{proposalcontrast}
+Junbo Yin, Dingfu Zhou, Liangjun Zhang, Jin Fang, Cheng-Zhong Xu, Jianbing
+  Shen, and Wenguan Wang.
+\newblock Proposalcontrast: Unsupervised pre-training for lidar-based 3d object
+  detection.
+\newblock In \emph{ECCV}, pages 17--33. Springer, 2022.
+
+\bibitem[Yuan et~al.(2023)Yuan, Zhang, Yan, Chen, Shi, Li, and Qiao]{ad-pt}
+Jiakang Yuan, Bo Zhang, Xiangchao Yan, Tao Chen, Botian Shi, Yikang Li, and Yu
+  Qiao.
+\newblock Ad-pt: Autonomous driving pre-training with large-scale point cloud
+  dataset.
+\newblock In \emph{NIPS}, 2023.
+
+\bibitem[Zhang et~al.(2023{\natexlab{a}})Zhang, Yuan, Shi, Chen, Li, and
+  Qiao]{uni3d}
+Bo Zhang, Jiakang Yuan, Botian Shi, Tao Chen, Yikang Li, and Yu Qiao.
+\newblock Uni3d: A unified baseline for multi-dataset 3d object detection.
+\newblock In \emph{CVPR}, pages 9253--9262, 2023{\natexlab{a}}.
+
+\bibitem[Zhang et~al.(2023{\natexlab{b}})Zhang, Xiong, Yang, Casas, Hu, and
+  Urtasun]{wavbi}
+Lunjun Zhang, Yuwen Xiong, Ze Yang, Sergio Casas, Rui Hu, and Raquel Urtasun.
+\newblock Learning unsupervised world models for autonomous driving via
+  discrete diffusion.
+\newblock \emph{arXiv preprint arXiv:2311.01017}, 2023{\natexlab{b}}.
+
+\bibitem[Zhang et~al.(2022{\natexlab{a}})Zhang, Chen, Wang, Wang, and
+  Zhao]{mutr3d}
+Tianyuan Zhang, Xuanyao Chen, Yue Wang, Yilun Wang, and Hang Zhao.
+\newblock Mutr3d: A multi-camera tracking framework via 3d-to-2d queries.
+\newblock In \emph{CVPR}, pages 4537--4546, 2022{\natexlab{a}}.
+
+\bibitem[Zhang et~al.(2022{\natexlab{b}})Zhang, Zhu, Zheng, Huang, Huang, Zhou,
+  and Lu]{beverse}
+Yunpeng Zhang, Zheng Zhu, Wenzhao Zheng, Junjie Huang, Guan Huang, Jie Zhou,
+  and Jiwen Lu.
+\newblock Beverse: Unified perception and prediction in birds-eye-view for
+  vision-centric autonomous driving.
+\newblock \emph{arXiv preprint arXiv:2205.09743}, 2022{\natexlab{b}}.
+
+\bibitem[Zhang et~al.(2023{\natexlab{c}})Zhang, Bai, and Li]{iscc}
+Zaiwei Zhang, Min Bai, and Erran Li.
+\newblock Implicit surface contrastive clustering for lidar point clouds.
+\newblock In \emph{CVPR}, pages 21716--21725, 2023{\natexlab{c}}.
+
+\bibitem[Zhou et~al.(2021)Zhou, Bajracharya, and Held]{plas_wm}
+Wenxuan Zhou, Sujay Bajracharya, and David Held.
+\newblock Plas: Latent action space for offline reinforcement learning.
+\newblock In \emph{CoRL}, pages 1719--1735, 2021.
+
+\bibitem[Zhu et~al.(2023)Zhu, Yang, Wu, Huang, Zhang, He, He, Zhao, Shen, Qiao,
+  et~al.]{ponderv2}
+Haoyi Zhu, Honghui Yang, Xiaoyang Wu, Di Huang, Sha Zhang, Xianglong He, Tong
+  He, Hengshuang Zhao, Chunhua Shen, Yu Qiao, et~al.
+\newblock Ponderv2: Pave the way for 3d foundataion model with a universal
+  pre-training paradigm.
+\newblock \emph{arXiv preprint arXiv:2310.08586}, 2023.
+
+\bibitem[Zhu et~al.(2021)Zhu, Min, Wei, Chen, and Wang]{mvs}
+Qingtian Zhu, Chen Min, Zizhuang Wei, Yisong Chen, and Guoping Wang.
+\newblock Deep learning for multi-view stereo via plane sweep: A survey.
+\newblock \emph{arXiv preprint arXiv:2106.15328}, 2021.
+
+\end{thebibliography}

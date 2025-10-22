@@ -1,0 +1,226 @@
+\begin{thebibliography}{44}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Bengio et~al.(2009)}]{bengio2009learning}
+Bengio, Y.; et~al. 2009.
+\newblock Learning deep architectures for AI.
+\newblock \emph{Foundations and trends{\textregistered} in Machine Learning}, 2(1): 1--127.
+
+\bibitem[{Chatzimichailidis et~al.(2019)Chatzimichailidis, Keuper, Pfreundt, and Gauger}]{chatzimichailidis2019gradvis}
+Chatzimichailidis, A.; Keuper, J.; Pfreundt, F.-J.; and Gauger, N.~R. 2019.
+\newblock GradVis: Visualization and Second Order Analysis of Optimization Surfaces during the Training of Deep Neural Networks.
+\newblock In \emph{2019 IEEE/ACM Workshop on Machine Learning in High Performance Computing Environments (MLHPC)}, 66--74.
+
+\bibitem[{Chen et~al.(2018)Chen, Badrinarayanan, Lee, and Rabinovich}]{pmlr-v80-chen18a}
+Chen, Z.; Badrinarayanan, V.; Lee, C.-Y.; and Rabinovich, A. 2018.
+\newblock {G}rad{N}orm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks.
+\newblock In Dy, J.; and Krause, A., eds., \emph{Proceedings of the 35th International Conference on Machine Learning}, volume~80 of \emph{Proceedings of Machine Learning Research}, 794--803. PMLR.
+
+\bibitem[{Elhamod et~al.(2022)Elhamod, Bu, Singh, Redell, Ghosh, Podolskiy, Lee, and Karpatne}]{elhamod2022cophy}
+Elhamod, M.; Bu, J.; Singh, C.; Redell, M.; Ghosh, A.; Podolskiy, V.; Lee, W.-C.; and Karpatne, A. 2022.
+\newblock CoPhy-PGNN: Learning physics-guided neural networks with competing loss functions for solving eigenvalue problems.
+\newblock \emph{ACM Transactions on Intelligent Systems and Technology}, 13(6): 1--23.
+
+\bibitem[{Esser, Rombach, and Ommer(2021)}]{esser2021taming}
+Esser, P.; Rombach, R.; and Ommer, B. 2021.
+\newblock Taming transformers for high-resolution image synthesis.
+\newblock In \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, 12873--12883.
+
+\bibitem[{Gao, Sun, and Wang(2021)}]{GAO2021110079}
+Gao, H.; Sun, L.; and Wang, J.-X. 2021.
+\newblock PhyGeoNet: Physics-informed geometry-adaptive convolutional neural networks for solving parameterized steady-state PDEs on irregular domain.
+\newblock \emph{Journal of Computational Physics}, 428: 110079.
+
+\bibitem[{Garipov et~al.(2018)Garipov, Izmailov, Podoprikhin, Vetrov, and Wilson}]{NIPS2018_8095}
+Garipov, T.; Izmailov, P.; Podoprikhin, D.; Vetrov, D.~P.; and Wilson, A.~G. 2018.
+\newblock Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs.
+\newblock In Bengio, S.; Wallach, H.; Larochelle, H.; Grauman, K.; Cesa-Bianchi, N.; and Garnett, R., eds., \emph{Advances in Neural Information Processing Systems 31}, 8789--8798. Curran Associates, Inc.
+
+\bibitem[{Goodfellow, Vinyals, and Saxe(2014)}]{goodfellow2014qualitatively}
+Goodfellow, I.~J.; Vinyals, O.; and Saxe, A.~M. 2014.
+\newblock Qualitatively characterizing neural network optimization problems.
+\newblock arXiv:1412.6544.
+
+\bibitem[{Guiroy, Verma, and Pal(2019)}]{guiroy2019understanding}
+Guiroy, S.; Verma, V.; and Pal, C. 2019.
+\newblock Towards Understanding Generalization in Gradient-Based Meta-Learning.
+\newblock arXiv:1907.07287.
+
+\bibitem[{Horoi et~al.(2022)Horoi, Huang, Rieck, Lajoie, Wolf, and Krishnaswamy}]{phate}
+Horoi, S.; Huang, J.; Rieck, B.; Lajoie, G.; Wolf, G.; and Krishnaswamy, S. 2022.
+\newblock Exploring the Geometry and Topology of Neural Network Loss Landscapes.
+\newblock In Bouadi, T.; Fromont, E.; and H{\"u}llermeier, E., eds., \emph{Advances in Intelligent Data Analysis XX}, 171--184. Cham: Springer International Publishing.
+\newblock ISBN 978-3-031-01333-1.
+
+\bibitem[{Huang et~al.(2020)Huang, Emam, Goldblum, Fowl, Terry, Huang, and Goldstein}]{pmlr-v137-huang20a}
+Huang, W.~R.; Emam, Z.; Goldblum, M.; Fowl, L.; Terry, J.~K.; Huang, F.; and Goldstein, T. 2020.
+\newblock Understanding Generalization Through Visualizations.
+\newblock In Zosa~Forde, J.; Ruiz, F.; Pradier, M.~F.; and Schein, A., eds., \emph{Proceedings on "I Can't Believe It's Not Better!" at NeurIPS Workshops}, volume 137 of \emph{Proceedings of Machine Learning Research}, 87--97. PMLR.
+
+\bibitem[{Jin et~al.(2021)Jin, Cai, Li, and Karniadakis}]{JIN2021109951}
+Jin, X.; Cai, S.; Li, H.; and Karniadakis, G.~E. 2021.
+\newblock NSFnets (Navier-Stokes flow nets): Physics-informed neural networks for the incompressible Navier-Stokes equations.
+\newblock \emph{Journal of Computational Physics}, 426: 109951.
+
+\bibitem[{Karakida, Akaho, and Amari(2019)}]{karakida2019normalization}
+Karakida, R.; Akaho, S.; and Amari, S.-i. 2019.
+\newblock The normalization method for alleviating pathological sharpness in wide neural networks.
+\newblock \emph{Advances in neural information processing systems}, 32.
+
+\bibitem[{Karpatne et~al.(2017)Karpatne, Atluri, Faghmous, Steinbach, Banerjee, Ganguly, Shekhar, Samatova, and Kumar}]{tgds}
+Karpatne, A.; Atluri, G.; Faghmous, J.~H.; Steinbach, M.; Banerjee, A.; Ganguly, A.; Shekhar, S.; Samatova, N.; and Kumar, V. 2017.
+\newblock Theory-guided data science: A new paradigm for scientific discovery from data.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering}, 29(10): 2318--2331.
+
+\bibitem[{Keskar et~al.(2017)Keskar, Mudigere, Nocedal, Smelyanskiy, and Tang}]{keskar2017on}
+Keskar, N.~S.; Mudigere, D.; Nocedal, J.; Smelyanskiy, M.; and Tang, P. T.~P. 2017.
+\newblock On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima.
+\newblock In \emph{International Conference on Learning Representations}.
+
+\bibitem[{Kornblith et~al.(2019)Kornblith, Norouzi, Lee, and Hinton}]{kornblith2019similarity}
+Kornblith, S.; Norouzi, M.; Lee, H.; and Hinton, G. 2019.
+\newblock Similarity of neural network representations revisited.
+\newblock In \emph{International Conference on Machine Learning}, 3519--3529. PMLR.
+
+\bibitem[{Krishnapriyan et~al.(2021)Krishnapriyan, Gholami, Zhe, Kirby, and Mahoney}]{krishnapriyan2021characterizing}
+Krishnapriyan, A.; Gholami, A.; Zhe, S.; Kirby, R.; and Mahoney, M.~W. 2021.
+\newblock Characterizing possible failure modes in physics-informed neural networks.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34.
+
+\bibitem[{Li et~al.(2018)Li, Xu, Taylor, Studer, and Goldstein}]{NIPS2018_7875}
+Li, H.; Xu, Z.; Taylor, G.; Studer, C.; and Goldstein, T. 2018.
+\newblock Visualizing the Loss Landscape of Neural Nets.
+\newblock In Bengio, S.; Wallach, H.; Larochelle, H.; Grauman, K.; Cesa-Bianchi, N.; and Garnett, R., eds., \emph{Advances in Neural Information Processing Systems 31}, 6389--6399. Curran Associates, Inc.
+
+\bibitem[{Li and Li(2022)}]{li2022mix}
+Li, J.; and Li, B. 2022.
+\newblock Mix-training physics-informed neural networks for the rogue waves of nonlinear Schr{\"o}dinger equation.
+\newblock \emph{Chaos, Solitons \& Fractals}, 164: 112712.
+
+\bibitem[{Liang and Zhang(2020)}]{liang2020simple}
+Liang, S.; and Zhang, Y. 2020.
+\newblock A simple general approach to balance task difficulty in multi-task learning.
+\newblock \emph{arXiv preprint arXiv:2002.04792}.
+
+\bibitem[{Lin et~al.(2022)Lin, Feiyang, Zhang, and Tsang}]{lin2022reasonable}
+Lin, B.; Feiyang, Y.; Zhang, Y.; and Tsang, I. 2022.
+\newblock Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning.
+\newblock \emph{Transactions on Machine Learning Research}.
+
+\bibitem[{Ma et~al.(2022)Ma, Kunin, Wu, and Ying}]{ma2022beyond}
+Ma, C.; Kunin, D.; Wu, L.; and Ying, L. 2022.
+\newblock Beyond the Quadratic Approximation: the Multiscale Structure of Neural Network Loss Landscapes.
+\newblock \emph{arXiv preprint arXiv:2204.11326}.
+
+\bibitem[{McInnes et~al.(2018)McInnes, Healy, Saul, and Gro{\ss}berger}]{mcinnes2018umap}
+McInnes, L.; Healy, J.; Saul, N.; and Gro{\ss}berger, L. 2018.
+\newblock UMAP: Uniform Manifold Approximation and Projection.
+\newblock \emph{Journal of Open Source Software}, 3(29): 861.
+
+\bibitem[{Mei, Montanari, and Nguyen(2018)}]{mei2018mean}
+Mei, S.; Montanari, A.; and Nguyen, P.-M. 2018.
+\newblock A Mean Field View of the Landscape of Two-Layers Neural Networks.
+\newblock arXiv:1804.06561.
+
+\bibitem[{Nguyen(2019)}]{nguyen2019optimization}
+Nguyen, N.~Q. 2019.
+\newblock Optimization landscape of deep neural networks.
+
+\bibitem[{Nguyen, Mukkamala, and Hein(2018)}]{nguyen2018loss}
+Nguyen, Q.; Mukkamala, M.~C.; and Hein, M. 2018.
+\newblock On the loss landscape of a class of deep neural networks with no bad local valleys.
+\newblock \emph{arXiv preprint arXiv:1809.10749}.
+
+\bibitem[{Prabhu et~al.(2019)Prabhu, Yap, Xu, and Whaley}]{prabhu2019understanding}
+Prabhu, V.~U.; Yap, D.~A.; Xu, J.; and Whaley, J. 2019.
+\newblock Understanding adversarial robustness through loss landscape geometries.
+\newblock \emph{arXiv preprint arXiv:1907.09061}.
+
+\bibitem[{Raissi, Perdikaris, and Karniadakis(2017{\natexlab{a}})}]{raissi2017physics1}
+Raissi, M.; Perdikaris, P.; and Karniadakis, G. 2017{\natexlab{a}}.
+\newblock Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations.
+\newblock \emph{arXiv preprint arXiv:1711.10561}.
+
+\bibitem[{Raissi, Perdikaris, and Karniadakis(2017{\natexlab{b}})}]{raissi2017physics2}
+Raissi, M.; Perdikaris, P.; and Karniadakis, G.~E. 2017{\natexlab{b}}.
+\newblock Physics Informed Deep Learning (Part II): Data-driven Discovery of Nonlinear Partial Differential Equations.
+\newblock \emph{arXiv preprint arXiv:1711.10566}.
+
+\bibitem[{Raissi, Perdikaris, and Karniadakis(2019)}]{raissi2019physics}
+Raissi, M.; Perdikaris, P.; and Karniadakis, G.~E. 2019.
+\newblock Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.
+\newblock \emph{Journal of Computational Physics}, 378: 686--707.
+
+\bibitem[{Roweis and Saul(2000)}]{doi:10.1126/science.290.5500.2323}
+Roweis, S.~T.; and Saul, L.~K. 2000.
+\newblock Nonlinear Dimensionality Reduction by Locally Linear Embedding.
+\newblock \emph{Science}, 290(5500): 2323--2326.
+
+\bibitem[{Sch{\"o}lkopf, Smola, and M{\"u}ller(1997)}]{10.1007/BFb0020217}
+Sch{\"o}lkopf, B.; Smola, A.; and M{\"u}ller, K.-R. 1997.
+\newblock Kernel principal component analysis.
+\newblock In Gerstner, W.; Germond, A.; Hasler, M.; and Nicoud, J.-D., eds., \emph{Artificial Neural Networks --- ICANN'97}, 583--588. Berlin, Heidelberg: Springer Berlin Heidelberg.
+\newblock ISBN 978-3-540-69620-9.
+
+\bibitem[{Shires and Pickard(2021)}]{PhysRevX.11.041026}
+Shires, B. W.~B.; and Pickard, C.~J. 2021.
+\newblock Visualizing Energy Landscapes through Manifold Learning.
+\newblock \emph{Phys. Rev. X}, 11: 041026.
+
+\bibitem[{Snyder(1990)}]{snyder1990robinson}
+Snyder, J.~P. 1990.
+\newblock The Robinson projection—a computation algorithm.
+\newblock \emph{Cartography and Geographic Information Systems}, 17(4): 301--305.
+
+\bibitem[{Snyder(1997)}]{snyder1997flattening}
+Snyder, J.~P. 1997.
+\newblock \emph{Flattening the earth: two thousand years of map projections}.
+\newblock University of Chicago Press.
+
+\bibitem[{Sun et~al.(2020)Sun, Li, Liang, Ding, and Srikant}]{9194023}
+Sun, R.; Li, D.; Liang, S.; Ding, T.; and Srikant, R. 2020.
+\newblock The Global Landscape of Neural Networks: An Overview.
+\newblock \emph{IEEE Signal Processing Magazine}, 37(5): 95--108.
+
+\bibitem[{Sypherd et~al.(2020)Sypherd, Diaz, Sankar, and Dasarathy}]{sypherd2020alphaloss}
+Sypherd, T.; Diaz, M.; Sankar, L.; and Dasarathy, G. 2020.
+\newblock On the alpha-loss Landscape in the Logistic Model.
+\newblock arXiv:2006.12406.
+
+\bibitem[{Wang(2012)}]{Wang2012}
+Wang, J. 2012.
+\newblock \emph{Laplacian Eigenmaps}, 235--247.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-27497-8.
+
+\bibitem[{Wang, Teng, and Perdikaris(2021)}]{doi:10.1137/20M1318043}
+Wang, S.; Teng, Y.; and Perdikaris, P. 2021.
+\newblock Understanding and Mitigating Gradient Flow Pathologies in Physics-Informed Neural Networks.
+\newblock \emph{SIAM Journal on Scientific Computing}, 43(5): A3055--A3081.
+
+\bibitem[{Wang, Yu, and Perdikaris(2022)}]{wang2020and}
+Wang, S.; Yu, X.; and Perdikaris, P. 2022.
+\newblock When and why PINNs fail to train: A neural tangent kernel perspective.
+\newblock \emph{Journal of Computational Physics}, 449: 110768.
+
+\bibitem[{Wen et~al.(2018)Wen, Wang, Yan, Xu, Wu, Chen, and Li}]{wen2018smoothout}
+Wen, W.; Wang, Y.; Yan, F.; Xu, C.; Wu, C.; Chen, Y.; and Li, H. 2018.
+\newblock SmoothOut: Smoothing Out Sharp Minima to Improve Generalization in Deep Learning.
+\newblock arXiv:1805.07898.
+
+\bibitem[{Xu, Yap, and Prabhu(2019)}]{xu2019understanding}
+Xu, J.; Yap, D.~A.; and Prabhu, V.~U. 2019.
+\newblock Understanding adversarial robustness through loss landscape geometries.
+\newblock In \emph{Proc. of the International Conference on Machine Learning (ICML) Workshops}, 18.
+
+\bibitem[{Yang et~al.(2021)Yang, Hodgkinson, Theisen, Zou, Gonzalez, Ramchandran, and Mahoney}]{yang2021taxonomizing}
+Yang, Y.; Hodgkinson, L.; Theisen, R.; Zou, J.; Gonzalez, J.~E.; Ramchandran, K.; and Mahoney, M.~W. 2021.
+\newblock Taxonomizing local versus global structure in neural network loss landscapes.
+\newblock arXiv:2107.11228.
+
+\bibitem[{Yao et~al.(2020)Yao, Gholami, Keutzer, and Mahoney}]{pyhessian}
+Yao, Z.; Gholami, A.; Keutzer, K.; and Mahoney, M.~W. 2020.
+\newblock PyHessian: Neural Networks Through the Lens of the Hessian.
+\newblock In \emph{2020 IEEE International Conference on Big Data (Big Data)}, 581--590.
+
+\end{thebibliography}

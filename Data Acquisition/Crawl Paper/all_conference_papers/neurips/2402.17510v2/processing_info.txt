@@ -1,0 +1,140 @@
+标题: Demonstrating and Reducing Shortcuts in Vision-Language Representation Learning
+arXiv ID: 2402.17510v2
+发布时间: 2024-02-27 13:50:34+00:00
+作者: Maurits Bleeker, Mariya Hendriksen, Andrew Yates, Maarten de Rijke
+摘要: Vision-language models (VLMs) mainly rely on contrastive training to learn
+general-purpose representations of images and captions. We focus on the
+situation when one image is associated with several captions, each caption
+containing both information shared among all captions and unique information
+per caption about the scene depicted in the image. In such cases, it is unclear
+whether contrastive losses are sufficient for learning task-optimal
+representations that contain all the information provided by the captions or
+whether the contrastive learning setup encourages the learning of a simple
+shortcut that minimizes contrastive loss. We introduce synthetic shortcuts for
+vision-language: a training and evaluation framework where we inject synthetic
+shortcuts into image-text data. We show that contrastive VLMs trained from
+scratch or fine-tuned with data containing these synthetic shortcuts mainly
+learn features that represent the shortcut. Hence, contrastive losses are not
+sufficient to learn task-optimal representations, i.e., representations that
+contain all task-relevant information shared between the image and associated
+captions. We examine two methods to reduce shortcut learning in our training
+and evaluation framework: (i) latent target decoding and (ii) implicit feature
+modification. We show empirically that both methods improve performance on the
+evaluation task, but only partly reduce shortcut learning when training and
+evaluating with our shortcut learning framework. Hence, we show the difficulty
+and challenge of our shortcut learning framework for contrastive
+vision-language representation learning.
+URL: http://arxiv.org/abs/2402.17510v2
+图片输出目录: all_conference_papers/neurips/2402.17510v2/extracted_images
+LaTeX文件数量: 25
+图片文件总数: 52
+匹配图片数量: 9
+
+==================================================
+LaTeX文件列表:
+  - all_conference_papers/neurips/2402.17510v2/main.tex
+  - all_conference_papers/neurips/2402.17510v2/math_commands.tex
+  - all_conference_papers/neurips/2402.17510v2/definitions.tex
+  - all_conference_papers/neurips/2402.17510v2/packages.tex
+  - all_conference_papers/neurips/2402.17510v2/authors.tex
+  - all_conference_papers/neurips/2402.17510v2/tables/ltd/recall_results_ltd.tex
+  - all_conference_papers/neurips/2402.17510v2/tables/ifm/recall_results_ifm.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/05_evaluation_setup.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/06_evaluation_results.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/08_conclusion.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/02_background.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/03_shortcuts_setup.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/01_introduction.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/04_shortcuts_results.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/00_abstract.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/09_impact.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/07_related_work.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/notation.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/background.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/problem.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/losses.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/experimental_setup.tex
+  - all_conference_papers/neurips/2402.17510v2/sections/appendix/appendix.tex
+  - all_conference_papers/neurips/2402.17510v2/text_files/todo.tex
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/latent_viz.tex
+
+==================================================
+图片引用列表:
+  - information-venn-diagram
+  - shortcut-example
+  - shared-vs-unique-v2
+  - CLIP-f30k-coco-shortcut-eval-linear
+  - VSE-f30k-coco-shortcut-eval-linear
+  - shortcut_img1
+  - shortcut_img4
+  - shortcut_img3
+  - shortcut_img2
+  - minimal-shared-representation
+  - task-optimal-representation
+
+==================================================
+匹配的图片文件:
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut-example.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/information-venn-diagram.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/shared-vs-unique-v2.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/minimal-shared-representation.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/task-optimal-representation.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img1.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img3.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img2.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img4.jpg
+
+==================================================
+所有图片文件:
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut-example.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/information-venn-diagram.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/shared-vs-unique.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/shared-vs-unique-v2.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/minimal-shared-representation.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/task-optimal-representation.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/deprecated/minimal-shared-representation-27-march.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/latent_viz/deprecated/task-optimal-representation-27-march.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image49.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image61.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image60.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image48.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image62.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image9.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image8.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image16.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image29.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image14.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image28.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image11.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image10.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image37.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image36.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image22.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image34.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image20.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image21.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image35.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image31.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image19.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/preview.jpeg
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image18.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image32.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image33.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image54.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image55.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image43.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image42.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image56.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image1.png
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image47.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image53.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image45.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image51.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image50.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/omnigraffle-canvas/image44.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img1.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img3.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img2.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/shortcut_examples/shortcut_img4.jpg
+  - all_conference_papers/neurips/2402.17510v2/figures/results/vse-f30k-coco-shortcut-eval-linear.pdf
+  - all_conference_papers/neurips/2402.17510v2/figures/results/clip-f30k-coco-shortcut-eval-linear.pdf

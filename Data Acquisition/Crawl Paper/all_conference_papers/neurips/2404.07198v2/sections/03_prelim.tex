@@ -1,0 +1,51 @@
+\section{Preliminaries and Problem Definition}
+\label{sec:prelim}
+
+We introduce the basic concepts pertaining to logical query answering and KGs largely following the 
+existing literature~\citep{galkin2022,ren2023ngdb,ultra}.%formalizations introduced in \citet{galkin2022}, \citet{ren2023ngdb}, and \citet{ultra}.
+
+\textbf{Knowledge Graphs and Inductive Setup.}
+Given a finite set of entities $\mathcal{V}$ (nodes), a finite set of relations $\mathcal{R}$ (edge types), and a set of triples (edges) $\mathcal{E} = (\mathcal{V} \times \mathcal{R} \times \mathcal{V})$, a knowledge graph $\mathcal{G}$ is a tuple $\mathcal{G} = (\mathcal{V}, \mathcal{R}, \mathcal{E})$.
+The simplest \emph{transductive} setup dictates that the graph at training time $\gtrain = (\etrain, \rtrain, \ttrain)$ and the graph at inference (validation or test) time $\ginf = (\einf, \rinf, \tinf)$ are the same, \ie, $\gtrain = \ginf$. 
+By default, we assume that the inference graph $\ginf$ is an incomplete part of a larger, non observable graph $\hat{\ginf}$ with missing triples to be predicted at inference time.
+In the \emph{inductive} setup, in the general case, the training and inference graphs are different, $\gtrain \neq \ginf$.
+In the easier inductive entity (\emph{inductive $(e)$}) setup tackled by most of the KG completion literature, the relation set $\mathcal{R}$ is fixed and shared between training and inference graphs, \ie, $\gtrain = (\etrain, \mathcal{R}, \ttrain)$ and $\ginf = (\einf, \mathcal{R}, \tinf)$. The inference graph can be an extension of the training graph if $\etrain \subseteq \einf$ or be a separate disjoint graph (with the same set of relations) if $\etrain \cap \einf = \varnothing$. 
+In \clqa, the former setup with the extended training graph at inference is tackled by InductiveQE approaches~\citep{galkin2022}. 
+
+In the hardest inductive entity and relation (inductive $(e,r)$) case, both entities and relations sets are different, \ie, $\etrain \cap \einf = \varnothing$ and $\rtrain \cap \rinf = \varnothing$. 
+In \clqa, there is no existing approach tackling this case and our proposed \method is the first one to do so.
+
+% In this work, we tackle this harder inductive (also known as \emph{fully-inductive}) case with both new, unseen entities and relation types at inference time. 
+% Since the harder inductive case (with new relations at inference) is strictly a superset of the easier inductive scenario (with the fixed relation set), any model capable of fully-inductive inference is by design applicable in easier inductive scenarios as well.
+
+\textbf{First-Order Logic Queries.}
+Applied to KGs, a first-order logic (FOL) query $q$ is a formula that consists of constants $\texttt{Con}$ ($\texttt{Con} \subseteq \gV$), variables $\texttt{Var}$ ($\texttt{Var} \subseteq \gV$, existentially quantified), relation \emph{projections} $R(a, b)$ denoting a binary function over constants or variables, and logic symbols ($\exists, \land, \lor, \lnot$).
+The answers $A_{\gG}(q)$ to the query $q$ are assignments of variables in a formula such that the instantiated query formula is a subgraph of the complete, non observable graph $\hat{\gG}$.
+Answers are denoted as \emph{easy} if they are reachable by graph traversal over the incomplete graph $\gG$ and denoted as \emph{hard} if at least one edge from the non observable, complete graph $\hat{\gG}$ has to be predicted during query execution.
+
+For example, in \autoref{fig:intro}, a query \emph{Which band member of Dire Straits played guitar?} is expressed in the logical form as $?U:\texttt{BandMember}(\texttt{Dire Straits}, U) \wedge \texttt{Plays}^{-1}(\texttt{Guitar}, U)$ as an \emph{intersection} query. 
+Here, $U$ is a projected target variable, \texttt{Dire Straits} and \texttt{Guitar} are constants, \texttt{BandMember} and \texttt{Plays} are \emph{relation projections} where $\texttt{Plays}^{-1}$ denotes the inverse of the relation \texttt{Plays}.
+The task of \clqa~ is to predict bindings (mappings between entities and variables) of the target variable, \eg, for the example query the answer set is a single entity $\gA_{q} = \{(U, \texttt{Mark Knopfler})\}$ and we treat this answer as an \emph{easy} answer as it is reachable by traversing the edges of the given graph.
+In practice, however, we measure the performance of \clqa approaches on \emph{hard} answers.
+
+\textbf{Inductive Query Answering.}
+In the transductive \clqa setup, the training and inference graphs are the same and share the same set of entities and relations, \ie, $\gtrain = \ginf$ meaning that inference queries operate on the same graph, the same set of constants \texttt{Con} and relations.
+This allows query answering models to learn hardcoded entity and relation embeddings at the same time losing the capabilities to generalize to new graphs at test time.
+
+In the inductive entity $(e)$ setup considered in \citet{galkin2022}, the inference graph extends the training graph $\gtrain \subset \ginf$ but the set of relations is still fixed. Therefore, the proposed models are still bound to a certain hardcoded set of relations and cannot generalize to any arbitrary KG.
+
+In this work, we lift all the restrictions on the training and inference graphs' vocabularies and consider the most general, inductive $(e,r)$ case when $\ginf \neq \gtrain$ and the inference graph might contain a completely different set of entities and relation types.
+Furthermore, missing links still have to be predicted in the inference graphs to reach \emph{hard} answers.
+% For example, in \autoref{fig:intro}, $\gtrain$ contains relations $\{\texttt{win}, \texttt{citizen}, \texttt{graduate} \}$\footnote{And their respective inverses} describing academic entities whereas $\ginf$ contains relations $\{\texttt{band member}, \texttt{plays}\}$ describing music industry.
+
+%\zz{Not sure whether it is necessary to mention labeling tricks.}
+\textbf{Labeling Trick GNNs.}
+Labeling tricks (as coined by \citet{labeling_trick}) are featurization strategies in graphs for breaking % neighborhood symmetries
+symmetries in node representations which are particularly pronounced in link prediction and KG completion tasks. 
+In the presence of such node symmetries (\emph{automorphisms}), classical uni- and multi-relational GNN encoders~\citep{gcn, gat, compgcn} assign different \emph{automorphic} nodes the same feature making them indistinguishable for downstream tasks.
+In multi-relational graphs, NBFNet~\citep{nbfnet} and A*Net~\citep{astarnet} apply a labeling trick by using the indicator function $\textsc{Indicator}(h,v,r)$ that puts a query vector $\vr$ on a head node $h$ and puts the zeros vector on other nodes $v$. 
+The indicator function does not require entity embeddings and such models can naturally generalize to new %, unseen 
+entities (while the set of relation types is still fixed).
+Theoretically, such a labeling strategy learns \emph{conditional node representations} and is provably more powerful~\citep{rwl2} than node-level GNN encoders. 
+In \clqa, only GNN-QE~\citep{gnn_qe} applies NBFNet as a projection operator making it the only approach generalizable to the inductive $(e)$ setup~\citep{galkin2022} with new nodes at inference time. 
+This work leverages labeling trick GNNs to generalize \clqa to arbitrary KGs with any entity and relation vocabulary.

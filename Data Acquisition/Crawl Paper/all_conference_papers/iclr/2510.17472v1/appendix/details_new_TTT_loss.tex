@@ -1,0 +1,52 @@
+Let $\mathbf{X} = (X_1, \dots, X_n)$ be a collection of answers to a given prompt corresponding to rollouts $\mathbf{Y} = (Y_1, \dots, Y_n)$, with $\widehat{c}_n$ denoting the majority vote and $j_n^\star$  the runner-up. We propose to directly maximise $\text{SNR}(\Delta_{j^\star_n})$ by using the group-level reward function $r_n^{(1)}$ defined in Eq. (\ref{eq:snr_based_reward}).
+Our objective (without the KL-regularisation) takes the form
+\begin{align*}
+&\max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[r_n^{(1)}(\mathbf{Y})\right] = \max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[\reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X)\right]\\
+&= \max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)} \left[\frac{(N_{\hat{c}_n}+N_{{j}_n^\star})^2}{n(N_{\hat{c}_n}-N_{{j}_n^\star}) - (N_{\hat{c}_n}-N_{{j}_n^\star})^2}\right],
+\end{align*}
+where $N_j= \sum_i\mathbf{1}\{X_i=j\}$.
+It is important to note that $\reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X)$ is a biased estimator of ${\text{SNR}}(\Delta_{j_n^\star})$, however in the large-sample limit we obtain the approximation
+\begin{align*}
+&\max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[r_n^{(1)}(\mathbf{Y})\right] = \max_\phi \mathbb{E}_{Y_1, \dots, Y_n\sim \pi_\phi(\cdot|pr)}\left[\reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X)\right]\\
+&\approx \max_\phi \frac{(q_{\hat{c}_n}-q_{j^\star_n})^2}{q_{\hat{c}_n}+q_{j^\star_n}-(q_{\hat{c}_n}-q_{j^\star_n})^2} = \max_\phi {\text{SNR}}(\Delta_{j_n^\star}).
+\end{align*}
+
+As discussed in the main text, to reduce the variance of the gradient estimate of the group-level reward, we adopt a leave one-out control variate approach \citep{tang2025optimizing}, resulting in the following effective advantage function for $Y_i$  when using the REINFORCE algorithm \citep{reinforce_92}
+\begin{equation}\label{eq:effective_advantage_reinforce}
+A_i = \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X) - \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X_{-i}). 
+\end{equation}
+
+Under the GRPO algorithm \citep{shao2024deepseekmathpushinglimitsmathematical}, the effective advantage for $Y_i$ becomes
+\begin{equation}\label{eq:effective_advantage_GRPO}
+\hat A_i = \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X) - \reallywidehat{\text{SNR}}(\Delta_{j_n^\star})(\mathbf X_{-i}) - \frac{1}{n}\sum_i A_i, 
+\end{equation}
+which further reduces the variance of the gradient estimate at the expense of introducing some bias \citep{tang2025optimizing}.
+In addition, we regularise the objective with a KL term that penalises deviations from a reference model $\pi_{\text{ref}}$. 
+
+\paragraph{Optimisation of the regularised objective.} Let $\pi_{\text{ref}} = (p_1, \dots, p_k)$.  We optimise over categorical distributions $\pi = (q_1, \dots, q_k)$.
+To enforce the normalisation constraint $\sum_i q_i=1$, we introduce a Lagrange multiplier $\lambda$, yielding the Lagrangian
+$$
+L(\pi, \lambda) = -\frac{(q_{\hat{c}_n}-q_{j^\star_n})^2}{q_{\hat{c}_n}+q_{j^\star_n}-(q_{\hat{c}_n}-q_{j^\star_n})^2} + \beta \sum_i q_i \log \frac{q_i}{p_i} + \lambda \left( \sum_i q_i - 1 \right),
+$$
+under the large-sample limit approximation described above.
+
+The stationary points satisfy 
+$$
+\frac{\partial {L}}{\partial q_i} = 0, \quad \forall i.
+$$
+Define
+$$
+g(x,y) = -\frac{(x - y)^2}{x + y - (x - y)^2}
+$$
+and denote by $g_x$, $g_y$ its partial derivatives with respect to $x$ and $y$, respectively.
+The optimality conditions are given by
+$$
+g_x(q_{\hat{c}_n}, q_{{j}_n^\star}) + \beta \left( 1 + \log \frac{q_{\hat{c}_n}}{p_{\hat{c}_n}} \right) + \lambda = 0,
+$$
+$$
+g_y(q_{\hat{c}_n}, q_{{j}_n^\star}) + \beta \left( 1 + \log \frac{q_{{j}_n^\star}}{p_{j_n^\star}} \right) + \lambda = 0,
+$$
+$$
+\beta \left( 1 + \log \frac{q_{i}}{p_{i}} \right) + \lambda = 0\Longrightarrow q_i\propto p_{i},\ \ \ i\neq \hat{c}_n, j^\star_n.
+$$
+In general, these equations do not admit a closed-form solution and must be solved numerically.

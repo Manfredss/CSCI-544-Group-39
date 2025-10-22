@@ -1,0 +1,86 @@
+% CVPR 2024 Paper Template; see https://github.com/cvpr-org/author-kit
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+\usepackage{cvpr}              % To produce the CAMERA-READY version
+%\usepackage[review]{cvpr}      % To produce the REVIEW version
+%\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+% Import additional packages in the preamble file, before hyperref
+\input{preamble}
+
+\usepackage[accsupp]{axessibility} % Improves PDF readability for those with visual impairments.
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{caption}
+%\usepackage{ulem}
+\usepackage{soul}
+\usepackage{xcolor}
+\usepackage{multirow} 
+
+% It is strongly recommended to use hyperref, especially for the review versio  
+% If you comment hyperref and then uncomment it, you should delete *.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you should be clear).
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue]{hyperref}
+
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\paperID{15454} % *** Enter the Paper ID here
+\def\confName{CVPR}
+\def\confYear{2024}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{DriveWorld: 4D Pre-trained Scene Understanding via World Models for Autonomous Driving}
+%$^{1}$School of Computer Science, Peking University \\ $^{2}$Unmanned Systems Technology Research Center, Defense Innovation Institute \\$^{3}$China Telecom Institute of AI \& Northwestern Polytechnical University \\$^{4}$Hong Kong University of Science and Technology (Guangzhou) $^{5}$GigaAI \\ $^{6}$Beijing University of Posts and Telecommunications $^{7}$Ant Group \\$^{8}$Sun Yat-sen University $^{9}$Tsinghua University $^{10}$Beijing Jiaotong University
+
+%%%%%%%%% AUTHORS - PLEASE UPDATE
+\author{Chen Min$^{1,2}$, Dawei Zhao$^{2}$\footnotemark[1] , Liang Xiao$^{2}$\footnotemark[1] , Jian Zhao$^{3}$, Xinli Xu$^{4}$, Zheng Zhu$^{5}$\\ Lei Jin$^{6}$, Jianshu Li$^{7}$, Yulan Guo$^{8}$, Junliang Xing$^{9}$, Liping Jing$^{10}$, Yiming Nie$^{2}$, Bin Dai$^{2}$\\
+$^{1}$School of Computer Science, Peking University \\ $^{2}$Unmanned Systems Technology Research Center, Defense Innovation Institute \\$^{3}$China Telecom Institute of AI \& NPU $^{4}$HKUST $^{5}$GigaAI $^{6}$BUPT $^{7}$Ant Group $^{8}$SYSU $^{9}$THU $^{10}$BJTU\\
+{\tt\small minchen@stu.pku.edu.cn, adamzdw@163.com, xiaoliang@nudt.edu.cn}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+%\and
+%Dawei Zhao\\
+%DII\\
+%First line of institution2 address\\
+%{\tt\small secondauthor@i2.org}
+}
+
+\begin{document}
+\maketitle
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} %将脚注符号设置为fnsymbol类型，即特殊符号表示
+\footnotetext[1]{Corresponding authors.}
+
+\input{sec/0_abstract}    
+\input{sec/1_intro}
+\input{sec/2_related_work}
+\input{sec/3_method}
+\input{sec/4_experiments}
+\input{sec/5_conclusion}  
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+\input{sec/X_suppl}
+
+% WARNING: do not forget to delete the supplementary pages from your submission 
+% \input{sec/X_suppl}
+
+\end{document}

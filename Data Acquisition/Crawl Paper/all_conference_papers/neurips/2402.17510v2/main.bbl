@@ -1,0 +1,479 @@
+\begin{thebibliography}{72}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adnan et~al.(2022)Adnan, Ioannou, Tsai, Galloway, Tizhoosh, and
+  Taylor]{adnan2022monitoring}
+Mohammed Adnan, Yani Ioannou, Chuan-Yung Tsai, Angus Galloway, H.R. Tizhoosh,
+  and Graham~W. Taylor.
+\newblock Monitoring shortcut learning using mutual information.
+\newblock \emph{arXiv preprint arXiv:2206.13034}, 2022.
+
+\bibitem[Alberti et~al.(2019)Alberti, Ling, Collins, and
+  Reitter]{alberti2019fusion}
+Chris Alberti, Jeffrey Ling, Michael Collins, and David Reitter.
+\newblock Fusion of detected objects in text for visual question answering.
+\newblock In \emph{EMNLP}, pp.\  2131--2140, 2019.
+
+\bibitem[Bachman et~al.(2019)Bachman, Hjelm, and
+  Buchwalter]{bachman2019learning}
+Philip Bachman, R.~Devon Hjelm, and William Buchwalter.
+\newblock Learning representations by maximizing mutual information across
+  views.
+\newblock In \emph{NeurIPS}, pp.\  15509--15519, 2019.
+
+\bibitem[Baltrusaitis et~al.(2019)Baltrusaitis, Ahuja, and
+  Morency]{baltrusaitis2019_multimodal}
+Tadas Baltrusaitis, Chaitanya Ahuja, and Louis{-}Philippe Morency.
+\newblock Multimodal machine learning: {A} survey and taxonomy.
+\newblock \emph{{IEEE} Trans. Pattern Anal. Mach. Intell.}, 41:\penalty0
+  423--443, 2019.
+
+\bibitem[Bao et~al.(2022)Bao, Wang, Dong, Liu, Mohammed, Aggarwal, Som, Piao,
+  and Wei]{bao2022vlmo}
+Hangbo Bao, Wenhui Wang, Li~Dong, Qiang Liu, Owais~Khan Mohammed, Kriti
+  Aggarwal, Subhojit Som, Songhao Piao, and Furu Wei.
+\newblock {VLM}o: Unified vision-language pre-training with
+  mixture-of-modality-experts.
+\newblock \emph{NeurIPS}, pp.\  32897--32912, 2022.
+
+\bibitem[Bardes et~al.(2022)Bardes, Ponce, and LeCun]{bardes2022vicreg}
+Adrien Bardes, Jean Ponce, and Yann LeCun.
+\newblock {VICReg}: Variance-invariance-covariance regularization for
+  self-supervised learning.
+\newblock In \emph{ICLR}, 2022.
+
+\bibitem[Biten et~al.(2022)Biten, Mafla, G{\'{o}}mez, and
+  Karatzas]{biten2022_is}
+Ali~Furkan Biten, Andr{\'{e}}s Mafla, Llu{\'{\i}}s G{\'{o}}mez, and Dimosthenis
+  Karatzas.
+\newblock Is an image worth five sentences? {A} new look into semantics for
+  image-text matching.
+\newblock In \emph{WACV}, pp.\  2483--2492. {IEEE}, 2022.
+
+\bibitem[Bleeker et~al.(2023)Bleeker, Yates, and de~Rijke]{bleeker2023reducing}
+Maurits Bleeker, Andrew Yates, and Maarten de~Rijke.
+\newblock Reducing predictive feature suppression in resource-constrained
+  contrastive image-caption retrieval.
+\newblock \emph{Transactions on Machine Learning Research}, 2023.
+
+\bibitem[Chen et~al.(2020{\natexlab{a}})Chen, Kornblith, Norouzi, and
+  Hinton]{chen2020simple}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey~E. Hinton.
+\newblock A simple framework for contrastive learning of visual
+  representations.
+\newblock In \emph{ICML}, pp.\  1597--1607, 2020{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2021)Chen, Luo, and Li]{chen2021intriguing}
+Ting Chen, Calvin Luo, and Lala Li.
+\newblock Intriguing properties of contrastive losses.
+\newblock In \emph{NeurIPS}, pp.\  11834--11845, 2021.
+
+\bibitem[Chen et~al.(2015)Chen, Fang, Lin, Vedantam, Gupta, Doll{\'a}r, and
+  Zitnick]{chen2015microsoft}
+Xinlei Chen, Hao Fang, Tsung-Yi Lin, Ramakrishna Vedantam, Saurabh Gupta, Piotr
+  Doll{\'a}r, and C.~Lawrence Zitnick.
+\newblock Microsoft {COCO} captions: Data collection and evaluation server.
+\newblock \emph{arXiv preprint arXiv:1504.00325}, 2015.
+
+\bibitem[Chen et~al.(2020{\natexlab{b}})Chen, Li, Yu, El~Kholy, Ahmed, Gan,
+  Cheng, and Liu]{chen2020uniter}
+Yen-Chun Chen, Linjie Li, Licheng Yu, Ahmed El~Kholy, Faisal Ahmed, Zhe Gan,
+  Yu~Cheng, and Jingjing Liu.
+\newblock {UNITER}: Universal image-text representation learning.
+\newblock In \emph{ECCV}, pp.\  104--120, 2020{\natexlab{b}}.
+
+\bibitem[Cho et~al.(2014)Cho, van Merrienboer, G{\"{u}}l{\c{c}}ehre, Bahdanau,
+  Bougares, Schwenk, and Bengio]{cho2014_learning}
+Kyunghyun Cho, Bart van Merrienboer, {\c{C}}aglar G{\"{u}}l{\c{c}}ehre, Dzmitry
+  Bahdanau, Fethi Bougares, Holger Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using {RNN} encoder-decoder for
+  statistical machine translation.
+\newblock In \emph{ACL}, pp.\  1724--1734, 2014.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{devlin2019_bert}
+Jacob Devlin, Ming{-}Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock {BERT:} {P}re-training of deep bidirectional transformers for
+  language understanding.
+\newblock In \emph{{NAACL-HLT}}, 2019.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn,
+  Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and
+  Houlsby]{dosovitskiy2021image}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn,
+  Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg
+  Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
+\newblock An image is worth 16x16 words: Transformers for image recognition at
+  scale.
+\newblock In \emph{ICLR}, 2021.
+
+\bibitem[Faghri et~al.(2018)Faghri, Fleet, Kiros, and
+  Fidler]{faghri2018improving}
+Fartash Faghri, David~J. Fleet, Jamie~Ryan Kiros, and Sanja Fidler.
+\newblock {VSE++:} {I}mproving visual-semantic embeddings with hard negatives.
+\newblock In \emph{BVCM}, pp.\ ~12, 2018.
+
+\bibitem[Federici et~al.(2020)Federici, Dutta, Forr{\'{e}}, Kushman, and
+  Akata]{federici2020learning}
+Marco Federici, Anjan Dutta, Patrick Forr{\'{e}}, Nate Kushman, and Zeynep
+  Akata.
+\newblock Learning robust representations via multi-view information
+  bottleneck.
+\newblock In \emph{ICLR}, 2020.
+
+\bibitem[Frome et~al.(2013)Frome, Corrado, Shlens, Bengio, Dean, Ranzato, and
+  Mikolov]{frome2013devise}
+Andrea Frome, Greg~S Corrado, Jon Shlens, Samy Bengio, Jeff Dean, Marc'Aurelio
+  Ranzato, and Tomas Mikolov.
+\newblock De{V}i{SE}: A deep visual-semantic embedding model.
+\newblock \emph{NeurIPS}, pp.\  2121--2129, 2013.
+
+\bibitem[Geirhos et~al.(2020)Geirhos, Jacobsen, Michaelis, Zemel, Brendel,
+  Bethge, and Wichmann]{geirhos2020shortcut}
+Robert Geirhos, J{\"o}rn-Henrik Jacobsen, Claudio Michaelis, Richard Zemel,
+  Wieland Brendel, Matthias Bethge, and Felix~A Wichmann.
+\newblock Shortcut learning in deep neural networks.
+\newblock \emph{Nature Machine Intelligence}, pp.\  665--673, 2020.
+
+\bibitem[Guo et~al.(2019)Guo, Wang, and Wang]{guo2019_deep}
+Wenzhong Guo, Jianwen Wang, and Shiping Wang.
+\newblock Deep multimodal representation learning: {A} survey.
+\newblock \emph{{IEEE} Access}, 7:\penalty0 63373--63394, 2019.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{CVPR}, pp.\  770--778, 2016.
+
+\bibitem[Hermann \& Lampinen(2020)Hermann and Lampinen]{hermann2020what}
+Katherine~L. Hermann and Andrew~K. Lampinen.
+\newblock What shapes feature representations? {Exploring} datasets,
+  architectures, and training.
+\newblock In \emph{NeurIPS}, pp.\  9995--10006, 2020.
+
+\bibitem[Hjelm et~al.(2019)Hjelm, Fedorov, Lavoie{-}Marchildon, Grewal,
+  Bachman, Trischler, and Bengio]{hjelm2019learning}
+R.~Devon Hjelm, Alex Fedorov, Samuel Lavoie{-}Marchildon, Karan Grewal, Philip
+  Bachman, Adam Trischler, and Yoshua Bengio.
+\newblock Learning deep representations by mutual information estimation and
+  maximization.
+\newblock In \emph{ICLR}, 2019.
+
+\bibitem[Jia et~al.(2021)Jia, Yang, Xia, Chen, Parekh, Pham, Le, Sung, Li, and
+  Duerig]{jia2021scaling}
+Chao Jia, Yinfei Yang, Ye~Xia, Yi{-}Ting Chen, Zarana Parekh, Hieu Pham,
+  Quoc~V. Le, Yun{-}Hsuan Sung, Zhen Li, and Tom Duerig.
+\newblock Scaling up visual and vision-language representation learning with
+  noisy text supervision.
+\newblock In \emph{ICML}, pp.\  4904--4916, 2021.
+
+\bibitem[Karpathy \& Li(2015)Karpathy and Li]{karpathy2015deep}
+Andrej Karpathy and Fei{-}Fei Li.
+\newblock Deep visual-semantic alignments for generating image descriptions.
+\newblock In \emph{CVPR}, pp.\  3128--3137, 2015.
+
+\bibitem[Kingma \& Ba(2015)Kingma and Ba]{kingma2014_adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock In \emph{ICLR}, 2015.
+
+\bibitem[Kipf \& Welling(2017)Kipf and Welling]{kipf2017_semi}
+Thomas~N. Kipf and Max Welling.
+\newblock Semi-supervised classification with graph convolutional networks.
+\newblock In \emph{ICLR}, 2017.
+
+\bibitem[Kiros et~al.(2014)Kiros, Salakhutdinov, and Zemel]{kiros2014unifying}
+Ryan Kiros, Ruslan Salakhutdinov, and Richard~S Zemel.
+\newblock Unifying visual-semantic embeddings with multimodal neural language
+  models.
+\newblock \emph{arXiv preprint arXiv:1411.2539}, 2014.
+
+\bibitem[Lee et~al.(2018)Lee, Chen, Hua, Hu, and He]{lee2018stacked}
+Kuang-Huei Lee, Xi~Chen, Gang Hua, Houdong Hu, and Xiaodong He.
+\newblock Stacked cross attention for image-text matching.
+\newblock In \emph{ECCV}, pp.\  201--216, 2018.
+
+\bibitem[Lee et~al.(2021)Lee, Arnab, Guadarrama, Canny, and
+  Fischer]{lee2021compressive}
+Kuang{-}Huei Lee, Anurag Arnab, Sergio Guadarrama, John~F. Canny, and Ian
+  Fischer.
+\newblock Compressive visual representations.
+\newblock In \emph{NeurIPS}, pp.\  19538--19552, 2021.
+
+\bibitem[Li et~al.(2020{\natexlab{a}})Li, Duan, Fang, Jiang, and
+  Zhou]{li2019unicoder}
+Gen Li, Nan Duan, Yuejian Fang, Daxin Jiang, and Ming Zhou.
+\newblock Unicoder-{VL}: A universal encoder for vision and language by
+  cross-modal pre-training.
+\newblock In \emph{AAAI}, 2020{\natexlab{a}}.
+
+\bibitem[Li et~al.(2021)Li, Selvaraju, Gotmare, Joty, Xiong, and
+  Hoi]{li2021align}
+Junnan Li, Ramprasaath Selvaraju, Akhilesh Gotmare, Shafiq Joty, Caiming Xiong,
+  and Steven Chu~Hong Hoi.
+\newblock Align before fuse: Vision and language representation learning with
+  momentum distillation.
+\newblock \emph{NeurIPS}, pp.\  9694--9705, 2021.
+
+\bibitem[Li et~al.(2022{\natexlab{a}})Li, Li, Xiong, and Hoi]{li2022blip}
+Junnan Li, Dongxu Li, Caiming Xiong, and Steven C.~H. Hoi.
+\newblock {BLIP}: Bootstrapping language-image pre-training for unified
+  vision-language understanding and generation.
+\newblock In \emph{ICML}, pp.\  12888--12900, 2022{\natexlab{a}}.
+
+\bibitem[Li et~al.(2023{\natexlab{a}})Li, Li, Savarese, and Hoi]{li2023blip}
+Junnan Li, Dongxu Li, Silvio Savarese, and Steven C.~H. Hoi.
+\newblock {BLIP-2:} bootstrapping language-image pre-training with frozen image
+  encoders and large language models.
+\newblock In \emph{ICML}, pp.\  19730--19742, 2023{\natexlab{a}}.
+
+\bibitem[Li et~al.(2019{\natexlab{a}})Li, Zhang, Li, Li, and Fu]{li2019visual}
+Kunpeng Li, Yulun Zhang, Kai Li, Yuanyuan Li, and Yun Fu.
+\newblock Visual semantic reasoning for image-text matching.
+\newblock In \emph{ICCV}, pp.\  4654--4662, 2019{\natexlab{a}}.
+
+\bibitem[Li et~al.(2019{\natexlab{b}})Li, Yatskar, Yin, Hsieh, and
+  Chang]{li2019visualbert}
+Liunian~Harold Li, Mark Yatskar, Da~Yin, Cho-Jui Hsieh, and Kai-Wei Chang.
+\newblock {VisualBERT}: A simple and performant baseline for vision and
+  language.
+\newblock \emph{arXiv preprint arXiv:1908.03557}, 2019{\natexlab{b}}.
+
+\bibitem[Li et~al.(2023{\natexlab{b}})Li, Fan, Yuan, He, Tian, Feris, Indyk,
+  and Katabi]{li2023addressing}
+Tianhong Li, Lijie Fan, Yuan Yuan, Hao He, Yonglong Tian, Rog{\'{e}}rio Feris,
+  Piotr Indyk, and Dina Katabi.
+\newblock Addressing feature suppression in unsupervised visual
+  representations.
+\newblock In \emph{WACV}, pp.\  1411--1420, 2023{\natexlab{b}}.
+
+\bibitem[Li et~al.(2020{\natexlab{b}})Li, Yin, Li, Zhang, Hu, Zhang, Wang, Hu,
+  Dong, Wei, et~al.]{li2020oscar}
+Xiujun Li, Xi~Yin, Chunyuan Li, Pengchuan Zhang, Xiaowei Hu, Lei Zhang, Lijuan
+  Wang, Houdong Hu, Li~Dong, Furu Wei, et~al.
+\newblock Oscar: Object-semantics aligned pre-training for vision-language
+  tasks.
+\newblock In \emph{ECCV}, pp.\  121--137, 2020{\natexlab{b}}.
+
+\bibitem[Li et~al.(2022{\natexlab{b}})Li, Liang, Zhao, Cui, Ouyang, Shao, Yu,
+  and Yan]{li2022supervision}
+Yangguang Li, Feng Liang, Lichen Zhao, Yufeng Cui, Wanli Ouyang, Jing Shao,
+  Fengwei Yu, and Junjie Yan.
+\newblock Supervision exists everywhere: {A} data efficient contrastive
+  language-image pre-training paradigm.
+\newblock In \emph{ICLR}, 2022{\natexlab{b}}.
+
+\bibitem[Liang et~al.(2023)Liang, Deng, Ma, Zou, Morency, and
+  Salakhutdinov]{liang2023factorized}
+Paul~Pu Liang, Zihao Deng, Martin~Q. Ma, James Zou, Louis-Philippe Morency, and
+  Russ Salakhutdinov.
+\newblock Factorized contrastive learning: Going beyond multi-view redundancy.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Lin et~al.(2014)Lin, Maire, Belongie, Hays, Perona, Ramanan,
+  Doll{\'a}r, and Zitnick]{lin2014microsoft}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
+  Ramanan, Piotr Doll{\'a}r, and C~Lawrence Zitnick.
+\newblock Microsoft {COCO}: Common objects in context.
+\newblock In \emph{ECCV}, pp.\  740--755, 2014.
+
+\bibitem[Loshchilov \& Hutter(2019)Loshchilov and
+  Hutter]{loshchilov2019decoupled}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock In \emph{ICLR}, 2019.
+
+\bibitem[Lu et~al.(2019)Lu, Batra, Parikh, and Lee]{lu2019vilbert}
+Jiasen Lu, Dhruv Batra, Devi Parikh, and Stefan Lee.
+\newblock Vi{LBERT}: Pretraining task-agnostic visiolinguistic representations
+  for vision-and-language tasks.
+\newblock In \emph{NeurIPS}, pp.\  13--23, 2019.
+
+\bibitem[Mu et~al.(2022)Mu, Kirillov, Wagner, and Xie]{mu2022slip}
+Norman Mu, Alexander Kirillov, David~A. Wagner, and Saining Xie.
+\newblock {SLIP:} {S}elf-supervision meets language-image pre-training.
+\newblock In \emph{ECCV}, pp.\  529--544, 2022.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever,
+  et~al.]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya
+  Sutskever, et~al.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{Open{AI} blog}, pp.\ ~9, 2019.
+
+\bibitem[Radford et~al.(2021)Radford, Kim, Hallacy, Ramesh, Goh, Agarwal,
+  Sastry, Askell, Mishkin, Clark, Krueger, and Sutskever]{radford2021learning}
+Alec Radford, Jong~Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh,
+  Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark,
+  Gretchen Krueger, and Ilya Sutskever.
+\newblock Learning transferable visual models from natural language
+  supervision.
+\newblock In \emph{ICML}, pp.\  8748--8763, 2021.
+
+\bibitem[Reimers \& Gurevych(2019)Reimers and Gurevych]{reimersers2019sentence}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using siamese {BERT}-{N}etworks.
+\newblock In \emph{EMNLP-IJCNLP}, pp.\  3980--3990, 2019.
+
+\bibitem[Robinson et~al.(2021)Robinson, Sun, Yu, Batmanghelich, Jegelka, and
+  Sra]{robinson2021can}
+Joshua Robinson, Li~Sun, Ke~Yu, Kayhan Batmanghelich, Stefanie Jegelka, and
+  Suvrit Sra.
+\newblock Can contrastive learning avoid shortcut solutions?
+\newblock In \emph{NeurIPS}, pp.\  4974--4986, 2021.
+
+\bibitem[Scimeca et~al.(2022)Scimeca, Oh, Chun, Poli, and
+  Yun]{scimeca2022which}
+Luca Scimeca, Seong~Joon Oh, Sanghyuk Chun, Michael Poli, and Sangdoo Yun.
+\newblock Which shortcut cues will {DNN}s choose? {A} study from the
+  parameter-space perspective.
+\newblock In \emph{ICLR}, 2022.
+
+\bibitem[Shwartz-Ziv \& LeCun(2023)Shwartz-Ziv and LeCun]{shwartz2023compress}
+Ravid Shwartz-Ziv and Yann LeCun.
+\newblock To compress or not to compress--self-supervised learning and
+  information theory: A review.
+\newblock \emph{arXiv preprint arXiv:2304.09355}, 2023.
+
+\bibitem[Simonyan \& Zisserman(2015)Simonyan and
+  Zisserman]{simonyan2015_very_deep}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock In \emph{ICLR}, 2015.
+
+\bibitem[Song et~al.(2020)Song, Tan, Qin, Lu, and Liu]{song2020mpnet}
+Kaitao Song, Xu~Tan, Tao Qin, Jianfeng Lu, and Tie{-}Yan Liu.
+\newblock {MPN}et: Masked and permuted pre-training for language understanding.
+\newblock In \emph{NeurIPS}, pp.\  16857--16867, 2020.
+
+\bibitem[Sridharan \& Kakade(2008)Sridharan and
+  Kakade]{sridharan2008information}
+Karthik Sridharan and Sham~M. Kakade.
+\newblock An information theoretic framework for multi-view learning.
+\newblock In \emph{COLT}, pp.\  403--414, 2008.
+
+\bibitem[Su et~al.(2020)Su, Zhu, Cao, Li, Lu, Wei, and Dai]{su2019vl}
+Weijie Su, Xizhou Zhu, Yue Cao, Bin Li, Lewei Lu, Furu Wei, and Jifeng Dai.
+\newblock {VL}-{BERT}: Pre-training of generic visual-linguistic
+  representations.
+\newblock In \emph{ICLR}, 2020.
+
+\bibitem[Tan \& Bansal(2019)Tan and Bansal]{tan2019lxmert}
+Hao Tan and Mohit Bansal.
+\newblock {LXMERT:} learning cross-modality encoder representations from
+  transformers.
+\newblock In \emph{EMNLP-IJCNLP}, pp.\  5099--5110, 2019.
+
+\bibitem[Tian et~al.(2020{\natexlab{a}})Tian, Krishnan, and
+  Isola]{tian2020contrastive}
+Yonglong Tian, Dilip Krishnan, and Phillip Isola.
+\newblock Contrastive multiview coding.
+\newblock In \emph{ECCV}, pp.\  776--794, 2020{\natexlab{a}}.
+
+\bibitem[Tian et~al.(2020{\natexlab{b}})Tian, Sun, Poole, Krishnan, Schmid, and
+  Isola]{tian2020what}
+Yonglong Tian, Chen Sun, Ben Poole, Dilip Krishnan, Cordelia Schmid, and
+  Phillip Isola.
+\newblock What makes for good views for contrastive learning?
+\newblock In \emph{NeurIPS}, pp.\  6827--6839, 2020{\natexlab{b}}.
+
+\bibitem[Tsai et~al.(2021)Tsai, Wu, Salakhutdinov, and Morency]{tsai2021self}
+Yao{-}Hung~Hubert Tsai, Yue Wu, Ruslan Salakhutdinov, and Louis{-}Philippe
+  Morency.
+\newblock Self-supervised learning from a multi-view perspective.
+\newblock In \emph{ICLR}, 2021.
+
+\bibitem[Tschannen et~al.(2020)Tschannen, Djolonga, Rubenstein, Gelly, and
+  Lucic]{tschannen2020on}
+Michael Tschannen, Josip Djolonga, Paul~K. Rubenstein, Sylvain Gelly, and Mario
+  Lucic.
+\newblock On mutual information maximization for representation learning.
+\newblock In \emph{ICLR}, 2020.
+
+\bibitem[Tschannen et~al.(2023)Tschannen, Kumar, Steiner, Zhai, Houlsby, and
+  Beyer]{tschannen2023image}
+Michael Tschannen, Manoj Kumar, Andreas~Peter Steiner, Xiaohua Zhai, Neil
+  Houlsby, and Lucas Beyer.
+\newblock Image captioners are scalable vision learners too.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[van~den Oord et~al.(2018)van~den Oord, Li, and
+  Vinyals]{oord2018representation}
+Aaron van~den Oord, Yazhe Li, and Oriol Vinyals.
+\newblock Representation learning with contrastive predictive coding.
+\newblock \emph{arXiv preprint arXiv:1807.03748}, 2018.
+
+\bibitem[Wang et~al.(2022)Wang, Guo, Deng, and Lu]{wang2022rethinking}
+Haoqing Wang, Xun Guo, Zhi{-}Hong Deng, and Yan Lu.
+\newblock Rethinking minimal sufficient representation in contrastive learning.
+\newblock In \emph{CVPR}, pp.\  16020--16029, 2022.
+
+\bibitem[Wang et~al.(2023)Wang, Bao, Dong, Bjorck, Peng, Liu, Aggarwal,
+  Mohammed, Singhal, Som, and Wei]{wang2022image}
+Wenhui Wang, Hangbo Bao, Li~Dong, Johan Bjorck, Zhiliang Peng, Qiang Liu, Kriti
+  Aggarwal, Owais~Khan Mohammed, Saksham Singhal, Subhojit Som, and Furu Wei.
+\newblock Image as a foreign language: {BEIT} pretraining for vision and
+  vision-language tasks.
+\newblock In \emph{CVPR}, pp.\  19175--19186, 2023.
+
+\bibitem[Wiles et~al.(2022)Wiles, Gowal, Stimberg, Rebuffi, Ktena, Dvijotham,
+  and Cemgil]{wiles_2022_afinegrained}
+Olivia Wiles, Sven Gowal, Florian Stimberg, Sylvestre{-}Alvise Rebuffi, Ira
+  Ktena, Krishnamurthy Dvijotham, and Ali~Taylan Cemgil.
+\newblock A fine-grained analysis on distribution shift.
+\newblock In \emph{ICLR}, 2022.
+
+\bibitem[Xiao et~al.(2021)Xiao, Wang, Efros, and Darrell]{xiao2021what}
+Tete Xiao, Xiaolong Wang, Alexei~A. Efros, and Trevor Darrell.
+\newblock What should not be contrastive in contrastive learning.
+\newblock In \emph{ICLR}, 2021.
+
+\bibitem[Yao et~al.(2022)Yao, Huang, Hou, Lu, Niu, Xu, Liang, Li, Jiang, and
+  Xu]{yao2022flip}
+Lewei Yao, Runhui Huang, Lu~Hou, Guansong Lu, Minzhe Niu, Hang Xu, Xiaodan
+  Liang, Zhenguo Li, Xin Jiang, and Chunjing Xu.
+\newblock {FILIP:} {F}ine-grained interactive language-image pre-training.
+\newblock In \emph{ICLR}, 2022.
+
+\bibitem[Young et~al.(2014)Young, Lai, Hodosh, and Hockenmaier]{young2014image}
+Peter Young, Alice Lai, Micah Hodosh, and Julia Hockenmaier.
+\newblock From image descriptions to visual denotations: New similarity metrics
+  for semantic inference over event descriptions.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  2:\penalty0 67--78, 2014.
+
+\bibitem[Yuan et~al.(2021)Yuan, Chen, Chen, Codella, Dai, Gao, Hu, Huang, Li,
+  Li, et~al.]{yuan2021florence}
+Lu~Yuan, Dongdong Chen, Yi-Ling Chen, Noel Codella, Xiyang Dai, Jianfeng Gao,
+  Houdong Hu, Xuedong Huang, Boxin Li, Chunyuan Li, et~al.
+\newblock Florence: A new foundation model for computer vision.
+\newblock \emph{arXiv preprint arXiv:2111.11432}, 2021.
+
+\bibitem[Yuksekgonul et~al.(2023)Yuksekgonul, Bianchi, Kalluri, Jurafsky, and
+  Zou]{yuksekgonul2023when}
+Mert Yuksekgonul, Federico Bianchi, Pratyusha Kalluri, Dan Jurafsky, and James
+  Zou.
+\newblock When and why vision-language models behave like bags-of-words, and
+  what to do about it?
+\newblock In \emph{ICLR}, 2023.
+
+\bibitem[Zeng et~al.(2022)Zeng, Zhang, and Li]{zeng2022multi}
+Yan Zeng, Xinsong Zhang, and Hang Li.
+\newblock Multi-grained vision language pre-training: Aligning texts with
+  visual concepts.
+\newblock In \emph{ICML}, pp.\  25994--26009, 2022.
+
+\bibitem[Zhao et~al.(2017)Zhao, Xie, Xu, and Sun]{zhao2017multi}
+Jing Zhao, Xijiong Xie, Xin Xu, and Shiliang Sun.
+\newblock Multi-view learning overview: Recent progress and new challenges.
+\newblock \emph{Inf. Fusion}, 38:\penalty0 43--54, 2017.
+
+\bibitem[Zong et~al.(2023)Zong, Mac~Aodha, and Hospedales]{zong2023self}
+Yongshuo Zong, Oisin Mac~Aodha, and Timothy Hospedales.
+\newblock Self-supervised multimodal learning: A survey.
+\newblock \emph{arXiv preprint arXiv:2304.01008}, 2023.
+
+\end{thebibliography}

@@ -1,0 +1,56 @@
+% !TEX root = ../../main.tex
+
+\begin{table*}[t!]
+	\centering
+	\caption{Mean and variance (over three training runs) recall@$k$ evaluation scores for the \ac{Flickr30k} and \ac{MS-COCO} datasets for image-to-text and text-to-image retrieval. 
+		We train with two loss functions: $\infonce{}$ and $\ifm{}$. 
+		We train either with (\checkmark) or without (\xmark) shortcuts. 
+		For the model trained with $\ifm{}$, we provide the hyper-parameters of the best-performing model.}
+	\setlength{\tabcolsep}{1.5pt}
+	\resizebox{\textwidth}{!}{%
+	\begin{tabular}{@{\extracolsep{1pt}}l @{} c r@{$_\pm$}l r@{$_\pm$}l r@{$_\pm$}l r@{$_\pm$}l r@{$_\pm$}l r@{$_\pm$}l r@{$_\pm$}l}
+		\toprule
+		& & \multicolumn{6}{c}{\textit{i2t}} & \multicolumn{6}{c}{\textit{t2i}} & \multicolumn{2}{c}{ \ } \\
+		\cmidrule(r){3-8} \cmidrule(r){9-14} \cmidrule{15-16}
+		Loss & $\sct{}$ & \multicolumn{2}{c}{R@1}  & \multicolumn{2}{c}{R@5}  & \multicolumn{2}{c}{R@10} & \multicolumn{2}{c}{R@1}  & \multicolumn{2}{c}{R@5}  & \multicolumn{2}{c}{R@10}  & \multicolumn{2}{c}{rsum} \\ 
+		\midrule
+		\multicolumn{16}{c}{\ac{Flickr30k}}\\
+		\midrule
+		& & \multicolumn{14}{c}{CLIP} \\
+		\cmidrule(r){3-16} 
+		$\infonce{}$ & \xmark & ${86.9}$ & $_{0.1}$ & ${97.4}$ & $_{0.0}$ & ${98.8}$ & $_{0.0}$ & ${72.8}$ & $_{0.2}$ & ${92.1}$ & $_{0.0}$ & ${95.6}$ & $_{0.0}$ & ${543.5}$ & $_{1.3}$\\
+		$\ifm{}$, $\epsilon = 0.05$ &  \xmark  & $\textbf{87.4}$ & $_{0.1} \positive$ & ${97.4}$ & $_{0.2}$-- & ${99.1}$ & $_{0.0}$-- & ${73.2}$ & $_{0.0}$-- & ${92.2}$ & $_{0.0}$-- & ${95.6}$ & $_{0.0}$-- & ${544.9}$ & $_{0.2}$-- \\
+		\cmidrule(r){3-16}
+		$\infonce{}$  &  \checkmark & ${57.9}$ & $_{0.3}$ & ${84.6}$ & $_{0.8}$ & ${91.3}$ & $_{0.0}$ & ${43.9}$ & $_{2.2}$ & ${74.6}$ & $_{0.8}$ & ${84.4}$ & $_{0.4}$ & ${436.7}$ & $_{18.8}$ \\ 
+		$\ifm{}$, $\epsilon = 0.1$ & \checkmark & $\textbf{73.8}$ & $_{0.8}\positive$ & $\textbf{91.5}$ & $_{0.5}\positive$ & $\textbf{95.6}$ & $_{0.0}\positive$ & $\textbf{58.9}$ & $_{0.1}\positive$ & $\textbf{84.4}$ & $_{0.1}\positive$ & $\textbf{91.1}$ & $_{0.2}\positive$ & $\textbf{495.2}$ & $_{5.7}\positive$ \\
+		\cmidrule{3-16} 
+		&  & \multicolumn{14}{c}{VSE++} \\
+		\cmidrule(r){3-16} 
+		$\infonce{}$  & \xmark & $\textbf{52.9}$ & $_{0.2}$ & $\textbf{80.5}$ & $_{0.1}$ & $\textbf{87.6}$ & $_{0.4}$ & $\textbf{40.5}$ & $_{0.1}$ & ${68.8}$ & $_{0.4}$ & $\textbf{78.9}$ & $_{0.3}$ & $\textbf{409.3}$ & $_{2.6}$ \\
+		$\ifm{}$, $\epsilon=0.05$ & \xmark & ${52.4}$ & $_{0.2}\negative$& ${76.9}$ & $_{0.1}\negative$& ${85.3}$ & $_{0.0}\negative$ & ${39.1}$ & $_{0.0}\negative$& ${68.8}$-- & $_{0.1}$ & ${78.2}$ & $_{0.1}\negative$& ${400.7}$ & $_{0.0}\negative$\\
+		\cmidrule(r){3-16}
+		$\infonce{}$ & \checkmark  & ${0.1}$ & $_{0.0}$ & ${0.4}$ & $_{0.0}$ & ${0.8}$ & $_{0.0}$ & ${0.1}$ & $_{0.0}$ & ${0.4}$ & $_{0.0}$ & ${1.0}$ & $_{0.0}$ & ${2.9}$ & $_{0.0}$ \\
+		$\ifm{}$, $\epsilon=0.05$ & \checkmark & ${0.0}$ & $_{0.0}$-- & ${0.6}$ & $_{0.1}$-- & ${0.9}$ & $_{0.2}$-- & ${0.1}$ & $_{0.0}$-- & ${0.5}$ & $_{0.0}$-- & ${1.0}$ & $_{0.0}$-- & ${3.2}$ & $_{0.8}$-- \\
+		\midrule
+		\multicolumn{16}{c}{\ac{MS-COCO}}\\
+		\midrule
+		&  & \multicolumn{14}{c}{CLIP} \\
+		\cmidrule(r){3-16} 
+		$\infonce{}$ & \xmark & $\textbf{63.5}$ & $_{0.1}$ & $\textbf{86.0}$ & $_{0.3}$ & $\textbf{92.2}$ & $_{0.0}$ & ${46.3}$ & $_{0.0}$ & ${74.7}$ & $_{0.0}$ & ${84.2}$ & $_{0.0}$ & ${446.9}$ & $_{0.9}$ \\
+		$\ifm{}$, $\epsilon=0.05$ &  \xmark & ${63.0}$ & $_{0.1}\negative$ & ${86.6}$ & $_{0.1}\negative$ & ${92.6}$ & $_{0.2}\negative$ & $\textbf{47.2}$ & $_{0.0}\positive$ & $\textbf{75.6}$ & $_{0.0}\positive$ & $\textbf{84.5}$ & $_{0.0}\positive$ & $\textbf{449.5}$ & $_{1.7}\positive$ \\
+		\cmidrule(r){3-16}
+		$\infonce{}$  &  \checkmark & ${13.9}$ & $_{0.0}$ & ${32.7}$ & $_{0.1}$ & ${43.8}$ & $_{0.0}$ & ${8.8}$ & $_{0.0}$ & ${24.7}$ & $_{0.2}$& ${35.5}$ & $_{0.5}$ & ${159.4}$ & $_{3.4}$ \\
+		$\ifm{}$, $\epsilon=0.05$ & \checkmark & $\textbf{23.4}$ & $_{1.5}\positive$ & $\textbf{46.5}$ & $_{2.7}\positive$ & $\textbf{58.2}$ & $_{2.5}\positive$ & $\textbf{17.1}$ & $_{0.3}\positive$ & $\textbf{38.9}$ & $_{0.9}\positive$ & $\textbf{51.3}$ & $_{1.0}\positive$ & $\textbf{235.5}$ & $_{43.8}\positive$ \\
+		\cmidrule{3-16} 
+		&  & \multicolumn{14}{c}{VSE++} \\
+		\cmidrule(r){3-16}
+		$\infonce{}$  & \xmark & $\textbf{41.7}$ & $_{0.3}$ & $\textbf{72.5}$ & $_{0.1}$ & $\textbf{83.1}$ & $_{0.1}$ & $\textbf{31.3}$ & $_{0.0}$ & ${61.1}$ & $_{0.0}$ & ${73.6}$ & $_{0.0}$ & $\textbf{363.4}$ & $_{0.4}$\\
+		$\ifm{}$, $\epsilon=0.05$ & \xmark & ${40.2}$ & $_{0.0}\negative$  & ${70.8}$ & $_{0.1} \negative$ & $ {81.6}$ & $_{0.1}\negative$ & ${30.8}$ & $_{0.0}\negative$ & $\textbf{61.5}$ & $_{0.0}\positive$ & $\textbf{74.3}$ & $_{0.0}\positive$ & ${359.3}$ & $_{1.1}\negative$ \\
+		\cmidrule(r){3-16}
+		$\infonce{}$ &  \checkmark & ${0.0}$ & $_{0.0}$ & ${0.1}$ & $_{0.0}$ & ${0.2}$ & $_{0.0}$ & ${0.0}$ & $_{0.0}$ & ${0.1}$ & $_{0.0}$ & ${0.2}$ & $_{0.0}$ & ${0.6}$ & $_{0.0}$ \\
+		$\ifm{}$, $\epsilon=0.05$& \checkmark & ${0.0}$ & $_{0.0}$-- & ${0.1}$ & $_{0.0}$-- & ${0.2}$ & $_{0.0}$ --& ${0.0}$ & $_{0.0}$-- & ${0.1}$ & $_{0.0}$-- & ${0.2}$ & $_{0.0}$-- & ${0.7}$ & $_{0.0}$--  \\
+		\bottomrule
+	\end{tabular}%
+	}
+	\label{tab:ifm}
+\end{table*}
