@@ -370,7 +370,7 @@ DEFAULT_DIAGRAM_KEYWORDS = [
     "architecture", "network", "pipeline", "framework", "block diagram",
     "overview", "diagram", "flowchart", "flow chart",
     "graphical mode", "transformer", "cnn", "rnn", "encoder-decoder",
-    "encoder–decoder", "module", "feature pyramid", "resnet",
+    "encoder–decoder", "feature pyramid", "resnet",
     "u-net", "unet", "attention", "multi-head", "head", "layer",
     "system", "design", "schematic",
 ]

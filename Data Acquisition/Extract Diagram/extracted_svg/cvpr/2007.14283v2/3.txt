@@ -1,0 +1,1 @@
+This figure depicts the flowchart of Faster Mean-shift. The black portions of the diagram are processed by CPU, while the blue portions are processed by GPU.

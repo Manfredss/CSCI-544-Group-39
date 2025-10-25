@@ -1,0 +1,1 @@
+Details about the architectures of image and point cloud backbones and how to insert the adapters into them.
