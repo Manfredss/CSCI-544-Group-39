@@ -16,7 +16,6 @@ Convert figures from a LaTeX project into **SVGs**—great for architecture/netw
 
 ## Requirements
 
-- Python 3.9+ (recommended)
 - PyMuPDF
   ```bash
   pip install pymupdf
