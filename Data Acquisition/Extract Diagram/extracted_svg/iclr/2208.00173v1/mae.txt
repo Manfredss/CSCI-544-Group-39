@@ -1,0 +1,1 @@
+Overview of a masked autoencoder with the figure borrowed from the original work MAE~.

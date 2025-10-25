@@ -1,0 +1,1 @@
+{A high-level diagram of .} Given multitraverse RGB videos, outputs a Gaussian-based environment map () and 2D ephemerality segmentation () for the input images. Note that the proposed framework is LiDAR-free and self-supervised.
