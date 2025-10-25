@@ -1,1 +1,0 @@
-This figure presents the overall framework of a pixel embedding based holistic instance segmentation and tracking algorithm, with the proposed plug-and-play Faster Mean-shift GPU accelerated clustering algorithm.

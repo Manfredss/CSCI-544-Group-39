@@ -1,1 +1,0 @@
-We propose a general framework for online 3D scene perception. With the presented memory-based adapters, we empower existing offline models in different tasks with online perception ability, which is valuable for robotics applications.

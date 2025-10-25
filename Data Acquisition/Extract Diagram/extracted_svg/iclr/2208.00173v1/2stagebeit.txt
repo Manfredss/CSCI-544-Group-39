@@ -1,1 +1,0 @@
-Overview of BEIT pre-training. The figure is edited from~.

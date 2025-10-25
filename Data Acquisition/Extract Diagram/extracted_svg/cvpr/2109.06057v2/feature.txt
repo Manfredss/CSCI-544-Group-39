@@ -1,1 +1,0 @@
-Illustration of feature alignment approach for unsupervised domain adaptation. Mid-level attribute features are aligned between source and target domains in a joint learning pipeline. $_{attr}$ represents the attribute alignment loss between the source attributes and the target attributes.
