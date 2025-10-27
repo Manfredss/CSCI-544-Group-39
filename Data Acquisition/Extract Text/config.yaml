@@ -1,0 +1,64 @@
+# LLM 配置文件
+# 支持 Ollama 本地模型和 OpenAI API 两种模式
+
+# LLM 提供商选择: "ollama" 或 "openai"
+llm_provider: ollama
+
+# Ollama 本地模型配置
+ollama:
+  base_url: http://localhost:11434
+  model: qwen3:8b  # 可选: qwen2.5:7b, llama3.1:8b, mistral:7b 等
+  temperature: 0.7
+  timeout: 120
+  no_thinking: true  # Qwen3 模型专用：禁用思维链输出（默认 true）
+
+# OpenAI API 配置
+openai:
+  # API Key 配置方式:
+  # 1. 从环境变量读取 (推荐): ENV:OPENAI_API_KEY
+  # 2. 直接填写: sk-xxx...
+  api_key: ENV:OPENAI_API_KEY
+  base_url: https://api.openai.com/v1
+  model: gpt-4o-mini  # 可选: gpt-4o, gpt-3.5-turbo 等
+  temperature: 0.7
+  timeout: 60
+
+# 提示词配置
+prompts:
+  # 上下文提取提示词
+  extract_context: |
+    You are analyzing an academic paper. Given the full paper text and a figure caption, extract the most relevant text paragraphs that explain or reference this figure. Focus on:
+    1. Paragraphs that directly discuss the figure
+    2. Sections that explain concepts shown in the figure
+    3. Related methodology or results
+    
+    Return ONLY the relevant paragraphs, separated by blank lines. Be concise but comprehensive.
+    
+    Full Paper Text:
+    {full_text}
+    
+    Figure Caption:
+    {caption}
+    
+    Figure Label (if any):
+    {label}
+    
+    Extract relevant context paragraphs:
+  
+  # 摘要生成提示词
+  generate_summary: |
+    Based on the following figure caption and its related context from an academic paper, generate a concise one-sentence summary (max 120 characters) that captures the core insight of this figure.
+    
+    Figure Caption:
+    {caption}
+    
+    Related Context:
+    {context}
+    
+    Generate a concise summary (one sentence, max 120 chars):
+
+# 处理配置
+processing:
+  max_context_chars: 50000  # 输入给 LLM 的最大字符数
+  max_summary_length: 120   # 摘要最大长度
+  enable_cache: true        # 是否启用缓存（预留功能）
